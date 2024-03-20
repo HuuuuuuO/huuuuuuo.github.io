@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Huabing Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://zhaohuabing.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>???????????????</title>
+      <link>https://zhaohuabing.com/post/%E8%AF%95%E8%AF%95%E6%96%87%E7%AB%A0%E5%90%8D/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://zhaohuabing.com/post/%E8%AF%95%E8%AF%95%E6%96%87%E7%AB%A0%E5%90%8D/</guid>
+      <description>啥，这是能用的吗</description>
+    </item>
     <item>
       <title>Clean White Theme for Hugo</title>
       <link>https://zhaohuabing.com/post/readme/</link>
