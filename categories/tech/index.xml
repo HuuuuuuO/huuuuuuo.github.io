@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/categories/tech/</link>
+    <link>http://localhost:1313/categories/tech/</link>
     <description>Recent content in Tech on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo日常更新流程</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</link>
+      <link>http://localhost:1313/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
       <description>1、新建文章 进入blog本地仓库，新疆文章，写文章并修改 cd F:\vscode\hugo-root hugo new post/文章名字.md 2、本地验证 hugo serve -D --disableFastRender 或 hugo serve 3、更新public目录 hugo</description>
     </item>
     <item>
       <title>git本地分支和远程分支冲突问题解决</title>
-      <link>https://huuuuuuo.github.io/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <link>http://localhost:1313/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <guid>http://localhost:1313/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1、failed to push some refs 报错 git push -u origin main To https://github.com/xxxx.git ! [rejected] main -&amp;gt; main (non-fast-forward) error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; hint: Updates were rejected because the tip of your current branch is behind hint: its remote counterpart. Integrate the remote changes (e.g. hint: &amp;#39;git pull ...&amp;#39;) before pushing again. hint: See the &amp;#39;Note about fast-forwards&amp;#39;</description>
     </item>
   </channel>
