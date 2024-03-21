@@ -344,14 +344,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">                  
+                <ul class="list-inline text-center">
                     
                     
                     
                     
                     
 
-		            
+                    
                     
                     
                     <li>
@@ -362,7 +362,6 @@
                             </span>
                         </a>
                     </li>
-		            
                     
                     
                     
@@ -372,21 +371,18 @@
                     
                     
                     
-            
-            
-            
-           
-             </ul>
-		<p class="copyright text-muted">
+                    
+                    
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">
                     Copyright &copy; Nefelibata 2024
                     
                     <br>
-                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
-                    </iframe>
+                    Powered by Hugo
+                    
                     
                 </p>
             </div>
@@ -399,12 +395,12 @@
 
 <script>
     function loadAsync(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
@@ -415,11 +411,11 @@
 
 <script>
     
-    if($('#tag_cloud').length !== 0){
-        loadAsync("/js/jquery.tagcloud.js",function(){
+    if ($('#tag_cloud').length !== 0) {
+        loadAsync("/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 
-                color: {start: '#bbbbee', end: '#0085a1'},
+                color: { start: '#bbbbee', end: '#0085a1' },
             };
             $('#tag_cloud a').tagcloud();
         })
@@ -428,9 +424,9 @@
 
 
 <script>
-    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -446,7 +442,7 @@
         
         
         
-            _containerSelector = 'div.post-container'
+        _containerSelector = 'div.post-container'
         
 
         
@@ -479,7 +475,7 @@
     
 
 
-    loadAsync("\/js\/jquery.nav.js", function () {
+    loadAsync("\/js \/ jquery.nav.js", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,
@@ -503,6 +499,5 @@
 
 
 <script src="/js/copy-to-clipboard.js"></script>
-
 </body>
 </html>
