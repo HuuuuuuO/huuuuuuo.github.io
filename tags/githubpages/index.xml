@@ -6,19 +6,19 @@
     <description>Recent content in GithubPages on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2024 10:31:12 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/githubpages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>博客搭建：Hugo&#43;GithubPages</title>
       <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</link>
-      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Mar 2024 10:31:12 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</guid>
       <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1、下载安装hugo 访问最新版本页面下载，推荐使用 Hugo extended 版本 解压到</description>
     </item>
     <item>
       <title>博客搭建：Jekyll&#43;GithubPages</title>
       <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</link>
-      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Mar 2024 09:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</guid>
       <description>Jekyll就是将纯文本转化为静态博客网站，不需要数据库支持，也没有评论功能，想要评论功能的话可以借助第三方的评论服务。 Jekyll + Github Pages可以</description>
     </item>
