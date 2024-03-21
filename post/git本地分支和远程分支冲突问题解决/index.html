@@ -196,7 +196,7 @@
                             on
                             Tue 19:30:42 2024-03-19
                             
-                            | <span class="post-date">1099 words</span> | about<span class="more-meta"> 3 mins</span>
+                            | <span class="post-date">1096 words</span> | about<span class="more-meta"> 3 mins</span>
                             
                             
                             
@@ -261,10 +261,10 @@
 请记住，应谨慎使用强制推送 （ <code>git push -f</code> ），尤其是在共享存储库中，因为它可能会覆盖历史记录并可能给其他协作者带来问题。在强制推动之前，请务必与你的团队沟通。</p>
 <hr>
 <h2 id="2empty-reply-from-server报错-or-timed-out报错">2、Empty reply from server报错 or Timed out报错</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ git push -u origin main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push -u origin main
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>fatal: unable to access &#39;https://github.com/HuuuuuuO/blog.git/&#39;: Empty reply from server
 </span></span></code></pre></div><p>或者为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ git push -f origin main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push -f origin main
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>fatal: unable to access &#39;https://github.com/HuuuuuuO/blog.git/&#39;: Failed to connect to github.com port 443: Timed out
 </span></span></code></pre></div><h3 id="解决方案-1">解决方案：</h3>
 <h4 id="1检查-ssh-访问">1.检查 SSH 访问：</h4>
@@ -272,9 +272,9 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -T git@github.com
 </span></span></code></pre></div><h4 id="2使用-ssh-而不是-https">2.使用 SSH 而不是 HTTPS：</h4>
 <p>如果当前使用 HTTPS 推送到 GitHub，请尝试切换到 SSH。这有时可以绕过与 HTTPS 连接相关的问题。您可以将远程 URL 更改为通过命令 <code>git remote set-url origin git@github.com:HuuuuuuO/blog.git</code> 使用 SSH。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>`git remote set-url origin git@github.com:HuuuuuuO/blog.git`
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git remote set-url origin git@github.com:HuuuuuuO/blog.git
 </span></span></code></pre></div><h4 id="3进行push">3.进行push</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ git push origin main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push origin main
 </span></span></code></pre></div><p>成功。</p>
 
 
@@ -324,10 +324,16 @@
                     <hr>
                     <ul class="pager">
                         
+                        <li class="previous">
+                            <a href="/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/" data-toggle="tooltip" data-placement="top"
+                                title="">&larr;
+                                Previous Post</a>
+                        </li>
+                        
                         
                         <li class="next">
-                            <a href="/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/" data-toggle="tooltip" data-placement="top"
-                                title="博客搭建：Jekyll&#43;GithubPages">Next
+                            <a href="/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/" data-toggle="tooltip" data-placement="top"
+                                title="博客搭建：Hugo&#43;GithubPages">Next
                                 Post &rarr;</a>
                         </li>
                         
@@ -428,12 +434,6 @@
                             
                             <a href="/tags/hugo" title="hugo">
                                 hugo
-                            </a>
-                            
-                            
-                            
-                            <a href="/tags/jekyll" title="jekyll">
-                                jekyll
                             </a>
                             
                             

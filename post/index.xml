@@ -13,14 +13,7 @@
       <link>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</link>
       <pubDate>Thu, 21 Mar 2024 18:55:26 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</guid>
-      <description>使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进�? 1、typora配置 图像存储路径改为如图：.//img/ 2、用ba</description>
-    </item>
-    <item>
-      <title>今天</title>
-      <link>https://huuuuuuo.github.io/post/%E4%BB%8A%E5%A4%A9/</link>
-      <pubDate>Thu, 21 Mar 2024 16:03:10 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E4%BB%8A%E5%A4%A9/</guid>
-      <description></description>
+      <description>使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用</description>
     </item>
     <item>
       <title>文章名字</title>
@@ -30,7 +23,7 @@
       <description></description>
     </item>
     <item>
-      <title>Hugo插件之代码块拷贝插件</title>
+      <title>Hugo插件：代码块拷贝插件</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</link>
       <pubDate>Thu, 21 Mar 2024 13:12:48 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</guid>
@@ -51,7 +44,7 @@
       <description>视频是关于GPT的底层原理和未来影响。将抛开技术细节，少用专业名词，在整体功能上讲解ChatGPT 的「工作原理」「制造过程」「涌现的能力」「</description>
     </item>
     <item>
-      <title>typora快捷键</title>
+      <title>Typora快捷键</title>
       <link>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Wed, 20 Mar 2024 22:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
@@ -65,7 +58,7 @@
       <description>Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。 index：暂存区 workspace：工作区 resposi</description>
     </item>
     <item>
-      <title>Hugo日常更新流程</title>
+      <title>Hugo：日常更新流程</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Wed, 20 Mar 2024 17:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
@@ -76,14 +69,7 @@
       <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</link>
       <pubDate>Wed, 20 Mar 2024 10:31:12 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</guid>
-      <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1、下载安装hugo 访问最新版本页面下载，推荐使��?Hugo extended</description>
-    </item>
-    <item>
-      <title>博客搭建：Jekyll&#43;GithubPages</title>
-      <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</link>
-      <pubDate>Wed, 20 Mar 2024 09:30:42 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</guid>
-      <description>Jekyll就是将纯文本转化为静态博客网站，不需要数据库支持，也没有评论功能，想要评论功能的话可以借助第三方的评论服务��? Jekyll + Github Pages</description>
+      <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1、下载安装hugo 访问最新版本页面下载，推荐使�?Hugo extended 版</description>
     </item>
     <item>
       <title>git push：本地分支和远程分支冲突问题解决</title>
@@ -91,6 +77,13 @@
       <pubDate>Tue, 19 Mar 2024 19:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1、failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&amp;gt; main (non-fast-forward) 4error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &amp;#39;git pull ...&amp;#39;) before pushing again. 8hint: See the &amp;#39;Note about</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
