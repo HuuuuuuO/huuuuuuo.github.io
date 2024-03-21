@@ -9,18 +9,11 @@
     <lastBuildDate>Thu, 21 Mar 2024 18:55:26 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo：图片存储路径优</title>
+      <title>Hugo：图片存储路径优化</title>
       <link>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</link>
       <pubDate>Thu, 21 Mar 2024 18:55:26 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</guid>
       <description>使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用</description>
-    </item>
-    <item>
-      <title>文章名字</title>
-      <link>https://huuuuuuo.github.io/post/%E6%96%87%E7%AB%A0%E5%90%8D%E5%AD%97/</link>
-      <pubDate>Thu, 21 Mar 2024 15:57:02 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E6%96%87%E7%AB%A0%E5%90%8D%E5%AD%97/</guid>
-      <description></description>
     </item>
     <item>
       <title>Hugo插件：代码块拷贝插件</title>
@@ -77,13 +70,6 @@
       <pubDate>Tue, 19 Mar 2024 19:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1、failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&amp;gt; main (non-fast-forward) 4error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &amp;#39;git pull ...&amp;#39;) before pushing again. 8hint: See the &amp;#39;Note about</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
