@@ -15,5 +15,12 @@
       <guid>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
       <description>1、新建文章 进入blog本地仓库，新疆文章，写文章并修改 cd F:\vscode\hugo-root hugo new post/文章名字.md 2、本地验证 hugo serve -D --disableFastRender 或 hugo serve 3、更新public目录，</description>
     </item>
+    <item>
+      <title>博客搭建：Hugo&#43;GithubPages</title>
+      <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</guid>
+      <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1、下载安装hugo 访问最新版本页面下载，推荐使用 Hugo extended 版本 解压到</description>
+    </item>
   </channel>
 </rss>

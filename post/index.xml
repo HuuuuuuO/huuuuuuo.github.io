@@ -6,8 +6,43 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2024 09:45:19 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自动名字日期</title>
+      <link>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E5%90%8D%E5%AD%97%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Thu, 21 Mar 2024 09:45:19 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E5%90%8D%E5%AD%97%E6%97%A5%E6%9C%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>An Example Post</title>
+      <link>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Thu, 21 Mar 2024 09:33:42 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E6%97%A5%E6%9C%9F/</guid>
+      <description>收到货四六级</description>
+    </item>
+    <item>
+      <title>连接github时connection reset的问题</title>
+      <link>https://huuuuuuo.github.io/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 21 Mar 2024 09:30:42 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>git连接时遇到问题 ssh -T git@github.com Connection reset by 140.82.113.3 port 22 解决方案 在所生成ssh秘钥文件夹下（~/.ssh/）使用文本文档新建 config文件（无后缀）。 修改代</description>
+    </item>
+    <item>
+      <title>关于GPT的底层原理和未来影响（转载）</title>
+      <link>https://huuuuuuo.github.io/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD/</guid>
+      <description>视频是关于GPT的底层原理和未来影响。将抛开技术细节，少用专业名词，在整体功能上讲解ChatGPT 的「工作原理」「制造过程」「涌现的能力」「</description>
+    </item>
+    <item>
+      <title>typora快捷键</title>
+      <link>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 20 Mar 2024 05:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>本地编辑md我用的是typora，用一些快捷键会更好用 设置标题 ctrl + 1 ~6 标题1~6 等同于 一级标题：#+空格+标题内容 二级标题：##+空格+标题</description>
+    </item>
     <item>
       <title>git基本使用</title>
       <link>https://huuuuuuo.github.io/post/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
@@ -23,11 +58,11 @@
       <description>1、新建文章 进入blog本地仓库，新疆文章，写文章并修改 cd F:\vscode\hugo-root hugo new post/文章名字.md 2、本地验证 hugo serve -D --disableFastRender 或 hugo serve 3、更新public目录，</description>
     </item>
     <item>
-      <title>typora快捷键</title>
-      <link>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <title>博客搭建：Hugo&#43;GithubPages</title>
+      <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</link>
       <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>本地编辑md我用的是typora，用一些快捷键会更好用 设置标题 ctrl + 1 ~6 标题1~6 等同于 一级标题：#+空格+标题内容 二级标题：##+空格+标题</description>
+      <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/</guid>
+      <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1、下载安装hugo 访问最新版本页面下载，推荐使用 Hugo extended 版本 解压到</description>
     </item>
     <item>
       <title>博客搭建：Jekyll&#43;GithubPages</title>
@@ -37,10 +72,10 @@
       <description>Jekyll就是将纯文本转化为静态博客网站，不需要数据库支持，也没有评论功能，想要评论功能的话可以借助第三方的评论服务。 Jekyll + Github Pages可以</description>
     </item>
     <item>
-      <title>git本地分支和远程分支冲突问题解决</title>
-      <link>https://huuuuuuo.github.io/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <title>git push：本地分支和远程分支冲突问题解决</title>
+      <link>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1、failed to push some refs 报错 git push -u origin main To https://github.com/xxxx.git ! [rejected] main -&amp;gt; main (non-fast-forward) error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; hint: Updates were rejected because the tip of your current branch is behind hint: its remote counterpart. Integrate the remote changes (e.g. hint: &amp;#39;git pull ...&amp;#39;) before pushing again. hint: See the &amp;#39;Note about fast-forwards&amp;#39;</description>
     </item>
   </channel>

@@ -6,8 +6,15 @@
     <description>Recent content in Git on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2024 09:30:42 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>连接github时connection reset的问题</title>
+      <link>https://huuuuuuo.github.io/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 21 Mar 2024 09:30:42 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>git连接时遇到问题 ssh -T git@github.com Connection reset by 140.82.113.3 port 22 解决方案 在所生成ssh秘钥文件夹下（~/.ssh/）使用文本文档新建 config文件（无后缀）。 修改代</description>
+    </item>
     <item>
       <title>git基本使用</title>
       <link>https://huuuuuuo.github.io/post/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
@@ -16,10 +23,10 @@
       <description>Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。 index：暂存区 workspace：工作区 resposi</description>
     </item>
     <item>
-      <title>git本地分支和远程分支冲突问题解决</title>
-      <link>https://huuuuuuo.github.io/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <title>git push：本地分支和远程分支冲突问题解决</title>
+      <link>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/2024-03-19-git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1、failed to push some refs 报错 git push -u origin main To https://github.com/xxxx.git ! [rejected] main -&amp;gt; main (non-fast-forward) error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; hint: Updates were rejected because the tip of your current branch is behind hint: its remote counterpart. Integrate the remote changes (e.g. hint: &amp;#39;git pull ...&amp;#39;) before pushing again. hint: See the &amp;#39;Note about fast-forwards&amp;#39;</description>
     </item>
   </channel>

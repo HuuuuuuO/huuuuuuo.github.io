@@ -6,13 +6,104 @@
     <description>Recent content in Tags on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2024 09:45:19 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tag1</title>
+      <link>https://huuuuuuo.github.io/tags/tag1/</link>
+      <pubDate>Thu, 21 Mar 2024 09:45:19 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/tag1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag2</title>
+      <link>https://huuuuuuo.github.io/tags/tag2/</link>
+      <pubDate>Thu, 21 Mar 2024 09:45:19 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/tag2/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Git</title>
       <link>https://huuuuuuo.github.io/tags/git/</link>
-      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Mar 2024 09:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git Bug</title>
+      <link>https://huuuuuuo.github.io/tags/git-bug/</link>
+      <pubDate>Thu, 21 Mar 2024 09:30:42 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/git-bug/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reset</title>
+      <link>https://huuuuuuo.github.io/tags/reset/</link>
+      <pubDate>Thu, 21 Mar 2024 09:30:42 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/reset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>https://huuuuuuo.github.io/tags/ssh/</link>
+      <pubDate>Thu, 21 Mar 2024 09:30:42 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://huuuuuuo.github.io/tags/ai/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>B站</title>
+      <link>https://huuuuuuo.github.io/tags/b%E7%AB%99/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/b%E7%AB%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT</title>
+      <link>https://huuuuuuo.github.io/tags/gpt/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/gpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>人工智能</title>
+      <link>https://huuuuuuo.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>大模型</title>
+      <link>https://huuuuuuo.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>视频</title>
+      <link>https://huuuuuuo.github.io/tags/%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/%E8%A7%86%E9%A2%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typora</title>
+      <link>https://huuuuuuo.github.io/tags/typora/</link>
+      <pubDate>Wed, 20 Mar 2024 05:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/typora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>快捷键</title>
+      <link>https://huuuuuuo.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 20 Mar 2024 05:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description></description>
     </item>
     <item>
@@ -48,20 +139,6 @@
       <link>https://huuuuuuo.github.io/tags/pages/</link>
       <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://huuuuuuo.github.io/tags/pages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Typora</title>
-      <link>https://huuuuuuo.github.io/tags/typora/</link>
-      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/tags/typora/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>快捷键</title>
-      <link>https://huuuuuuo.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
-      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description></description>
     </item>
     <item>

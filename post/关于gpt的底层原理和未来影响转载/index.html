@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Nefelibata">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg">
+    <meta property="twitter:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg" />
+    
+
+    
+    <meta name="title" content="关于GPT的底层原理和未来影响（转载）" />
+    <meta property="og:title" content="关于GPT的底层原理和未来影响（转载）" />
+    <meta property="twitter:title" content="关于GPT的底层原理和未来影响（转载）" />
+    
+
+    
+    <meta name="description" content="看吧，天空在上">
+    <meta property="og:description" content="看吧，天空在上" />
+    <meta property="twitter:description" content="看吧，天空在上" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Nefelibata, tick, 看吧，天空在上, Blog, 博客, 个人网站, 互联网, Web">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>关于GPT的底层原理和未来影响（转载） | 看吧，天空在上</title>
+
+    <link rel="canonical" href="/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Nefelibata</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">Timeline</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg-jeep.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/gpt" title="GPT">
+                            GPT
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B" title="大模型">
+                            大模型
+                        </a>
+                        
+                        <a class="tag" href="/tags/ai" title="AI">
+                            AI
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" title="人工智能">
+                            人工智能
+                        </a>
+                        
+                        <a class="tag" href="/tags/b%E7%AB%99" title="B站">
+                            B站
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E8%A7%86%E9%A2%91" title="视频">
+                            视频
+                        </a>
+                        
+                    </div>
+                    <h1>关于GPT的底层原理和未来影响（转载）</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                Nefelibata
+                             
+                            on 
+                            Thursday, March 21, 2024
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <blockquote>
+<p>视频是关于GPT的底层原理和未来影响。将抛开技术细节，少用专业名词，在整体功能上讲解ChatGPT 的「工作原理」「制造过程」「涌现的能力」「未来的影响」以及「如何应对」：</p>
+<p>1、ChatGPT是如何回答问题的</p>
+<p>2、它是怎么被制造的，为什么它不是搜索引擎</p>
+<p>3、它有哪些惊人能力，为什么它不只是聊天机器人</p>
+<p>4、它将给社会带来什么样的冲击</p>
+<p>5、我们该如何维持未来的竞争力</p>
+</blockquote>
+
+
+
+<style>
+    #biliplayer {
+      width: 100%;
+      height: 600px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      #biliplayer {
+        width: 100%;
+        height: 250px;
+      }
+    }
+</style>
+
+
+    <div>
+        <iframe id="biliplayer" src="//player.bilibili.com/player.html?bvid=BV1MY4y1R7EN&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" ></iframe>
+    </div>
+
+
+<p>
+  <img src="image.png" alt="alt text">
+
+</p>
+<h1 id="总结1">总结1</h1>
+<p><strong>一、底层原理</strong></p>
+<ol>
+<li>生成文段的原理：单字接龙与自回归生成。基于上文生成下一个单字，同时把自己新生成的单字归入上文，继续生成下一个单字。若上文对应多个单字，则基于概率分布随机抽取。</li>
+<li>如何生成合理的回答：输入回答范例让模型学习，从多个类似范例中形成通用规律，从而面对数据库未储存的问题，能够基于通用规律回答出数据库中不存在的文本。</li>
+<li>因此它不同于搜索引擎，搜索引擎只能呈现数据库中存在的文本。</li>
+<li>由此导致的缺陷：混淆记忆。基于通用规律生成的文本可能并不正确。人们由于无法直接查看其依赖的数据库和其学习方式，难以对其回答进行证实证伪。</li>
+</ol>
+<p><strong>二、ChatGPT的三阶段训练</strong></p>
+<ol>
+<li>无监督学习（开卷有益）：对模型输入海量的互联网文本，让模型自己学习、做单字接龙（GPT-3学习材料45TB，参数1750亿，变成了超大模型LLM）。</li>
+<li>监督学习（模板规范）：输入人工写好的优质对话范例，让模型学习如何组织符合人类规范的回答。例如对不知道的问题回答“不知道”而非乱说，对错误的问题指出错误而非顺着说，对违法的问题指出违法而非直接回答。</li>
+<li>强化学习（创意引导）：不再要求ChatGPT按对话范例回答，而是直接向它提问，让它自由回答。对回答进行人工评分，奖励有创意的回答。</li>
+</ol>
+<ul>
+<li>当单字接龙达到超大规模，成为LLM后，出现了3个意外能力：</li>
+</ul>
+<ol>
+<li>理解指令：因为可以把各种任务要求（归纳、拆分、仿写、润色、洗稿、比对、翻译）等都以优质对话范例的形式输入模型，ChatGPT可以理解各种指令，支持各种任务。</li>
+<li>理解例子（语境内学习）：ChatGPT可以通过用户输入的若干例子，来明确用户想干什么，处理新的要求。这种能力如何产生目前还无定论。</li>
+<li>思维链：若要求ChatGPT分步思考，它就可以一步步连续推理，且最终答对的可能性大幅提升。</li>
+</ol>
+<p><strong>三、ChatGPT的意义</strong></p>
+<p>类似一次试点火实验，它展示了大语言模型（LLM）的可行性，使全世界愿意投入更多到LLM的开发改进中，使LLM变得更好用、更便宜，更多相关产品得以普及。</p>
+<p><strong>四、LLM的应用价值</strong></p>
+<p>自然语言处理技术（NLP）实现理解自然语言后，能够帮助人类处理海量语言内容，使一个普通人快捷准确地接触到各行各业的平均知识，从而提高人们【创造、继承和应用知识】的语言处理效率。</p>
+<ul>
+<li>LLM自身不能改造世界。因为其对语言的“理解”与人类不同，不认识语言符号的指代对象，只是学会了【承载知识的语言搭配模式】。所以其身份是成为人类的工具（百科全书），由人类对模型的回答进行解读和实践。</li>
+</ul>
+<p><strong>五、LLM的社会影响</strong></p>
+<ol>
+<li>深影响行业：与【语言中的知识】密切相关的行业：学术界-创造知识（eg: 人机科研），教育界-传承知识，新闻界-传播信息。</li>
+<li>教育界的挑战：现有的教育模式主要是“传授既有知识”，但有可能未来人们学到的所有知识LLM也都拥有。因此需要新建教育的理论框架，转向主要传授“学习能力和创造能力”，并且需要将“人的更高层次的创新”与“LLM的创新”区分开来。</li>
+<li>网络安全的挑战：ChatGPT可能输出违法信息。如何确保提问中的商业、国家机密不被泄露。由于数据安全问题，各国、各公司可能会开发自己的LLM，但如何实现数据规模效应，实现联邦学习。</li>
+</ol>
+<p><strong>六、如何应对</strong></p>
+<ol>
+<li>克服抵触心理。很多人会因为害怕被取代而抵触新工具，但这只会让我们更晚学会利用新工具，更晚获得新工具带来的优势。</li>
+<li>重塑终身学习能力。应试教育使人习惯将与分数有关的学习才称为“学习”，有学校之外不愿学习的怠惰心理。但GPT-4后还会有新工具出现，只能靠自己学会终身学习。</li>
+<li>国家重视。LLM可能是一项升级人类学习系统的技术，带来新一轮工业革命，国家不能错过。</li>
+</ol>
+<h1 id="总结2">总结2</h1>
+<p><strong>写在前面：</strong></p>
+<p><strong>视频其中提到自然语言模型与现实人类社会的问题进行的个人总结</strong></p>
+<p>（个人的思考能力固然是有限的，欢迎大家在评论区探讨）</p>
+<p>**标题：【**<strong>Ep.1 万字科普ChatGPT-4为何会颠覆人类社会】</strong></p>
+<p><strong>作者原意主题是「为什么所有人都应关注ChatGPT」</strong></p>
+<p>作者先是解释了 GPT的原理【单字接龙】进而引出GPT版本。</p>
+<p>是有三部训练的【开卷有益】【模板规范】【创作引导】。</p>
+<p>未来影响的【应用价值】和【社会影响】。</p>
+<p>【如何应对】ChatGPT 非常强大，但它仍是一个没有意识的工具，</p>
+<p>不会主动配合人，面对空洞的提问就给出空洞的回答，</p>
+<p>需要被【<strong>正确地使用</strong>】，才能发挥最大的价值。</p>
+<p>【克服抵触心】【个人学习能力】【国家的竞争力】</p>
+<p>1、ChatGPT是如何回答问题的</p>
+<ul>
+<li>答：ChatGPT的实质功能是单字接龙</li>
+<li>长文由单字接龙的自回归所生成</li>
+<li>通过提前训练才能让它生成人们想要的问答</li>
+<li>训练方式是让它按照问答范例来做单字接龙</li>
+<li>这样训练是为了让它学会「能举一反三的规律」</li>
+<li>缺点是可能混淆记忆，无法直接查看和更新所学，且高度依赖学习材料。</li>
+</ul>
+<p>
+  <img src="https://i0.hdslb.com/bfs/note/4ca135719f3919d0c56b002d4b9802385c7c2494.jpg" alt="img">
+
+</p>
+<p>2、Chat-GPT它是怎么被制造的，为什么它不是搜索引擎</p>
+<p>总结：</p>
+<p>开卷有益：【超大语言模型（LLM）】缺陷：【胡言乱语】需要规范。</p>
+<p>模板规范：【优质对话范例】，【<strong>什么该说什么不该说</strong>】引用台词：不利于XX的话不要说。</p>
+<p>进而引发【回答不知道】，【你说问题的是错误的】，在回答二极管问题时【<strong>不仅仅是回答对错而是原因</strong>】。</p>
+<p>创意引导：根据【人类对它生成答案的好坏评分】来调节模型，以引导它生成人类认可的【创意回答】。</p>
+<p>【使ChatGPT变成既懂规矩又会试探】的聊天机器人。</p>
+<p><strong>：</strong></p>
+<p>我的理解是GPT家族的模型并不真的理解语意，把句子和句意联系起来。它们“能够明确接受到的语言符号”</p>
+<p><strong>引用作者总结:</strong></p>
+<p>（1）对于ChatGPT而言，一个token是一个语言符号。</p>
+<p>（2）“能够明确接受到的语言符号”是指，它能够明白你发的这个单词，是它字典中的哪个一，甚至包不包括在它的字典中，也可以「明确」。</p>
+<p>（3）不同符号间的关系就是，A句子和B词汇，到底说的是不是一回事，它能判断。</p>
+<p>（4）ChatGPT的强，在于第三章提到的「涌现能力」，至于为什么会出现这几个能力，大家还在研究</p>
+<p>
+  <img src="../../static/img/%e5%85%b3%e4%ba%8eGPT%e7%9a%84%e5%ba%95%e5%b1%82%e5%8e%9f%e7%90%86%e5%92%8c%e6%9c%aa%e6%9d%a5%e5%bd%b1%e5%93%8d%ef%bc%88%e8%bd%ac%e8%bd%bd%ef%bc%89.assets/image-20240321010241856.png" alt="image-20240321010241856">
+
+</p>
+<p>
+  <img src="D:%5cgitproject%5chugo-blog-root%5ccontent%5cpost%5cf23ca21f49295cfa18e1830b3fbb859780b0c271.jpg@1058w_!web-note.webp" alt="img">
+
+</p>
+<p>
+  <img src="../../static/img/%e5%85%b3%e4%ba%8eGPT%e7%9a%84%e5%ba%95%e5%b1%82%e5%8e%9f%e7%90%86%e5%92%8c%e6%9c%aa%e6%9d%a5%e5%bd%b1%e5%93%8d%ef%bc%88%e8%bd%ac%e8%bd%bd%ef%bc%89.assets/501c40d4a82700296189e99f275305dfcb3b39be.jpg@1058w_!web-note.webp" alt="img">
+
+</p>
+<p>
+  <img src="https://i0.hdslb.com/bfs/note/501c40d4a82700296189e99f275305dfcb3b39be.jpg@1058w_!web-note.webp" alt="img">
+
+</p>
+<p>
+  <img src="https://i0.hdslb.com/bfs/note/41e340b0836d9a977ef8ef8c17df0fc3e25ef2f5.jpg@1058w_!web-note.webp" alt="img">
+
+</p>
+<p>3、它有哪些惊人能力，为什么它不只是聊天机器人</p>
+<p>
+  <img src="https://i0.hdslb.com/bfs/note/c3393cd1514e39b85cd6a19b2a0d49a4f31f9dc6.jpg@1058w_!web-note.webp" alt="img">
+
+</p>
+<p>4、它将给社会带来什么样的冲击</p>
+<p>首先要讨论的就是「大语言模型能为人类做什么」，只有弄清楚这一点，才有依据判断「它对社会的影响」。</p>
+<p>【应用价值】自然语言处理技术（NLP）应运而生，也就是 ChatGPT 所隶属的技术，其目标是让机器“理解”自然语言，协助人类处理繁琐的语言类工作，所以 NLP 也被誉为“人工智能皇冠上的明珠”。</p>
+<p>【社会影响的预测】由于大语言模型所能改善的是：群体协作过程中「创造、继承、应用知识」时的「语言处理效率」。所以随着技术的发展，大语言模型对社会的影响范围将和当初「电脑的影响范围」一样，即「全社会」。</p>
+<p><strong>引用作者总结：</strong></p>
+<ul>
+<li>跟「搜索引擎」结合：帮助用户精准寻找和筛选信息，比如，微软的 new bing。</li>
+<li>跟「笔记工具」结合，辅助阅读和写作，比如，notion，Flow us，wolai。</li>
+<li>跟「办公软件」结合，辅助文字处理、数据分析和演示制作，比如，office的下一步动作。</li>
+<li>跟「教育培训」结合，定制个人的学习计划和学习材料，全天家教。</li>
+<li>跟「开发工具」结合，辅助编写业务代码、调试纠错。</li>
+<li>跟「动画小说」结合，辅助小说配图、配乐。</li>
+<li>跟「客服系统」结合，7x24小时随便问，没有任何情绪。</li>
+<li>跟「视频会议」结合，多语翻译、会议记录与总结、谈话查找。</li>
+<li>跟「评论审核」结合，筛选评论、统计舆论、给出提醒。</li>
+<li>跟「行业顾问」结合，提供法律、医疗、健身等指导。</li>
+<li>跟「社交媒体」结合，帮助找到兴趣相投的用户和话题 。</li>
+<li>跟「视频娱乐」结合，个性化推荐音乐、电影、小说、动漫。</li>
+<li>跟「游戏剧情」结合，让 NPC 给玩家带来更灵活的对话体验。</li>
+</ul>
+<p>大语言模型对【<strong>网络安全</strong>】的威胁。</p>
+<p>5、我们该如何维持未来的竞争力</p>
+<p>ChatGPT并不会让你失业，但会熟练使用ChatGPT的人会让你失业。</p>
+<p><strong>引用作者总结：</strong></p>
+<p>总的来说，ChatGPT 的出现确实带来了各种各样的问题和风险：存在准确性和可解释性的缺陷，存在科技伦理安全和结构性失业的冲击，存在民族文化和意识形态的侵袭。</p>
+<p>但这些问题和风险，所有国家都要面对，一样会有害怕和抵触的情绪，我们应该利用这一点，率先克服抵触心理，反过来抓住 ChatGPT 的机会，率先研究大语言模型的改进和配套技术的重组；率先培养终身学习能力和推动教育改革；率先做好科技伦理的约束和换岗转行的防备；主动输出我们的文化和价值观。</p>
+<p>最后，我非常喜欢一个UP说过的一句话：【<strong>工具无法取代人，只有会用工具的人取代不会工具的人</strong>】</p>
+<p>真正需要害怕的是我们「无法成为会用工具的人」，可并没有人阻止我们探索工具，能够阻止我们的只有我们自己的心态和学习能力。</p>
+<p>谢谢各位看到最后。</p>
+<p>希望对阅读笔记的朋友有些帮助。</p>
+<h1 id="总结3">总结3</h1>
+<ol>
+<li><strong>ChatGPT技术可以影响整个人类社会。</strong></li>
+<li>**工作原理：**包括生成下一个字、自回归生成、模型本身的影响等;</li>
+<li>**训练方式：**使用学习材料来训练模型，并让模型学习提问和回答的通用规律，以便在未被记忆的情况下仍能生成用户想要的回答；</li>
+<li>ChatGPT与搜索引擎的不同，ChatGPT可以创造不存在的文本，但也存在混淆记忆的风险。</li>
+<li>ChatGPT的**实质功能：**单字接龙长文，通过提前训练才能让他生成人们想要的回答。</li>
+<li>ChatGPT的内容无法被直接增删改查，决策缺乏可解释性，使用时带来安全风险。</li>
+<li>ChatGPT高度依赖数据，需要提供数量足够多种类足够丰富，质量足够高的学习材料。</li>
+<li>ChatGPT的三个训练阶段：开卷有益阶段、模板规范阶段和创意引导阶段。</li>
+<li>**开卷有益阶段：**让ChatGPT对海量互联网文本做单词接龙，以扩充模型的词汇量和语言知识世界的信息与知识。</li>
+<li>**模板规范阶段：**让ChatGPT对优质对话范例做单词接龙，以规范回答的对话模式和对话内容。</li>
+<li>**创意引导阶段：**让ChatGPT根据人类对它生成答案的好坏评分来调整模型，以引导它生成人类认可的创意回答。</li>
+<li>**ChatGPT涌现出的能力：**当单字接龙模型的规模达到一定程度后，就会涌现出理解指令、理解粒子、思维链等能力。</li>
+<li>**ChatGPT的意义：**虽然ChatGPT从产品形态和技术创新上来看不够完善，但它完成了一次验证，让全球都看到了大语言模型的可行性，吸引全球大力开发和改进大语言模型。</li>
+<li>大语言模型将变得更好用、更快速、更便宜，相关产品也会普及；</li>
+<li>大语言模型能够进行语法校对、翻译等，但真正有价值的是在精通语言的基础上，能存储人类从古至今积累的世界知识；</li>
+<li>自然语言处理技术的发展可以协助人类处理繁琐的语言类工作；</li>
+<li>合理使用大语言模型可以让人们更快捷准确地接触各行各业的平均知识；</li>
+<li>大语言模型与搜索引擎、办公软件、教育培训、医疗健身等方面结合可以帮助用户更精准地寻找和筛选信息；</li>
+<li>学术界、教育界、商业界和内容生产行业受到的影响最大。</li>
+<li>现有的人才培养模式难以适应未来的就业市场，教育界需要转变培养模式，以培养学习能力和创造能力为主；</li>
+<li>ChatGPT的出现迫使人们加速推进培养创新性人才的目标，需要对知识的层级做更精细的划分，并提供相应的培养工具和易于实施的普及方案;</li>
+<li>ChatGPT的使用带来了网络安全和社会安全的新挑战;</li>
+<li>面对新工具，应掌握其优点和缺点，正确使用；</li>
+<li>克服自己的抵触心理，做好终身学习的准备。</li>
+<li>应试教育对学生的学习能力产生了负面影响，导致很多学生对学习概念的理解变得片面和扭曲。</li>
+<li>重塑自己的终身学习能力是最困难的一步，需要克服长期养成的错误习惯。</li>
+<li>ChatGPT会改变人类群体应用知识的方式和继承知识的方式，重塑人类学习系统，并带来新的认知革命，重组政治和社会。</li>
+<li>ChatGPT的出现带来了各种各样的问题和风险，包括准确性和可解释性的缺陷，存在科技伦理安全和结构性失业的冲击，存在民族文化和意识形态的侵袭，但这些问题和风险所有国家都要面对。</li>
+<li>视频呼吁利用ChatGPT的机会，率先研究大语言模型的改进和配套技术的重组，培养终身学习能力和推动教育改革，做好科技伦理的约束和换岗转行的防备，主动输出我们的文化和价值观。</li>
+</ol>
+<p>
+  <img src="https://i0.hdslb.com/bfs/note/b8badad05cdd74510af1c660d722cf66748e680e.jpg@690w_!web-note.webp" alt="img">
+
+</p>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://huuuuuuo.github.io/"><img src="/img/favicon.png" />Nefelibata</a></span>
+        
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/" data-toggle="tooltip" data-placement="top" title="typora快捷键">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/" data-toggle="tooltip" data-placement="top" title="连接github时connection reset的问题">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/branch" title="branch">
+                            branch
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/b%E7%AB%99" title="b站">
+                            b站
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/git" title="git">
+                            git
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/git-bug" title="git bug">
+                            git bug
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/github" title="github">
+                            github
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/githubpages" title="githubpages">
+                            githubpages
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/gpt" title="gpt">
+                            gpt
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/hugo" title="hugo">
+                            hugo
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/jekyll" title="jekyll">
+                            jekyll
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/pages" title="pages">
+                            pages
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/reset" title="reset">
+                            reset
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/ssh" title="ssh">
+                            ssh
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/typora" title="typora">
+                            typora
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" title="人工智能">
+                            人工智能
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%88%86%E6%94%AF" title="分支">
+                            分支
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B" title="大模型">
+                            大模型
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE" title="快捷键">
+                            快捷键
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E8%A7%86%E9%A2%91" title="视频">
+                            视频
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/HuuuuuuO">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Nefelibata 2024
+                    
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tag2 on Huabing Blog</title>
-    <link>http://localhost:1313/tags/tag2/</link>
-    <description>Recent content in Tag2 on Huabing Blog</description>
+    <title>Tag2 on Nefelibata</title>
+    <link>https://huuuuuuo.github.io/tags/tag2/</link>
+    <description>Recent content in Tag2 on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 04 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 21 Mar 2024 09:45:19 +0800</lastBuildDate>
+    <atom:link href="https://huuuuuuo.github.io/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>???????????????</title>
-      <link>http://localhost:1313/post/%E8%AF%95%E8%AF%95%E6%96%87%E7%AB%A0%E5%90%8D/</link>
-      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/%E8%AF%95%E8%AF%95%E6%96%87%E7%AB%A0%E5%90%8D/</guid>
-      <description>啥，这是能用的吗</description>
+      <title>自动名字日期</title>
+      <link>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E5%90%8D%E5%AD%97%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Thu, 21 Mar 2024 09:45:19 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E5%90%8D%E5%AD%97%E6%97%A5%E6%9C%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>An Example Post</title>
+      <link>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Thu, 21 Mar 2024 09:33:42 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E8%87%AA%E5%8A%A8%E6%97%A5%E6%9C%9F/</guid>
+      <description>收到货四六级</description>
     </item>
   </channel>
 </rss>
