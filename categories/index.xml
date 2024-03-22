@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 21 Mar 2024 22:08:09 +0800</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tech</title>
-      <link>https://huuuuuuo.github.io/categories/tech/</link>
+      <link>http://localhost:1313/categories/tech/</link>
       <pubDate>Thu, 21 Mar 2024 18:55:26 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/categories/tech/</guid>
+      <guid>http://localhost:1313/categories/tech/</guid>
       <description></description>
     </item>
   </channel>

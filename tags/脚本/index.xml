@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>脚本 on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/tags/%E8%84%9A%E6%9C%AC/</link>
+    <link>http://localhost:1313/tags/%E8%84%9A%E6%9C%AC/</link>
     <description>Recent content in 脚本 on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 21 Mar 2024 20:48:11 +0800</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/tags/%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：图片存储路径优化</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</link>
+      <link>http://localhost:1313/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</link>
       <pubDate>Thu, 21 Mar 2024 18:55:26 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</guid>
+      <guid>http://localhost:1313/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</guid>
       <description>使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用</description>
     </item>
   </channel>
