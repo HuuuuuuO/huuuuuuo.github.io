@@ -916,7 +916,7 @@ body{
     content: "+";
   }
   .side-catalog.fold .catalog-body {
-    display: none;
+    display: inline;
   }
   .side-catalog .catalog-toggle::before {
     content: "−";
