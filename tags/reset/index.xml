@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reset on Nefelibata</title>
-    <link>http://localhost:1313/tags/reset/</link>
+    <link>https://huuuuuuo.github.io/tags/reset/</link>
     <description>Recent content in Reset on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 21 Mar 2024 20:36:19 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/reset/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huuuuuuo.github.io/tags/reset/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>连接github时connection reset的问题</title>
-      <link>http://localhost:1313/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <link>https://huuuuuuo.github.io/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <pubDate>Thu, 21 Mar 2024 11:36:42 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://huuuuuuo.github.io/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
       <description>git连接时遇到问题 1ssh -T git@github.com 2Connection reset by 140.82.113.3 port 22 解决方案 在所生成ssh秘钥文件夹下（~/.ssh/）使用文本文档新建 config文件（无后缀）。 修改代</description>
     </item>
   </channel>

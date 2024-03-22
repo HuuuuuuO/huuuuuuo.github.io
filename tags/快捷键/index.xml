@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>快捷键 on Nefelibata</title>
-    <link>http://localhost:1313/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+    <link>https://huuuuuuo.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
     <description>Recent content in 快捷键 on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 21 Mar 2024 20:40:35 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huuuuuuo.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Typora快捷键</title>
-      <link>http://localhost:1313/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <link>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Wed, 20 Mar 2024 22:30:42 +0800</pubDate>
-      <guid>http://localhost:1313/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description>本地编辑md我用的是typora，用一些快捷键会更好用 设置标题 ctrl + 1 ~6 标题1~6 等同于 一级标题：#+空格+标题内容 二级标题：##+空格+标题</description>
     </item>
   </channel>
