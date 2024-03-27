@@ -6,14 +6,14 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Mar 2024 18:24:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 19:04:36 +0000</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：内容折叠</title>
       <link>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0/</link>
       <pubDate>Wed, 27 Mar 2024 23:23:48 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0/</guid>
-      <description>1 目前显示效果 ◎ 无比想念最好的骑士 HTML 标记 Info 这是注释sdada css 1git add . 2git commit -m &amp;#34;update&amp;#34; 3git push origin master 4git add . 5git commit -m &amp;#34;update&amp;#34; 6git push origin master 7git add . 8git commit -m &amp;#34;update&amp;#34; 9git push origin master 1.1 折叠 1.2 展开</description>
+      <description>1 目前显示效果 &gt; &gt; &gt; 展开 &gt; &gt; &gt; 1git add . 2git commit -m &amp;#34;update&amp;#34; 3git push origin master 2 解决方案 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&amp;lt;details style=&amp;#34;background-color:#282a36ab;&amp;#34;&amp;gt; 2 &amp;lt;summary&amp;gt; &amp;lt;font color=&amp;#34;white&amp;#34;&amp;gt; &amp;gt; &amp;gt; &amp;gt; 展开 &amp;gt; &amp;gt; &amp;gt; &amp;lt;/font&amp;gt;&amp;lt;/summary&amp;gt; 3 {{ .Inner | markdownify }} 4&amp;lt;/details&amp;gt; 3 未来</description>
     </item>
     <item>
       <title>Hugo：访问量统计</title>
