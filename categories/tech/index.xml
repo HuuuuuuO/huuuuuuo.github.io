@@ -6,8 +6,15 @@
     <description>Recent content in Tech on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Mar 2024 15:15:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 15:41:05 +0000</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：内容折叠</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0/</link>
+      <pubDate>Wed, 27 Mar 2024 23:23:48 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0/</guid>
+      <description>1 目前显示效果 折叠前： 展开后： 2 解决方案 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&amp;lt;details&amp;gt; 2 &amp;lt;summary&amp;gt;{{ (.Get 0) | markdownify }}&amp;lt;/summary&amp;gt; 3 {{ .Inner | markdownify }} 4&amp;lt;/details&amp;gt; 使用方式： 2.1 在 md 正文使用 点击展开 &amp;gt; &amp;gt; &amp;gt; &amp;gt; &amp;gt;</description>
+    </item>
     <item>
       <title>Hugo：访问量统计</title>
       <link>https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/</link>
@@ -65,7 +72,7 @@
       <description>使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用</description>
     </item>
     <item>
-      <title>Hugo插件：代码块拷贝插件</title>
+      <title>Hugo：代码块拷贝</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</link>
       <pubDate>Thu, 21 Mar 2024 13:12:48 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</guid>
