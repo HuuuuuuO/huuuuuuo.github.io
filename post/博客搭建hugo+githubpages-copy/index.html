@@ -192,7 +192,7 @@
                             
                             
                             
-                            <br>Last Modified on Tue 09:17:10 2024-03-26
+                            <br>Last Modified on Wed 03:30:20 2024-03-27
                             
                             
                         </span>
@@ -219,10 +219,10 @@
                 
                
                     <p>本文借鉴并修改自 <a href="https://haoyep.com/posts/windows-hugo-blog-github/#%E5%88%9B%E5%BB%BA-hugo-%E7%BD%91%E7%AB%99">Windows下使用hugo和Github Pages配置博客</a></p>
-<h2 id="1下载安装hugo">1、下载安装hugo</h2>
+<h1 id="1下载安装hugo">1、下载安装hugo</h1>
 <p>访问<a href="https://github.com/gohugoio/hugo/releases/latest">最新版本</a>页面下载，推荐使用 <code>Hugo extended</code> 版本</p>
 <p>解压到某个目录，然后将该目录添加到环境变量中</p>
-<h3 id="11创建-hugo-网站">1.1创建 Hugo 网站</h3>
+<h2 id="11创建-hugo-网站">1.1创建 Hugo 网站</h2>
 <p>通过上述操作安装 hugo 程序后，就可以通过 <code>hugo new site</code> 命令进行网站创建、配置与本地调试了。 选择一个本地文件夹作为根目录，右键——<code>Git Bash Here</code>，输入下面的命令</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hugo new site &lt;site-name&gt;
 </span></span></code></pre></div><p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636474.png?size=large">
@@ -230,8 +230,8 @@
 
 </a></p>
 <p><strong>注：后续命令未经说明，均在 Git Bash 中的 <code>E:\Workspace\blog</code> 目录下运行</strong></p>
-<h2 id="2主题">2、主题</h2>
-<h3 id="231-安装">2.3.1 安装</h3>
+<h1 id="2主题">2、主题</h1>
+<h2 id="231-安装">2.3.1 安装</h2>
 <p>推荐使用 <a href="https://github.com/hugo-fixit/FixIt"><strong>FixIt</strong> 主题</a>。 初始化你的项目目录为一个空的 Git 存储库，将 [FixIt][fixit] 主题克隆到 <code>themes</code> 目录中，将其作为 [Git 子模块][git-submodule] 添加到您的项目中。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git init 
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
@@ -1312,8 +1312,8 @@
   <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636924.png" alt="网站效果">
 
 </a></p>
-<h2 id="3github">3、Github</h2>
-<h3 id="31-在-windows-上创建-ssh-密钥并将其添加到-github">3.1 在 Windows 上创建 SSH 密钥并将其添加到 GitHub</h3>
+<h1 id="3github">3、Github</h1>
+<h2 id="31-在-windows-上创建-ssh-密钥并将其添加到-github">3.1 在 Windows 上创建 SSH 密钥并将其添加到 GitHub</h2>
 <h4 id="311-windows-端生成-ssh-密钥">3.1.1 Windows 端生成 SSH 密钥</h4>
 <p>使用 Git Bash 或命令行打开终端窗口，输入以下命令。记得把<code>your_email@example.com</code>改成你自己的邮箱地址。</p>
 <table>

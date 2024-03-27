@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Mar 2024 08:50:12 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 03:30:20 +0000</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python无环境部署</title>
+      <link>https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 27 Mar 2024 10:16:07 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</guid>
+      <description>1、背景 有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。 目前考虑的方案是</description>
+    </item>
     <item>
       <title>今天1</title>
       <link>https://huuuuuuo.github.io/post/%E4%BB%8A%E5%A4%A91/</link>

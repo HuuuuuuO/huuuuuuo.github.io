@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Hugo：图片存储路径优化" />
-    <meta property="og:title" content="Hugo：图片存储路径优化" />
-    <meta property="twitter:title" content="Hugo：图片存储路径优化" />
+    <meta name="title" content="Python无环境部署" />
+    <meta property="og:title" content="Python无环境部署" />
+    <meta property="twitter:title" content="Python无环境部署" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="Nefelibata, tick, 看吧，天空在上, Blog, 博客, 个人网站, 互联网, Web">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Hugo：图片存储路径优化 | 看吧，天空在上</title>
+    <title>Python无环境部署 | 看吧，天空在上</title>
 
-    <link rel="canonical" href="/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
+    <link rel="canonical" href="/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
 
     
     
@@ -168,20 +168,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                            <a class="tag" href="/tags/hugo" title="hugo">
-                                hugo
+                            <a class="tag" href="/tags/" title="">
+                                
                             </a>
                             
-                            <a class="tag" href="/tags/%e4%bc%98%e5%8c%96" title="优化">
-                                优化
-                            </a>
-                            
-                            <a class="tag" href="/tags/%e8%84%9a%e6%9c%ac" title="脚本">
-                                脚本
+                            <a class="tag" href="/tags/" title="">
+                                
                             </a>
                             
                         </div>
-                        <h1>Hugo：图片存储路径优化</h1>
+                        <h1>Python无环境部署</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             
@@ -190,9 +186,9 @@
                             Nefelibata
                             
                             on
-                            Thu 18:55:26 2024-03-21
+                            Wed 10:16:07 2024-03-27
                             
-                            | <span class="post-date">312 words</span> | about<span class="more-meta"> 1 mins</span>
+                            | <span class="post-date">93 words</span> | about<span class="more-meta"> 1 mins</span>
                             
                             
                             
@@ -222,48 +218,10 @@
                     
                 
                
-                    <p>使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进</p>
-<h1 id="1typora配置">1、typora配置</h1>
-<p>图像存储路径改为如图，其中是以相对路径   <code> ./</code>  开头</p>
-<p>
-  <img src="/img/image-20240321185821924.png" alt="image-20240321185821924">
+                    <h1 id="1背景">1、背景</h1>
+<p>有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。</p>
+<p>目前考虑的方案是，mysql 改用 access，python改用</p>
 
-</p>
-<h1 id="2用py自动化流程">2、用py自动化流程</h1>
-<p>在<code>hugo-root</code> 路径下，新建 <code>img_move.py</code> 文件，并将其放进 <a href="https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/">Hugo日常更新流程</a></p>
-<p>py代码如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>import os
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>import shutil
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>import codecs
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span># 定义源路径和目标路径
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>source_path = &#34;content/post/postimg&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>destination_path = &#34;static/img&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span># 复制文件，如果目标路径已存在文件则不覆盖
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>for filename in os.listdir(source_path):
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    source_file = os.path.join(source_path, filename)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    destination_file = os.path.join(destination_path, filename)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    if not os.path.exists(destination_file):
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>        shutil.copy2(source_file, destination_file)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        print(f&#34;文件 {source_file} 复制成功！&#34;)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    else:
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>        print(f&#34;pass&#34;)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>print(f&#34;----------------------------------&#34;)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span># 遍历md文件并替换字符串
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>md_files = [f for f in os.listdir(&#34;content/post&#34;) if f.endswith(&#34;.md&#34;)]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>for md_file in md_files:
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    md_file_path = os.path.join(&#34;content/post&#34;, md_file)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>    with codecs.open(md_file_path, &#39;r&#39;, encoding=&#39;utf-8&#39;, errors=&#39;ignore&#39;) as file:
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        content = file.read()
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    new_content = content.replace(&#39;/img/&#39;, &#39;/img/&#39;)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    if content != new_content:
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>        with codecs.open(md_file_path, &#39;w&#39;, encoding=&#39;utf-8&#39;, errors=&#39;ignore&#39;) as file:
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>            file.write(new_content)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>        print(f&#34;文件 {md_file_path} 替换成功！&#34;)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>    else:
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>        print(f&#34;pass&#34;)
-</span></span></code></pre></div>
 
                     
                     
@@ -312,17 +270,11 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo插件：代码块拷贝插件">&larr;
+                            <a href="/post/%E4%BB%8A%E5%A4%A91/" data-toggle="tooltip" data-placement="top"
+                                title="今天1">&larr;
                                 Previous Post</a>
                         </li>
                         
-                        
-                        <li class="next">
-                            <a href="/post/%E4%BB%8A%E5%A4%A91/" data-toggle="tooltip" data-placement="top"
-                                title="今天1">Next
-                                Post &rarr;</a>
-                        </li>
                         
                     </ul>
                     
