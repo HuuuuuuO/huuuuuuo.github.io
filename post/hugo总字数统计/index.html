@@ -194,7 +194,7 @@
                             
                             
                             
-                            <br>Last Modified on Wed 07:49:23 2024-03-27
+                            <br>Last Modified on Wed 09:27:26 2024-03-27
                             
                             
                         </span>
@@ -227,7 +227,7 @@
 
 </p>
 <h1 id="解决方法">解决方法</h1>
-<p>我是直接在主题上面改的，在主题的 <code>layouts/partials/footer/footer.html </code>里增加以下代码：</p>
+<p>我是直接在主题上面改的，在主题的 <code>layouts/partials/footer.html </code>里增加以下代码：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>&lt;!-- 添加在copyright之前 --&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>&lt;!-- Add total page and word count time --&gt;
@@ -292,6 +292,12 @@
                                 Previous Post</a>
                         </li>
                         
+                        
+                        <li class="next">
+                            <a href="/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/" data-toggle="tooltip" data-placement="top"
+                                title="Hugo：博客运行时间">Next
+                                Post &rarr;</a>
+                        </li>
                         
                     </ul>
                     
@@ -541,6 +547,49 @@
     
 
 
+<style>
+     
+    #backtop {
+        color: #c2c0c0;
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        width: 35px;
+        height: 35px;
+        z-index: 999998;
+
+         
+    }
+</style>
+<div id="backtop">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up" class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z">
+        </path>
+    </svg>
+    
+</div>
+<script>
+    var timer = null;
+    backtop.onclick = function () {
+        cancelAnimationFrame(timer);
+        
+        var startTime = +new Date();
+        
+        var b = document.body.scrollTop || document.documentElement.scrollTop;
+        var d = 500;
+        var c = b;
+        timer = requestAnimationFrame(function func() {
+            var t = d - Math.max(0, startTime - (+new Date()) + d);
+            document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+            timer = requestAnimationFrame(func);
+            if (t == d) {
+                cancelAnimationFrame(timer);
+            }
+        });
+    }
+
+</script>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -579,10 +628,41 @@
                     
                 </ul>
                 
-
-                <p class="copyright text-muted">
                 
+                
+                
+                <p class="copyright text-muted">
                     
+                    本博客已稳定运行
+                    <span id="runningdays" class="running-days"></span>
+                <script>
+                    let s1 = '2024-3-18'; 
+                    s1 = new Date(s1.replace(/-/g, "/"));
+                    let s2 = new Date();
+                    let timeDifference = s2.getTime() - s1.getTime();
+
+                    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+                    let result = days + "天" + hours + "小时" + minutes + "分钟";
+                    document.getElementById('runningdays').innerHTML = result;
+                </script>
+                    <br>
+                    
+                    
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -612,16 +692,8 @@
                     
                         
                     
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                    发表了14篇文章 · 
-                    总计19.20k字
+                    发表了16篇文章 · 
+                    总计19.73k字
                     <br>
                     Copyright &copy; Nefelibata 2024
                     
@@ -745,5 +817,7 @@
 
 
 <script src="/js/copy-to-clipboard.js"></script>
+
+
 </body>
 </html>

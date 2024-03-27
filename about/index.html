@@ -505,6 +505,49 @@
 
 
 
+<style>
+     
+    #backtop {
+        color: #c2c0c0;
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        width: 35px;
+        height: 35px;
+        z-index: 999998;
+
+         
+    }
+</style>
+<div id="backtop">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up" class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z">
+        </path>
+    </svg>
+    
+</div>
+<script>
+    var timer = null;
+    backtop.onclick = function () {
+        cancelAnimationFrame(timer);
+        
+        var startTime = +new Date();
+        
+        var b = document.body.scrollTop || document.documentElement.scrollTop;
+        var d = 500;
+        var c = b;
+        timer = requestAnimationFrame(function func() {
+            var t = d - Math.max(0, startTime - (+new Date()) + d);
+            document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+            timer = requestAnimationFrame(func);
+            if (t == d) {
+                cancelAnimationFrame(timer);
+            }
+        });
+    }
+
+</script>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -543,10 +586,41 @@
                     
                 </ul>
                 
-
-                <p class="copyright text-muted">
                 
+                
+                
+                <p class="copyright text-muted">
                     
+                    本博客已稳定运行
+                    <span id="runningdays" class="running-days"></span>
+                <script>
+                    let s1 = '2024-3-18'; 
+                    s1 = new Date(s1.replace(/-/g, "/"));
+                    let s2 = new Date();
+                    let timeDifference = s2.getTime() - s1.getTime();
+
+                    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+                    let result = days + "天" + hours + "小时" + minutes + "分钟";
+                    document.getElementById('runningdays').innerHTML = result;
+                </script>
+                    <br>
+                    
+                    
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -576,16 +650,8 @@
                     
                         
                     
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                    发表了14篇文章 · 
-                    总计19.20k字
+                    发表了16篇文章 · 
+                    总计19.73k字
                     <br>
                     Copyright &copy; Nefelibata 2024
                     
@@ -760,5 +826,7 @@
 
 
 <script src="/js/copy-to-clipboard.js"></script>
+
+
 </body>
 </html>
