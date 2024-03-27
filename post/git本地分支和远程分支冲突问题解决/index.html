@@ -196,11 +196,11 @@
                             on
                             Tue 19:30:42 2024-03-19
                             
-                            | <span class="post-date">1090 words</span> | about<span class="more-meta"> 3 mins</span>
+                            | <span class="post-date">1089 words</span> | about<span class="more-meta"> 3 mins</span>
                             
                             
                             
-                            <br>Last Modified on Wed 03:38:48 2024-03-27
+                            <br>Last Modified on Wed 03:39:46 2024-03-27
                             
                             
                         </span>
@@ -271,7 +271,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push -f origin main
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>fatal: unable to access &#39;https://github.com/HuuuuuuO/blog.git/&#39;: Failed to connect to github.com port 443: Timed out
 </span></span></code></pre></div><h2 id="21-解决方案">2.1 解决方案：</h2>
-<h3 id="1检查-ssh-访问">1.检查 SSH 访问：</h3>
+<h3 id="211-检查-ssh-访问">2.1.1 检查 SSH 访问：</h3>
 <p>如果使用 SSH 连接到 GitHub，请确保将 SSH 密钥正确添加到 GitHub 帐户。您可以使用命令 <code>ssh -T git@github.com</code> 测试 SSH 连接。如果您收到成功的身份验证消息，则您的 SSH 设置是正确的。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -T git@github.com
 </span></span></code></pre></div><h3 id="2使用-ssh-而不是-https">2.使用 SSH 而不是 HTTPS：</h3>
