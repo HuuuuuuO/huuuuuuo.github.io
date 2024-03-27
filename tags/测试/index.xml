@@ -6,14 +6,14 @@
     <description>Recent content in 测试 on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Mar 2024 05:00:35 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 06:51:55 +0000</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>今天1</title>
       <link>https://huuuuuuo.github.io/post/%E4%BB%8A%E5%A4%A91/</link>
       <pubDate>Fri, 22 Mar 2024 15:34:21 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/%E4%BB%8A%E5%A4%A91/</guid>
-      <description>1号标题 最近下载了一个笔记软件Effie，感觉里面的字体挺好看的，搜一下发现是一款开源字体 1.克服抵触心理。很多人会因为害怕被取代而抵触新工</description>
+      <description>1号标题 最近下载了一个笔记软件Effie，感觉里面的字体挺好看的，搜一下发现是一款开源字体 1gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/ 2gem sources -l 3 4gem install jekyll 5gem install jekyll-paginate 6jekyll -v 1.克服抵触心</description>
     </item>
   </channel>
 </rss>
