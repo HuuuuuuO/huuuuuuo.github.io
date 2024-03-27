@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//img/home-bg-jeep.jpg">
-    <meta property="twitter:image" content="http://localhost:1313//img/home-bg-jeep.jpg" />
+    <meta property="og:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg">
+    <meta property="twitter:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg" />
     
 
     
@@ -36,7 +36,7 @@
 
     <title>博客搭建：Hugo&#43;GithubPages | 看吧，天空在上</title>
 
-    <link rel="canonical" href="/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages/">
+    <link rel="canonical" href="/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/">
 
     
     
@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="/css/font-awesome.all.min.css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/copy-to-clipboard.css">
+    <link rel="stylesheet" href="https://huuuuuuo.github.io/css/copy-to-clipboard.css">
 
     
     <script src="/js/jquery.min.js"></script>
@@ -186,13 +186,13 @@
                             Nefelibata
                             
                             on
-                            Wed 10:31:12 2024-03-20
+                            Wed 00:00:00 2024-03-20
                             
-                            | <span class="post-date">10060 words</span> | about<span class="more-meta"> 21 mins</span>
+                            | <span class="post-date">9369 words</span> | about<span class="more-meta"> 19 mins</span>
                             
                             
                             
-                            <br>Last Modified on Fri 19:10:26 2024-03-22
+                            <br>Last Modified on Tue 09:17:10 2024-03-26
                             
                             
                         </span>
@@ -220,27 +220,27 @@
                
                     <p>本文借鉴并修改自 <a href="https://haoyep.com/posts/windows-hugo-blog-github/#%E5%88%9B%E5%BB%BA-hugo-%E7%BD%91%E7%AB%99">Windows下使用hugo和Github Pages配置博客</a></p>
 <h2 id="1下载安装hugo">1、下载安装hugo</h2>
-<p>访问<a href="https://github.com/gohugoio/hugo/releases/latest">最新版本</a>页面下载，推荐使�?<code>Hugo extended</code> 版本</p>
+<p>访问<a href="https://github.com/gohugoio/hugo/releases/latest">最新版本</a>页面下载，推荐使用 <code>Hugo extended</code> 版本</p>
 <p>解压到某个目录，然后将该目录添加到环境变量中</p>
 <h3 id="11创建-hugo-网站">1.1创建 Hugo 网站</h3>
-<p>通过上述操作安装 hugo 程序后，就可以通过 <code>hugo new site</code> 命令进行网站创建、配置与本地调试了  选择一个本地文件夹作为根目录，右键——<code>Git Bash Here</code>，输入下面的命令</p>
+<p>通过上述操作安装 hugo 程序后，就可以通过 <code>hugo new site</code> 命令进行网站创建、配置与本地调试了。 选择一个本地文件夹作为根目录，右键——<code>Git Bash Here</code>，输入下面的命令</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hugo new site &lt;site-name&gt;
-</span></span></code></pre></div><p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081636474.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081636474.png" alt="hugo new site 命令进行网站创建">
+</span></span></code></pre></div><p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636474.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636474.png" alt="hugo new site 命令进行网站创建">
 
 </a></p>
-<p>*<em>注：后续命令未经说明，均�?Git Bash 中的 <code>E:\Workspace\blog</code> 目录下运�?</em></p>
-<h2 id="2主">2、主�?</h2>
+<p><strong>注：后续命令未经说明，均在 Git Bash 中的 <code>E:\Workspace\blog</code> 目录下运行</strong></p>
+<h2 id="2主题">2、主题</h2>
 <h3 id="231-安装">2.3.1 安装</h3>
-<p>推荐使用 <a href="https://github.com/hugo-fixit/FixIt"><strong>FixIt</strong> 主题</a>�?初始化你的项目目录为一个空�?Git 存储库，�?[FixIt][fixit] 主题克隆�?<code>themes</code> 目录中，将其作为 [Git 子模块][git-submodule] 添加到您的项目中�?</p>
+<p>推荐使用 <a href="https://github.com/hugo-fixit/FixIt"><strong>FixIt</strong> 主题</a>。 初始化你的项目目录为一个空的 Git 存储库，将 [FixIt][fixit] 主题克隆到 <code>themes</code> 目录中，将其作为 [Git 子模块][git-submodule] 添加到您的项目中。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git init 
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 </span></span></code></pre></div><p>如果你想使用 <code>dev</code> 分支上的版本，可以使用以下命令：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
-</span></span></code></pre></div><p>或者将子模块分支从 <code>master</code> 切换�?<code>dev</code>�?</p>
+</span></span></code></pre></div><p>或者将子模块分支从 <code>master</code> 切换到 <code>dev</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git submodule set-branch -b dev themes/FixIt
 </span></span></code></pre></div><h3 id="232-基础配置">2.3.2 基础配置</h3>
-<p>用<code>VScode</code>打开<code>E:\Workspace\blog</code>文件夹，用下面的内容覆盖<code>hugo.toml</code>文件。并自行修改<code>baseURL</code>和<code>title</code>�?其中，<code>baseURL</code>为<code>你的github账户�?github.io</code>，也可以像我一样设置自定义域名。记得逐项修改为你的配置�?</p>
+<p>用<code>VScode</code>打开<code>E:\Workspace\blog</code>文件夹，用下面的内容覆盖<code>hugo.toml</code>文件。并自行修改<code>baseURL</code>和<code>title</code>。 其中，<code>baseURL</code>为<code>你的github账户名.github.io</code>，也可以像我一样设置自定义域名。记得逐项修改为你的配置。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   1</span><span><span style="color:#6272a4"># =====================================================================================</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   2</span><span><span style="color:#6272a4"># It&#39;s recommended to use Alternate Theme Config to configure FixIt</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   3</span><span><span style="color:#6272a4"># Modifying this file may result in merge conflict</span>
@@ -252,7 +252,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   9</span><span><span style="color:#6272a4"># -------------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  10</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  11</span><span><span style="color:#6272a4"># 网站标题</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  12</span><span>title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  12</span><span>title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小站&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  13</span><span><span style="color:#6272a4"># Hostname (and path) to the root</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  14</span><span>baseURL <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://haoyep.com/&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  15</span><span><span style="color:#6272a4"># baseURL = &#34;https://leegical.github.io/&#34;</span>
@@ -262,9 +262,9 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  19</span><span>defaultContentLanguage <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;zh-cn&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  20</span><span><span style="color:#6272a4"># 网站语言, 仅在这里 CN 大写 [&#34;en&#34;, &#34;zh-CN&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  21</span><span>languageCode <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;zh-CN&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  22</span><span><span style="color:#6272a4"># 语言名称 [&#34;English&#34;, &#34;简体中�?, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  23</span><span>languageName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;简体中�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  24</span><span><span style="color:#6272a4"># 是否包括中日韩文�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  22</span><span><span style="color:#6272a4"># 语言名称 [&#34;English&#34;, &#34;简体中文&#34;, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  23</span><span>languageName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;简体中文&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  24</span><span><span style="color:#6272a4"># 是否包括中日韩文字</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  25</span><span>hasCJKLanguage <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  26</span><span><span style="color:#6272a4"># default amount of posts in each pages</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  27</span><span>paginate <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">12</span>
@@ -335,28 +335,28 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  92</span><span>  version <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;0.2.X&#34;</span> <span style="color:#6272a4"># e.g. &#34;0.2.X&#34;, &#34;0.2.15&#34;, &#34;v0.2.15&#34; etc.</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  93</span><span>  <span style="color:#6272a4"># 网站描述</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  94</span><span>  description <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  95</span><span>  <span style="color:#6272a4"># 网站关键�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  96</span><span>  keywords <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;程序�?]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  95</span><span>  <span style="color:#6272a4"># 网站关键词</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  96</span><span>  keywords <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;程序员&#34;</span>]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  97</span><span>  <span style="color:#6272a4"># 网站默认主题样式 [&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  98</span><span>  defaultTheme <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;auto&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  99</span><span>  <span style="color:#6272a4"># 公共 git 仓库路径，仅�?enableGitInfo 设为 true 时有�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  99</span><span>  <span style="color:#6272a4"># 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 100</span><span>  gitRepo <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 101</span><span>  <span style="color:#6272a4">#  哪种哈希函数用来 SRI, 为空时表示不使用 SRI</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 102</span><span>  <span style="color:#6272a4"># [&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 103</span><span>  fingerprint <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sha256&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 104</span><span>  <span style="color:#6272a4">#  日期格式</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 105</span><span>  dateFormat <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;2006-01-02&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 106</span><span>  <span style="color:#6272a4"># 网站图片，用�?Open Graph �?Twitter Cards</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 106</span><span>  <span style="color:#6272a4"># 网站图片，用于 Open Graph 和 Twitter Cards</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 107</span><span>  images <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;/logo.png&#34;</span>]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 108</span><span>  <span style="color:#6272a4">#  开�?PWA 支持</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 108</span><span>  <span style="color:#6272a4">#  开启 PWA 支持</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 109</span><span>  enablePWA <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 110</span><span>  <span style="color:#6272a4">#  是否自动显示外链图标</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 111</span><span>  externalIcon <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 112</span><span>  <span style="color:#6272a4">#  默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 113</span><span>  <span style="color:#6272a4"># 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观�?FixIt 受欢迎程度上升的好方�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 112</span><span>  <span style="color:#6272a4">#  默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 113</span><span>  <span style="color:#6272a4"># 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 114</span><span>  disableThemeInject <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 115</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 116</span><span>  <span style="color:#6272a4"># 作者配�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 116</span><span>  <span style="color:#6272a4"># 作者配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 117</span><span>  [params<span style="color:#ff79c6">.</span>author]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 118</span><span>    name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 119</span><span>    email <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
@@ -365,11 +365,11 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 122</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 123</span><span>  <span style="color:#6272a4"># 应用图标配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 124</span><span>  [params<span style="color:#ff79c6">.</span>app]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 125</span><span>    <span style="color:#6272a4"># 当添加到 iOS 主屏幕或�?Android 启动器时的标题，覆盖默认标题</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 126</span><span>    title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 125</span><span>    <span style="color:#6272a4"># 当添加到 iOS 主屏幕或者 Android 启动器时的标题，覆盖默认标题</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 126</span><span>    title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小站&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 127</span><span>    <span style="color:#6272a4"># 是否隐藏网站图标资源链接</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 128</span><span>    noFavicon <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 129</span><span>    <span style="color:#6272a4"># 更现代的 SVG 网站图标，可替代旧的 .png �?.ico 文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 129</span><span>    <span style="color:#6272a4"># 更现代的 SVG 网站图标，可替代旧的 .png 和 .ico 文件</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 130</span><span>    svgFavicon <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/favicon.svg&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 131</span><span>    <span style="color:#6272a4"># Safari 图标颜色</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 132</span><span>    iconColor <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;#5bbad5&#34;</span>
@@ -383,19 +383,19 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 140</span><span>  <span style="color:#6272a4"># 搜索配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 141</span><span>  [params<span style="color:#ff79c6">.</span>search]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 142</span><span>    enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 143</span><span>    <span style="color:#6272a4"># 搜索引擎的类�?[&#34;lunr&#34;, &#34;algolia&#34;, &#34;fuse&#34;]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 143</span><span>    <span style="color:#6272a4"># 搜索引擎的类型 [&#34;lunr&#34;, &#34;algolia&#34;, &#34;fuse&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 144</span><span>    type <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;lunr&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 145</span><span>    <span style="color:#6272a4"># 文章内容最长索引长�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 145</span><span>    <span style="color:#6272a4"># 文章内容最长索引长度</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 146</span><span>    contentLength <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4000</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 147</span><span>    <span style="color:#6272a4"># 搜索框的占位提示�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 147</span><span>    <span style="color:#6272a4"># 搜索框的占位提示语</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 148</span><span>    placeholder <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 149</span><span>    <span style="color:#6272a4">#  最大结果数�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 149</span><span>    <span style="color:#6272a4">#  最大结果数目</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 150</span><span>    maxResultLength <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 151</span><span>    <span style="color:#6272a4">#  结果内容片段长度</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 152</span><span>    snippetLength <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">50</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 153</span><span>    <span style="color:#6272a4">#  搜索结果中高亮部分的 HTML 标签</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 154</span><span>    highlightTag <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;em&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 155</span><span>    <span style="color:#6272a4">#  是否在搜索索引中使用基于 baseURL 的绝对路�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 155</span><span>    <span style="color:#6272a4">#  是否在搜索索引中使用基于 baseURL 的绝对路径</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 156</span><span>    absoluteURL <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 157</span><span>    [params<span style="color:#ff79c6">.</span>search<span style="color:#ff79c6">.</span>algolia]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 158</span><span>      index <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
@@ -413,29 +413,29 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 170</span><span>      useExtendedSearch <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 171</span><span>      ignoreFieldNorm <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 172</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 173</span><span>  <span style="color:#6272a4"># 页面头部导航栏配�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 173</span><span>  <span style="color:#6272a4"># 页面头部导航栏配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 174</span><span>  [params<span style="color:#ff79c6">.</span>header]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 175</span><span>    <span style="color:#6272a4">#  桌面端导航栏模式 [&#34;sticky&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 176</span><span>    desktopMode <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sticky&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 177</span><span>    <span style="color:#6272a4">#  移动端导航栏模式 [&#34;sticky&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 178</span><span>    mobileMode <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;auto&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 179</span><span>    <span style="color:#6272a4">#  页面头部导航栏标题配�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 179</span><span>    <span style="color:#6272a4">#  页面头部导航栏标题配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 180</span><span>    [params<span style="color:#ff79c6">.</span>header<span style="color:#ff79c6">.</span>title]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 181</span><span>      <span style="color:#6272a4"># LOGO �?URL</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 181</span><span>      <span style="color:#6272a4"># LOGO 的 URL</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 182</span><span>      logo <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/logo.png&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 183</span><span>      <span style="color:#6272a4"># 标题名称</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 184</span><span>      name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 185</span><span>      <span style="color:#6272a4"># 你可以在名称（允�?HTML 格式）之前添加其他信息，例如图标</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 184</span><span>      name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小站&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 185</span><span>      <span style="color:#6272a4"># 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 186</span><span>      pre <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 187</span><span>      <span style="color:#6272a4"># 你可以在名称（允�?HTML 格式）之后添加其他信息，例如图标</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 187</span><span>      <span style="color:#6272a4"># 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 188</span><span>      post <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 189</span><span>      <span style="color:#6272a4">#  是否为标题显示打字机动画</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 190</span><span>      typeit <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 191</span><span>    <span style="color:#6272a4">#  页面头部导航栏副标题配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 192</span><span>    [params<span style="color:#ff79c6">.</span>header<span style="color:#ff79c6">.</span>subtitle]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 193</span><span>      <span style="color:#6272a4"># 副标题名�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 193</span><span>      <span style="color:#6272a4"># 副标题名称</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 194</span><span>      name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 195</span><span>      <span style="color:#6272a4"># 是否为副标题显示打字机动�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 195</span><span>      <span style="color:#6272a4"># 是否为副标题显示打字机动画</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 196</span><span>      typeit <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 197</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 198</span><span>  <span style="color:#6272a4"># FixIt 0.2.18 | NEW Breadcrumb config</span>
@@ -447,24 +447,24 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 204</span><span>  <span style="color:#6272a4"># 页面底部信息配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 205</span><span>  [params<span style="color:#ff79c6">.</span>footer]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 206</span><span>    enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 207</span><span>    <span style="color:#6272a4">#  自定义内容（支持 HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 207</span><span>    <span style="color:#6272a4">#  自定义内容（支持 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 208</span><span>    <span style="color:#6272a4"># 进阶使用，见参数 `params.customFilePath.footer`</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 209</span><span>    custom <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 210</span><span>    <span style="color:#6272a4">#  是否显示 Hugo 和主题信�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 210</span><span>    <span style="color:#6272a4">#  是否显示 Hugo 和主题信息</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 211</span><span>    hugo <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 212</span><span>    <span style="color:#6272a4">#  是否显示版权信息</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 213</span><span>    copyright <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 214</span><span>    <span style="color:#6272a4">#  是否显示作�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 214</span><span>    <span style="color:#6272a4">#  是否显示作者</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 215</span><span>    author <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 216</span><span>    <span style="color:#6272a4"># 网站创立年份</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 217</span><span>    since <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2019</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 218</span><span>    <span style="color:#6272a4">#  是否显示网站内容总字�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 218</span><span>    <span style="color:#6272a4">#  是否显示网站内容总字数</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 219</span><span>    wordCount <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 220</span><span>    <span style="color:#6272a4">#  公网安备信息，仅在中国使用（支持 HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 220</span><span>    <span style="color:#6272a4">#  公网安备信息，仅在中国使用（支持 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 221</span><span>    gov <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 222</span><span>    <span style="color:#6272a4">#  ICP 备案信息，仅在中国使用（支持 HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 222</span><span>    <span style="color:#6272a4">#  ICP 备案信息，仅在中国使用（支持 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 223</span><span>    icp <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 224</span><span>    <span style="color:#6272a4"># 许可协议信息（支�?HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 224</span><span>    <span style="color:#6272a4"># 许可协议信息（支持 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 225</span><span>    license <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&lt;a rel=&#34;license external nofollow noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 226</span><span>    <span style="color:#6272a4">#  网站创立时间</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 227</span><span>    [params<span style="color:#ff79c6">.</span>footer<span style="color:#ff79c6">.</span>siteTime]
@@ -485,27 +485,27 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 242</span><span>  [params<span style="color:#ff79c6">.</span>section]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 243</span><span>    <span style="color:#6272a4"># section 页面每页显示文章数量</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 244</span><span>    paginate <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 245</span><span>    <span style="color:#6272a4"># 日期格式（月和日�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 245</span><span>    <span style="color:#6272a4"># 日期格式（月和日）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 246</span><span>    dateFormat <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;01-02&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 247</span><span>    <span style="color:#6272a4"># RSS 文章数目</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 248</span><span>    rss <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 249</span><span>    <span style="color:#6272a4">#  最近更新文章设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 249</span><span>    <span style="color:#6272a4">#  最近更新文章设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 250</span><span>    [params<span style="color:#ff79c6">.</span>section<span style="color:#ff79c6">.</span>recentlyUpdated]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 251</span><span>      enable <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 252</span><span>      rss <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 253</span><span>      days <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">30</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 254</span><span>      maxCount <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 255</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 256</span><span>  <span style="color:#6272a4">#  List（目录或标签）页面配�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 256</span><span>  <span style="color:#6272a4">#  List（目录或标签）页面配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 257</span><span>  [params<span style="color:#ff79c6">.</span>list]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 258</span><span>    <span style="color:#6272a4"># list 页面每页显示文章数量</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 259</span><span>    paginate <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 260</span><span>    <span style="color:#6272a4"># 日期格式（月和日�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 260</span><span>    <span style="color:#6272a4"># 日期格式（月和日）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 261</span><span>    dateFormat <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;01-02&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 262</span><span>    <span style="color:#6272a4"># RSS 文章数目</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 263</span><span>    rss <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 264</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 265</span><span>  <span style="color:#6272a4"># 标签云配�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 265</span><span>  <span style="color:#6272a4"># 标签云配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 266</span><span>  [params<span style="color:#ff79c6">.</span>tagcloud]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 267</span><span>    enable <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 268</span><span>    <span style="color:#8be9fd;font-style:italic">min</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">14</span> <span style="color:#6272a4"># 最小字体大小，单位：px</span>
@@ -520,21 +520,21 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 277</span><span>    <span style="color:#6272a4"># 主页个人信息</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 278</span><span>    [params<span style="color:#ff79c6">.</span>home<span style="color:#ff79c6">.</span>profile]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 279</span><span>      enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 280</span><span>      <span style="color:#6272a4"># Gravatar 邮箱，用于优先在主页显示的头�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 280</span><span>      <span style="color:#6272a4"># Gravatar 邮箱，用于优先在主页显示的头像</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 281</span><span>      gravatarEmail <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 282</span><span>      <span style="color:#6272a4"># 主页显示头像�?URL</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 282</span><span>      <span style="color:#6272a4"># 主页显示头像的 URL</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 283</span><span>      avatarURL <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/avatar.jpg&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 284</span><span>      <span style="color:#6272a4">#  头像菜单链接�?identifier</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 284</span><span>      <span style="color:#6272a4">#  头像菜单链接的 identifier</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 285</span><span>      avatarMenu <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 286</span><span>      <span style="color:#6272a4">#  主页显示的网站标题（支持 HTML 格式�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 287</span><span>      title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 286</span><span>      <span style="color:#6272a4">#  主页显示的网站标题（支持 HTML 格式）</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 287</span><span>      title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱的小站&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 288</span><span>      <span style="color:#6272a4"># 主页显示的网站副标题</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 289</span><span>      subtitle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;色相事一刹那，光阴里无尽�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 290</span><span>      <span style="color:#6272a4"># 是否为副标题显示打字机动�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 289</span><span>      subtitle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;色相事一刹那，光阴里无尽藏&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 290</span><span>      <span style="color:#6272a4"># 是否为副标题显示打字机动画</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 291</span><span>      typeit <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 292</span><span>      <span style="color:#6272a4"># 是否显示社交账号</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 293</span><span>      social <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 294</span><span>      <span style="color:#6272a4">#  免责声明（支�?HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 294</span><span>      <span style="color:#6272a4">#  免责声明（支持 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 295</span><span>      disclaimer <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 296</span><span>    <span style="color:#6272a4"># 主页文章列表</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 297</span><span>    [params<span style="color:#ff79c6">.</span>home<span style="color:#ff79c6">.</span>posts]
@@ -634,11 +634,11 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 391</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 392</span><span>  <span style="color:#6272a4">#  文章页面配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 393</span><span>  [params<span style="color:#ff79c6">.</span>page]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 394</span><span>    <span style="color:#6272a4">#  是否启用文章作者头�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 394</span><span>    <span style="color:#6272a4">#  是否启用文章作者头像</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 395</span><span>    authorAvatar <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 396</span><span>    <span style="color:#6272a4">#  是否在主页隐藏一篇文�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 396</span><span>    <span style="color:#6272a4">#  是否在主页隐藏一篇文章</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 397</span><span>    hiddenFromHomePage <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 398</span><span>    <span style="color:#6272a4">#  是否在搜索结果中隐藏一篇文�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 398</span><span>    <span style="color:#6272a4">#  是否在搜索结果中隐藏一篇文章</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 399</span><span>    hiddenFromSearch <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 400</span><span>    <span style="color:#6272a4">#  是否使用 twemoji</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 401</span><span>    twemoji <span style="color:#ff79c6">=</span> false
@@ -651,18 +651,18 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 408</span><span>    fraction <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 409</span><span>    <span style="color:#6272a4">#  是否使用 fontawesome 扩展语法</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 410</span><span>    fontawesome <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 411</span><span>    <span style="color:#6272a4"># 许可协议信息（支�?HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 411</span><span>    <span style="color:#6272a4"># 许可协议信息（支持 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 412</span><span>    license <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&lt;a rel=&#34;license external nofollow noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 413</span><span>    <span style="color:#6272a4"># 是否在文章页面显示原�?Markdown 文档链接</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 413</span><span>    <span style="color:#6272a4"># 是否在文章页面显示原始 Markdown 文档链接</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 414</span><span>    linkToMarkdown <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 415</span><span>    <span style="color:#6272a4">#  是否�?RSS 中显示全文内�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 415</span><span>    <span style="color:#6272a4">#  是否在 RSS 中显示全文内容</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 416</span><span>    rssFullText <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 417</span><span>    <span style="color:#6272a4">#  页面样式 [&#34;narrow&#34;, &#34;normal&#34;, &#34;wide&#34;, ...]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 418</span><span>    pageStyle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;normal&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 419</span><span>    <span style="color:#6272a4">#   强制使用 Gravatar 作为作者头�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 419</span><span>    <span style="color:#6272a4">#   强制使用 Gravatar 作为作者头像</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 420</span><span>    <span style="color:#6272a4"># gravatarForce = true</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 421</span><span>    <span style="color:#6272a4">#  开启自动书签支�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 422</span><span>    <span style="color:#6272a4"># 如果�?true，则在关闭页面时保存阅读进度</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 421</span><span>    <span style="color:#6272a4">#  开启自动书签支持</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 422</span><span>    <span style="color:#6272a4"># 如果为 true，则在关闭页面时保存阅读进度</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 423</span><span>    autoBookmark <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 424</span><span>    <span style="color:#6272a4">#  是否使用 字数统计</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 425</span><span>    wordCount <span style="color:#ff79c6">=</span> true
@@ -670,9 +670,9 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 427</span><span>    readingTime <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 428</span><span>    <span style="color:#6272a4">#  文章结束标志</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 429</span><span>    endFlag <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 430</span><span>    <span style="color:#6272a4">#  是否开启即时页�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 430</span><span>    <span style="color:#6272a4">#  是否开启即时页面</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 431</span><span>    instantPage <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 432</span><span>    <span style="color:#6272a4"># FixIt 0.3.0 | 是否在侧边栏开启合�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 432</span><span>    <span style="color:#6272a4"># FixIt 0.3.0 | 是否在侧边栏开启合集</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 433</span><span>    collectionList <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 434</span><span>    <span style="color:#6272a4"># FixIt 0.3.0 | NEW whether to enable collection navigation at the end of the post</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 435</span><span>    collectionNavigation <span style="color:#ff79c6">=</span> false
@@ -685,13 +685,13 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 442</span><span>    [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>toc]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 443</span><span>      <span style="color:#6272a4"># 是否使用目录</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 444</span><span>      enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 445</span><span>      <span style="color:#6272a4">#  是否保持使用文章前面的静态目�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 445</span><span>      <span style="color:#6272a4">#  是否保持使用文章前面的静态目录</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 446</span><span>      keepStatic <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 447</span><span>      <span style="color:#6272a4"># 是否使侧边目录自动折叠展开</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 448</span><span>      auto <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 449</span><span>      <span style="color:#6272a4">#  目录位置 [&#34;left&#34;, &#34;right&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 450</span><span>      position <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;right&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 451</span><span>    <span style="color:#6272a4">#  在文章开头显示提示信息，提醒读者文章内容可能过�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 451</span><span>    <span style="color:#6272a4">#  在文章开头显示提示信息，提醒读者文章内容可能过时</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 452</span><span>    [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>expirationReminder]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 453</span><span>      enable <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 454</span><span>      <span style="color:#6272a4"># 如果文章最后更新于这天数之前，显示提醒</span>
@@ -703,10 +703,10 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 460</span><span>    <span style="color:#6272a4"># FixIt 0.2.16 | 数学公式 CHANGED KaTeX mathematical formulas (https://katex.org)</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 461</span><span>    [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>math]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 462</span><span>      enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 463</span><span>      <span style="color:#6272a4"># 默认行内定界符是 $ ... $ �?\( ... \)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 463</span><span>      <span style="color:#6272a4"># 默认行内定界符是 $ ... $ 和 \( ... \)</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 464</span><span>      inlineLeftDelimiter <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 465</span><span>      inlineRightDelimiter <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 466</span><span>      <span style="color:#6272a4"># 默认块定界符�?$$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 466</span><span>      <span style="color:#6272a4"># 默认块定界符是 $$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 467</span><span>      blockLeftDelimiter <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 468</span><span>      blockRightDelimiter <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 469</span><span>      <span style="color:#6272a4"># KaTeX 插件 copy_tex</span>
@@ -719,7 +719,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 476</span><span>      copy <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 477</span><span>      <span style="color:#6272a4">#  是否显示代码块的编辑按钮</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 478</span><span>      edit <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 479</span><span>      <span style="color:#6272a4"># 默认展开显示的代码行�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 479</span><span>      <span style="color:#6272a4"># 默认展开显示的代码行数</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 480</span><span>      maxShownLines <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 481</span><span>    <span style="color:#6272a4"># FixIt 0.2.14 | 文章编辑</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 482</span><span>    [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>edit]
@@ -730,11 +730,11 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 487</span><span>      url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 488</span><span>    <span style="color:#6272a4"># FixIt 0.2.0 | Mapbox GL JS 配置 (https://docs.mapbox.com/mapbox-gl-js)</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 489</span><span>    [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>mapbox]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 490</span><span>      <span style="color:#6272a4"># Mapbox GL JS �?access token</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 490</span><span>      <span style="color:#6272a4"># Mapbox GL JS 的 access token</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 491</span><span>      accessToken <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 492</span><span>      <span style="color:#6272a4"># 浅色主题的地图样�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 492</span><span>      <span style="color:#6272a4"># 浅色主题的地图样式</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 493</span><span>      lightStyle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;mapbox://styles/mapbox/light-v9&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 494</span><span>      <span style="color:#6272a4"># 深色主题的地图样�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 494</span><span>      <span style="color:#6272a4"># 深色主题的地图样式</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 495</span><span>      darkStyle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;mapbox://styles/mapbox/dark-v9&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 496</span><span>      <span style="color:#6272a4"># 是否添加 NavigationControl</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 497</span><span>      navigation <span style="color:#ff79c6">=</span> true
@@ -758,7 +758,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 515</span><span>        <span style="color:#6272a4"># alipay = &#34;/images/alipay.png&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 516</span><span>        <span style="color:#6272a4"># paypal = &#34;/images/paypal.png&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 517</span><span>        <span style="color:#6272a4"># bitcoin = &#34;/images/bitcoin.png&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 518</span><span>    <span style="color:#6272a4">#  文章页面的分享信息设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 518</span><span>    <span style="color:#6272a4">#  文章页面的分享信息设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 519</span><span>    [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>share]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 520</span><span>      enable <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 521</span><span>      Twitter <span style="color:#ff79c6">=</span> true
@@ -927,29 +927,29 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 684</span><span>      [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>library<span style="color:#ff79c6">.</span>css]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 685</span><span>        <span style="color:#6272a4"># someCSS = &#34;some.css&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 686</span><span>        <span style="color:#6272a4"># 位于 &#34;assets/&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 687</span><span>        <span style="color:#6272a4"># 或�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 687</span><span>        <span style="color:#6272a4"># 或者</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 688</span><span>        <span style="color:#6272a4"># someCSS = &#34;https://cdn.example.com/some.css&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 689</span><span>      [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>library<span style="color:#ff79c6">.</span>js]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 690</span><span>        <span style="color:#6272a4"># someJavascript = &#34;some.js&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 691</span><span>        <span style="color:#6272a4"># 位于 &#34;assets/&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 692</span><span>        <span style="color:#6272a4"># 或�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 692</span><span>        <span style="color:#6272a4"># 或者</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 693</span><span>        <span style="color:#6272a4"># someJavascript = &#34;https://cdn.example.com/some.js&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 694</span><span>    <span style="color:#6272a4">#  页面 SEO 配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 695</span><span>    [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>seo]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 696</span><span>      <span style="color:#6272a4"># 图片 URL</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 697</span><span>      images <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;/favicon.ico&#34;</span>]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 698</span><span>      <span style="color:#6272a4"># 出版者信�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 698</span><span>      <span style="color:#6272a4"># 出版者信息</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 699</span><span>      [params<span style="color:#ff79c6">.</span>page<span style="color:#ff79c6">.</span>seo<span style="color:#ff79c6">.</span>publisher]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 700</span><span>        name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;云吱&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 701</span><span>        logoUrl <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/logo.png&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 702</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 703</span><span>  <span style="color:#6272a4">#  TypeIt 配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 704</span><span>  [params<span style="color:#ff79c6">.</span>typeit]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 705</span><span>    <span style="color:#6272a4"># 每一步的打字速度（单位是毫秒�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 705</span><span>    <span style="color:#6272a4"># 每一步的打字速度（单位是毫秒）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 706</span><span>    speed <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 707</span><span>    <span style="color:#6272a4"># 光标的闪烁速度（单位是毫秒�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 707</span><span>    <span style="color:#6272a4"># 光标的闪烁速度（单位是毫秒）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 708</span><span>    cursorSpeed <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1000</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 709</span><span>    <span style="color:#6272a4"># 光标的字符（支持 HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 709</span><span>    <span style="color:#6272a4"># 光标的字符（支持 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 710</span><span>    cursorChar <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;|&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 711</span><span>    <span style="color:#6272a4"># 打字结束之后光标的持续时间（单位是毫秒，&#34;-1&#34; 代表无限大）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 712</span><span>    duration <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>
@@ -958,32 +958,32 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 715</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 716</span><span>  <span style="color:#6272a4">#  Mermaid 配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 717</span><span>  [params<span style="color:#ff79c6">.</span>mermaid]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 718</span><span>    <span style="color:#6272a4"># 取值详�?https://mermaid.js.org/config/theming.html#available-themes</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 718</span><span>    <span style="color:#6272a4"># 取值详见 https://mermaid.js.org/config/theming.html#available-themes</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 719</span><span>    themes <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;default&#34;</span>, <span style="color:#f1fa8c">&#34;dark&#34;</span>]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 720</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 721</span><span>  <span style="color:#6272a4"># 盘古之白配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 722</span><span>  [params<span style="color:#ff79c6">.</span>pangu]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 723</span><span>    <span style="color:#6272a4"># 适用于中文写作用�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 723</span><span>    <span style="color:#6272a4"># 适用于中文写作用户</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 724</span><span>    enable <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 725</span><span>    selector <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;article&#34;</span> <span style="color:#6272a4"># </span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 726</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 727</span><span>  <span style="color:#6272a4">#  水印配置</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 728</span><span>  <span style="color:#6272a4"># 详细参数�?https://github.com/Lruihao/watermark#readme</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 728</span><span>  <span style="color:#6272a4"># 详细参数见 https://github.com/Lruihao/watermark#readme</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 729</span><span>  [params<span style="color:#ff79c6">.</span>watermark]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 730</span><span>    enable <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 731</span><span>    <span style="color:#6272a4"># 水印内容（允�?HTML 格式�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 731</span><span>    <span style="color:#6272a4"># 水印内容（允许 HTML 格式）</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 732</span><span>    content <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 733</span><span>    <span style="color:#6272a4"># 水印透明�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 733</span><span>    <span style="color:#6272a4"># 水印透明度</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 734</span><span>    opacity <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.1</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 735</span><span>    <span style="color:#6272a4"># 水印父节�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 735</span><span>    <span style="color:#6272a4"># 水印父节点</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 736</span><span>    appendTo <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;.wrapper&gt;main&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 737</span><span>    <span style="color:#6272a4"># 单水印宽�?单位：px</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 737</span><span>    <span style="color:#6272a4"># 单水印宽度 单位：px</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 738</span><span>    width <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">150</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 739</span><span>    <span style="color:#6272a4"># 单水印高�?单位：px</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 739</span><span>    <span style="color:#6272a4"># 单水印高度 单位：px</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 740</span><span>    height <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 741</span><span>    <span style="color:#6272a4"># 水印行间�?单位：px</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 741</span><span>    <span style="color:#6272a4"># 水印行间距 单位：px</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 742</span><span>    rowSpacing <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">60</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 743</span><span>    <span style="color:#6272a4"># 水印列间�?单位：px</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 743</span><span>    <span style="color:#6272a4"># 水印列间距 单位：px</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 744</span><span>    colSpacing <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">30</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 745</span><span>    <span style="color:#6272a4"># 水印旋转角度 单位：deg</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 746</span><span>    rotate <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">15</span>
@@ -992,13 +992,13 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 749</span><span>    <span style="color:#6272a4">#  水印字体</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 750</span><span>    fontFamily <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;inherit&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 751</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 752</span><span>  <span style="color:#6272a4">#  不蒜子统�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 752</span><span>  <span style="color:#6272a4">#  不蒜子统计</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 753</span><span>  [params<span style="color:#ff79c6">.</span>ibruce]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 754</span><span>    enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 755</span><span>    <span style="color:#6272a4"># 在文章中开�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 755</span><span>    <span style="color:#6272a4"># 在文章中开启</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 756</span><span>    enablePost <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 757</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 758</span><span>  <span style="color:#6272a4"># 网站验证代码，用�?Google/Bing/Yandex/Pinterest/Baidu/360/Sogou</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 758</span><span>  <span style="color:#6272a4"># 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 759</span><span>  [params<span style="color:#ff79c6">.</span>verification]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 760</span><span>    google <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 761</span><span>    bing <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
@@ -1012,7 +1012,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 769</span><span>  [params<span style="color:#ff79c6">.</span>seo]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 770</span><span>    <span style="color:#6272a4"># 图片 URL</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 771</span><span>    image <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/favicon.ico&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 772</span><span>    <span style="color:#6272a4"># 缩略�?URL</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 772</span><span>    <span style="color:#6272a4"># 缩略图 URL</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 773</span><span>    thumbnailUrl <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;favicon-32x32.png&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 774</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 775</span><span>  <span style="color:#6272a4"># FixIt 0.2.0 | NEW 网站分析配置</span>
@@ -1021,12 +1021,12 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 778</span><span>    <span style="color:#6272a4"># Google Analytics</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 779</span><span>    [params<span style="color:#ff79c6">.</span>analytics<span style="color:#ff79c6">.</span>google]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 780</span><span>      id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 781</span><span>      <span style="color:#6272a4"># 是否匿名化用�?IP</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 781</span><span>      <span style="color:#6272a4"># 是否匿名化用户 IP</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 782</span><span>      anonymizeIP <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 783</span><span>    <span style="color:#6272a4"># Fathom Analytics</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 784</span><span>    [params<span style="color:#ff79c6">.</span>analytics<span style="color:#ff79c6">.</span>fathom]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 785</span><span>      id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 786</span><span>      <span style="color:#6272a4"># 自行托管追踪器时的主机路�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 786</span><span>      <span style="color:#6272a4"># 自行托管追踪器时的主机路径</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 787</span><span>      server <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 788</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 789</span><span>  <span style="color:#6272a4"># FixIt 0.2.7 | NEW Cookie 许可配置</span>
@@ -1038,42 +1038,42 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 795</span><span>      dismiss <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 796</span><span>      link <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 797</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 798</span><span>  <span style="color:#6272a4"># FixIt 0.2.7 | 第三方库文件�?CDN 设置</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 798</span><span>  <span style="color:#6272a4"># FixIt 0.2.7 | 第三方库文件的 CDN 设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 799</span><span>  [params<span style="color:#ff79c6">.</span>cdn]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 800</span><span>    <span style="color:#6272a4"># CDN 数据文件名称，默认不启用 [&#34;jsdelivr.yml&#34;, &#34;unpkg.yml&#34;, ...]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 801</span><span>    <span style="color:#6272a4"># 位于 &#34;themes/FixIt/assets/data/cdn/&#34; 目录</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 802</span><span>    <span style="color:#6272a4"># 可以在你的项目下相同路径存放你自己的数据文件�?assets/data/cdn/&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 802</span><span>    <span style="color:#6272a4"># 可以在你的项目下相同路径存放你自己的数据文件：&#34;assets/data/cdn/&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 803</span><span>    <span style="color:#6272a4"># data = &#34;unpkg.yml&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 804</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 805</span><span>  <span style="color:#6272a4"># FixIt 0.2.8 | NEW 兼容性设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 805</span><span>  <span style="color:#6272a4"># FixIt 0.2.8 | NEW 兼容性设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 806</span><span>  [params<span style="color:#ff79c6">.</span>compatibility]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 807</span><span>    <span style="color:#6272a4"># 是否使用 Polyfill.io 来兼容旧式浏览器</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 808</span><span>    polyfill <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 809</span><span>    <span style="color:#6272a4"># 是否使用 object-fit-images 来兼容旧式浏览器</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 810</span><span>    objectFit <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 811</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 812</span><span>  <span style="color:#6272a4"># FixIt 0.2.14 | NEW 在左上角或者右上角显示 GitHub 开源链�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 812</span><span>  <span style="color:#6272a4"># FixIt 0.2.14 | NEW 在左上角或者右上角显示 GitHub 开源链接</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 813</span><span>  [params<span style="color:#ff79c6">.</span>githubCorner]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 814</span><span>    enable <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 815</span><span>    permalink <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://github.com/hugo-fixit/FixIt&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 816</span><span>    title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;�?GitHub 上查看源代码&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 816</span><span>    title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;在 GitHub 上查看源代码&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 817</span><span>    position <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;right&#34;</span> <span style="color:#6272a4"># [&#34;left&#34;, &#34;right&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 818</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 819</span><span>  <span style="color:#6272a4"># FixIt 0.2.14 | NEW Gravatar 设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 820</span><span>  [params<span style="color:#ff79c6">.</span>gravatar]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 821</span><span>    <span style="color:#6272a4">#  取决于作者邮箱，作者邮箱未设置则使用本地头�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 821</span><span>    <span style="color:#6272a4">#  取决于作者邮箱，作者邮箱未设置则使用本地头像</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 822</span><span>    enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 823</span><span>    <span style="color:#6272a4"># Gravatar 主机，默认：“www.gravatar.com�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 823</span><span>    <span style="color:#6272a4"># Gravatar 主机，默认：“www.gravatar.com”</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 824</span><span>    host <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;cn.gravatar.com&#34;</span> <span style="color:#6272a4"># [&#34;cn.gravatar.com&#34;, &#34;gravatar.loli.net&#34;, ...]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 825</span><span>    style <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;identicon&#34;</span> <span style="color:#6272a4"># [&#34;&#34;, &#34;mp&#34;, &#34;identicon&#34;, &#34;monsterid&#34;, &#34;wavatar&#34;, &#34;retro&#34;, &#34;blank&#34;, &#34;robohash&#34;]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 826</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 827</span><span>  <span style="color:#6272a4"># FixIt 0.2.16 | NEW 返回顶部</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 828</span><span>  [params<span style="color:#ff79c6">.</span>backToTop]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 829</span><span>    enable <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 830</span><span>    <span style="color:#6272a4"># �?b2t 按钮中显示滚动百分比</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 830</span><span>    <span style="color:#6272a4"># 在 b2t 按钮中显示滚动百分比</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 831</span><span>    scrollpercent <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 832</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 833</span><span>  <span style="color:#6272a4"># FixIt 0.2.16 | NEW 阅读进度�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 833</span><span>  <span style="color:#6272a4"># FixIt 0.2.16 | NEW 阅读进度条</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 834</span><span>  [params<span style="color:#ff79c6">.</span>readingProgress]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 835</span><span>    enable <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 836</span><span>    <span style="color:#6272a4"># 可用值：[&#34;left&#34;, &#34;right&#34;]</span>
@@ -1100,11 +1100,11 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 857</span><span>  <span style="color:#6272a4"># FixIt 0.2.18-lts.3 | [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 858</span><span>  [params<span style="color:#ff79c6">.</span>cacheRemoteImages]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 859</span><span>    enable <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 860</span><span>    <span style="color:#6272a4"># 用本地图片链接替换远程图片链�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 860</span><span>    <span style="color:#6272a4"># 用本地图片链接替换远程图片链接</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 861</span><span>    replace <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 862</span><span>  
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 863</span><span>  <span style="color:#6272a4"># FixIt 0.2.17 | NEW 定义自定义文件路�?</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 864</span><span>  <span style="color:#6272a4"># 在站点目�?`layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 863</span><span>  <span style="color:#6272a4"># FixIt 0.2.17 | NEW 定义自定义文件路径</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 864</span><span>  <span style="color:#6272a4"># 在站点目录 `layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 865</span><span>  [params<span style="color:#ff79c6">.</span>customFilePath]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 866</span><span>    <span style="color:#6272a4"># aside = &#34;custom/aside.html&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 867</span><span>    <span style="color:#6272a4"># profile = &#34;custom/profile.html&#34;</span>
@@ -1113,11 +1113,11 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 870</span><span>  <span style="color:#6272a4"># FixIt 0.2.15 | NEW 开发者选项</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 871</span><span>  [params<span style="color:#ff79c6">.</span>dev]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 872</span><span>    enable <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 873</span><span>    <span style="color:#6272a4"># 检查更�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 873</span><span>    <span style="color:#6272a4"># 检查更新</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 874</span><span>    c4u <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 875</span><span>    <span style="color:#6272a4"># 请勿公开展示�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 875</span><span>    <span style="color:#6272a4"># 请勿公开展示！</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 876</span><span>    githubToken <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 877</span><span>    <span style="color:#6272a4"># 移动端开发者工具配�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 877</span><span>    <span style="color:#6272a4"># 移动端开发者工具配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 878</span><span>    [params<span style="color:#ff79c6">.</span>dev<span style="color:#ff79c6">.</span>mDevtools]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 879</span><span>      enable <span style="color:#ff79c6">=</span> false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 880</span><span>      <span style="color:#6272a4"># 支持 &#34;vConsole&#34;, &#34;eruda&#34;</span>
@@ -1138,19 +1138,19 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 895</span><span><span style="color:#6272a4"># See: https://gohugo.io/getting-started/configuration-markup/</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 896</span><span><span style="color:#6272a4"># -------------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 897</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 898</span><span><span style="color:#6272a4"># Hugo 解析文档的配�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 898</span><span><span style="color:#6272a4"># Hugo 解析文档的配置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 899</span><span>[markup]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 900</span><span>  <span style="color:#6272a4"># 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 901</span><span>  [markup<span style="color:#ff79c6">.</span>highlight]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 902</span><span>    <span style="color:#6272a4">################## 必要的配�?##################</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 902</span><span>    <span style="color:#6272a4">################## 必要的配置 ##################</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 903</span><span>    <span style="color:#6272a4"># https://github.com/hugo-fixit/FixIt/issues/43</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 904</span><span>    codeFences <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 905</span><span>    lineNos <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 906</span><span>    lineNumbersInTable <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 907</span><span>    noClasses <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 908</span><span>    <span style="color:#6272a4">################## 必要的配�?##################</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 908</span><span>    <span style="color:#6272a4">################## 必要的配置 ##################</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 909</span><span>    guessSyntax <span style="color:#ff79c6">=</span> true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 910</span><span>  <span style="color:#6272a4"># Goldmark �?Hugo 0.60 以来的默�?Markdown 解析�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 910</span><span>  <span style="color:#6272a4"># Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 911</span><span>  [markup<span style="color:#ff79c6">.</span>goldmark]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 912</span><span>    [markup<span style="color:#ff79c6">.</span>goldmark<span style="color:#ff79c6">.</span>extensions]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 913</span><span>      definitionList <span style="color:#ff79c6">=</span> true
@@ -1206,10 +1206,10 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 963</span><span><span style="color:#6272a4"># -------------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 964</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 965</span><span>[mediaTypes]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 966</span><span>  <span style="color:#6272a4"># 用于输出 Markdown 格式文档的设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 966</span><span>  <span style="color:#6272a4"># 用于输出 Markdown 格式文档的设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 967</span><span>  [mediaTypes<span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34;text/markdown&#34;</span>]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 968</span><span>    suffixes <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;md&#34;</span>]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 969</span><span>  <span style="color:#6272a4"># 用于输出 txt 格式文档的设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 969</span><span>  <span style="color:#6272a4"># 用于输出 txt 格式文档的设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 970</span><span>  [mediaTypes<span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34;text/plain&#34;</span>]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 971</span><span>    suffixes <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;txt&#34;</span>]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 972</span><span>
@@ -1219,12 +1219,12 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 976</span><span><span style="color:#6272a4"># -------------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 977</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 978</span><span>[outputFormats]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 979</span><span>  <span style="color:#6272a4"># 用于输出 Markdown 格式文档的设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 979</span><span>  <span style="color:#6272a4"># 用于输出 Markdown 格式文档的设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 980</span><span>  [outputFormats<span style="color:#ff79c6">.</span>MarkDown]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 981</span><span>    mediaType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;text/markdown&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 982</span><span>    isPlainText <span style="color:#ff79c6">=</span> true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 983</span><span>    isHTML <span style="color:#ff79c6">=</span> false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 984</span><span>  <span style="color:#6272a4">#  用于输出 baidu_urls.txt 文件的设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 984</span><span>  <span style="color:#6272a4">#  用于输出 baidu_urls.txt 文件的设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 985</span><span>  [outputFormats<span style="color:#ff79c6">.</span>BaiduUrls]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 986</span><span>    baseName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;baidu_urls&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 987</span><span>    mediaType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;text/plain&#34;</span>
@@ -1235,7 +1235,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 992</span><span><span style="color:#6272a4"># Customizing Output Formats</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 993</span><span><span style="color:#6272a4"># See: https://gohugo.io/templates/output-formats/#customizing-output-formats</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 994</span><span><span style="color:#6272a4"># -------------------------------------------------------------------------------------</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 995</span><span><span style="color:#6272a4">#  用于 Hugo 输出文档的设�?</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 995</span><span><span style="color:#6272a4">#  用于 Hugo 输出文档的设置</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 996</span><span>[outputs]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 997</span><span>  home <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;HTML&#34;</span>, <span style="color:#f1fa8c">&#34;RSS&#34;</span>, <span style="color:#f1fa8c">&#34;JSON&#34;</span>, <span style="color:#f1fa8c">&#34;BaiduUrls&#34;</span>]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 998</span><span>  page <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;HTML&#34;</span>]
@@ -1253,21 +1253,21 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1010</span><span>  category <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;categories&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1011</span><span>  tag <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;tags&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1012</span><span>  collections <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;collections&#34;</span>
-</span></span></code></pre></div><p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142004055.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142004055.png" alt="hugo配置文件">
+</span></span></code></pre></div><p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142004055.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142004055.png" alt="hugo配置文件">
 
 </a></p>
 <h4 id="233-修改文章前缀模板">2.3.3 修改文章前缀模板</h4>
-<p>在每�?markdown 文章最前面可以用一部分注释来告诉<code>FixIt主题</code>，这篇文章的属性，譬如文章标签、分类、是否为草稿等�?</p>
+<p>在每篇 markdown 文章最前面可以用一部分注释来告诉<code>FixIt主题</code>，这篇文章的属性，譬如文章标签、分类、是否为草稿等。</p>
 <blockquote>
-<p>详细可参�?<a href="https://fixit.lruihao.cn/zh-cn/documentation/content-management/introduction/#front-matter">FixIt 官方文档</a></p>
+<p>详细可参考 <a href="https://fixit.lruihao.cn/zh-cn/documentation/content-management/introduction/#front-matter">FixIt 官方文档</a></p>
 </blockquote>
-<p>用下面的内容覆盖<code>archetypes/default.md</code> 以及 <code>archetypes/posts.md</code>文件�?<strong>注意：实际使用的时候要把摘要的斜杠去掉</strong></p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142018958.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142018958.png" alt="文章前缀模板">
+<p>用下面的内容覆盖<code>archetypes/default.md</code> 以及 <code>archetypes/posts.md</code>文件。 <strong>注意：实际使用的时候要把摘要的斜杠去掉</strong></p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142018958.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142018958.png" alt="文章前缀模板">
 
 </a></p>
-<h3 id="24-创建你的第一篇文">2.4 创建你的第一篇文�?</h3>
+<h3 id="24-创建你的第一篇文章">2.4 创建你的第一篇文章</h3>
 <p>以下是创建新文章的命令：</p>
 <table>
 <thead>
@@ -1283,9 +1283,9 @@
 </tr>
 </tbody>
 </table>
-<p>执行完成后，在<code>./content/posts</code>目录下应该可以看到新文件，同时里面已经有 markdown 模版中的文章前缀参数�?你可以在<code>VScode</code>中随意编辑文章�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142019979.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142019979.png" alt="创建出的新文章">
+<p>执行完成后，在<code>./content/posts</code>目录下应该可以看到新文件，同时里面已经有 markdown 模版中的文章前缀参数。 你可以在<code>VScode</code>中随意编辑文章。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142019979.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142019979.png" alt="创建出的新文章">
 
 </a></p>
 <h3 id="25-本地调试">2.5 本地调试</h3>
@@ -1303,19 +1303,19 @@
 </tr>
 </tbody>
 </table>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081636839.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081636839.png" alt="本地调试">
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636839.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636839.png" alt="本地调试">
 
 </a></p>
-<p>浏览器中打开 http://localhost:1313/，就能看到网站效果�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081636924.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081636924.png" alt="网站效果">
+<p>浏览器中打开 http://localhost:1313/，就能看到网站效果。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636924.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081636924.png" alt="网站效果">
 
 </a></p>
 <h2 id="3github">3、Github</h2>
-<h3 id="31-windows-上创ssh-密钥并将其添加到-github">3.1 �?Windows 上创�?SSH 密钥并将其添加到 GitHub</h3>
-<h4 id="311-windows-端生ssh-密钥">3.1.1 Windows 端生�?SSH 密钥</h4>
-<p>使用 Git Bash 或命令行打开终端窗口，输入以下命令。记得把<code>your_email@example.com</code>改成你自己的邮箱地址�?</p>
+<h3 id="31-在-windows-上创建-ssh-密钥并将其添加到-github">3.1 在 Windows 上创建 SSH 密钥并将其添加到 GitHub</h3>
+<h4 id="311-windows-端生成-ssh-密钥">3.1.1 Windows 端生成 SSH 密钥</h4>
+<p>使用 Git Bash 或命令行打开终端窗口，输入以下命令。记得把<code>your_email@example.com</code>改成你自己的邮箱地址。</p>
 <table>
 <thead>
 <tr>
@@ -1330,45 +1330,45 @@
 </tr>
 </tbody>
 </table>
-<p>按照提示键入您想要保存密钥的文件名和路径，或使用默认设置�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637024.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637024.png" alt="生成SSH密钥">
+<p>按照提示键入您想要保存密钥的文件名和路径，或使用默认设置。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637024.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637024.png" alt="生成SSH密钥">
 
 </a></p>
-<p>接下来，系统将生成一个随机字符串作为密钥密码。此处可以选用默认密码以便于不需要输入密码进�?SSH 登录。进入生成密钥的文件夹，查看密钥�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637119.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637119.png" alt="查看密钥">
+<p>接下来，系统将生成一个随机字符串作为密钥密码。此处可以选用默认密码以便于不需要输入密码进行 SSH 登录。进入生成密钥的文件夹，查看密钥：</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637119.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637119.png" alt="查看密钥">
 
 </a></p>
-<h4 id="312-添加github">3.1.2 添加�?GitHub</h4>
+<h4 id="312-添加到-github">3.1.2 添加到 GitHub</h4>
 <ol>
 <li>
-<p>登录�?GitHub 账户，并转到“Settings”（设置）中的“SSH and GPG keys”（SSH �?GPG 密钥）页面�?</p>
+<p>登录到 GitHub 账户，并转到“Settings”（设置）中的“SSH and GPG keys”（SSH 和 GPG 密钥）页面。</p>
 </li>
 <li>
-<p>点击“New SSH key”（新建 SSH 密钥），填写标题和密钥的内容�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637219.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637219.png" alt="新建 SSH 密钥">
+<p>点击“New SSH key”（新建 SSH 密钥），填写标题和密钥的内容。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637219.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637219.png" alt="新建 SSH 密钥">
 
 </a></p>
 </li>
 <li>
-<p>打开<code>id_rsa.pub</code>公钥文件 (即你在生成的时候保存的文件) ，将其内容复制到 GitHub �?“Key�?字段中�?</p>
+<p>打开<code>id_rsa.pub</code>公钥文件 (即你在生成的时候保存的文件) ，将其内容复制到 GitHub 的 “Key” 字段中。</p>
 </li>
 <li>
-<p>最后，点击“Add SSH key�?（添�?SSH 密钥），完成密钥添加�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637309.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637309.png" alt="添加 SSH 密钥">
+<p>最后，点击“Add SSH key” （添加 SSH 密钥），完成密钥添加。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637309.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637309.png" alt="添加 SSH 密钥">
 
 </a></p>
 </li>
 </ol>
 <h3 id="32-创建-blog-仓库">3.2 创建 blog 仓库</h3>
-<p>用于存储博客源文件，也就是刚才的本地项目文件�?</p>
+<p>用于存储博客源文件，也就是刚才的本地项目文件。</p>
 <ol>
-<li>�?GitHub 网站上登录你的账号，然后点击页面右上角的加号图标，选择 “New repository”（新建仓库）�?</li>
-<li>�?“Initialize this repository with”（使用以下方式初始化仓库）部分，选择 “Add a README file”（添加一�?README 文件）选项�?</li>
-<li>暂存并提交现有文�?</li>
+<li>在 GitHub 网站上登录你的账号，然后点击页面右上角的加号图标，选择 “New repository”（新建仓库）。</li>
+<li>在 “Initialize this repository with”（使用以下方式初始化仓库）部分，选择 “Add a README file”（添加一个 README 文件）选项。</li>
+<li>暂存并提交现有文件</li>
 </ol>
 <table>
 <thead>
@@ -1386,14 +1386,14 @@
 </table>
 <ol>
 <li>
-<p>点击 “Create repository”（创建仓库）按钮，完成 GitHub 仓库的创建�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637388.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637388.png" alt="创建 blog 仓库">
+<p>点击 “Create repository”（创建仓库）按钮，完成 GitHub 仓库的创建。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637388.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637388.png" alt="创建 blog 仓库">
 
 </a></p>
 </li>
 <li>
-<p>将本地仓库与远程 GitHub 仓库关联起来。在项目目录中打开 Git Bash，执行以下命令，�?<code>&lt;remote-url&gt;</code> 替换为你�?GitHub 仓库的远�?URL�?</p>
+<p>将本地仓库与远程 GitHub 仓库关联起来。在项目目录中打开 Git Bash，执行以下命令，将 <code>&lt;remote-url&gt;</code> 替换为你的 GitHub 仓库的远程 URL：</p>
 </li>
 </ol>
 <table>
@@ -1410,7 +1410,7 @@
 </tr>
 </tbody>
 </table>
-<p>例如�?</p>
+<p>例如：</p>
 <table>
 <thead>
 <tr>
@@ -1426,7 +1426,7 @@
 </tbody>
 </table>
 <ol>
-<li>将本地代码推送到远程仓库�?main 分支。执行以下命令：</li>
+<li>将本地代码推送到远程仓库的 main 分支。执行以下命令：</li>
 </ol>
 <table>
 <thead>
@@ -1442,27 +1442,27 @@
 </tr>
 </tbody>
 </table>
-<p>这将把本地的代码推送到远程仓库�?<code>main</code> 分支，并将其设置为默认上游分支�?</p>
+<p>这将把本地的代码推送到远程仓库的 <code>main</code> 分支，并将其设置为默认上游分支。</p>
 <h3 id="33-创建-github-pages-公开仓库">3.3 创建 Github Pages 公开仓库</h3>
-<p>用于实际展示博客�?</p>
+<p>用于实际展示博客。</p>
 <ol>
 <li>
-<p>创建新仓�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637474.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637474.png" alt="创建新Github Pages仓库">
+<p>创建新仓库</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637474.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637474.png" alt="创建新Github Pages仓库">
 
 </a></p>
 </li>
 <li>
-<p><code>Repository name</code> 这里一定要�?<code>[你的github账号].github.io</code>。<code>你的github账号</code>必须小写字母。仓库可见性设为<code>Public</code>。选择“使�?README 初始化此存储库”�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637559.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637559.png" alt="新建Github Pages仓库">
+<p><code>Repository name</code> 这里一定要填 <code>[你的github账号].github.io</code>。<code>你的github账号</code>必须小写字母。仓库可见性设为<code>Public</code>。选择“使用 README 初始化此存储库”。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637559.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637559.png" alt="新建Github Pages仓库">
 
 </a></p>
 </li>
 </ol>
 <h3 id="34-上传页面">3.4 上传页面</h3>
-<h5 id="3401-进入项目根目录执行">3.4.0.1 进入项目根目录，执行�?</h5>
+<h5 id="3401-进入项目根目录执行">3.4.0.1 进入项目根目录，执行：</h5>
 <table>
 <thead>
 <tr>
@@ -1477,9 +1477,9 @@
 </tr>
 </tbody>
 </table>
-<p>执行后，站点根目录下会生成一�?<code>public</code> 文件夹，该文件下的内容即 Hugo 生成的整个静态网站。每次更新内容后，将 <code>pubilc</code> 目录里所有文�?push �?GitHub Pages 所在的仓库即可�?</p>
-<h5 id="3402-上传代码master">3.4.0.2 上传代码�?master</h5>
-<p>首次使用的时候要执行以下命令�?</p>
+<p>执行后，站点根目录下会生成一个 <code>public</code> 文件夹，该文件下的内容即 Hugo 生成的整个静态网站。每次更新内容后，将 <code>pubilc</code> 目录里所有文件 push 到 GitHub Pages 所在的仓库即可。</p>
+<h5 id="3402-上传代码至-master">3.4.0.2 上传代码至 master</h5>
+<p>首次使用的时候要执行以下命令：</p>
 <table>
 <thead>
 <tr>
@@ -1495,17 +1495,17 @@
 </tbody>
 </table>
 <h5 id="3403-更改-pages-展示分支">3.4.0.3 更改 Pages 展示分支</h5>
-<p>进入 Github Pages 仓库的<code>Setting</code>-<code>Pages</code>，把<code>Branch</code>修改为<code>master</code>，点�?save�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637645.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637645.png" alt="修改发布Branch">
+<p>进入 Github Pages 仓库的<code>Setting</code>-<code>Pages</code>，把<code>Branch</code>修改为<code>master</code>，点击 save。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637645.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637645.png" alt="修改发布Branch">
 
 </a></p>
-<p>稍等几分钟即可通过<code>[你的github账号].github.io</code>来访问博客站点了，和<code>hugo serve -D</code>本地调试完全一致�?</p>
+<p>稍等几分钟即可通过<code>[你的github账号].github.io</code>来访问博客站点了，和<code>hugo serve -D</code>本地调试完全一致。</p>
 <h3 id="35-github-action-自动发布">3.5 Github Action 自动发布</h3>
-<p>通过上述命令我们可以手动发布我们的静态文件，但还是有以下弊端�?</p>
+<p>通过上述命令我们可以手动发布我们的静态文件，但还是有以下弊端：</p>
 <ol>
 <li>发布步骤还是比较繁琐，本地调试后还需要切换到 <code>public/</code> 目录进行上传</li>
-<li>无法对博�?<code>.md</code> 源文件进行备份与版本管理 可以通过官方提供�?GitHub Action 进行 CI 自动发布�?</li>
+<li>无法对博客 <code>.md</code> 源文件进行备份与版本管理 可以通过官方提供的 GitHub Action 进行 CI 自动发布。</li>
 </ol>
 <h4 id="351-增加-action-配置文件">3.5.1 增加 action 配置文件</h4>
 <p>回到 blog 仓库的本地文件夹，新增<code>.github/workflows/deploy.yml</code></p>
@@ -1523,17 +1523,17 @@
 </tr>
 </tbody>
 </table>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637741.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637741.png" alt="新建deploy.yml">
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637741.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637741.png" alt="新建deploy.yml">
 
 </a></p>
-<p>�?vscode 编辑 deploy.yml 的内容，参考如下：</p>
-<p>注意：<code>EXTERNAL_REPOSITORY</code>要修改为 Github Pages 的链�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637836.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637836.png" alt="deploy.yml">
+<p>用 vscode 编辑 deploy.yml 的内容，参考如下：</p>
+<p>注意：<code>EXTERNAL_REPOSITORY</code>要修改为 Github Pages 的链接</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637836.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637836.png" alt="deploy.yml">
 
 </a></p>
-<p>提交变更�?Github�?</p>
+<p>提交变更到 Github：</p>
 <table>
 <thead>
 <tr>
@@ -1548,14 +1548,14 @@
 </tr>
 </tbody>
 </table>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637929.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637929.png" alt="提交变更">
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637929.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637929.png" alt="提交变更">
 
 </a></p>
 <h4 id="352-设置-action-变量">3.5.2 设置 action 变量</h4>
 <p>进入 <a href="https://github.com/settings/tokens">Github tokens</a> ，点击<code>Generate new token</code>——<code>Generate new token (classic)</code></p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637020.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637020.png" alt="Generate new token">
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637020.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637020.png" alt="Generate new token">
 
 </a></p>
 <ul>
@@ -1566,22 +1566,22 @@
 <p>Expiration：<code>No expiration</code></p>
 </li>
 <li>
-<p>Select scopes：只勾�?</p>
+<p>Select scopes：只勾选</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>repo
-</span></span></code></pre></div><p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637107.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637107.png" alt="设置属性">
+</span></span></code></pre></div><p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637107.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637107.png" alt="设置属性">
 
 </a></p>
-<p>拉到最下面，点击生成�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637199.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637199.png" alt="生成密钥">
+<p>拉到最下面，点击生成。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637199.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637199.png" alt="生成密钥">
 
 </a></p>
 </li>
 </ul>
-<p>注意生成�?token 只会显示这一次，形如 <code>ghp_xxxxxxxxxx</code>，点击复制�?回到 blog 仓库——Setting，新建仓库密�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637293.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637293.png" alt="新建仓库密钥">
+<p>注意生成的 token 只会显示这一次，形如 <code>ghp_xxxxxxxxxx</code>，点击复制。 回到 blog 仓库——Setting，新建仓库密钥</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637293.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637293.png" alt="新建仓库密钥">
 
 </a></p>
 <ul>
@@ -1589,28 +1589,28 @@
 <p>Name：PERSONAL_TOKEN</p>
 </li>
 <li>
-<p>Secret：填刚才复制的密�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637376.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081637376.png" alt="粘贴密钥">
+<p>Secret：填刚才复制的密钥</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637376.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637376.png" alt="粘贴密钥">
 
 </a></p>
 </li>
 </ul>
-<h2 id="4-自定义博客域">4 自定义博客域�?</h2>
-<p><code>你的github账户�?github.io</code>的网址在国内访问速度较慢，为博客设置一个自定义域名可以有效加快速度。以本博客为例，要设置的自定义域名为：<code>haoyep.com</code>�?</p>
+<h2 id="4-自定义博客域名">4 自定义博客域名</h2>
+<p><code>你的github账户名.github.io</code>的网址在国内访问速度较慢，为博客设置一个自定义域名可以有效加快速度。以本博客为例，要设置的自定义域名为：<code>haoyep.com</code>。</p>
 <h3 id="41-cloudflare-配置">4.1 Cloudflare 配置</h3>
 <ol>
 <li>
-<p>使用 Cloudflare 托管域名，这一点教程很多，跟着做就行�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312141651245.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312141651245.png" alt="托管域名">
+<p>使用 Cloudflare 托管域名，这一点教程很多，跟着做就行。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312141651245.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312141651245.png" alt="托管域名">
 
 </a></p>
 </li>
 <li>
-<p>�?DNS 配置中，新增一�?CNAME 解析记录到<code>你的github账户�?github.io</code>，不启用代理�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142035444.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142035444.png" alt="新增一�?CNAME 解析记录">
+<p>在 DNS 配置中，新增一条 CNAME 解析记录到<code>你的github账户名.github.io</code>，不启用代理。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142035444.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142035444.png" alt="新增一条 CNAME 解析记录">
 
 </a></p>
 </li>
@@ -1618,21 +1618,21 @@
 <h3 id="42-hugo-配置">4.2 hugo 配置</h3>
 <ol>
 <li>
-<p>�?<code>static</code> 中添�?CNAME 文件，内容为自定义域名为 <code>haoyep.com</code>�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142031955.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142031955.png" alt="CNAME 文件">
+<p>在 <code>static</code> 中添加 CNAME 文件，内容为自定义域名为 <code>haoyep.com</code>。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142031955.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142031955.png" alt="CNAME 文件">
 
 </a></p>
 </li>
 <li>
-<p><code>hugo.toml</code> 修改 <code>baseURL</code> 为自定义域名�?<code>haoyep.com</code>�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142033201.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142033201.png" alt="baseURL">
+<p><code>hugo.toml</code> 修改 <code>baseURL</code> 为自定义域名为 <code>haoyep.com</code>。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142033201.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142033201.png" alt="baseURL">
 
 </a></p>
 </li>
 </ol>
-<p>提交�?Github 仓库</p>
+<p>提交到 Github 仓库</p>
 <table>
 <thead>
 <tr>
@@ -1648,12 +1648,12 @@
 </tbody>
 </table>
 <h3 id="43-github-pages-仓库配置">4.3 Github Pages 仓库配置</h3>
-<p>为自定义域名启用 SSL 证书�?Settings——Pages——Custom domain，勾�?<strong>Enforce HTTPS</strong>�?
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142041938.png" alt="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142041938.png">
+<p>为自定义域名启用 SSL 证书。 Settings——Pages——Custom domain，勾选 <strong>Enforce HTTPS</strong>。 
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142041938.png" alt="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142041938.png">
 
 </p>
 <h2 id="5-总结">5 总结</h2>
-<p>以上整个环境部署好之后，接下来的常用命令就是以下几个�?</p>
+<p>以上整个环境部署好之后，接下来的常用命令就是以下几个：</p>
 <ul>
 <li>
 <ol>
@@ -1665,7 +1665,7 @@
 <thead>
 <tr>
 <th><code>1 </code></th>
-<th><code>hugo new posts/文章�?md</code></th>
+<th><code>hugo new posts/文章名.md</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1699,7 +1699,7 @@
 <ul>
 <li>
 <ol>
-<li>修改完成，确定要上传�?GitHub 上后�?*站点目录**下执行：</li>
+<li>修改完成，确定要上传到 GitHub 上后，<strong>站点目录</strong>下执行：</li>
 </ol>
 </li>
 </ul>
@@ -1732,31 +1732,31 @@
 </tr>
 </tbody>
 </table>
-<p>稍等片刻，github action 执行完毕，页面就会更新了�?</p>
-<h2 id="6-选择和配hugo-主题httpshugoloveitcomzh-cntheme-documentation-basics">6 <a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/">选择和配�?Hugo 主题</a></h2>
+<p>稍等片刻，github action 执行完毕，页面就会更新了。</p>
+<h2 id="6-选择和配置-hugo-主题httpshugoloveitcomzh-cntheme-documentation-basics">6 <a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/">选择和配置 Hugo 主题</a></h2>
 <h3 id="61-网站-logo">6.1 网站 logo</h3>
-<p>在本地项目文件夹<code>static</code>中添�?个方�?png 图片，命名为<code>avatar.png</code>、<code>logo.png</code>，作为网站头像和 logo�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081638404.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/md_img202311081638404.png" alt="网站头像�?logo">
+<p>在本地项目文件夹<code>static</code>中添加2个方形 png 图片，命名为<code>avatar.png</code>、<code>logo.png</code>，作为网站头像和 logo：</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081638404.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081638404.png" alt="网站头像和 logo">
 
 </a></p>
-<p>并修改<code>hugo.toml</code>文件中对应的参数�?</p>
-<h3 id="62-网站小图">6.2 网站小图�?</h3>
-<p>我是在这个<a href="https://bigheads.io/editor/?accessory=shades&amp;body=chest&amp;circleColor=blue&amp;clothing=dressShirt&amp;clothingColor=red&amp;eyebrows=concerned&amp;eyes=happy&amp;faceMask=false&amp;faceMaskColor=white&amp;facialHair=none&amp;graphic=none&amp;hair=none&amp;hairColor=blue&amp;hat=beanie&amp;hatColor=blue&amp;lashes=false&amp;lipColor=turqoise&amp;mask=false&amp;mouth=openSmile&amp;skinTone=light">网站</a>上生成自己的 svg 小图标。然后把文件下载后，放在博客的<code>static</code>目录中�?</p>
-<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142045154.png?size=large">
-  <img src="https://cdn.haoyep.com/gh/leegical/Blog_///img/cdn///img/202312142045154.png" alt="网站svg图标">
+<p>并修改<code>hugo.toml</code>文件中对应的参数。</p>
+<h3 id="62-网站小图标">6.2 网站小图标</h3>
+<p>我是在这个<a href="https://bigheads.io/editor/?accessory=shades&amp;body=chest&amp;circleColor=blue&amp;clothing=dressShirt&amp;clothingColor=red&amp;eyebrows=concerned&amp;eyes=happy&amp;faceMask=false&amp;faceMaskColor=white&amp;facialHair=none&amp;graphic=none&amp;hair=none&amp;hairColor=blue&amp;hat=beanie&amp;hatColor=blue&amp;lashes=false&amp;lipColor=turqoise&amp;mask=false&amp;mouth=openSmile&amp;skinTone=light">网站</a>上生成自己的 svg 小图标。然后把文件下载后，放在博客的<code>static</code>目录中。</p>
+<p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142045154.png?size=large">
+  <img src="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142045154.png" alt="网站svg图标">
 
 </a></p>
-<p>前往<a href="https://realfavicongenerator.net/">这个网站</a>，生成下面的文件�?</p>
+<p>前往<a href="https://realfavicongenerator.net/">这个网站</a>，生成下面的文件：</p>
 <ul>
 <li>apple-touch-icon.png (180x180)</li>
 <li>favicon-32x32.png (32x32)</li>
 <li>favicon-16x16.png (16x16)</li>
 <li>mstile-150x150.png (150x150)</li>
 <li>android-chrome-192x192.png (192x192)</li>
-<li>android-chrome-512x512.png (512x512) 然后放在 <code>/static</code> 目录�?</li>
+<li>android-chrome-512x512.png (512x512) 然后放在 <code>/static</code> 目录。</li>
 </ul>
-<p>并修改<code>hugo.toml</code>文件中对应的参数�?</p>
+<p>并修改<code>hugo.toml</code>文件中对应的参数。</p>
 <p>记得提交更改</p>
 <table>
 <thead>
@@ -1772,7 +1772,7 @@
 </tr>
 </tbody>
 </table>
-<p>稍等片刻，github action 执行完毕，页面就会更新了�?</p>
+<p>稍等片刻，github action 执行完毕，页面就会更新了。</p>
 
 
                     
@@ -1787,7 +1787,7 @@
 <div class="zs-modal-box">
 	<div class="zs-modal-head">
 		<button type="button" class="close">×</button>
-		<span class="author"><a href="http://localhost:1313/"><img src="/img/favicon.png" />Nefelibata</a></span>
+		<span class="author"><a href="https://huuuuuuo.github.io/"><img src="/img/favicon.png" />Nefelibata</a></span>
         
 	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
 		
@@ -1822,15 +1822,15 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" data-toggle="tooltip" data-placement="top"
-                                title="git push：本地分支和远程分支冲突问题解决">&larr;
+                            <a href="/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/" data-toggle="tooltip" data-placement="top"
+                                title="博客搭建：Jekyll&#43;GithubPages">&larr;
                                 Previous Post</a>
                         </li>
                         
                         
                         <li class="next">
-                            <a href="/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：日常更新流程">Next
+                            <a href="/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD-copy/" data-toggle="tooltip" data-placement="top"
+                                title="关于GPT的底层原理和未来影响（转载）">Next
                                 Post &rarr;</a>
                         </li>
                         
@@ -1945,6 +1945,12 @@
                             
                             <a href="/tags/hugo" title="hugo">
                                 hugo
+                            </a>
+                            
+                            
+                            
+                            <a href="/tags/jekyll" title="jekyll">
+                                jekyll
                             </a>
                             
                             
