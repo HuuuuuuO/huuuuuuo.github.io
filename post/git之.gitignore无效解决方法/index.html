@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Python无环境部署" />
-    <meta property="og:title" content="Python无环境部署" />
-    <meta property="twitter:title" content="Python无环境部署" />
+    <meta name="title" content="Git之.gitignore无效解决方法" />
+    <meta property="og:title" content="Git之.gitignore无效解决方法" />
+    <meta property="twitter:title" content="Git之.gitignore无效解决方法" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="Nefelibata, tick, 看吧，天空在上, Blog, 博客, 个人网站, 互联网, Web">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Python无环境部署 | 看吧，天空在上</title>
+    <title>Git之.gitignore无效解决方法 | 看吧，天空在上</title>
 
-    <link rel="canonical" href="/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
+    <link rel="canonical" href="/post/git%E4%B9%8B.gitignore%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
 
     
     
@@ -177,7 +177,7 @@
                             </a>
                             
                         </div>
-                        <h1>Python无环境部署</h1>
+                        <h1>Git之.gitignore无效解决方法</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             
@@ -186,9 +186,9 @@
                             Nefelibata
                             
                             on
-                            Wed 10:16:07 2024-03-27
+                            Wed 11:44:19 2024-03-27
                             
-                            | <span class="post-date">91 words</span> | about<span class="more-meta"> 1 mins</span>
+                            | <span class="post-date">208 words</span> | about<span class="more-meta"> 1 mins</span>
                             
                             
                             
@@ -218,9 +218,16 @@
                     
                 
                
-                    <h1 id="1背景">1、背景</h1>
-<p>有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。</p>
-<p>目前考虑的方案是，mysql 改用 access，python</p>
+                    <p>文章转载修改自：<a href="https://blog.csdn.net/wwwtotoro/article/details/91042307">https://blog.csdn.net/wwwtotoro/article/details/91042307</a></p>
+<p>在根目录中新建.gitignore文件，设置如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>public/
+</span></span></code></pre></div><p>若没有生效，是因为gitignore只能忽略那些原来没有被 track 的文件，如果某些文件已经被纳入了版本管理中，则修改 .gitignore 是无效的。
+解决方法是先把本地缓存删除，然后再提交。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git rm -r --cached .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git add .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git commit -m &#34;update .gitignore&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git push -u origin master
+</span></span></code></pre></div><p>结果显示，git远程仓库内删除了 <code>public</code> 目录</p>
 
 
                     
@@ -270,17 +277,11 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/%E4%BB%8A%E5%A4%A91/" data-toggle="tooltip" data-placement="top"
-                                title="今天1">&larr;
+                            <a href="/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/" data-toggle="tooltip" data-placement="top"
+                                title="Python无环境部署">&larr;
                                 Previous Post</a>
                         </li>
                         
-                        
-                        <li class="next">
-                            <a href="/post/git%E4%B9%8B.gitignore%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" data-toggle="tooltip" data-placement="top"
-                                title="Git之.gitignore无效解决方法">Next
-                                Post &rarr;</a>
-                        </li>
                         
                     </ul>
                     
