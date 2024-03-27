@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Nefelibata</title>
+    <link>https://huuuuuuo.github.io/tags/python/</link>
+    <description>Recent content in Python on Nefelibata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Mar 2024 04:25:38 +0000</lastBuildDate>
+    <atom:link href="https://huuuuuuo.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python无环境部署</title>
+      <link>https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 27 Mar 2024 10:16:07 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</guid>
+      <description>1、背景 有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。 目前考虑的方案是</description>
+    </item>
+  </channel>
+</rss>

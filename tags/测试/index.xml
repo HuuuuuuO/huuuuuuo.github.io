@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on Nefelibata</title>
+    <link>https://huuuuuuo.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on Nefelibata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Mar 2024 04:25:38 +0000</lastBuildDate>
+    <atom:link href="https://huuuuuuo.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>今天1</title>
+      <link>https://huuuuuuo.github.io/post/%E4%BB%8A%E5%A4%A91/</link>
+      <pubDate>Fri, 22 Mar 2024 15:34:21 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E4%BB%8A%E5%A4%A91/</guid>
+      <description>1号标题 最近下载了一个笔记软件Effie，感觉里面的字体挺好看的，搜一下发现是一款开源字体 1.克服抵触心理。很多人会因为害怕被取代而抵触新工</description>
+    </item>
+  </channel>
+</rss>
