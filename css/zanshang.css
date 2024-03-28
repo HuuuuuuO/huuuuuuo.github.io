@@ -137,7 +137,7 @@ button.close {
 }
 
 .zs-modal-btns .btn:nth-child(3n-2) {
-    margin-left: 0;
+    margin-left: 10;
 }
 
 .zs-modal-btns .btn {
