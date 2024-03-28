@@ -60,7 +60,7 @@ button.close {
 }
 
 .zs-modal-box {
-    width: 340px;
+    width: 450px;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -73,14 +73,15 @@ button.close {
 }
 
 .zs-modal-head {
-    padding: 0 16px;
+    /* padding: 0 16px; */
     position: relative;
 }
 
 .zs-modal-head img {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 50%; */
+    margin: auto;
 }
 
 .zs-modal-head .close {
@@ -93,7 +94,7 @@ button.close {
 }
 
 .zs-modal-head .author {
-    padding-top: 15px;
+    padding-top: 1px;
     display: block;
 }
 .zs-modal-head .author a{
@@ -102,69 +103,22 @@ button.close {
 }
 
 .zs-modal-head .author img {
-    margin-right: 5px;
+    margin-left: 15px;
+    margin-top: 19px;
 }
 
-.zs-modal-head .tip {
-    background: #f6f6f6;
-    padding: 0 10px;
-    font-size: 12px;
-    color: gray;
-    border-radius: 3px;
-    margin-top: 10px;
-    position: relative;
-    line-height: 28px;
-    margin-bottom: 10px;
+.zs-modal-body label{
+
+    margin: 0;
+
 }
 
-.zs-modal-head .tip i {
-    display: block;
-    border-width: 0 7px 7px 7px;
-    border-color: transparent  transparent #f6f6f6 transparent;
-    border-style: dashed dashed solid dashed;
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: -7px;
-}
+
 
 .zs-modal-body {
-    padding: 0 15px;
+    padding:0 0 ;
 }
 
-.zs-modal-btns {
-    font-size: 0;
-}
-
-.zs-modal-btns .btn:nth-child(3n-2) {
-    margin-left: 10;
-}
-
-.zs-modal-btns .btn {
-    width: 28%;
-    margin-left: 8%;
-    margin-bottom: 24px;
-    display: inline-block;
-    font-size: 12px;
-}
-
-.zs-modal-btns .btn-blink {
-    background: #fff;
-    border-color: #e26d6d;
-    color: #e26d6d;
-    font-weight: bold;
-}
-
-.zs-modal-btns .btn-blink:hover, .zs-btns .btn-blink:active {
-    background: rgba(226,109,109,.06);
-    box-shadow: none;
-}
-
-.zs-modal-btns .btn-blink:focus {
-    background: #e26d6d;
-    border-color: #e26d6d;
-    color: #fff;
-}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .zs-modal-body ul {
@@ -177,16 +131,35 @@ button.close {
 }
 
 .zs-modal-footer label {
-    margin: 0 10px;
+    margin: 0 0px;
+}
+
+.zs-modal-body img {
+    height: 30px;
+    min-width: 85px;
+    margin-left: 68px;
 }
 
 .zs-modal-footer img {
-    height: 30px;
-    min-width: 85px;
+    height: 185px;
+    min-width: 185px;
+    margin: auto;
 }
 
-.zs-modal-pay {
-    text-align: center;
-    padding: 15px 0;
-    display: none;
+
+
+label.left-btn {
+    margin-left: 0px;
+}
+
+label.right-btn {
+    margin-left: 22px;
+}
+
+label.left-png {
+    margin-left: 20px;
+}
+
+label.right-png {
+    margin-left: 8px;
 }
