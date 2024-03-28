@@ -6,7 +6,7 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 28 Mar 2024 07:43:39 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2024 09:06:15 +0000</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：添加评论功能</title>
@@ -20,7 +20,7 @@
       <link>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
       <pubDate>Wed, 27 Mar 2024 23:23:48 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid>
-      <description>1 目前显示效果 &gt; &gt; &gt; 展开 &gt; &gt; &gt; 1git add . 2git commit -m &amp;#34;update&amp;#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&amp;lt;details style=&amp;#34;background-color:#282a36ab;&amp;#34;&amp;gt; 2 &amp;lt;summary&amp;gt; &amp;lt;font color=&amp;#34;white&amp;#34;&amp;gt; &amp;gt; &amp;gt; &amp;gt; 展开 &amp;gt; &amp;gt; &amp;gt; &amp;lt;/font&amp;gt;&amp;lt;/summary&amp;gt; 3 {{ .Inner | markdownify</description>
+      <description>1 目前显示效果 1git add . 2git commit -m &amp;#34;update&amp;#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&amp;lt;details style=&amp;#34;background-color:#ffffff;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);&amp;#34;&amp;gt; 2 &amp;lt;summary&amp;gt; &amp;lt;font color=#817f7f&amp;gt; &amp;gt; &amp;gt; &amp;gt; 展开 &amp;gt; &amp;gt; &amp;gt; &amp;lt;/font&amp;gt;&amp;lt;/summary&amp;gt; 3 {{ .Inner | markdownify }} 4&amp;lt;/details&amp;gt; 以</description>
     </item>
     <item>
       <title>Hugo：访问量统计</title>
