@@ -203,11 +203,11 @@
                             on
                             Wed 23:23:48 2024-03-27
                             
-                            | <span class="post-date">1051 words</span> | about<span class="more-meta"> 3 mins</span>
+                            | <span class="post-date">1196 words</span> | about<span class="more-meta"> 3 mins</span>
                             
                             
                             
-                            <br>Last Modified on Thu 05:45:37 2024-03-28
+                            <br>Last Modified on Thu 07:43:39 2024-03-28
                             
                             
                         </span>
@@ -400,8 +400,161 @@
 
 
    
-<h1 id="3-未来改进">3 未来改进</h1>
-<p>可添加 css 来改进动态效果</p>
+<h1 id="3-改进">3 改进</h1>
+<h2 id="31-noticedetails">3.1 notice+details</h2>
+<p>使notice具有折叠效果，如下所示：</p>
+<style type="text/css">
+    .notice {
+        --root-color: #444;
+        --root-background: #eff;
+        --title-color: #fff;
+        --title-background: #7bd;
+        --warning-title: #c33;
+        --warning-content: #fee;
+        --info-title: #fb7;
+        --info-content: #fec;
+        --note-title: #6be;
+        --note-content: #e7f2fa;
+        --tip-title: #5a5;
+        --tip-content: #efe
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .notice {
+            --root-color: #ddd;
+            --root-background: #eff;
+            --title-color: #fff;
+            --title-background: #7bd;
+            --warning-title: #800;
+            --warning-content: #400;
+            --info-title: #a50;
+            --info-content: #420;
+            --note-title: #069;
+            --note-content: #023;
+            --tip-title: #363;
+            --tip-content: #121
+        }
+    }
+
+    body.dark .notice {
+        --root-color: #ddd;
+        --root-background: #eff;
+        --title-color: #fff;
+        --title-background: #7bd;
+        --warning-title: #800;
+        --warning-content: #400;
+        --info-title: #a50;
+        --info-content: #420;
+        --note-title: #069;
+        --note-content: #023;
+        --tip-title: #363;
+        --tip-content: #121
+    }
+
+    .notice {
+        padding: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        color: var(--root-color);
+        background: var(--root-background)
+    }
+
+    .notice p:last-child {
+        margin-bottom: 0
+    }
+
+    .notice-title {
+        margin: -18px -18px 12px;
+        padding: 4px 18px;
+        border-radius: 4px 4px 0 0;
+        font-weight: 700;
+        color: var(--title-color);
+        background: var(--title-background)
+    }
+
+    .notice.warning .notice-title {
+        background: var(--warning-title)
+    }
+
+    .notice.warning {
+        background: var(--warning-content)
+    }
+
+    .notice.info .notice-title {
+        background: var(--info-title)
+    }
+
+    .notice.info {
+        background: var(--info-content)
+    }
+
+    .notice.note .notice-title {
+        background: var(--note-title)
+    }
+
+    .notice.note {
+        background: var(--note-content)
+    }
+
+    .notice.tip .notice-title {
+        background: var(--tip-title)
+    }
+
+    .notice.tip {
+        background: var(--tip-content)
+    }
+
+    .icon-notice {
+        display: inline-flex;
+        align-self: center;
+        margin-right: 8px
+    }
+
+    .icon-notice img,
+    .icon-notice svg {
+        height: 1em;
+        width: 1em;
+        fill: currentColor
+    }
+
+    .icon-notice img,
+    .icon-notice.baseline svg {
+        top: .125em;
+        position: relative
+    }
+</style><div class="notice note" >
+    <details><summary> <p class="notice-title">
+        <span class="icon-notice baseline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 128 300 300">
+  <path d="M150 128c82.813 0 150 67.188 150 150 0 82.813-67.188 150-150 150C67.187 428 0 360.812 0 278c0-82.813 67.188-150 150-150Zm25 243.555v-37.11c0-3.515-2.734-6.445-6.055-6.445h-37.5c-3.515 0-6.445 2.93-6.445 6.445v37.11c0 3.515 2.93 6.445 6.445 6.445h37.5c3.32 0 6.055-2.93 6.055-6.445Zm-.39-67.188 3.515-121.289c0-1.367-.586-2.734-1.953-3.516-1.172-.976-2.93-1.562-4.688-1.562h-42.968c-1.758 0-3.516.586-4.688 1.563-1.367.78-1.953 2.148-1.953 3.515l3.32 121.29c0 2.734 2.93 4.882 6.64 4.882h36.134c3.515 0 6.445-2.148 6.64-4.883Z"/>
+</svg>
+
+        </span>Note</p></summary><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git add .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git commit -m &#34;update&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git push origin master
+</span></span></code></pre></div></details> 
+</div>
+<p>使用时对于notice是没有变化的，依然是：</p>
+<p>
+  <img src="/img/image-20240328154028511.png" alt="image-20240328154028511">
+
+</p>
+<p>改动方式是在 <code>notice.html</code> 后面进行稍微改动，添加 summary 和 details ：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>&lt;div class=&#34;notice {{ $noticeType }}&#34; {{ if len .Params | eq 2 }} id=&#34;{{ .Get 1 }}&#34; {{ end }}&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>&lt;details&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    &lt;summary&gt; 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>        &lt;p class=&#34;notice-title&#34;&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>            &lt;span class=&#34;icon-notice baseline&#34;&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>                {{ printf &#34;icons/%s.svg&#34; $noticeType | readFile | safeHTML }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>            &lt;/span&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>            {{- i18n $noticeType -}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        &lt;/p&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    &lt;/summary&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    	{{- if or $block (not $raw) }}{{ $raw }}{{ else }}&lt;p&gt;{{ $raw }}&lt;/p&gt;{{ end -}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>&lt;/details&gt; 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>&lt;/div&gt;
+</span></span></code></pre></div><h2 id="32-可添加-css-来改进动态效果">3.2 可添加 css 来改进动态效果</h2>
 
 
                     
@@ -459,6 +612,12 @@
                         </li>
                         
                         
+                        <li class="next">
+                            <a href="/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" data-toggle="tooltip" data-placement="top"
+                                title="Hugo：添加评论功能">Next
+                                Post &rarr;</a>
+                        </li>
+                        
                     </ul>
                     
 
@@ -466,15 +625,15 @@
 
 
 <script src="https://giscus.app/client.js"
-        data-repo=""
-        data-repo-id=""
-        data-category=""
-        data-category-id=""
-        data-mapping=""
-        data-reactions-enabled=""
-        data-emit-metadata=""
-        data-theme=""
-        data-lang=""
+        data-repo="HuuuuuuO/huuuuuuo.github.io"
+        data-repo-id="R_kgDOLi2R7w"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOLi2R784CeJvK"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="noborder_light"
+        data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 </script>
@@ -540,6 +699,12 @@
                             
                             <a href="/tags/copy" title="copy">
                                 copy
+                            </a>
+                            
+                            
+                            
+                            <a href="/tags/giscus" title="giscus">
+                                giscus
                             </a>
                             
                             
@@ -711,6 +876,12 @@
                             </a>
                             
                             
+                            
+                            <a href="/tags/%E8%AF%84%E8%AE%BA" title="评论">
+                                评论
+                            </a>
+                            
+                            
                         </div>
                     </section>
                     
@@ -879,8 +1050,10 @@
                     
                         
                     
-                    发表了 18 篇文章 · 
-                    总计 2.11 万字
+                        
+                    
+                    发表了 19 篇文章 · 
+                    总计 2.15 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
