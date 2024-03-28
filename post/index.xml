@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 28 Mar 2024 16:46:08 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2024 17:26:49 +0000</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：图片点击放大</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</link>
+      <pubDate>Fri, 29 Mar 2024 01:16:10 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</guid>
+      <description>1 显示效果 想要知乎这种图片点击放大的效果，一查才知道是灯箱。 2 解决方案 2.1 修改 config.toml 在 config.toml文件中，添加如下代码： 1[params] 2 fancybox = true 2.2 创建</description>
+    </item>
     <item>
       <title>Hugo：添加评论功能</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</link>
