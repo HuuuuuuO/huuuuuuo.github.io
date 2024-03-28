@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Hugo：内容折叠" />
-    <meta property="og:title" content="Hugo：内容折叠" />
-    <meta property="twitter:title" content="Hugo：内容折叠" />
+    <meta name="title" content="Hugo：内容折叠与代码块大小限制" />
+    <meta property="og:title" content="Hugo：内容折叠与代码块大小限制" />
+    <meta property="twitter:title" content="Hugo：内容折叠与代码块大小限制" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="Nefelibata, tick, 看吧，天空在上, Blog, 博客, 个人网站, 互联网, Web">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Hugo：内容折叠 | 看吧，天空在上</title>
+    <title>Hugo：内容折叠与代码块大小限制 | 看吧，天空在上</title>
 
-    <link rel="canonical" href="/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0/">
+    <link rel="canonical" href="/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
 
     
     
@@ -184,16 +184,20 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                            <a class="tag" href="/tags/" title="">
-                                
+                            <a class="tag" href="/tags/hugo" title="hugo">
+                                hugo
                             </a>
                             
-                            <a class="tag" href="/tags/" title="">
-                                
+                            <a class="tag" href="/tags/%e6%8a%98%e5%8f%a0" title="折叠">
+                                折叠
+                            </a>
+                            
+                            <a class="tag" href="/tags/%e4%bb%a3%e7%a0%81%e5%9d%97" title="代码块">
+                                代码块
                             </a>
                             
                         </div>
-                        <h1>Hugo：内容折叠</h1>
+                        <h1>Hugo：内容折叠与代码块大小限制</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             
@@ -204,11 +208,11 @@
                             on
                             Wed 23:23:48 2024-03-27
                             
-                            | <span class="post-date">85 words</span> | about<span class="more-meta"> 1 mins</span>
+                            | <span class="post-date">681 words</span> | about<span class="more-meta"> 2 mins</span>
                             
                             
                             
-                            <br>Last Modified on Wed 20:16:16 2024-03-27
+                            <br>Last Modified on Thu 00:32:54 2024-03-28
                             
                             
                         </span>
@@ -247,13 +251,91 @@
 
    
 <h1 id="2-解决方案">2 解决方案</h1>
+<h2 id="21-内容折叠">2.1 内容折叠</h2>
 <p>新建 <code>themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html</code> 文件，并添加以下代码：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;details style=&#34;background-color:#282a36ab;&#34;&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  &lt;summary&gt; &lt;font color=&#34;white&#34;&gt; &gt; &gt; &gt; 展开 &gt; &gt; &gt; &lt;/font&gt;&lt;/summary&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  {{ .Inner | markdownify }}
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>&lt;/details&gt;
+</span></span></code></pre></div><p>在 <code>markdown</code> 中使用时这么写：</p>
+<p>
+  <img src="/img/image-20240328081447543.png" alt="image-20240328081447543">
+
+</p>
+<h2 id="22-代码块大小限制">2.2 代码块大小限制</h2>
+<p>我是直接在主题文件中改的，在主题文件的 <code>themes\hugo-theme-cleanwhite\static\css\hugo-theme-cleanwhite.min.css</code> 中添加：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>pre code{font-size:16px;display:block;width:auto;white-space:pre;word-wrap:normal}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>.post-content pre,code{font-family:LXGW WenKai Screen;font-size:18px;line-height:1.5em;max-height:50em;word-spacing:0.2em;letter-spacing:0.015em;font-weight: 600;}
+</span></span></code></pre></div><p>其中：第一行的<code>font-size:16px</code> 、<code>display:block</code> 表示代码块中的字体大小、显示方式为 <code>block</code> ；</p>
+<p>第二行中， <code>font-family:LXGW WenKai Screen</code> ：代码块字体，
+<code>line-height:1.5em</code> ：代码块行间距
+<code>max-height:50em</code>  ：代码块最大高度为50倍当前字号的大小，超过会显示滚动条，1em表示当前元素的字号大小
+<code>word-spacing:0.2em</code> ： 代码块中的字间距
+<code>letter-spacing:0.015em</code> ：代码块中的字母间距
+<code>font-weight: 600</code> ：字重，就是字的粗细程度</p>
+<p>显示效果如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>import os
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>import shutil
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>import codecs
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span># 定义源路径和目标路径
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>source_path = &#34;content/post/postimg&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>destination_path = &#34;static/img&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span># 复制文件，如果目标路径已存在文件则不覆盖
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>for filename in os.listdir(source_path):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    source_file = os.path.join(source_path, filename)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    destination_file = os.path.join(destination_path, filename)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    if not os.path.exists(destination_file):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>        shutil.copy2(source_file, destination_file)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        print(f&#34;文件 {source_file} 复制成功！&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    else:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>        print(f&#34;pass&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>print(f&#34;----------------------------------&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span># 遍历md文件并替换字符串
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>md_files = [f for f in os.listdir(&#34;content/post&#34;) if f.endswith(&#34;.md&#34;)]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>for md_file in md_files:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    md_file_path = os.path.join(&#34;content/post&#34;, md_file)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>    with codecs.open(md_file_path, &#39;r&#39;, encoding=&#39;utf-8&#39;, errors=&#39;ignore&#39;) as file:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        content = file.read()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    new_content = content.replace(&#39;/img/&#39;, &#39;/img/&#39;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    if content != new_content:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>        with codecs.open(md_file_path, &#39;w&#39;, encoding=&#39;utf-8&#39;, errors=&#39;ignore&#39;) as file:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>            file.write(new_content)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>        print(f&#34;文件 {md_file_path} 替换成功！&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>    else:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>        print(f&#34;pass&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span># 定义源路径和目标路径
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>source_path = &#34;content/post/postimg&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>destination_path = &#34;static/img&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span># 复制文件，如果目标路径已存在文件则不覆盖
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>for filename in os.listdir(source_path):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>    source_file = os.path.join(source_path, filename)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>    destination_file = os.path.join(destination_path, filename)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>    if not os.path.exists(destination_file):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>        shutil.copy2(source_file, destination_file)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>        print(f&#34;文件 {source_file} 复制成功！&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>    else:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>        print(f&#34;pass&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>print(f&#34;----------------------------------&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span># 遍历md文件并替换字符串
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span>md_files = [f for f in os.listdir(&#34;content/post&#34;) if f.endswith(&#34;.md&#34;)]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>for md_file in md_files:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>    md_file_path = os.path.join(&#34;content/post&#34;, md_file)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span>    with codecs.open(md_file_path, &#39;r&#39;, encoding=&#39;utf-8&#39;, errors=&#39;ignore&#39;) as file:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>        content = file.read()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>    new_content = content.replace(&#39;/img/&#39;, &#39;/img/&#39;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span>    if content != new_content:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span>        with codecs.open(md_file_path, &#39;w&#39;, encoding=&#39;utf-8&#39;, errors=&#39;ignore&#39;) as file:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span>            file.write(new_content)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span>        print(f&#34;文件 {md_file_path} 替换成功！&#34;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>    else:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span>        print(f&#34;pass&#34;)
 </span></span></code></pre></div><h1 id="3-未来改进">3 未来改进</h1>
-<p>还需要添加 css 来改进动态效果</p>
+<p>可添加 css 来改进动态效果</p>
 
 
                     
@@ -534,6 +616,12 @@
                             
                             
                             
+                            <a href="/tags/%E6%8A%98%E5%8F%A0" title="折叠">
+                                折叠
+                            </a>
+                            
+                            
+                            
                             <a href="/tags/%E8%84%9A%E6%9C%AC" title="脚本">
                                 脚本
                             </a>
@@ -727,7 +815,7 @@
                         
                     
                     发表了 18 篇文章 · 
-                    总计 2.02 万字
+                    总计 2.08 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

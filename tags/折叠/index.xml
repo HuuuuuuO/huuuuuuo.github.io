@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>代码块 on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</link>
-    <description>Recent content in 代码块 on Nefelibata</description>
+    <title>折叠 on Nefelibata</title>
+    <link>https://huuuuuuo.github.io/tags/%E6%8A%98%E5%8F%A0/</link>
+    <description>Recent content in 折叠 on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 28 Mar 2024 00:32:54 +0000</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huuuuuuo.github.io/tags/%E6%8A%98%E5%8F%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：内容折叠与代码块大小限制</title>
       <link>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
       <pubDate>Wed, 27 Mar 2024 23:23:48 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid>
       <description>1 目前显示效果 &gt; &gt; &gt; 展开 &gt; &gt; &gt; 1git add . 2git commit -m &amp;#34;update&amp;#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&amp;lt;details style=&amp;#34;background-color:#282a36ab;&amp;#34;&amp;gt; 2 &amp;lt;summary&amp;gt; &amp;lt;font color=&amp;#34;white&amp;#34;&amp;gt; &amp;gt; &amp;gt; &amp;gt; 展开 &amp;gt; &amp;gt; &amp;gt; &amp;lt;/font&amp;gt;&amp;lt;/summary&amp;gt; 3 {{ .Inner | markdownify</description>
-    </item>
-    <item>
-      <title>Hugo：代码块拷贝</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</link>
-      <pubDate>Thu, 21 Mar 2024 13:12:48 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</guid>
-      <description>本文转载与修改自：Hugo插件之代码块拷贝插件 添加按钮-css 我们通过检查博客内容页面发现，hugo生成的每个代码块格式如下： 没有语法突出显</description>
     </item>
   </channel>
 </rss>

@@ -34,9 +34,9 @@
     <meta name="keyword"  content="Nefelibata, tick, 看吧，天空在上, Blog, 博客, 个人网站, 互联网, Web">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>优化 | 看吧，天空在上</title>
+    <title>折叠 | 看吧，天空在上</title>
 
-    <link rel="canonical" href="/tags/%E4%BC%98%E5%8C%96/">
+    <link rel="canonical" href="/tags/%E6%8A%98%E5%8F%A0/">
 
     
     
@@ -201,20 +201,20 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
         <h2 class="post-title">
-            Hugo：图片存储路径优化
+            Hugo：内容折叠与代码块大小限制
         </h2>
 	
         <div class="post-content-preview">
 	
-            使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用
+            1 目前显示效果 > > > 展开 > > > 1git add . 2git commit -m &#34;update&#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&lt;details style=&#34;background-color:#282a36ab;&#34;&gt; 2 &lt;summary&gt; &lt;font color=&#34;white&#34;&gt; &gt; &gt; &gt; 展开 &gt; &gt; &gt; &lt;/font&gt;&lt;/summary&gt; 3 {{ .Inner | markdownify
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 18:55:26 2024-03-21 
+        Posted by Nefelibata on Wed 23:23:48 2024-03-27 
         
         
         | Last Modified on Thu 00:32:54 2024-03-28 
