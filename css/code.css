@@ -1,4 +1,0 @@
-.post-content pre code {
-    max-height: 12em; /* 设置代码块的最大高度为父元素字体大小的xx倍 */
-    overflow: auto; /* 当代码块内容超出最大高度时，显示滚动条 */
-}
