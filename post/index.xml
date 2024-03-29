@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 29 Mar 2024 18:08:35 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2024 18:39:21 +0000</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：代码高亮风格</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/</link>
+      <pubDate>Sat, 30 Mar 2024 02:11:00 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/</guid>
+      <description>1 代码高亮风格 代码高亮风格很多，可以参见 Chroma Style Gallery 看起来都不错，可以考虑添加进 hugo 2 遇到问题 之前我已经在 config.toml 中已经添加如下配置： 1[markup] 2 [markup.highlight] 3 codeFences = true 4 guessSyntax =</description>
+    </item>
     <item>
       <title>Hugo：添加热力图</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/</link>

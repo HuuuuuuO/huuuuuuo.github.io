@@ -214,7 +214,7 @@
         Posted by Nefelibata on Wed 22:30:42 2024-03-20 
         
         
-        | Last Modified on Fri 18:08:35 2024-03-29 
+        | Last Modified on Fri 18:39:21 2024-03-29 
         
     
     </p>
@@ -304,6 +304,18 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-03-30";
+    var value = dataMap.get(key);
+    var wordCount =  591 ;
+    var link = "/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/";
+    var title = "Hugo：代码高亮风格";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-03-30";
     var value = dataMap.get(key);
     var wordCount =  867 ;
@@ -719,6 +731,12 @@
         
         
         
+        <a href="/tags/chroma-style-gallery" title="chroma style gallery">
+            chroma style gallery
+        </a>
+        
+        
+        
         <a href="/tags/copy" title="copy">
             copy
         </a>
@@ -835,6 +853,12 @@
         
         <a href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97" title="代码块">
             代码块
+        </a>
+        
+        
+        
+        <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE" title="代码高亮">
+            代码高亮
         </a>
         
         
@@ -1127,8 +1151,10 @@
                     
                         
                     
-                    发表了 21 篇文章 · 
-                    总计 2.27 万字
+                        
+                    
+                    发表了 22 篇文章 · 
+                    总计 2.33 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
