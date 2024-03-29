@@ -214,7 +214,7 @@
         Posted by Nefelibata on Wed 11:44:19 2024-03-27 
         
         
-        | Last Modified on Fri 17:42:26 2024-03-29 
+        | Last Modified on Fri 17:57:12 2024-03-29 
         
     
     </p>
@@ -240,7 +240,7 @@
         Posted by Nefelibata on Thu 11:36:42 2024-03-21 
         
         
-        | Last Modified on Fri 17:42:26 2024-03-29 
+        | Last Modified on Fri 17:57:12 2024-03-29 
         
     
     </p>
@@ -266,7 +266,7 @@
         Posted by Nefelibata on Wed 20:30:42 2024-03-20 
         
         
-        | Last Modified on Fri 17:42:26 2024-03-29 
+        | Last Modified on Fri 17:57:12 2024-03-29 
         
     
     </p>
@@ -292,7 +292,7 @@
         Posted by Nefelibata on Tue 19:30:42 2024-03-19 
         
         
-        | Last Modified on Fri 17:42:26 2024-03-29 
+        | Last Modified on Fri 17:57:12 2024-03-29 
         
     
     </p>
@@ -382,6 +382,18 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-03-30";
+    var value = dataMap.get(key);
+    var wordCount =  830 ;
+    var link = "/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/";
+    var title = "Hugo：添加热力图";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-03-29";
     var value = dataMap.get(key);
     var wordCount =  188 ;
@@ -642,7 +654,7 @@
   var lightTheme = {
       backgroundColor: '#FFFFFF',
       fangkuaicolor:'#F1F1F1',
-      gaoliangcolor: ['#0085A13B','#0085A1B8'],
+      gaoliangcolor: ['#0085A121','#0085A1B8'],
       
       riqiColor: '#999',
       textbrcolor: '#FFF',
@@ -694,7 +706,7 @@
         },
         
         showLabel: false,
-        splitNumber: 7,
+        splitNumber: 4,
 
     },
     calendar: {
@@ -960,6 +972,12 @@
         
         
         
+        <a href="/tags/%E7%83%AD%E5%8A%9B%E5%9B%BE" title="热力图">
+            热力图
+        </a>
+        
+        
+        
         <a href="/tags/%E8%84%9A%E6%9C%AC" title="脚本">
             脚本
         </a>
@@ -1186,8 +1204,10 @@
                     
                         
                     
-                    发表了 20 篇文章 · 
-                    总计 2.18 万字
+                        
+                    
+                    发表了 21 篇文章 · 
+                    总计 2.26 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
