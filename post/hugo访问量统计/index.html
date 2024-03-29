@@ -205,7 +205,7 @@
                             
                             
                             
-                            <br>Last Modified on Fri 18:39:21 2024-03-29
+                            <br>Last Modified on Fri 18:48:50 2024-03-29
                             
                             
                         </span>
@@ -246,10 +246,10 @@
 <h1 id="解决方案">解决方案</h1>
 <p>本文使用 <a href="http://busuanzi.ibruce.info/">不蒜子</a> 来进行网站访问量的统计</p>
 <p>前期也踩了几个坑，最后在官网发现了最佳解决方案，只需要将官网上的两行代码稍加改进就可以在hugo上完美使用，这是官网的使用方式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;script async src=&#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#34;&gt;&lt;/script&gt;
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;script async src=&#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#34;&gt;&lt;/script&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;span id=&#34;busuanzi_container_site_pv&#34;&gt;本站总访问量&lt;span id=&#34;busuanzi_value_site_pv&#34;&gt;&lt;/span&gt;次&lt;/span&gt;
 </span></span></code></pre></div><p>我们在 hugo 的 <code>themes\hugo-theme-cleanwhite\layouts\partials\footer.html</code> 文件中的相应位置（取决于你想插入的位置），插入以下代码：</p>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;script async src=&#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#34;&gt;&lt;/script&gt;
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;script async src=&#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#34;&gt;&lt;/script&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;span id=&#34;busuanzi_container_site_pv&#34;&gt;本站总访问量 &lt;span id=&#34;busuanzi_value_site_pv&#34;&gt;&lt;/span&gt; 次 · &lt;/span&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>&lt;span id=&#34;busuanzi_container_site_uv&#34;&gt;您是本站第 &lt;span id=&#34;busuanzi_value_site_uv&#34;&gt;&lt;/span&gt; 位访问者&lt;/span&gt;
 </span></span></code></pre></div><p><code>busuanzi_value_site_pv</code> ：表示访问次数</p>
