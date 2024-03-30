@@ -6,14 +6,14 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Mar 2024 16:36:37 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2024 17:08:31 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：一些有趣的短代码收集</title>
       <link>https://huuuuuuo.github.io/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</link>
       <pubDate>Sat, 30 Mar 2024 15:53:28 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</guid>
-      <description>首先感谢 眠于水月间 大佬，文章主要收集于他的文章，[Hugo | 在 Stack 主题上可行的短代码们] Tip 实际使用需要去掉前括号的空格，以下所有样式皆如此 1 评</description>
+      <description>首先感谢 眠于水月间 大佬，文章主要收集于他的文章，[Hugo | 在 Stack 主题上可行的短代码们] 本文旨在收集一些有趣的短代码，因此主要是呈现使用方式，</description>
     </item>
     <item>
       <title>Hugo：文字标记</title>
