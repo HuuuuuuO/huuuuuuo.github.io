@@ -209,7 +209,7 @@
                             
                             
                             
-                            <br>Last Modified on Thu 03:02:51 2024-03-28
+                            <br>Last Modified on Sat 16:23:22 2024-03-30
                             
                             
                         </span>
@@ -263,14 +263,17 @@
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 </span></span></code></pre></div><p>或者将子模块分支从 <code>master</code> 切换到 <code>dev</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git submodule set-branch -b dev themes/FixIt
-</span></span></code></pre></div><h3 id="232-基础配置">2.3.2 基础配置</h3>
+</span></span></code></pre></div><h2 id="232-基础配置">2.3.2 基础配置</h2>
 <p>用<code>VScode</code>打开<code>E:\Workspace\blog</code>文件夹，用下面的内容覆盖<code>hugo.toml</code>文件。并自行修改<code>baseURL</code>和<code>title</code>。 其中，<code>baseURL</code>为<code>你的github账户名.github.io</code>，也可以像我一样设置自定义域名。记得逐项修改为你的配置。</p>
 
 
 
 
-<details style="background-color:#e6e3e336;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);">
-    <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   1</span><span><span style="color:#9893a5"># =====================================================================================</span>
+
+
+<details>
+  <summary></summary>
+  <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   1</span><span><span style="color:#9893a5"># =====================================================================================</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   2</span><span><span style="color:#9893a5"># It&#39;s recommended to use Alternate Theme Config to configure FixIt</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   3</span><span><span style="color:#9893a5"># Modifying this file may result in merge conflict</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">   4</span><span><span style="color:#9893a5"># =====================================================================================</span>
@@ -1284,6 +1287,11 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1012</span><span>  <span style="color:#d7827e">collections</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;collections&#34;</span>
 </span></span></code></pre></div>
 </details>
+
+
+
+
+
 <p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202312142004055.png?size=large">
 
 
@@ -1294,7 +1302,7 @@
 </div>
 
 </a></p>
-<h4 id="233-修改文章前缀模板">2.3.3 修改文章前缀模板</h4>
+<h2 id="233-修改文章前缀模板">2.3.3 修改文章前缀模板</h2>
 <p>在每篇 markdown 文章最前面可以用一部分注释来告诉<code>FixIt主题</code>，这篇文章的属性，譬如文章标签、分类、是否为草稿等。</p>
 <blockquote>
 <p>详细可参考 <a href="https://fixit.lruihao.cn/zh-cn/documentation/content-management/introduction/#front-matter">FixIt 官方文档</a></p>
@@ -1310,7 +1318,7 @@
 </div>
 
 </a></p>
-<h3 id="24-创建你的第一篇文章">2.4 创建你的第一篇文章</h3>
+<h2 id="24-创建你的第一篇文章">2.4 创建你的第一篇文章</h2>
 <p>以下是创建新文章的命令：</p>
 <table>
 <thead>
@@ -1337,7 +1345,7 @@
 </div>
 
 </a></p>
-<h3 id="25-本地调试">2.5 本地调试</h3>
+<h2 id="25-本地调试">2.5 本地调试</h2>
 <table>
 <thead>
 <tr>
@@ -1375,7 +1383,7 @@
 </a></p>
 <h1 id="3github">3、Github</h1>
 <h2 id="31-在-windows-上创建-ssh-密钥并将其添加到-github">3.1 在 Windows 上创建 SSH 密钥并将其添加到 GitHub</h2>
-<h4 id="311-windows-端生成-ssh-密钥">3.1.1 Windows 端生成 SSH 密钥</h4>
+<h3 id="311-windows-端生成-ssh-密钥">3.1.1 Windows 端生成 SSH 密钥</h3>
 <p>使用 Git Bash 或命令行打开终端窗口，输入以下命令。记得把<code>your_email@example.com</code>改成你自己的邮箱地址。</p>
 <table>
 <thead>
@@ -1413,7 +1421,7 @@
 </div>
 
 </a></p>
-<h4 id="312-添加到-github">3.1.2 添加到 GitHub</h4>
+<h3 id="312-添加到-github">3.1.2 添加到 GitHub</h3>
 <ol>
 <li>
 <p>登录到 GitHub 账户，并转到“Settings”（设置）中的“SSH and GPG keys”（SSH 和 GPG 密钥）页面。</p>
@@ -1565,7 +1573,7 @@
 </li>
 </ol>
 <h3 id="34-上传页面">3.4 上传页面</h3>
-<h5 id="3401-进入项目根目录执行">3.4.0.1 进入项目根目录，执行：</h5>
+<h4 id="3401-进入项目根目录执行">3.4.0.1 进入项目根目录，执行：</h4>
 <table>
 <thead>
 <tr>
@@ -1581,7 +1589,7 @@
 </tbody>
 </table>
 <p>执行后，站点根目录下会生成一个 <code>public</code> 文件夹，该文件下的内容即 Hugo 生成的整个静态网站。每次更新内容后，将 <code>pubilc</code> 目录里所有文件 push 到 GitHub Pages 所在的仓库即可。</p>
-<h5 id="3402-上传代码至-master">3.4.0.2 上传代码至 master</h5>
+<h4 id="3402-上传代码至-master">3.4.0.2 上传代码至 master</h4>
 <p>首次使用的时候要执行以下命令：</p>
 <table>
 <thead>
@@ -1597,7 +1605,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="3403-更改-pages-展示分支">3.4.0.3 更改 Pages 展示分支</h5>
+<h4 id="3403-更改-pages-展示分支">3.4.0.3 更改 Pages 展示分支</h4>
 <p>进入 Github Pages 仓库的<code>Setting</code>-<code>Pages</code>，把<code>Branch</code>修改为<code>master</code>，点击 save。</p>
 <p><a href="https://cdn.haoyep.com/gh/leegical/Blog_img/md_img202311081637645.png?size=large">
 
@@ -2411,6 +2419,7 @@
 <link rel="stylesheet" href="/css/backtop.css">
 
 
+
 <footer>
     <div class="container">
         <div class="row">
@@ -2528,8 +2537,10 @@
                     
                         
                     
-                    发表了 24 篇文章 · 
-                    总计 2.41 万字
+                        
+                    
+                    发表了 25 篇文章 · 
+                    总计 2.47 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

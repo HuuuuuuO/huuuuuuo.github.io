@@ -1,0 +1,30 @@
+blockquote.quote-center {
+    position: relative;
+    border-left: none;
+    padding-left: 0;
+    border-top: 0px solid var(--card-separator-color);
+    border-bottom: 0px solid var(--card-separator-color);
+    p {
+      text-align: center !important;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+    &::before {
+      position: absolute;
+      left: 0;
+      content: '“----';
+      color: #6496c880;
+      font-size: 3em;
+      font-weight: normal;
+      margin-top: -0.72em;
+    }
+    &::after {
+      position: absolute;
+      right: 0;
+      content: '----”';
+      color: #6496c880;
+      font-size: 3em;
+      font-weight: normal;
+      margin-top: -1.42em;
+    }
+}

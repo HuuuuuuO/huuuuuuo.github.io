@@ -1,0 +1,13 @@
+
+i.star{
+    color: hsl(61, 79%, 63%); /*星星的颜色*/
+  }
+  
+  i.star-outline{
+    color: hsl(211, 31%, 74%);/*空星星的颜色*/
+  }
+  
+  i.star svg, i.star-outline svg{
+    width: 20px;
+    fill: currentColor;
+}

@@ -1,0 +1,26 @@
+
+i.star{
+    color: hsl(61, 79%, 63%); /*星星的颜色*/
+  }
+  
+  i.star-outline{
+    color: hsla(0, 2%, 61%, 0.495);/*空星星的颜色*/
+  }
+  
+  i.star svg, i.star-outline svg{
+    width: 20px;
+    fill: currentColor;
+}
+
+
+.mycard {
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    word-break: break-all;
+    background: #d2e5eb14;
+    box-shadow: 0 6px 10px 0 #00000033;
+    .content {
+      line-height: 30px;
+    }
+}
