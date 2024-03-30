@@ -247,8 +247,17 @@
                 
                 
                 
+                
+                
 
                 <ul>
+                    
+                    <li>
+                        <span>03-30</span> —
+                        <a href="/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/">
+                            Hugo：文章标记
+                        </a>
+                    </li>
                     
                     <li>
                         <span>03-30</span> —
@@ -493,7 +502,19 @@
   
     var key = "2024-03-30";
     var value = dataMap.get(key);
-    var wordCount =  91 ;
+    var wordCount =  5 ;
+    var link = "/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/";
+    var title = "Hugo：文章标记";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-03-30";
+    var value = dataMap.get(key);
+    var wordCount =  740 ;
     var link = "/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/";
     var title = "Hugo：文章发布后最后修改时间不一致问题";
     
@@ -1361,8 +1382,10 @@
                     
                         
                     
-                    发表了 23 篇文章 · 
-                    总计 2.34 万字
+                        
+                    
+                    发表了 24 篇文章 · 
+                    总计 2.40 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

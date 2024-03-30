@@ -198,6 +198,30 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/">
+        <h2 class="post-title">
+            Hugo：文章标记
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 显示效果
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sat 13:32:11 2024-03-30 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
         <h2 class="post-title">
             Hugo：文章发布后最后修改时间不一致问题
@@ -205,7 +229,7 @@
 	
         <div class="post-content-preview">
 	
-            1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前，这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前
+            1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前， 这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前
        
         </div>
     </a>
@@ -541,32 +565,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/">
-        <h2 class="post-title">
-            Hugo：代码块拷贝
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            本文转载与修改自：Hugo插件之代码块拷贝插件 添加按钮-css 我们通过检查博客内容页面发现，hugo生成的每个代码块格式如下： 没有语法突出显
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Thu 13:12:48 2024-03-21 
-        
-        
-        | Last Modified on Wed 23:26:13 2024-03-27 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -659,7 +657,19 @@
   
     var key = "2024-03-30";
     var value = dataMap.get(key);
-    var wordCount =  91 ;
+    var wordCount =  5 ;
+    var link = "/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/";
+    var title = "Hugo：文章标记";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-03-30";
+    var value = dataMap.get(key);
+    var wordCount =  740 ;
     var link = "/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/";
     var title = "Hugo：文章发布后最后修改时间不一致问题";
     
@@ -1526,8 +1536,10 @@
                     
                         
                     
-                    发表了 23 篇文章 · 
-                    总计 2.34 万字
+                        
+                    
+                    发表了 24 篇文章 · 
+                    总计 2.40 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

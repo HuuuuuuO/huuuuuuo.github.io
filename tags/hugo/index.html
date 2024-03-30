@@ -205,7 +205,7 @@
 	
         <div class="post-content-preview">
 	
-            1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前，这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前
+            1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前， 这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前
        
         </div>
     </a>
@@ -654,7 +654,19 @@
   
     var key = "2024-03-30";
     var value = dataMap.get(key);
-    var wordCount =  91 ;
+    var wordCount =  5 ;
+    var link = "/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/";
+    var title = "Hugo：文章标记";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-03-30";
+    var value = dataMap.get(key);
+    var wordCount =  740 ;
     var link = "/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/";
     var title = "Hugo：文章发布后最后修改时间不一致问题";
     
@@ -1521,8 +1533,10 @@
                     
                         
                     
-                    发表了 23 篇文章 · 
-                    总计 2.34 万字
+                        
+                    
+                    发表了 24 篇文章 · 
+                    总计 2.40 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

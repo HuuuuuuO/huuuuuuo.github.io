@@ -201,11 +201,11 @@
                             on
                             Sat 11:59:46 2024-03-30
                             
-                            | <span class="post-date">91 words</span> | about<span class="more-meta"> 1 mins</span>
+                            | <span class="post-date">740 words</span> | about<span class="more-meta"> 2 mins</span>
                             
                             
                             
-                            <br>Last Modified on Sat 12:06:23 2024-03-30
+                            <br>Last Modified on Sat 13:59:33 2024-03-30
                             
                             
                         </span>
@@ -244,8 +244,42 @@
 </div>
 
 </p>
-<p>但是之前，这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前。</p>
-<p>一开始以为是主题修改了，导致时间会改变，</p>
+<p>但是之前，
+
+<mark>这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前。</mark>
+</p>
+<p>一开始以为是主题修改了，导致时间会改变，<strong>尝试了不修改主题内的东西</strong>，还是一样的结果。</p>
+<p>在 <code>config.toml</code> 中也都是设置正确的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#797593">[</span><span style="color:#d7827e">frontmatter</span><span style="color:#797593">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#d7827e">lastmod</span> <span style="color:#797593">=</span> <span style="color:#797593">[</span><span style="color:#ea9d34">&#39;lastmod&#39;</span><span style="color:#797593">,</span><span style="color:#ea9d34">&#39;:git&#39;</span><span style="color:#797593">,</span>  <span style="color:#ea9d34">&#39;:fileModTime&#39;</span><span style="color:#797593">,</span>  <span style="color:#ea9d34">&#39;date&#39;</span><span style="color:#797593">,</span> <span style="color:#ea9d34">&#39;publishDate&#39;</span><span style="color:#797593">]</span>
+</span></span></code></pre></div><p>问题是，在本地进行 <code>hugo serve</code> 的时候，本地的效果是正确的。那么我就开始考虑是发布的时候，<code>github acition</code> 的 <code>workflow</code> 出现问题了。</p>
+<h2 id="11-排查-timezone">1.1 排查 timezone</h2>
+<p>在 <code>.github\workflows\deploy.yml</code> 中添加如下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>- <span style="color:#d7827e">name</span><span style="color:#797593">:</span> <span style="color:#ea9d34">Set timezone</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#d7827e">run</span><span style="color:#797593">:</span> <span style="color:#ea9d34">echo &#34;TZ=Asia/Shanghai&#34; &gt;&gt; $GITHUB_ENV</span>
+</span></span></code></pre></div><p>发现发布以后，时间变成发布的时间了，但是每篇文章还是一致的，所以不是发布时间的问题。如果要以 git 发布时间来作为最后修改时间，可以改一下这一项。</p>
+<h2 id="12-排查-workflow">1.2 排查 workflow</h2>
+<p>在进行 workflow 排查的时候，想起来对于 workflow 来说，有一项是在服务端进行如下操作的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>- <span style="color:#d7827e">name</span><span style="color:#797593">:</span> <span style="color:#ea9d34">Build Web</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#d7827e">run</span><span style="color:#797593">:</span> <span style="color:#ea9d34">hugo</span>
+</span></span></code></pre></div><p>在服务端进行 hugo 构建的话，就有可能会携带的 lastmod 信息被重建，从而导致时间不准，遂进行改进。</p>
+<h1 id="2-解决方案">2 解决方案</h1>
+<h2 id="21-修改workflows">2.1 修改workflows</h2>
+<p>将<code>.github\workflows\deploy.yml</code> 中的上述代码注释掉，也就是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#9893a5"># - name: Build Web</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#9893a5">#   run: hugo</span>
+</span></span></code></pre></div><h2 id="22-推送public">2.2 推送public</h2>
+<p>这时候，我们的思路是：在本地进行 hugo 的构建，然后将 <code>public\</code>推送到<code>GitHub Pages</code>，从而避开在服务端进行 hugo 构建的操作。于是就有了接下来的操作。</p>
+<p>原先，在 <code>themes\hugo-theme-cleanwhite\.gitignore</code>中 忽略了 <code>public\</code>的推送，这时候将它注释掉：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># public/
+</span></span></code></pre></div><p>然后，如果在 git 推送的时候没有进行 hugo 构建的话，那么得在流程上加上 hugo构建，也就是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hugo
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git add .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git commit -m &#34;update&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git push origin master
+</span></span></code></pre></div><p>至此，以及可以通过本地构建，修复这个最后修改时间不一致的问题了。</p>
+<h1 id="3-后续思考">3 后续思考</h1>
+<p>其实这个问题并没有根本上解决，理论上是可以在服务端进行hugo 构建的，后续可以继续排查，可能是还有什么bug没有找到。</p>
 
 
                     
@@ -294,6 +328,12 @@
                                 Previous Post</a>
                         </li>
                         
+                        
+                        <li class="next">
+                            <a href="/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/" data-toggle="tooltip" data-placement="top"
+                                title="Hugo：文章标记">Next
+                                Post &rarr;</a>
+                        </li>
                         
                     </ul>
                     
@@ -782,8 +822,10 @@
                     
                         
                     
-                    发表了 23 篇文章 · 
-                    总计 2.34 万字
+                        
+                    
+                    发表了 24 篇文章 · 
+                    总计 2.40 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
