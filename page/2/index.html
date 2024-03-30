@@ -118,6 +118,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/ceshi\/?utm_source=random",
+      
       "\/post\/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD\/?utm_source=random",
       
       "\/post\/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86\/?utm_source=random",
@@ -262,6 +264,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/git%E4%B9%8B.gitignore%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+        <h2 class="post-title">
+            Git：.gitignore无效解决方法
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            文章转载修改自：https://blog.csdn.net/wwwtotoro/article/details/91042307 在根目录中新
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 11:44:19 2024-03-27 
+        
+        
+        | Last Modified on Sat 14:54:32 2024-03-30 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
@@ -637,6 +665,18 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-03-30";
+    var value = dataMap.get(key);
+    var wordCount =  52 ;
+    var link = "/post/ceshi/";
+    var title = "Ceshi";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-03-30";
     var value = dataMap.get(key);
     var wordCount =  214 ;
@@ -1564,7 +1604,9 @@
                     
                         
                     
-                    发表了 26 篇文章 · 
+                        
+                    
+                    发表了 27 篇文章 · 
                     总计 2.54 万字
                     <br>
                     
