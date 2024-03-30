@@ -6,14 +6,14 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Mar 2024 13:59:33 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2024 14:27:36 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：文章标记</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/</link>
       <pubDate>Sat, 30 Mar 2024 13:32:11 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E6%A0%87%E8%AE%B0/</guid>
-      <description>1 显示效果</description>
+      <description>1 显示效果 第一种，正经标记： 对文字进行标记 第一种，将文字放在代码里，利用代码的颜色进行标记： 对文字进行标记 2 解决方案 首先，利用短代码，添加 ./layouts/shortcodes/mark.html</description>
     </item>
     <item>
       <title>Hugo：文章发布后最后修改时间不一致问题</title>
