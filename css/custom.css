@@ -90,7 +90,7 @@ i.star{
 }
 
 .dark .message__text {
-  border: 1px solid var(--border);
+  border: 0px solid var(--border);
   background: var(--card-background);
 }
 
