@@ -6,7 +6,7 @@
     <description>Recent content in Hugo on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Mar 2024 16:40:46 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2024 23:22:17 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：文字标记</title>
@@ -118,7 +118,7 @@
       <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/</link>
       <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/</guid>
-      <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1、下载安装hugo 访问最新版本页面下载，推荐使用 Hugo extended 版本 解压到</description>
+      <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1 下载安装hugo 访问最新版本页面下载，推荐使用 Hugo extended 版本 解压到某</description>
     </item>
   </channel>
 </rss>
