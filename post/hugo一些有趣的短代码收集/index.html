@@ -201,11 +201,11 @@
                             on
                             Sat 15:53:28 2024-03-30
                             
-                            | <span class="post-date">975 words</span> | about<span class="more-meta"> 2 mins</span>
+                            | <span class="post-date">805 words</span> | about<span class="more-meta"> 2 mins</span>
                             
                             
                             
-                            <br>Last Modified on Sat 17:56:26 2024-03-30
+                            <br>Last Modified on Sat 18:27:04 2024-03-30
                             
                             
                         </span>
@@ -378,35 +378,6 @@
 </p>
     </div>
 <h1 id="1-评分">1 评分</h1>
-<p>新建<code>rating.html</code>，内容为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">head</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">link</span> <span style="color:#d7827e">rel</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;stylesheet&#34;</span> <span style="color:#d7827e">type</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;text/css&#34;</span> <span style="color:#d7827e">href</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;/css/custom.css&#34;</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#797593">&lt;/</span><span style="color:#d7827e">head</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">span</span> <span style="color:#d7827e">class</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;star-rating&#34;</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    {{- if ge (.Get 0) (.Get 1) -}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        {{- $star_outline := sub (int (.Get 0)) (int (.Get 1)) -}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>        {{- range $i, $sequence :=  (seq (.Get 1)) -}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>            <span style="color:#797593">&lt;</span><span style="color:#d7827e">i</span> <span style="color:#d7827e">class</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;star&#34;</span><span style="color:#797593">&gt;&lt;</span><span style="color:#d7827e">svg</span> <span style="color:#d7827e">xmlns</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;http://www.w3.org/2000/svg&#34;</span> <span style="color:#d7827e">viewBox</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;0 0 576 512&#34;</span><span style="color:#797593">&gt;&lt;</span><span style="color:#d7827e">path</span> <span style="color:#d7827e">d</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;</span><span style="color:#797593">/&gt;&lt;/</span><span style="color:#d7827e">svg</span><span style="color:#797593">&gt;&lt;/</span><span style="color:#d7827e">i</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        {{- end -}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        {{- range $i, $sequence :=  (seq $star_outline) -}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>            <span style="color:#797593">&lt;</span><span style="color:#d7827e">i</span> <span style="color:#d7827e">class</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;star-outline&#34;</span><span style="color:#797593">&gt;&lt;</span><span style="color:#d7827e">svg</span> <span style="color:#d7827e">xmlns</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;http://www.w3.org/2000/svg&#34;</span> <span style="color:#d7827e">viewBox</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;0 0 576 512&#34;</span><span style="color:#797593">&gt;&lt;</span><span style="color:#d7827e">path</span> <span style="color:#d7827e">d</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;</span><span style="color:#797593">/&gt;&lt;/</span><span style="color:#d7827e">svg</span><span style="color:#797593">&gt;&lt;/</span><span style="color:#d7827e">i</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        {{- end -}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    {{- end -}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">span</span><span style="color:#797593">&gt;</span>
-</span></span></code></pre></div><p>新建<code>custom.css</code>，内容为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#d7827e">i</span><span style="color:#797593">.</span><span style="color:#56949f">star</span><span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#286983">color</span><span style="color:#797593">:</span> <span style="color:#d7827e">hsl</span><span style="color:#797593">(</span><span style="color:#ea9d34">61</span><span style="color:#797593">,</span> <span style="color:#ea9d34">79</span><span style="color:#286983">%</span><span style="color:#797593">,</span> <span style="color:#ea9d34">63</span><span style="color:#286983">%</span><span style="color:#797593">);</span> <span style="color:#9893a5">/*星星的颜色*/</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  <span style="color:#d7827e">i</span><span style="color:#797593">.</span><span style="color:#56949f">star-outline</span><span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#286983">color</span><span style="color:#797593">:</span> <span style="color:#d7827e">hsl</span><span style="color:#797593">(</span><span style="color:#ea9d34">0</span><span style="color:#797593">,</span> <span style="color:#ea9d34">2</span><span style="color:#286983">%</span><span style="color:#797593">,</span> <span style="color:#ea9d34">61</span><span style="color:#286983">%</span><span style="color:#797593">,</span> <span style="color:#ea9d34">0.495</span><span style="color:#797593">);</span><span style="color:#9893a5">/*空星星的颜色*/</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  <span style="color:#d7827e">i</span><span style="color:#797593">.</span><span style="color:#56949f">star</span> <span style="color:#d7827e">svg</span><span style="color:#797593">,</span> <span style="color:#d7827e">i</span><span style="color:#797593">.</span><span style="color:#56949f">star-outline</span> <span style="color:#d7827e">svg</span><span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#286983">width</span><span style="color:#797593">:</span> <span style="color:#ea9d34">20</span><span style="color:#286983">px</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#d7827e">fill</span><span style="color:#797593">:</span> <span style="color:#286983">currentColor</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#797593">}</span>
-</span></span></code></pre></div><p>使用方法：</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{ {&lt; rating 10 7 &gt;}} //总星数 实际星数；不可以打半星；实际使用需要去掉前括号的空格
 </span></span></code></pre></div><p>显示效果如下：</p>
 <head>
@@ -443,12 +414,25 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>![image-20240330163521774](/img/image-20240330163521774.png)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>{ {&lt; /notice &gt;}}
-</span></span></code></pre></div><h1 id="4-对话">4 对话</h1>
+</span></span></code></pre></div><div class="notice warning" >
+    
+            <p class="notice-title">
+                <span class="icon-notice baseline">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="126 76.5 300 300">
+  <path d="M297.431 324.397v-34.255c0-3.245-2.344-5.95-5.358-5.95h-32.146c-3.014 0-5.358 2.705-5.358 5.95v34.255c0 3.245 2.344 5.95 5.358 5.95h32.146c3.014 0 5.358-2.705 5.358-5.95Zm-.335-67.428 3.014-82.753c0-1.081-.502-2.524-1.674-3.425-1.005-.902-2.512-1.983-4.019-1.983h-36.834c-1.507 0-3.014 1.081-4.019 1.983-1.172.901-1.674 2.704-1.674 3.786l2.846 82.392c0 2.344 2.512 4.146 5.693 4.146h30.975c3.013 0 5.525-1.803 5.692-4.146Zm-2.344-168.39L423.34 342.425c3.683 7.032 3.516 15.686-.335 22.717-3.85 7.031-10.883 11.358-18.417 11.358H147.413c-7.534 0-14.566-4.327-18.417-11.358-3.85-7.031-4.018-15.685-.335-22.716L257.248 88.578C260.93 81.188 268.13 76.5 276 76.5c7.87 0 15.069 4.688 18.752 12.08Z"/>
+</svg>
+
+                </span>Warning</p>
+        <p>实际使用需要去掉前括号的空格，以下所有样式皆如此</p>
+    </div>
+<h1 id="4-对话">4 对话</h1>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{ {<span style="color:#797593">&lt;</span> <span style="color:#d7827e">message</span> <span style="color:#d7827e">from</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;self&#34;</span> <span style="color:#d7827e">accountID</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;twitter/昵称&#34;</span> <span style="color:#d7827e">images</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;图片链接&#34;</span> <span style="color:#d7827e">timestamp</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;自定义时间&#34;</span> <span style="color:#d7827e">name</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;name&#34;</span> <span style="color:#797593">&gt;</span>}} 这里是自定义的信息内容。 { {<span style="color:#797593">&lt;</span> <span style="color:#797593">/</span><span style="color:#d7827e">message</span> <span style="color:#797593">&gt;</span>}}  
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{ {<span style="color:#797593">&lt;</span> <span style="color:#d7827e">message</span> <span style="color:#d7827e">accountID</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;twitter/昵称&#34;</span> <span style="color:#d7827e">images</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;图片链接&#34;</span> <span style="color:#d7827e">timestamp</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;自定义时间&#34;</span> <span style="color:#d7827e">name</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;name&#34;</span> <span style="color:#797593">&gt;</span>}} 
 </span></span></code></pre></div><hr>
-<link rel="stylesheet" href="/css/message.css" />
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
 
 <div class="message --self">
     <div class="message__inner">
@@ -472,7 +456,9 @@
     </div>
 </div>
 
-<link rel="stylesheet" href="/css/message.css" />
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
 
 <div class="message ">
     <div class="message__inner">
@@ -503,7 +489,9 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{ {&lt; timeline date=&#34;2023&#34; title=&#34;哈哈哈&#34; description=&#34;啊呀&#34; tags=&#34;嘻嘻&#34;  &gt;}}
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>{ {&lt; timeline date=&#34;2022&#34; title=&#34;哈哈哈&#34; description=&#34;啊呀&#34; tags=&#34;嘻嘻&#34;  &gt;}}
-</span></span></code></pre></div><div class="timeline__row">
+</span></span></code></pre></div><head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head><div class="timeline__row">
     <div class="timeline__time">
         <div class="timeline__time">2024</div>
         <div class="timeline__split-line"></div>
@@ -672,7 +660,9 @@
     }
 </style>
 
-<div class="timeline__row">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head><div class="timeline__row">
     <div class="timeline__time">
         <div class="timeline__time">2023</div>
         <div class="timeline__split-line"></div>
@@ -841,7 +831,9 @@
     }
 </style>
 
-<div class="timeline__row">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head><div class="timeline__row">
     <div class="timeline__time">
         <div class="timeline__time">2022</div>
         <div class="timeline__split-line"></div>
@@ -1012,7 +1004,11 @@
 
 <h1 id="6-图片轮播">6 图片轮播</h1>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{ {&lt; imgloop &#34;1.jpg,2.jpg,3.jpg&#34; &gt;}} //需要使用url
-</span></span></code></pre></div>
+</span></span></code></pre></div><head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
     
     <div class="swiper-container">
@@ -1059,7 +1055,59 @@
         </script>
 
 
-<h1 id="7">7</h1>
+<h1 id="8-pdfppt网页">8 PDF、PPT、网页</h1>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{ {<span style="color:#797593">&lt;</span> <span style="color:#d7827e">pdf</span> <span style="color:#d7827e">src</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;这里放pdf链接，本地文件当然也可以！跟md文件放在一个文件夹里就行。&#34;</span> <span style="color:#797593">&gt;</span>}}
+</span></span></code></pre></div><p>这里其实放什么都可以，只要是个链接就能够进行浏览</p>
+<p>比如，一个网页：</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
+
+<div class="pdf" style="
+    padding-bottom: 66%;
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: 5px solid;
+">
+    <iframe
+        width="100%"
+        height="100%"
+        src="https://huuuuuuo.github.io/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/"
+        frameborder="0"
+        allowfullscreen=""
+        style="
+            position: absolute;
+            top: 0;
+            left: 0" >
+    </iframe>
+</div>
+
+<p>PDF：</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
+
+<div class="pdf" style="
+    padding-bottom: 66%;
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: 5px solid;
+">
+    <iframe
+        width="100%"
+        height="100%"
+        src="/123.pdf"
+        frameborder="0"
+        allowfullscreen=""
+        style="
+            position: absolute;
+            top: 0;
+            left: 0" >
+    </iframe>
+</div>
+
 
 
                     
@@ -1614,7 +1662,7 @@
                         
                     
                     发表了 25 篇文章 · 
-                    总计 2.52 万字
+                    总计 2.50 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
