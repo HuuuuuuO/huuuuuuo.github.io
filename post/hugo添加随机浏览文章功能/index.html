@@ -17,9 +17,9 @@
     
 
     
-    <meta name="title" content="git push：本地分支和远程分支冲突问题解决" />
-    <meta property="og:title" content="git push：本地分支和远程分支冲突问题解决" />
-    <meta property="twitter:title" content="git push：本地分支和远程分支冲突问题解决" />
+    <meta name="title" content="Hugo：添加随机浏览文章功能" />
+    <meta property="og:title" content="Hugo：添加随机浏览文章功能" />
+    <meta property="twitter:title" content="Hugo：添加随机浏览文章功能" />
     
 
     
@@ -36,9 +36,9 @@
     <meta name="keyword"  content="Nefelibata,看吧天空在上,Blog,博客,个人网站,互联网,Web,hugo">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>git push：本地分支和远程分支冲突问题解决 | Blog</title>
+    <title>Hugo：添加随机浏览文章功能 | Blog</title>
 
-    <link rel="canonical" href="/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+    <link rel="canonical" href="/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/">
 
     
     
@@ -244,24 +244,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                            <a class="tag" href="/tags/git" title="git">
-                                git
+                            <a class="tag" href="/tags/" title="">
+                                
                             </a>
                             
-                            <a class="tag" href="/tags/branch" title="branch">
-                                branch
-                            </a>
-                            
-                            <a class="tag" href="/tags/%e5%88%86%e6%94%af" title="分支">
-                                分支
-                            </a>
-                            
-                            <a class="tag" href="/tags/git%20bug" title="git bug">
-                                git bug
+                            <a class="tag" href="/tags/" title="">
+                                
                             </a>
                             
                         </div>
-                        <h1>git push：本地分支和远程分支冲突问题解决</h1>
+                        <h1>Hugo：添加随机浏览文章功能</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             
@@ -270,13 +262,13 @@
                             Nefelibata
                             
                             on
-                            Tue 19:30:42 2024-03-19
+                            Sat 20:26:44 2024-03-30
                             
-                            | <span class="post-date">1089 words</span> | about<span class="more-meta"> 3 mins</span>
+                            | <span class="post-date">214 words</span> | about<span class="more-meta"> 1 mins</span>
                             
                             
                             
-                            <br>Last Modified on Wed 21:42:48 2024-03-27
+                            <br>Last Modified on Sat 20:33:34 2024-03-30
                             
                             
                         </span>
@@ -303,60 +295,38 @@
                 
 
              
-                    <h1 id="1-failed-to-push-some-refs-报错">1 failed to push some refs 报错</h1>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push -u origin main
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>To https://github.com/xxxx.git
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span> ! [rejected]        main -&gt; main (non-fast-forward)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>error: failed to push some refs to &#39;https://github.com/xxxx.git&#39;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>hint: Updates were rejected because the tip of your current branch is behind
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>hint: its remote counterpart. Integrate the remote changes (e.g.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>hint: &#39;git pull ...&#39;) before pushing again.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
-</span></span></code></pre></div><h2 id="11-解决方案">1.1 解决方案：</h2>
-<p>错误消息表明本地分支位于远程分支后面，并且 Git 阻止我推送更改以避免覆盖远程更改。如果其他人已将提交推送到本地没有的远程分支，则可能会出现这种情况。若要解决此问题，需要先将远程更改集成到本地分支中，然后才能推送更改。以下是步骤：</p>
-<h3 id="111-fetch-the-remote-changes">1.1.1 <strong>Fetch the Remote Changes</strong>:</h3>
-<p>First, you need to fetch the changes from the remote repository without merging them into your local branch. This ensures that you have the latest changes from the remote repository but keeps your local branch unchanged.
-获取远程更改：首先，你需要从远程存储库获取更改，而无需将它们合并到本地分支中。这可确保你拥有来自远程存储库的最新更改，但保持本地分支不变。</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git fetch origin
-</span></span></code></pre></div><h3 id="112-merge-or-rebase">1.1.2 <strong>Merge or Rebase</strong>:</h3>
-<p>After fetching the changes, you have two main options to integrate the remote changes into your local branch:
-合并或变基：获取更改后，你有两个主要选项将远程更改集成到本地分支中：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>- **Merge**: This will create a new merge commit in your local branch that combines your changes with the changes from the remote branch.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git merge origin/main
-</span></span></code></pre></div><ul>
-<li><strong>Rebase</strong>:</li>
-<li>This will replay your local commits on top of the remote changes, creating a linear history. This is a cleaner approach but can be more complex if there are conflicts.
-变基：这将在远程更改之上重放你的本地提交，从而创建线性历史记录。这是一种更简洁的方法，但如果存在冲突，可能会更复杂。</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git rebase origin/main
-</span></span></code></pre></div><p>If you choose to rebase and encounter conflicts, you&rsquo;ll need to resolve them manually. After resolving conflicts, continue the rebase with <code>git rebase --continue</code>.
-如果选择变基并遇到冲突，则需要手动解决它们。解决冲突后，继续使用 <code>git rebase --continue</code> .</p>
-<h3 id="113-push-your-changes">1.1.3 <strong>Push Your Changes</strong>:</h3>
-<p>Once you&rsquo;ve integrated the remote changes into your local branch, you can push your changes to the remote repository. If you&rsquo;ve rebased, you might need to force push, but be cautious as this can overwrite history on the remote repository.
-推送更改：将远程更改集成到本地分支后，可以将更改推送到远程存储库。如果已变基，则可能需要强制推送，但要小心，因为这可能会覆盖远程存储库上的历史记录。</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push origin main
-</span></span></code></pre></div><p>If you&rsquo;ve merged and there are no conflicts, a simple push should work. If you&rsquo;ve rebased and need to force push, use:
-如果已合并并且没有冲突，则简单的推送应该可以工作。如果你已重新定位并需要强制推送，请使用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push -f origin main
-</span></span></code></pre></div><p>Remember, force pushing (<code>git push -f</code>) should be used with caution, especially in shared repositories, as it can overwrite history and potentially cause issues for other collaborators. Always communicate with your team before force pushing.
-请记住，应谨慎使用强制推送 （ <code>git push -f</code> ），尤其是在共享存储库中，因为它可能会覆盖历史记录并可能给其他协作者带来问题。在强制推动之前，请务必与你的团队沟通。</p>
-<hr>
-<h1 id="2-empty-reply-from-server报错-or-timed-out报错">2 Empty reply from server报错 or Timed out报错</h1>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push -u origin main
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>fatal: unable to access &#39;https://github.com/HuuuuuuO/blog.git/&#39;: Empty reply from server
-</span></span></code></pre></div><p>或者为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push -f origin main
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>fatal: unable to access &#39;https://github.com/HuuuuuuO/blog.git/&#39;: Failed to connect to github.com port 443: Timed out
-</span></span></code></pre></div><h2 id="21-解决方案">2.1 解决方案：</h2>
-<h3 id="211-检查-ssh-访问">2.1.1 检查 SSH 访问：</h3>
-<p>如果使用 SSH 连接到 GitHub，请确保将 SSH 密钥正确添加到 GitHub 帐户。您可以使用命令 <code>ssh -T git@github.com</code> 测试 SSH 连接。如果您收到成功的身份验证消息，则您的 SSH 设置是正确的。</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -T git@github.com
-</span></span></code></pre></div><h3 id="2使用-ssh-而不是-https">2.使用 SSH 而不是 HTTPS：</h3>
-<p>如果当前使用 HTTPS 推送到 GitHub，请尝试切换到 SSH。这有时可以绕过与 HTTPS 连接相关的问题。您可以将远程 URL 更改为通过命令 <code>git remote set-url origin git@github.com:HuuuuuuO/blog.git</code> 使用 SSH。</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git remote set-url origin git@github.com:HuuuuuuO/blog.git
-</span></span></code></pre></div><h3 id="3进行push">3.进行push</h3>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git push origin main
-</span></span></code></pre></div><p>成功。</p>
+                    <p>偶然看见了一位大佬的博客 <a href="https://blog.douchi.space/hugo-random-post/#gsc.tab=0">给 Hugo 博客添加随机文章入口</a> ，发现了他做了这个功能，感觉可以搞一下，于是借鉴了她的代码，感谢。</p>
+<h1 id="1-显示效果">1 显示效果</h1>
+<p>在博客的右上角添加了一个叫 STROLL 的随机访问入口，点击后即可随机浏览一篇文章。</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240330202907703.png">
+<img src="/img/image-20240330202907703.png" alt="image-20240330202907703"  />
+</a>
+</div>
+
+</p>
+<h1 id="2-解决方案">2 解决方案</h1>
+<p>新增 <code>layouts\partials\random.html</code> ，并且在其中添加代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#286983">function</span> <span style="color:#d7827e">goToRandomPost</span><span style="color:#797593">()</span> <span style="color:#797593">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#286983">const</span> <span style="color:#d7827e">pages</span> <span style="color:#797593">=</span> <span style="color:#797593">[</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>      <span style="color:#797593">{{</span> <span style="color:#d7827e">range</span> <span style="color:#797593">((</span><span style="color:#d7827e">where</span> <span style="color:#797593">.</span><span style="color:#d7827e">Site</span><span style="color:#797593">.</span><span style="color:#d7827e">RegularPages</span> <span style="color:#ea9d34">&#34;Type&#34;</span> <span style="color:#ea9d34">&#34;post&#34;</span><span style="color:#797593">))</span> <span style="color:#797593">}}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>      <span style="color:#ea9d34">&#34;{{ .RelPermalink }}?utm_source=random&#34;</span><span style="color:#797593">,</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>      <span style="color:#797593">{{</span> <span style="color:#d7827e">end</span> <span style="color:#797593">-</span><span style="color:#797593">}}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#797593">];</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#286983">const</span> <span style="color:#d7827e">rand</span> <span style="color:#797593">=</span> <span style="color:#d7827e">Math</span><span style="color:#797593">.</span><span style="color:#d7827e">floor</span><span style="color:#797593">(</span><span style="color:#d7827e">Math</span><span style="color:#797593">.</span><span style="color:#d7827e">random</span><span style="color:#797593">()</span> <span style="color:#797593">*</span> <span style="color:#d7827e">pages</span><span style="color:#797593">.</span><span style="color:#d7827e">length</span><span style="color:#797593">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#d7827e">window</span><span style="color:#797593">.</span><span style="color:#d7827e">location</span><span style="color:#797593">.</span><span style="color:#d7827e">href</span> <span style="color:#797593">=</span> <span style="color:#d7827e">pages</span><span style="color:#797593">[</span><span style="color:#d7827e">rand</span><span style="color:#797593">];</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
+</span></span></code></pre></div><p>然后再导航栏的html中添加一个入口，在 <code>layouts\partials\nav.html</code> 中添加：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">li</span><span style="color:#797593">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    {{ partial &#34;random&#34; . }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">a</span> <span style="color:#d7827e">class</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;random&#34;</span> <span style="color:#d7827e">onclick</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#39;goToRandomPost()&#39;</span><span style="color:#797593">&gt;</span>STROLL<span style="color:#797593">&lt;/</span><span style="color:#d7827e">a</span><span style="color:#797593">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">li</span><span style="color:#797593">&gt;</span>
+</span></span></code></pre></div><p>这样就可以完成这个随机访问的功能了~</p>
 
 
                     
@@ -399,12 +369,12 @@
                     <hr>
                     <ul class="pager">
                         
-                        
-                        <li class="next">
-                            <a href="/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/" data-toggle="tooltip" data-placement="top"
-                                title="博客搭建：Jekyll&#43;GithubPages">Next
-                                Post &rarr;</a>
+                        <li class="previous">
+                            <a href="/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/" data-toggle="tooltip" data-placement="top"
+                                title="Hugo：一些有趣的短代码收集">&larr;
+                                Previous Post</a>
                         </li>
+                        
                         
                     </ul>
                     
