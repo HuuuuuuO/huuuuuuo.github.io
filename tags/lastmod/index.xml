@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lastmod on Nefelibata</title>
+    <link>https://huuuuuuo.github.io/tags/lastmod/</link>
+    <description>Recent content in Lastmod on Nefelibata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 30 Mar 2024 12:06:23 +0800</lastBuildDate>
+    <atom:link href="https://huuuuuuo.github.io/tags/lastmod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：文章发布后最后修改时间不一致问题</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 30 Mar 2024 11:59:46 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</guid>
+      <description>1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前，这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前</description>
+    </item>
+  </channel>
+</rss>

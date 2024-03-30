@@ -6,14 +6,14 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Mar 2024 11:19:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2024 12:06:23 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>哈哈哈哈哈哈</title>
-      <link>https://huuuuuuo.github.io/post/%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%88/</link>
-      <pubDate>Sat, 30 Mar 2024 10:29:34 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%88/</guid>
-      <description>zahu</description>
+      <title>Hugo：文章发布后最后修改时间不一致问题</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 30 Mar 2024 11:59:46 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</guid>
+      <description>1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前，这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前</description>
     </item>
     <item>
       <title>Hugo：代码高亮风格</title>
@@ -168,13 +168,6 @@
       <pubDate>Tue, 19 Mar 2024 19:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&amp;gt; main (non-fast-forward) 4error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &amp;#39;git pull ...&amp;#39;) before pushing again. 8hint: See the &amp;#39;Note about fast-forwards&amp;#39; in &amp;#39;git push --help&amp;#39; for</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://huuuuuuo.github.io/post/%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%881%E5%93%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%881%E5%93%88/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

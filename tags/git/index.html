@@ -367,7 +367,7 @@
 
 <section>
     <hr>
-    <h5>HEATMAP | March</h5>
+    <h5>HEAT-MAP | March</h5>
 <div id="heatmap" style="max-width: 290px;height: 200px;margin-bottom: 6px;"></div>
 
 <script src="/js/echarts.min.js"></script>
@@ -382,9 +382,9 @@
   
     var key = "2024-03-30";
     var value = dataMap.get(key);
-    var wordCount =  1 ;
-    var link = "/post/%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%88/";
-    var title = "哈哈哈哈哈哈";
+    var wordCount =  91 ;
+    var link = "/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/";
+    var title = "Hugo：文章发布后最后修改时间不一致问题";
     
     
     if (value == null) {
@@ -655,18 +655,6 @@
       dataMap.set(key, [{wordCount,link, title}]);
     } else {
       value.push({wordCount,link, title});
-    }
-    var key = "0001-01-01";
-    var value = dataMap.get(key);
-    var wordCount =  0 ;
-    var link = "/post/%E5%93%88%E5%93%88%E5%93%88%E5%93%88%E5%93%881%E5%93%88/";
-    var title = "";
-    
-    
-    if (value == null) {
-      dataMap.set(key, [{wordCount,link, title}]);
-    } else {
-      value.push({wordCount,link, title});
     }var data = [];
   for (const [key, value] of dataMap.entries()) {
     data.push([key, value.length]);
@@ -905,6 +893,12 @@
         
         <a href="/tags/jekyll" title="jekyll">
             jekyll
+        </a>
+        
+        
+        
+        <a href="/tags/lastmod" title="lastmod">
+            lastmod
         </a>
         
         
@@ -1255,10 +1249,8 @@
                     
                         
                     
-                        
-                    
-                    发表了 24 篇文章 · 
-                    总计 2.33 万字
+                    发表了 23 篇文章 · 
+                    总计 2.34 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
