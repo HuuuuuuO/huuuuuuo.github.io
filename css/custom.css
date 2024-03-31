@@ -269,9 +269,9 @@ img.message__img {
 }
 
 #search-btn {
-  position: absolute;
+  /* position: absolute;
   top: 0px;
-  right: 0px;
+  right: 0px; */
   /* font-size: 24px; */
 }
 
