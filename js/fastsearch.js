@@ -127,7 +127,7 @@ function loadSearch() {
       location: 0,
       distance: 100,
       threshold: 0.4,
-      minMatchCharLength: 2,
+      minMatchCharLength: 1,
       keys: [
         'permalink',
         'title',
@@ -157,7 +157,7 @@ function executeSearch(term) {
   } else { // build our html
     // console.log(results)
     permalinks = [];
-    numLimit = 5;
+    numLimit = 20;
     for (let item in results) { // only show first 5 results
         if (item > numLimit) {
             break;

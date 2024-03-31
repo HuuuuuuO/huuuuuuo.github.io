@@ -242,6 +242,7 @@ img.message__img {
   outline: none;
   text-align: left;
   display: inline-block;
+  padding: 10px;
 }
 
 #searchResults li {
@@ -304,4 +305,31 @@ img.message__img {
   #fastSearch, #search-btn {
     top: 64px;
   }
+}
+
+/* 对于WebKit浏览器（如Chrome和Safari） */
+::-webkit-input-placeholder {
+  color: rgba(140, 138, 140, 0.689);
+}
+
+/* 对于Mozilla Firefox 4至18 */
+:-moz-placeholder {
+  color: rgba(140, 138, 140, 0.689);
+  opacity: 1; /* Firefox默认给placeholder文字添加了透明度，所以需要设置opacity为1 */
+}
+
+/* 对于Mozilla Firefox 19+ */
+::-moz-placeholder {
+  color: rgba(140, 138, 140, 0.689);
+  opacity: 1;
+}
+
+/* 对于Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: rgba(140, 138, 140, 0.689);
+}
+
+/* 对于Microsoft Edge */
+::-ms-input-placeholder {
+  color: rgba(140, 138, 140, 0.689);
 }

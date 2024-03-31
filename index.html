@@ -124,6 +124,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD\/?utm_source=random",
+      
       "\/post\/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D\/?utm_source=random",
       
       "\/post\/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95cname%E7%AD%89%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88\/?utm_source=random",
@@ -221,7 +223,7 @@
   <link rel="stylesheet" type="text/css" href="/css/custom.css">
   </head>
 <div id="fastSearch">
-  <input id="searchInput" tabindex="0">
+  <input id="searchInput" tabindex="0" type="text" placeholder="# grep ..">
   <ul id="searchResults">
   </ul>
 </div> 
@@ -299,6 +301,30 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+        <h2 class="post-title">
+            Hugo：增加搜索功能
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sun 20:26:11 2024-03-31 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D/">
@@ -648,30 +674,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/">
-        <h2 class="post-title">
-            Hugo：博客运行时间
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方案 1&lt;!-- Add blog running time --&gt; 2本博客已稳定运行 3&lt;span id=&#34;runningdays&#34; class=&#34;running-days&#34;&gt;&lt;/span&gt; 4&lt;script&gt; 5let s1 = &#39;2024-3-18&#39;; //website start date 6s1 = new Date(s1.replace(/-/g, &#34;/&#34;)); 7let s2 = new Date(); 8let timeDifference = s2.getTime() - s1.getTime(); 9 10let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 11let
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 16:05:03 2024-03-27 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -762,6 +764,18 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-03-31";
+    var value = dataMap.get(key);
+    var wordCount =  0 ;
+    var link = "/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/";
+    var title = "Hugo：增加搜索功能";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-03-31";
     var value = dataMap.get(key);
     var wordCount =  135 ;
@@ -1759,7 +1773,9 @@
                     
                         
                     
-                    发表了 28 篇文章 · 
+                        
+                    
+                    发表了 29 篇文章 · 
                     总计 2.74 万字
                     <br>
                     
