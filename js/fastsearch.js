@@ -157,7 +157,7 @@ function executeSearch(term) {
   } else { // build our html
     // console.log(results)
     permalinks = [];
-    numLimit = 20;
+    numLimit = 100;
     for (let item in results) { // only show first 5 results
         if (item > numLimit) {
             break;
@@ -178,3 +178,4 @@ function executeSearch(term) {
     last = list.lastChild.firstElementChild; // last result container — used for checking against keyboard up/down location
   }
 }
+
