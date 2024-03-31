@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Giscus on Nefelibata</title>
-    <link>http://localhost:1313/tags/giscus/</link>
+    <link>https://huuuuuuo.github.io/tags/giscus/</link>
     <description>Recent content in Giscus on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 28 Mar 2024 19:26:18 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/giscus/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huuuuuuo.github.io/tags/giscus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：添加评论功能</title>
-      <link>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</link>
+      <link>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Thu, 28 Mar 2024 14:55:47 +0800</pubDate>
-      <guid>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</guid>
       <description>1 显示效果 2 解决方案 我正在使用的主题所提供的评论方案是： 1 [params.giscus] 2 data_repo=&amp;#34;your GitHub repo&amp;#34; 3 data_repo_id=&amp;#34;your repo id&amp;#34; 4 data_category=&amp;#34;your category&amp;#34; 5 data_category_id=&amp;#34;your category id&amp;#34; 6 data_mapping=&amp;#34;pathname&amp;#34; 7 data_reactions_enabled=&amp;#34;1&amp;#34; 8 data_emit_metadata=&amp;#34;0&amp;#34; 9 data_theme=&amp;#34;light&amp;#34; 10 data_lang=&amp;#34;en&amp;#34; 11 crossorigin=&amp;#34;anonymous&amp;#34; 在申请giscus 的时候，</description>
     </item>
   </channel>

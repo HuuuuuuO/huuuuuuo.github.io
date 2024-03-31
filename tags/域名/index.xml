@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>域名 on Nefelibata</title>
+    <link>https://huuuuuuo.github.io/tags/%E5%9F%9F%E5%90%8D/</link>
+    <description>Recent content in 域名 on Nefelibata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 31 Mar 2024 16:56:19 +0800</lastBuildDate>
+    <atom:link href="https://huuuuuuo.github.io/tags/%E5%9F%9F%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GithubPages配置域名</title>
+      <link>https://huuuuuuo.github.io/post/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D/</link>
+      <pubDate>Sun, 31 Mar 2024 15:23:03 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D/</guid>
+      <description>1 申请域名 可以去找个免费域名网站，我用的是： 域名申请或者购买成功了以后，我们还需要解析域名。 2 解析域名 输入ping xxx.github.io</description>
+    </item>
+    <item>
+      <title>域名、A记录、CNAME等都是什么</title>
+      <link>https://huuuuuuo.github.io/post/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95cname%E7%AD%89%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Sun, 31 Mar 2024 14:33:56 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95cname%E7%AD%89%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>今天想要给博客搞个域名，涉及了一大堆专业名词，在此记录一下。 1 域名 域名就是最常见的网址，比如 www.baidu.com ，因为ip地址不好记，所以用域名来代替，我们访</description>
+    </item>
+  </channel>
+</rss>

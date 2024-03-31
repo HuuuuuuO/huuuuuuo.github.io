@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Access on Nefelibata</title>
-    <link>http://localhost:1313/tags/access/</link>
+    <link>https://huuuuuuo.github.io/tags/access/</link>
     <description>Recent content in Access on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 27 Mar 2024 21:42:48 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/access/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huuuuuuo.github.io/tags/access/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python无环境部署</title>
-      <link>http://localhost:1313/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</link>
+      <link>https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Wed, 27 Mar 2024 10:16:07 +0800</pubDate>
-      <guid>http://localhost:1313/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</guid>
       <description>1、背景 有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。 目前考虑的方案是</description>
     </item>
   </channel>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +14,8 @@
 
 
     
-    <meta property="og:image" content="http://localhost:1313//img/home-bg-jeep.jpg">
-    <meta property="twitter:image" content="http://localhost:1313//img/home-bg-jeep.jpg" />
+    <meta property="og:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg">
+    <meta property="twitter:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg" />
     
 
     
@@ -65,7 +65,7 @@
     <link rel="stylesheet" href="/css/font-awesome.all.min.css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/copy-to-clipboard.css">
+    <link rel="stylesheet" href="https://huuuuuuo.github.io/css/copy-to-clipboard.css">
 
     
     <script src="/js/jquery.min.js"></script>
@@ -118,6 +118,8 @@
                         <script>
   function goToRandomPost() {
     const pages = [
+      
+      "\/post\/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D\/?utm_source=random",
       
       "\/post\/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95cname%E7%AD%89%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88\/?utm_source=random",
       
@@ -248,12 +250,20 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                            <a class="tag" href="/tags/" title="">
-                                
+                            <a class="tag" href="/tags/%e5%9f%9f%e5%90%8d" title="域名">
+                                域名
                             </a>
                             
-                            <a class="tag" href="/tags/" title="">
-                                
+                            <a class="tag" href="/tags/A%e8%ae%b0%e5%bd%95" title="A记录">
+                                A记录
+                            </a>
+                            
+                            <a class="tag" href="/tags/CNAME" title="CNAME">
+                                CNAME
+                            </a>
+                            
+                            <a class="tag" href="/tags/DNS" title="DNS">
+                                DNS
                             </a>
                             
                         </div>
@@ -268,11 +278,11 @@
                             on
                             Sun 14:33:56 2024-03-31
                             
-                            | <span class="post-date">1915 words</span> | about<span class="more-meta"> 4 mins</span>
+                            | <span class="post-date">2408 words</span> | about<span class="more-meta"> 5 mins</span>
                             
                             
                             
-                            <br>Last Modified on Sun 15:22:27 2024-03-31
+                            <br>Last Modified on Sun 16:56:19 2024-03-31
                             
                             
                         </span>
@@ -380,8 +390,8 @@
 
 
 <div class="post-img-view">
-<a data-fancybox="gallery" href="postimg/image-20240331145610941.png">
-<img src="postimg/image-20240331145610941.png" alt="image-20240331145610941"  />
+<a data-fancybox="gallery" href="/img/image-20240331145610941.png">
+<img src="/img/image-20240331145610941.png" alt="image-20240331145610941"  />
 </a>
 </div>
 
@@ -400,7 +410,7 @@
 <p>大家可以手动设置一下自己的网络DNS。电脑的，路由器的，甚至是手机的都可以设置一下。</p>
 <p><strong>设置方法是打开电脑或者路由器的网络设置，然后找到DNS来填写你想要的。</strong></p>
 <p>通常方便记忆，设置为主<strong>114.114.114.114，<strong>备用</strong>8.8.8.8</strong>。这俩就够用了。</p>
-<h1 id="6-免费公共-dns-服务器大全">6 免费公共 DNS 服务器大全</h1>
+<h1 id="6-免费公共-dns-服务器">6 免费公共 DNS 服务器</h1>
 <p>由 DNSPod 提供的公共免费 DNS，后来 DNSPod 被腾讯(Tencent)收购，现在属于腾讯公司所有，稳定性和连通性也是不错的，经海外好友测试反馈，海外也可以使用。
 DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加了 DoT/DoH 的 IP 版。</p>
 <p>IPv4:</p>
@@ -408,6 +418,21 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
 </span></span></code></pre></div><p>IPv6:</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>2402:4e00::
 </span></span></code></pre></div><p>其他可参考：https://dns.icoa.cn/</p>
+<h1 id="7-转发重定向">7 转发/重定向</h1>
+<p>实现页面的跳转有两种方式：转发和重定向。</p>
+<h2 id="71-重定向">7.1 重定向</h2>
+<p>重定向(Redirect)就是通过各种方法**<code>将各种网络请求重新定个方向转到其它位置</code>**（如：网页重定向、域名的重定向、路由选择的变化也是对数据报文经由路径的一种重定向）。</p>
+<p>由浏览器端进行的页面跳转。</p>
+<p>服务器端接收到客户端的请求之后，会给客户端返回了一个临时响应头，这个临时响应头中记录了，客户端需要再次发送请求（重定向）的 URL 地址，客户端再收到了地址之后，会将请求发送到新的地址上，这就是请求重定向。</p>
+<blockquote>
+<p>这就好像张三（客户端）找李四（服务器端）借钱，李四没钱，于是李四就告诉张三，“我没钱，你去王五那借“，于是张三又去王五家借到了钱，这就是请求重定向。</p>
+</blockquote>
+<h2 id="72-转发">7.2 转发</h2>
+<p>由服务器端进行的页面跳转。在服务器内部的资源跳转方式。</p>
+<p>生在服务端程序内部，当服务器端收到一个客户端的请求之后，会先将请求，转发给目标地址，再将目标地址返回的结果转发给客户端。 而客户端对于这一切毫无感知的。</p>
+<blockquote>
+<p>这就好比，张三（客户端）找李四（服务器端）借钱，而李四没钱，于是李四又去王五那借钱，并把钱借给了张三，整个过程中张三只借了一次款，剩下的事情都是李四完成的，这就是请求转发。</p>
+</blockquote>
 <h1 id="其他记录">其他记录</h1>
 <p>还有其他MX记录等后续用到再更新</p>
 <blockquote>
@@ -417,6 +442,7 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
 <li><a href="https://www.jianshu.com/p/b483300378af">DNS的A、CNAME、MX、NS、TXT、SPF记录</a></li>
 <li><a href="https://www.zhihu.com/question/34826522">https://www.zhihu.com/question/34826522</a></li>
 <li><a href="https://dns.icoa.cn/">https://dns.icoa.cn/</a></li>
+<li><a href="https://worktile.com/kb/p/37343">https://worktile.com/kb/p/37343</a></li>
 </ul>
 </blockquote>
 
@@ -467,6 +493,12 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
                                 Previous Post</a>
                         </li>
                         
+                        
+                        <li class="next">
+                            <a href="/post/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D/" data-toggle="tooltip" data-placement="top"
+                                title="GithubPages配置域名">Next
+                                Post &rarr;</a>
+                        </li>
                         
                     </ul>
                     
@@ -543,6 +575,12 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
                             
                             
                             
+                            <a href="/tags/a%E8%AE%B0%E5%BD%95" title="a记录">
+                                a记录
+                            </a>
+                            
+                            
+                            
                             <a href="/tags/branch" title="branch">
                                 branch
                             </a>
@@ -561,8 +599,20 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
                             
                             
                             
+                            <a href="/tags/cname" title="cname">
+                                cname
+                            </a>
+                            
+                            
+                            
                             <a href="/tags/copy" title="copy">
                                 copy
+                            </a>
+                            
+                            
+                            
+                            <a href="/tags/dns" title="dns">
+                                dns
                             </a>
                             
                             
@@ -597,6 +647,12 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
                             
                             
                             
+                            <a href="/tags/github-pages" title="github pages">
+                                github pages
+                            </a>
+                            
+                            
+                            
                             <a href="/tags/githubpages" title="githubpages">
                                 githubpages
                             </a>
@@ -605,12 +661,6 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
                             
                             <a href="/tags/gitignore" title="gitignore">
                                 gitignore
-                            </a>
-                            
-                            
-                            
-                            <a href="/tags/gitubpages" title="gitubpages">
-                                gitubpages
                             </a>
                             
                             
@@ -725,6 +775,12 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
                             
                             <a href="/tags/%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7" title="图片放大">
                                 图片放大
+                            </a>
+                            
+                            
+                            
+                            <a href="/tags/%E5%9F%9F%E5%90%8D" title="域名">
+                                域名
                             </a>
                             
                             
@@ -1011,8 +1067,10 @@ DNSPod 除了 IPv4，现在同时支持 IPv6 DNS 和 DoT/DoH 服务。新增加�
                     
                         
                     
-                    发表了 27 篇文章 · 
-                    总计 2.67 万字
+                        
+                    
+                    发表了 28 篇文章 · 
+                    总计 2.74 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
