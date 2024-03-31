@@ -6,14 +6,14 @@
     <description>Recent content in Fuse on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 31 Mar 2024 22:15:19 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2024 22:31:03 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/fuse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：增加搜索功能</title>
       <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Sun, 31 Mar 2024 20:26:11 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</guid>
-      <description>1 显示效果 2 解决方案 2.1 添加搜索 在 layouts\partials\nav.html 中插入如下代码，在你想添加搜索的地方 1&amp;lt;li&amp;gt; 2 &amp;lt;a id=&amp;#34;search-btn&amp;#34; href=&amp;#34;javascript:void(0);&amp;#34;&amp;gt; 3 &amp;lt;i class=&amp;#34;fa fa-search&amp;#34;&amp;gt;&amp;lt;/i&amp;gt; 4 &amp;lt;/a&amp;gt; 5&amp;lt;/li&amp;gt; 6&amp;lt;script src=&amp;#34;/js/fuse.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 7&amp;lt;script src=&amp;#34;/js/fastsearch.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 8&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;/css/custom.css&amp;#34;&amp;gt; fuse.min.js 需要在github上下载一下</description>
+      <description>1 显示效果 可以看到在右上角有一个搜索图标，原本是这个主题带的，原本是点击以后会进入一个新的 search页面进行搜索，但是我用的时候发现这个功</description>
     </item>
   </channel>
 </rss>

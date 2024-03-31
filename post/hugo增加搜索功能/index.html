@@ -307,11 +307,11 @@
                             on
                             Sun 20:26:11 2024-03-31
                             
-                            | <span class="post-date">1726 words</span> | about<span class="more-meta"> 4 mins</span>
+                            | <span class="post-date">1982 words</span> | about<span class="more-meta"> 4 mins</span>
                             
                             
                             
-                            <br>Last Modified on Sun 22:15:19 2024-03-31
+                            <br>Last Modified on Sun 22:31:03 2024-03-31
                             
                             
                         </span>
@@ -339,7 +339,28 @@
 
              
                     <h1 id="1-显示效果">1 显示效果</h1>
-<h1 id="2-解决方案">2 解决方案</h1>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240331221906100.png">
+<img src="/img/image-20240331221906100.png" alt="image-20240331221906100"  />
+</a>
+</div>
+
+</p>
+<p>可以看到在右上角有一个搜索图标，原本是这个主题带的，原本是点击以后会进入一个新的 <code>search</code>页面进行搜索，但是我用的时候发现这个功能有问题，点击进去以后什么都没有出现，加上又会跳转到新页面，遂放弃，根据我的需求进行改进。</p>
+<h1 id="2-改进方向">2 改进方向</h1>
+<p>总结起来我有几个想要的效果，便朝着这几个方向去改：</p>
+<ul>
+<li>在同一个页面进行搜索，省去跳转的麻烦</li>
+<li>搜索框和结果居中固定显示，并且有滚轮</li>
+<li>为了可以和背景区分开，又不至于太僵硬，做成了毛玻璃效果</li>
+<li>同步适应手机端的摆放位置优化</li>
+<li>其他一些美化</li>
+</ul>
+<p>那么就朝着这个方向开始做起来吧（并没有，其实都是做好以后再总结的😑</p>
+<h1 id="3-解决方案">3 解决方案</h1>
 <h2 id="21-添加搜索">2.1 添加搜索</h2>
 <p>在 <code>layouts\partials\nav.html</code> 中插入如下代码，在你想添加搜索的地方</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">li</span><span style="color:#797593">&gt;</span>
@@ -1332,7 +1353,7 @@
                         
                     
                     发表了 29 篇文章 · 
-                    总计 2.91 万字
+                    总计 2.94 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
