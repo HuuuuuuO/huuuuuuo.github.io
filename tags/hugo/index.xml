@@ -2,122 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/tags/hugo/</link>
+    <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Mar 2024 23:22:17 +0800</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Mar 2024 14:47:28 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：添加随机浏览文章功能</title>
+      <link>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sat, 30 Mar 2024 20:26:44 +0800</pubDate>
+      <guid>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/</guid>
+      <description>偶然看见了一位大佬的博客 给 Hugo 博客添加随机文章入口 ，发现了他做了这个功能，感觉可以搞一下，于是借鉴了她的代码，感谢。 1 显示效果 在博客的右上角添</description>
+    </item>
+    <item>
+      <title>Hugo：一些有趣的短代码收集</title>
+      <link>http://localhost:1313/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</link>
+      <pubDate>Sat, 30 Mar 2024 15:53:28 +0800</pubDate>
+      <guid>http://localhost:1313/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</guid>
+      <description>首先感谢 眠于水月间 大佬，文章主要收集于他的文章，[Hugo | 在 Stack 主题上可行的短代码们] 本文旨在收集一些有趣的短代码，因此主要是呈现使用方式，</description>
+    </item>
     <item>
       <title>Hugo：文字标记</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/</link>
+      <link>http://localhost:1313/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/</link>
       <pubDate>Sat, 30 Mar 2024 13:32:11 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/</guid>
       <description>1 显示效果 第一种，正经标记： 对文字进行标记 第二种，将文字放在代码里，利用代码的颜色进行标记： 对文字进行标记 2 解决方案 首先，利用短代码，添加 ./layouts/shortcodes/mark.html</description>
     </item>
     <item>
       <title>Hugo：文章发布后最后修改时间不一致问题</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</link>
+      <link>http://localhost:1313/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 30 Mar 2024 11:59:46 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</guid>
       <description>1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前， 这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前</description>
     </item>
     <item>
       <title>Hugo：代码高亮风格</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/</link>
+      <link>http://localhost:1313/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/</link>
       <pubDate>Sat, 30 Mar 2024 02:11:00 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/</guid>
+      <guid>http://localhost:1313/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/</guid>
       <description>1 代码高亮风格 代码高亮风格很多，可以参见 Chroma Style Gallery 看起来都不错，可以考虑添加进 hugo 2 遇到问题 之前我已经在 config.toml 中已经添加如下配置： 1[markup] 2 [markup.highlight] 3 codeFences = true 4 guessSyntax =</description>
     </item>
     <item>
       <title>Hugo：添加热力图</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/</link>
+      <link>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/</link>
       <pubDate>Sat, 30 Mar 2024 01:43:14 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/</guid>
       <description>1 显示效果 鼠标未移动到上面的时候，根据发表文章的数量显示热力图： 如果鼠标移动到上面，会显示当天发表的文章详情，并且可以点击进行跳转： 2 解决方</description>
     </item>
     <item>
       <title>Hugo：图片点击放大</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</link>
+      <link>http://localhost:1313/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</link>
       <pubDate>Fri, 29 Mar 2024 01:16:10 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</guid>
+      <guid>http://localhost:1313/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</guid>
       <description>1 显示效果 想要知乎这种图片点击放大的效果，一查才知道是灯箱。 2 解决方案 2.1 修改 config.toml 在 config.toml文件中，添加如下代码： 1[params] 2 fancybox = true 2.2 创建</description>
     </item>
     <item>
       <title>Hugo：添加评论功能</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</link>
+      <link>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Thu, 28 Mar 2024 14:55:47 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</guid>
       <description>1 显示效果 2 解决方案 我正在使用的主题所提供的评论方案是： 1 [params.giscus] 2 data_repo=&amp;#34;your GitHub repo&amp;#34; 3 data_repo_id=&amp;#34;your repo id&amp;#34; 4 data_category=&amp;#34;your category&amp;#34; 5 data_category_id=&amp;#34;your category id&amp;#34; 6 data_mapping=&amp;#34;pathname&amp;#34; 7 data_reactions_enabled=&amp;#34;1&amp;#34; 8 data_emit_metadata=&amp;#34;0&amp;#34; 9 data_theme=&amp;#34;light&amp;#34; 10 data_lang=&amp;#34;en&amp;#34; 11 crossorigin=&amp;#34;anonymous&amp;#34; 在申请giscus 的时候，</description>
     </item>
     <item>
       <title>Hugo：内容折叠与代码块大小限制</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
+      <link>http://localhost:1313/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
       <pubDate>Wed, 27 Mar 2024 23:23:48 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid>
+      <guid>http://localhost:1313/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid>
       <description>1 目前显示效果 1git add . 2git commit -m &amp;#34;update&amp;#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&amp;lt;details style=&amp;#34;background-color:#ffffff;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);&amp;#34;&amp;gt; 2 &amp;lt;summary&amp;gt; &amp;lt;font color=#817f7f&amp;gt; &amp;gt; &amp;gt; &amp;gt; 展开 &amp;gt; &amp;gt; &amp;gt; &amp;lt;/font&amp;gt;&amp;lt;/summary&amp;gt; 3 {{ .Inner | markdownify }} 4&amp;lt;/details&amp;gt; 以</description>
     </item>
     <item>
       <title>Hugo：访问量统计</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/</link>
+      <link>http://localhost:1313/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/</link>
       <pubDate>Wed, 27 Mar 2024 22:40:19 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/</guid>
       <description>显示效果 解决方案 本文使用 不蒜子 来进行网站访问量的统计 前期也踩了几个坑，最后在官网发现了最佳解决方案，只需要将官网上的两行代码稍加改进就可以在</description>
     </item>
     <item>
       <title>Hugo：自定义字体</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
+      <link>http://localhost:1313/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
       <pubDate>Wed, 27 Mar 2024 22:27:26 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
+      <guid>http://localhost:1313/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
       <description>显示效果 解决方案 本博客使用的是 霞鹜文楷 ，要在网站使用此字体，可以查看 霞鹜文楷屏幕阅读版 网络字体仓库 1、插入代码 将以下代码插入 themes\hugo-theme-cleanwhite\layouts\partials\head.html 1&amp;lt;html&amp;gt; 2&amp;lt;head&amp;gt; 3 &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css&amp;#34; /&amp;gt;</description>
     </item>
     <item>
       <title>Hugo：一键回到顶部</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E4%B8%80%E9%94%AE%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/</link>
+      <link>http://localhost:1313/post/hugo%E4%B8%80%E9%94%AE%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/</link>
       <pubDate>Wed, 27 Mar 2024 17:15:28 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E4%B8%80%E9%94%AE%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/</guid>
+      <guid>http://localhost:1313/post/hugo%E4%B8%80%E9%94%AE%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/</guid>
       <description>文章参考自：https://github.com/sengmitnick/hugo-theme-hello-friend-ng/commit</description>
     </item>
     <item>
       <title>Hugo：博客运行时间</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</link>
+      <link>http://localhost:1313/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</link>
       <pubDate>Wed, 27 Mar 2024 16:05:03 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</guid>
+      <guid>http://localhost:1313/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</guid>
       <description>文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方案 1&amp;lt;!-- Add blog running time --&amp;gt; 2本博客已稳定运行 3&amp;lt;span id=&amp;#34;runningdays&amp;#34; class=&amp;#34;running-days&amp;#34;&amp;gt;&amp;lt;/span&amp;gt; 4&amp;lt;script&amp;gt; 5let s1 = &amp;#39;2024-3-18&amp;#39;; //website start date 6s1 = new Date(s1.replace(/-/g, &amp;#34;/&amp;#34;)); 7let s2 = new Date(); 8let timeDifference = s2.getTime() - s1.getTime(); 9 10let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 11let</description>
     </item>
     <item>
       <title>Hugo：总字数统计</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/</link>
+      <link>http://localhost:1313/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/</link>
       <pubDate>Wed, 27 Mar 2024 15:38:38 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/</guid>
       <description>文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方法 我是直接在主题上面改的，在主题的 layouts/partials/footer.html 里增加以下代码： 1&amp;lt;!-- 添加在copyright之前 --&amp;gt; 2 3&amp;lt;!-- Add total page and word count time --&amp;gt; 4{{$scratch := newScratch}} 5{{ range</description>
     </item>
     <item>
       <title>Hugo：图片存储路径优化</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</link>
+      <link>http://localhost:1313/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</link>
       <pubDate>Thu, 21 Mar 2024 18:55:26 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</guid>
+      <guid>http://localhost:1313/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/</guid>
       <description>使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用</description>
     </item>
     <item>
       <title>Hugo：代码块拷贝</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</link>
+      <link>http://localhost:1313/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</link>
       <pubDate>Thu, 21 Mar 2024 13:12:48 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/</guid>
       <description>本文转载与修改自：Hugo插件之代码块拷贝插件 添加按钮-css 我们通过检查博客内容页面发现，hugo生成的每个代码块格式如下： 没有语法突出显</description>
     </item>
     <item>
       <title>Hugo：日常更新流程</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</link>
+      <link>http://localhost:1313/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Wed, 20 Mar 2024 17:30:42 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
       <description>1、新建文章 进入blog本地仓库，新疆文章，写文章并修改 1cd F:\vscode\hugo-root 2hugo new post/文章名字.md 2、本地验证 1hugo serve -D --disableFastRender 2或 3hugo serve 3、更新public目录</description>
     </item>
     <item>
       <title>博客搭建：Hugo&#43;GithubPages</title>
-      <link>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/</link>
+      <link>http://localhost:1313/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/</link>
       <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/</guid>
+      <guid>http://localhost:1313/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/</guid>
       <description>本文借鉴并修改自 Windows下使用hugo和Github Pages配置博客 1 下载安装hugo 访问最新版本页面下载，推荐使用 Hugo extended 版本 解压到某</description>
     </item>
   </channel>

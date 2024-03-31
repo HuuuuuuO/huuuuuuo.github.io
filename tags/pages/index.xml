@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/tags/pages/</link>
+    <link>http://localhost:1313/tags/pages/</link>
     <description>Recent content in Pages on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 22 Mar 2024 18:57:14 +0800</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/tags/pages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：日常更新流程</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</link>
+      <link>http://localhost:1313/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Wed, 20 Mar 2024 17:30:42 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/</guid>
       <description>1、新建文章 进入blog本地仓库，新疆文章，写文章并修改 1cd F:\vscode\hugo-root 2hugo new post/文章名字.md 2、本地验证 1hugo serve -D --disableFastRender 2或 3hugo serve 3、更新public目录</description>
     </item>
   </channel>

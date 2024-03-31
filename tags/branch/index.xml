@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Branch on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/tags/branch/</link>
+    <link>http://localhost:1313/tags/branch/</link>
     <description>Recent content in Branch on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 27 Mar 2024 21:42:48 +0800</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/tags/branch/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/branch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git push：本地分支和远程分支冲突问题解决</title>
-      <link>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <link>http://localhost:1313/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Tue, 19 Mar 2024 19:30:42 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <guid>http://localhost:1313/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&amp;gt; main (non-fast-forward) 4error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &amp;#39;git pull ...&amp;#39;) before pushing again. 8hint: See the &amp;#39;Note about fast-forwards&amp;#39; in &amp;#39;git push --help&amp;#39; for</description>
     </item>
   </channel>

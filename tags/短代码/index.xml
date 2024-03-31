@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>短代码 on Nefelibata</title>
+    <link>http://localhost:1313/tags/%E7%9F%AD%E4%BB%A3%E7%A0%81/</link>
+    <description>Recent content in 短代码 on Nefelibata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 31 Mar 2024 14:47:17 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%9F%AD%E4%BB%A3%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：一些有趣的短代码收集</title>
+      <link>http://localhost:1313/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</link>
+      <pubDate>Sat, 30 Mar 2024 15:53:28 +0800</pubDate>
+      <guid>http://localhost:1313/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</guid>
+      <description>首先感谢 眠于水月间 大佬，文章主要收集于他的文章，[Hugo | 在 Stack 主题上可行的短代码们] 本文旨在收集一些有趣的短代码，因此主要是呈现使用方式，</description>
+    </item>
+  </channel>
+</rss>

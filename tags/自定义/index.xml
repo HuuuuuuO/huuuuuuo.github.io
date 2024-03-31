@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自定义 on Nefelibata</title>
-    <link>https://huuuuuuo.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/</link>
+    <link>http://localhost:1313/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/</link>
     <description>Recent content in 自定义 on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 27 Mar 2024 22:45:04 +0800</lastBuildDate>
-    <atom:link href="https://huuuuuuo.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：自定义字体</title>
-      <link>https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
+      <link>http://localhost:1313/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
       <pubDate>Wed, 27 Mar 2024 22:27:26 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
+      <guid>http://localhost:1313/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
       <description>显示效果 解决方案 本博客使用的是 霞鹜文楷 ，要在网站使用此字体，可以查看 霞鹜文楷屏幕阅读版 网络字体仓库 1、插入代码 将以下代码插入 themes\hugo-theme-cleanwhite\layouts\partials\head.html 1&amp;lt;html&amp;gt; 2&amp;lt;head&amp;gt; 3 &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css&amp;#34; /&amp;gt;</description>
     </item>
   </channel>

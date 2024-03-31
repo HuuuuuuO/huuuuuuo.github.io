@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随机浏览 on Nefelibata</title>
+    <link>http://localhost:1313/tags/%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88/</link>
+    <description>Recent content in 随机浏览 on Nefelibata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 31 Mar 2024 14:34:21 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：添加随机浏览文章功能</title>
+      <link>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sat, 30 Mar 2024 20:26:44 +0800</pubDate>
+      <guid>http://localhost:1313/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/</guid>
+      <description>偶然看见了一位大佬的博客 给 Hugo 博客添加随机文章入口 ，发现了他做了这个功能，感觉可以搞一下，于是借鉴了她的代码，感谢。 1 显示效果 在博客的右上角添</description>
+    </item>
+  </channel>
+</rss>
