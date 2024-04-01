@@ -6,8 +6,22 @@
     <description>Recent content in Tech on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Apr 2024 02:11:37 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 10:29:26 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo学习（长期更新）</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Apr 2024 09:45:54 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/</guid>
+      <description>此文章用于长期更新hugo学习的内容 1 前言</description>
+    </item>
+    <item>
+      <title>Hugo：增加新页面</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Mon, 01 Apr 2024 08:40:15 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Hugo：增加搜索功能</title>
       <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</link>

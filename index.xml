@@ -6,13 +6,20 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Apr 2024 02:11:37 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 10:29:26 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Movies</title>
-      <link>https://huuuuuuo.github.io/movies/movies/</link>
-      <pubDate>Mon, 01 Apr 2024 00:19:48 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/movies/movies/</guid>
+      <title>Hugo学习（长期更新）</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Apr 2024 09:45:54 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/</guid>
+      <description>此文章用于长期更新hugo学习的内容 1 前言</description>
+    </item>
+    <item>
+      <title>Hugo：增加新页面</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Mon, 01 Apr 2024 08:40:15 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</guid>
       <description></description>
     </item>
     <item>
@@ -219,27 +226,6 @@
       <description>1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&amp;gt; main (non-fast-forward) 4error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &amp;#39;git pull ...&amp;#39;) before pushing again. 8hint: See the &amp;#39;Note about fast-forwards&amp;#39; in &amp;#39;git push --help&amp;#39; for</description>
     </item>
     <item>
-      <title></title>
-      <link>https://huuuuuuo.github.io/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/notes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://huuuuuuo.github.io/random/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/random/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://huuuuuuo.github.io/search/placeholder/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/search/placeholder/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>About</title>
       <link>https://huuuuuuo.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -247,11 +233,25 @@
       <description>About Me Hello ~&#xA;If you&amp;rsquo;ve got something to say, just leave a comment😊 ~</description>
     </item>
     <item>
+      <title>Memos</title>
+      <link>https://huuuuuuo.github.io/memos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/memos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Movies</title>
+      <link>https://huuuuuuo.github.io/movies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/movies/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Timeline</title>
       <link>https://huuuuuuo.github.io/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://huuuuuuo.github.io/archive/</guid>
-      <description>2024-03 嘻嘻 哈哈哈 啊呀</description>
+      <description></description>
     </item>
   </channel>
 </rss>

@@ -123,6 +123,10 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E5%AD%A6%E4%B9%A0\/?utm_source=random",
+      
+      "\/post\/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2\/?utm_source=random",
+      
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD\/?utm_source=random",
       
       "\/post\/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D\/?utm_source=random",
@@ -306,6 +310,32 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/">
+        <h2 class="post-title">
+            Hugo：总字数统计
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方法 我是直接在主题上面改的，在主题的 layouts/partials/footer.html 里增加以下代码： 1&lt;!-- 添加在copyright之前 --&gt; 2 3&lt;!-- Add total page and word count time --&gt; 4{{$scratch := newScratch}} 5{{ range
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 15:38:38 2024-03-27 
+        
+        
+        | Last Modified on Mon 08:21:53 2024-04-01 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
         <h2 class="post-title">
             Hugo：图片存储路径优化
@@ -321,8 +351,6 @@
     
         Posted by Nefelibata on Thu 18:55:26 2024-03-21 
         
-        
-        | Last Modified on Fri 18:57:14 2024-03-22 
         
     
     </p>
@@ -348,7 +376,7 @@
         Posted by Nefelibata on Thu 13:12:48 2024-03-21 
         
         
-        | Last Modified on Wed 23:26:13 2024-03-27 
+        | Last Modified on Thu 08:13:31 2024-03-28 
         
     
     </p>
@@ -374,7 +402,7 @@
         Posted by Nefelibata on Wed 17:30:42 2024-03-20 
         
         
-        | Last Modified on Fri 18:57:14 2024-03-22 
+        | Last Modified on Fri 12:50:59 2024-03-22 
         
     
     </p>
@@ -400,7 +428,7 @@
         Posted by Nefelibata on Wed 00:00:00 2024-03-20 
         
         
-        | Last Modified on Sun 15:23:39 2024-03-31 
+        | Last Modified on Mon 08:21:53 2024-04-01 
         
     
     </p>
@@ -486,7 +514,7 @@
 
 <section>
     <hr>
-    <h5>HEATMAP | March</h5>
+    <h5>HEATMAP | April</h5>
 <div id="heatmap" style="max-width: 290px;height: 200px;margin-bottom: 6px;"></div>
 
 <script src="/js/echarts.min.js"></script>
@@ -499,6 +527,30 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-01";
+    var value = dataMap.get(key);
+    var wordCount =  21 ;
+    var link = "/post/hugo%E5%AD%A6%E4%B9%A0/";
+    var title = "Hugo学习（长期更新）";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-04-01";
+    var value = dataMap.get(key);
+    var wordCount =  0 ;
+    var link = "/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/";
+    var title = "Hugo：增加新页面";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-03-31";
     var value = dataMap.get(key);
     var wordCount =  1982 ;
@@ -1524,7 +1576,7 @@
                     
                         
                     
-                    发表了 29 篇文章 · 
+                    发表了 31 篇文章 · 
                     总计 2.94 万字
                     <br>
                     

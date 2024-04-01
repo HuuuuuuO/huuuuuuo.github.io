@@ -263,7 +263,7 @@ img.message__img {
     padding: 0; /* 移除默认的ul元素内边距 */
   border-radius:  5px 5px 5px 5px;
   /* background-color: #fffffffc; */
-  max-height: 600px; /* 根据需要调整最大高度 */
+  max-height: 1000%; /* 根据需要调整最大高度 */
   overflow-y: auto; /* 当内容超过最大高度时显示滚动条 */
   backdrop-filter: blur(10px); /* 设置模糊效果，值越大模糊效果越明显 */
   background-color: rgba(242, 242, 242, 0.472); /* 设置半透明的背景色 */

@@ -123,6 +123,10 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E5%AD%A6%E4%B9%A0\/?utm_source=random",
+      
+      "\/post\/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2\/?utm_source=random",
+      
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD\/?utm_source=random",
       
       "\/post\/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D\/?utm_source=random",
@@ -322,7 +326,7 @@
         Posted by Nefelibata on Wed 23:23:48 2024-03-27 
         
         
-        | Last Modified on Sat 16:33:41 2024-03-30 
+        | Last Modified on Thu 17:09:06 2024-03-28 
         
     
     </p>
@@ -412,6 +416,30 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-01";
+    var value = dataMap.get(key);
+    var wordCount =  21 ;
+    var link = "/post/hugo%E5%AD%A6%E4%B9%A0/";
+    var title = "Hugo学习（长期更新）";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-04-01";
+    var value = dataMap.get(key);
+    var wordCount =  0 ;
+    var link = "/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/";
+    var title = "Hugo：增加新页面";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-03-31";
     var value = dataMap.get(key);
     var wordCount =  1982 ;
@@ -1437,7 +1465,7 @@
                     
                         
                     
-                    发表了 29 篇文章 · 
+                    发表了 31 篇文章 · 
                     总计 2.94 万字
                     <br>
                     
