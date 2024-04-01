@@ -6,8 +6,15 @@
     <description>Recent content in Lastmod on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Apr 2024 08:21:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 15:37:16 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/lastmod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：将首页文章按照最后修改时间显示</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/</link>
+      <pubDate>Mon, 01 Apr 2024 15:28:12 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/</guid>
+      <description>1 显示效果 现在可以按照最后更新时间进行排序了 2 修改代码 在 layouts\partials\portfolio.html 中，将以下一行代码替换成后面三行。 原代码： 1&amp;lt;!-- {{ $paginator := .Paginate (where (where .Site.Pages &amp;#34;Type&amp;#34; &amp;#34;post&amp;#34;) &amp;#34;IsPage&amp;#34; true) }} --&amp;gt; 替换成： 1{{ $sortedPages</description>
+    </item>
     <item>
       <title>Hugo：文章发布后最后修改时间不一致问题</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</link>

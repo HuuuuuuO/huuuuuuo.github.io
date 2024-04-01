@@ -123,6 +123,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA\/?utm_source=random",
+      
       "\/post\/hugo%E5%AD%A6%E4%B9%A0\/?utm_source=random",
       
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2\/?utm_source=random",
@@ -310,14 +312,38 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/">
         <h2 class="post-title">
-            Hugo学习（长期更新）
+            Hugo：将首页文章按照最后修改时间显示
         </h2>
 	
         <div class="post-content-preview">
 	
-            此文章用于长期更新hugo学习的内容 1 前言 side-catalog 1display: block;height: 100%; padding-bottom: 40px;width: 200px;overflow-y: uto;-ms-overflow-style: none; scrollbar-width: none; 1display:block;height:100%;padding-bottom:40px;width:350px; 前言 1display: block;height: 100%; padding-bottom: 40px;width: 200px;overflow-y: uto;-ms-overflow-style: none; scrollbar-width: none; 1display:block;height:100%;padding-bottom:40px;width:350px; 前言 1display: block;height: 100%; padding-bottom: 40px;width: 200px;overflow-y: uto;-ms-overflow-style: none; scrollbar-width: none; 1display:block;height:100%;padding-bottom:40px;width:350px;
+            1 显示效果 现在可以按照最后更新时间进行排序了 2 修改代码 在 layouts\partials\portfolio.html 中，将以下一行代码替换成后面三行。 原代码： 1&lt;!-- {{ $paginator := .Paginate (where (where .Site.Pages &#34;Type&#34; &#34;post&#34;) &#34;IsPage&#34; true) }} --&gt; 替换成： 1{{ $sortedPages
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Mon 15:28:12 2024-04-01 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/">
+        <h2 class="post-title">
+            Hugo学习笔记（长期更新）
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            此文章用于长期更新hugo学习的内容 1 模板 1├── layouts 2└── themes 3 └── mytheme 4 └── layouts 5 ├── 404.html // 404页面模板 6 ├── _default 7 │ ├── baseof.html // 默认的基
        
         </div>
     </a>
@@ -341,7 +367,7 @@
 	
         <div class="post-content-preview">
 	
-            
+            想要在网站上做几个新页面
        
         </div>
     </a>
@@ -495,7 +521,7 @@
 	
         <div class="post-content-preview">
 	
-            1 显示效果 第一种，正经标记： 对文字进行标记 第二种，将文字放在代码里，利用代码的颜色进行标记： 对文字进行标记 2 解决方案 首先，利用短代码，添加 ./layouts/shortcodes/mark.html
+            1 显示效果 第一种，正经标记： 对文字进行标记 第二种，将文字放在代码里，利用代码的颜色来进行标记： 对文字进行标记 2 解决方案 首先，利用短代码，添加
        
         </div>
     </a>
@@ -504,7 +530,7 @@
         Posted by Nefelibata on Sat 13:32:11 2024-03-30 
         
         
-        | Last Modified on Mon 08:21:53 2024-04-01 
+        | Last Modified on Mon 14:58:33 2024-04-01 
         
     
     </p>
@@ -667,32 +693,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/">
-        <h2 class="post-title">
-            Hugo：访问量统计
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            显示效果 解决方案 本文使用 不蒜子 来进行网站访问量的统计 前期也踩了几个坑，最后在官网发现了最佳解决方案，只需要将官网上的两行代码稍加改进就可以在
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 22:40:19 2024-03-27 
-        
-        
-        | Last Modified on Mon 08:21:53 2024-04-01 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -785,9 +785,9 @@
   
     var key = "2024-04-01";
     var value = dataMap.get(key);
-    var wordCount =  59 ;
-    var link = "/post/hugo%E5%AD%A6%E4%B9%A0/";
-    var title = "Hugo学习（长期更新）";
+    var wordCount =  139 ;
+    var link = "/post/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/";
+    var title = "Hugo：将首页文章按照最后修改时间显示";
     
     
     if (value == null) {
@@ -797,7 +797,19 @@
     }
     var key = "2024-04-01";
     var value = dataMap.get(key);
-    var wordCount =  0 ;
+    var wordCount =  1601 ;
+    var link = "/post/hugo%E5%AD%A6%E4%B9%A0/";
+    var title = "Hugo学习笔记（长期更新）";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-04-01";
+    var value = dataMap.get(key);
+    var wordCount =  12 ;
     var link = "/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/";
     var title = "Hugo：增加新页面";
     
@@ -869,7 +881,7 @@
     }
     var key = "2024-03-30";
     var value = dataMap.get(key);
-    var wordCount =  200 ;
+    var wordCount =  201 ;
     var link = "/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/";
     var title = "Hugo：文字标记";
     
@@ -1516,6 +1528,12 @@
         
         
         
+        <a href="/tags/%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2" title="增加新页面">
+            增加新页面
+        </a>
+        
+        
+        
         <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B" title="大模型">
             大模型
         </a>
@@ -1832,8 +1850,10 @@
                     
                         
                     
-                    发表了 31 篇文章 · 
-                    总计 2.94 万字
+                        
+                    
+                    发表了 32 篇文章 · 
+                    总计 3.11 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
