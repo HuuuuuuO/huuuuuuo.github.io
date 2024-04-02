@@ -1,6 +1,6 @@
 /*  */
-/* 
-header video {
+
+/* header video {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,43 +12,36 @@ header video {
   margin-bottom: 100px;
 } */
 
-element.style {
-}
-/* .page-banner-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.page-banner-img > video {
-  width: 100vw;
-  object-fit: cover;
-} */
+
 .movie-quanju {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2px;
   margin-bottom: 40px; }
 
-/* header video {
-  content: '';
+header video {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  /* height: 30rem; */
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFF 100%);
-} */
 
-/* header video:after {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -10; 
+
+  /* object-fit: cover; */
+
+}
+
+header video:after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFF 100%);
- } */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFF 100%); }
 
 .page-movies .pagetitle, .page-movies .header-menu a {
   color: #FFF; }
@@ -60,7 +53,9 @@ element.style {
   fill: #dfdfdf; }
 
 #movies_page {
-  margin-top: 350px;
+  margin-top: 50%;
+  margin-left: 30%;
+
   display: grid;
   grid-gap: 2px;
   grid-template-columns: repeat(3, 1fr); }

@@ -280,11 +280,9 @@
 
 
 
-<header >
-  
-  <div class="page-banner-img">
-    <video 
-    class="video-source"
+<header>
+  <video
+  class="video-source"
   id="TopGif"
   width="100%"
   height="100%"
@@ -298,32 +296,14 @@
   preload="auto"
   autoplay="true"
   loop=""
-  muted="">
-      <source src="/css/movies.mp4">
-            </video>
-            <script>
-              (function() {
-                var video = document.querySelector('.page-banner .page-banner-img > video');
-                var videoPlay = function() {
-                  video.play().catch (function() {
-                      video.muted = true;
-                      video.play();
-                    });
-                }
-    
-                video.onloadstart = function() {
-                  video.currentTime = 8.5;
-                  video.volume = 0.8;
-                  video.muted = (video.volume == 0);
-                  videoPlay();
-                }
-    
-                video.onended = function() {
-                  video.currentTime = 8.5;
-                  video.volume = 0;video.play();}
-              })();
-            </script>
-    </div>
+  muted=""
+  >
+  <source src="/css/movies.mp4" type="video/mp4" />
+  </video>
+  
+</header>
+
+
 
 
 
@@ -2863,6 +2843,7 @@
       <div id="movies_loadMore" class="movies_loadMore">看更多...</div>
       <script src="/js/movies.js?v=1.3.2"></script>
       </div>
+      
    </div>
 </div>
 
