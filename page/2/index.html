@@ -319,23 +319,21 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
         <h2 class="post-title">
-            GithubPages配置域名
+            Hugo：文章发布后最后修改时间不一致问题
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 申请域名 可以去找个免费域名网站，我用的是： 域名申请或者购买成功了以后，我们还需要解析域名。 2 解析域名 输入ping xxx.github.io
+            1 显示效果 目前的显示效果如下，每篇文章可以正常显示最后修改时间。 但是之前， 这两个地方都是显示同一个时间，那就是最近一次 git 提交时间的8小时之前
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Sun 15:23:03 2024-03-31 
+        Posted by Nefelibata on Sat 11:59:46 2024-03-30 
         
-        
-        | Last Modified on Mon 08:21:53 2024-04-01 
         
     
     </p>
@@ -345,23 +343,23 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+    <a href="https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/">
         <h2 class="post-title">
-            Hugo：增加搜索功能
+            Typora快捷键
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 显示效果 可以看到在右上角有一个搜索图标，原本是这个主题带的，原本是点击以后会进入一个新的 search页面进行搜索，但是我用的时候发现这个功
+            本地编辑md我用的是typora，用一些快捷键会更好用 设置标题 ctrl + 1 ~6 标题1~6 等同于 一级标题：#+空格+标题内容 二级标题：##+空格+标题
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Sun 20:26:11 2024-03-31 
+        Posted by Nefelibata on Wed 22:30:42 2024-03-20 
         
         
-        | Last Modified on Mon 08:21:53 2024-04-01 
+        | Last Modified on Sat 04:00:05 2024-03-30 
         
     
     </p>
@@ -371,23 +369,73 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/">
         <h2 class="post-title">
-            Hugo：内容折叠与代码块大小限制
+            Hugo：图片点击放大
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 目前显示效果 1git add . 2git commit -m &#34;update&#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&lt;details style=&#34;background-color:#ffffff;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);&#34;&gt; 2 &lt;summary&gt; &lt;font color=#817f7f&gt; &gt; &gt; &gt; 展开 &gt; &gt; &gt; &lt;/font&gt;&lt;/summary&gt; 3 {{ .Inner | markdownify }} 4&lt;/details&gt; 以
+            1 显示效果 想要知乎这种图片点击放大的效果，一查才知道是灯箱。 2 解决方案 2.1 修改 config.toml 在 config.toml文件中，添加如下代码： 1[params] 2 fancybox = true 2.2 创建
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 23:23:48 2024-03-27 
+        Posted by Nefelibata on Fri 01:16:10 2024-03-29 
         
         
-        | Last Modified on Thu 17:09:06 2024-03-28 
+        | Last Modified on Sat 03:12:33 2024-03-30 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/">
+        <h2 class="post-title">
+            Hugo：访问量统计
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            显示效果 解决方案 本文使用 不蒜子 来进行网站访问量的统计 前期也踩了几个坑，最后在官网发现了最佳解决方案，只需要将官网上的两行代码稍加改进就可以在
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 22:40:19 2024-03-27 
+        
+        
+        | Last Modified on Sat 03:10:18 2024-03-30 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/">
+        <h2 class="post-title">
+            Hugo：添加热力图
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 显示效果 鼠标未移动到上面的时候，根据发表文章的数量显示热力图： 如果鼠标移动到上面，会显示当天发表的文章详情，并且可以点击进行跳转： 2 解决方
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sat 01:43:14 2024-03-30 
+        
         
     
     </p>
@@ -437,7 +485,7 @@
         Posted by Nefelibata on Thu 13:12:48 2024-03-21 
         
         
-        | Last Modified on Thu 08:13:31 2024-03-28 
+        | Last Modified on Wed 23:26:13 2024-03-27 
         
     
     </p>
@@ -463,7 +511,81 @@
         Posted by Nefelibata on Wed 22:27:26 2024-03-27 
         
         
-        | Last Modified on Thu 08:13:31 2024-03-28 
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+        <h2 class="post-title">
+            git push：本地分支和远程分支冲突问题解决
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&gt; main (non-fast-forward) 4error: failed to push some refs to &#39;https://github.com/xxxx.git&#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &#39;git pull ...&#39;) before pushing again. 8hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Tue 19:30:42 2024-03-19 
+        
+        
+        | Last Modified on Wed 21:42:48 2024-03-27 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/">
+        <h2 class="post-title">
+            博客搭建：Jekyll&#43;GithubPages
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            Jekyll就是将纯文本转化为静态博客网站，不需要数据库支持，也没有评论功能，想要评论功能的话可以借助第三方的评论服务。 Jekyll + Github Pages可以
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 00:00:00 2024-03-20 
+        
+        
+        | Last Modified on Wed 21:42:48 2024-03-27 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
+        <h2 class="post-title">
+            Python无环境部署
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1、背景 有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。 目前考虑的方案是
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 10:16:07 2024-03-27 
+        
         
     
     </p>
@@ -521,108 +643,6 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD-copy/">
-        <h2 class="post-title">
-            关于GPT的底层原理和未来影响（转载）
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            视频是关于GPT的底层原理和未来影响。将抛开技术细节，少用专业名词，在整体功能上讲解ChatGPT 的「工作原理」「制造过程」「涌现的能力」「
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 00:00:00 2024-03-20 
-        
-        
-        | Last Modified on Wed 15:41:15 2024-03-27 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAjekyll&#43;githubpages/">
-        <h2 class="post-title">
-            博客搭建：Jekyll&#43;GithubPages
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            Jekyll就是将纯文本转化为静态博客网站，不需要数据库支持，也没有评论功能，想要评论功能的话可以借助第三方的评论服务。 Jekyll + Github Pages可以
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 00:00:00 2024-03-20 
-        
-        
-        | Last Modified on Wed 15:41:07 2024-03-27 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
-        <h2 class="post-title">
-            Python无环境部署
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1、背景 有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。 目前考虑的方案是
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 10:16:07 2024-03-27 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
-        <h2 class="post-title">
-            git push：本地分支和远程分支冲突问题解决
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&gt; main (non-fast-forward) 4error: failed to push some refs to &#39;https://github.com/xxxx.git&#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &#39;git pull ...&#39;) before pushing again. 8hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Tue 19:30:42 2024-03-19 
-        
-        
-        | Last Modified on Wed 11:39:20 2024-03-27 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/">
         <h2 class="post-title">
             Hugo：日常更新流程
@@ -639,7 +659,7 @@
         Posted by Nefelibata on Wed 17:30:42 2024-03-20 
         
         
-        | Last Modified on Fri 12:50:59 2024-03-22 
+        | Last Modified on Fri 18:57:14 2024-03-22 
         
     
     </p>
@@ -649,47 +669,23 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
+    <a href="https://huuuuuuo.github.io/post/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
         <h2 class="post-title">
-            Hugo：图片存储路径优化
+            git基本使用
         </h2>
 	
         <div class="post-content-preview">
 	
-            使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用
+            Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。 index：暂存区 workspace：工作区 resposi
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 18:55:26 2024-03-21 
+        Posted by Nefelibata on Wed 20:30:42 2024-03-20 
         
         
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-        <h2 class="post-title">
-            Typora快捷键
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            本地编辑md我用的是typora，用一些快捷键会更好用 设置标题 ctrl + 1 ~6 标题1~6 等同于 一级标题：#+空格+标题内容 二级标题：##+空格+标题
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 22:30:42 2024-03-20 
-        
-        
-        | Last Modified on Thu 20:40:35 2024-03-21 
+        | Last Modified on Fri 18:57:14 2024-03-22 
         
     
     </p>
