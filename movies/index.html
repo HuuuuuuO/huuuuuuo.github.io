@@ -206,7 +206,7 @@
                     
                     
 		    
-                        <li><a href="/movies/">MOVIES</a></li>
+                        <li><a href="/movies/">SPARK</a></li>
                     
                         <li><a href="/memos/">MEMOS</a></li>
                     
@@ -282,35 +282,19 @@
 
 
 
-<script src="/js/movies.js"></script>
-
 <header>
-
-  <video
-  class="video-source"
-  id="TopGif"
-  webkit-playsinline="true"
-  x-webkit-airplay="true"
-  playsinline="true"
-  x5-video-player-type="h5"
-  x5-video-orientation="h5"
-  x5-video-player-fullscreen="true"
-  preload="auto"
-  autoplay="true"
-  loop=""
-  muted=""
-  >
-  <source src="https://github.com/HuuuuuuO/huuuuuuo.github.io/blob/master/img/movies.mp4" type="video/mp4" />
-  </video>
-
+  <div class="movies_video">
+  <video class="video-source" id="TopGif" width="100%" height="100%" style="object-fit:cover" webkit-playsinline="true" x-webkit-airplay="true" playsinline="" x5-video-player-type="h5" x5-video-orientation="h5" x5-video-player-fullscreen="true" preload="auto" autoplay="" loop="" muted="" __idm_id__="16277505">
+    <source src="https://github.com/HuuuuuuO/huuuuuuo.github.io/blob/master/img/movies.mp4" type="video/mp4"></video>
+    
+  </div>
 </header>
 
 
 
+<body>
 
-
-
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/movies.css">
 
 <div data-pagefind-ignore="all" class="container">
   <div class="row">
@@ -2837,10 +2821,12 @@
             
           </div>  
       <div id="movies_loadMore" class="movies_loadMore">看更多...</div>
+      <script src="/js/movies.js"></script>
       </div>
       
    </div>
 </div>
+</body>
 
 
 
@@ -3213,5 +3199,4 @@ list-max-height=90px
 <script src="/js/progress.js"></script>
 
 
-</body>
 </html>
