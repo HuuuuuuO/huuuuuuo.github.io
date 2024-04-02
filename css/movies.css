@@ -36,9 +36,24 @@ body {
   right: 0;
   top: 0;
   z-index: -10; 
+  
 
 
 }
+
+ .tit1 {
+  display: block;
+  margin-top: 15%;
+  margin-left: 47%;
+
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; 
+  height: 100%;
+  width: 100%;
+  color: #ffffff6a;
+}
+
 .bg_pic:after {
   content: '';
   position: absolute;
@@ -66,7 +81,7 @@ body {
   fill: #dfdfdf; }
 
 #movies_page {
-  margin-top: 420px;
+  margin-top: 15%;
   margin-left: 18%;
   margin-right: 18%;
   
