@@ -27,9 +27,9 @@ body {
   grid-gap: 2px;
   margin-bottom: 40px; }
 
-.movies_video {
+.bg_pic {
   position: absolute;
-  height: 90rem;
+  height: 85rem;
   /* height: 80%; */
   width: 100%;
   left: 0;
@@ -39,7 +39,7 @@ body {
 
 
 }
-.movies_video:after {
+.bg_pic:after {
   content: '';
   position: absolute;
   left: 0;
@@ -49,7 +49,10 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%); 
 }
 
+.container-1:after {
 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%); 
+}
 
 
 
@@ -162,7 +165,7 @@ body {
 @media (prefers-color-scheme: dark) {
   .movie-content-right-3, .movie-content-right-2 a {
     color: var(--sanji-color); }
-  .movies_video:after {
+  .bg_pic:after {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #1A1718 100%); }
   .page-movies .pagetitle, .page-movies .header-menu a {
     color: var(--sanji-color); }
