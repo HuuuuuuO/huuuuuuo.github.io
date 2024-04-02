@@ -123,6 +123,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1\/?utm_source=random",
+      
       "\/post\/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA\/?utm_source=random",
       
       "\/post\/hugo%E5%AD%A6%E4%B9%A0\/?utm_source=random",
@@ -315,7 +317,7 @@
                   
                 
                 <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2024
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">32</span></h1>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">33</span></h1>
                     <hr>
                 </section>
 
@@ -324,13 +326,20 @@
                 
                 
                 <h2 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">04
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">3</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">4</span>
                 </h2>
                 <hr>
 
             </section>
                 
                 <ul>
+                    
+                    <li>
+                        <span>04-02</span>&nbsp;&nbsp;
+                        <a href="/post/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
+                            Hugo：阅读进度条
+                        </a>
+                    </li>
                     
                     <li>
                         <span>04-01</span>&nbsp;&nbsp;
@@ -648,6 +657,18 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-02";
+    var value = dataMap.get(key);
+    var wordCount =  257 ;
+    var link = "/post/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/";
+    var title = "Hugo：阅读进度条";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-01";
     var value = dataMap.get(key);
     var wordCount =  139 ;
@@ -1717,8 +1738,10 @@
                     
                         
                     
-                    发表了 32 篇文章 · 
-                    总计 3.11 万字
+                        
+                    
+                    发表了 33 篇文章 · 
+                    总计 3.14 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1895,6 +1918,9 @@ list-max-height=90px
 
 
 
+<progress id="content_progress" value="0"></progress>
+<link rel="stylesheet" href="/css/progress.css">
+<script src="/js/progress.js"></script>
 
 
 </body>
