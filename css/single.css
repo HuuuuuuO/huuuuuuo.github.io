@@ -20,7 +20,12 @@ body {
   .navbar-custom.is-fixed .navbar-brand{
     color: #505050e3;
   }
-  
+  @media only screen and (max-width: 767px){
+    .navbar-custom .nav li a{
+      color: #626161dc;
+    
+    }
+  }
   .movie-quanju {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -29,8 +34,8 @@ body {
   
   .bg_pic {
     position: absolute;
-    height: 85rem;
-    /* height: 80%; */
+    /* height: 85rem; */
+    height: 100%;
     width: 100%;
     left: 0;
     right: 0;
@@ -39,29 +44,39 @@ body {
   
   
   }
-  
+  .sidebar-container a {
+    color: #33333490!important;
+}
  
 
 
    .tit1 {
     display: block;
-    margin-top: 20%;
+    /* margin-top: 20%;
     margin-left: 267.5px;
     margin-right: 267.5px;
+    margin-bottom: 10%; */
 
-    margin-bottom: 10%;
+    padding-top: 15%;
+    padding-bottom: 10%;
+
+    padding-left: 1100px;
+    padding-right: 20%;
+
+
+
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start; 
     height: 100%;
     width: 100%;
-    color: #ffffffbb;
+    color: #ffffff;
   }
 
   .tit1 h1 {
 font-size: 50px;
 display: inline-block;
-  max-width: 700px; 
+  max-width: 900px; 
 }
 
 
@@ -93,7 +108,7 @@ display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid #eeeeee00;
+    border-top: 4px solid #a44b4b00;
 }
 
   .container-1:after {

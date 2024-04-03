@@ -2,7 +2,7 @@ body {
     background-color: #ffffff;
   }
   .navbar-custom.is-fixed{
-    background-color: rgba(255, 255, 255, 0.262);
+    background-color: rgba(255, 255, 255, 0.148);
     border: 0 ;
   }
   
@@ -13,6 +13,14 @@ body {
     color: #ffffffe3;
   
   }
+  @media only screen and (max-width: 767px){
+    .navbar-custom .nav li a{
+      color: #626161dc;
+    
+    }
+  }
+
+
   .navbar-custom .navbar-brand{
     color: #ffffffe3;
   
@@ -30,7 +38,7 @@ body {
   .bg_pic {
     position: absolute;
     height: 85rem;
-    /* height: 80%; */
+    /* height: 100%; */
     width: 100%;
     left: 0;
     right: 0;
@@ -39,7 +47,7 @@ body {
   
   
   }
-  
+
  
 
 
@@ -53,7 +61,7 @@ body {
     justify-content: flex-start; 
     height: 100%;
     width: 100%;
-    color: #ffffff6a;
+    color: #ffffffcb;
   }
 
   .sidebar-container .short-about p {

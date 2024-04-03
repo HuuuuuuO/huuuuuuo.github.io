@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
     //primary navigation slide-in effect
     if ($(window).width() > MQL) {
             var headerHeight = $('.navbar-custom').height(),
-        bannerHeight = $('.intro-header .container').height();
+        bannerHeight = 5000;
         $(window).on('scroll', {
                 previousTop: 0
             },
