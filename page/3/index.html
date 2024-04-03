@@ -334,23 +334,23 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+    <a href="https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/">
         <h2 class="post-title">
-            git基本使用
+            Typora快捷键
         </h2>
 	
         <div class="post-content-preview">
 	
-            Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。 index：暂存区 workspace：工作区 resposi
+            本地编辑md我用的是typora，用一些快捷键会更好用 设置标题 ctrl + 1 ~6 标题1~6 等同于 一级标题：#+空格+标题内容 二级标题：##+空格+标题
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 20:30:42 2024-03-20 
+        Posted by Nefelibata on Wed 2024-03-20 
         
         
-        | Last Modified on Fri 18:57:14 2024-03-22 
+        | Last Modified on Thu 2024-03-21 
         
     
     </p>
@@ -373,10 +373,8 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 11:36:42 2024-03-21 
+        Posted by Nefelibata on Thu 2024-03-21 
         
-        
-        | Last Modified on Fri 18:57:14 2024-03-22 
         
     
     </p>
@@ -386,23 +384,23 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
+    <a href="https://huuuuuuo.github.io/post/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
         <h2 class="post-title">
-            Hugo：图片存储路径优化
+            git基本使用
         </h2>
 	
         <div class="post-content-preview">
 	
-            使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用
+            Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。 index：暂存区 workspace：工作区 resposi
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 18:55:26 2024-03-21 
+        Posted by Nefelibata on Wed 2024-03-20 
         
         
-        | Last Modified on Fri 18:57:14 2024-03-22 
+        | Last Modified on Thu 2024-03-21 
         
     
     </p>
@@ -915,13 +913,14 @@
 
   
   var lightTheme = {
-      backgroundColor: '#FFFFFF',
-      fangkuaicolor:'#f1f1f1a8',
-      gaoliangcolor: ['#0085A121','#0085A1B8'],
+      backgroundColor: '#FFFFFF00',     
+      fangkuaicolor:'#FFFFFF00',    
+      gaoliangcolor: ['#0085A145','#0085A1E3'],  
       
-      riqiColor: '#999',
-      textbrcolor: '#FFF',
+      riqiColor: '#999',        
+      textbrcolor: '#FFFFFF',       
       xiankuangcolor:'rgba(0, 0, 0, 0.0)',
+      borderColor:'#FFFFFF00',
   };
 
   
@@ -938,10 +937,15 @@
   var currentTheme = prefersDarkMode ? darkTheme : lightTheme;
 
   option = {
+    
+
     tooltip: {
     hideDelay: 1000,
     enterable: true,
+
     backgroundColor: currentTheme.textbrcolor,
+    
+
     borderWidth: 0, 
     formatter: function (p) {
         const date = p.data[0];

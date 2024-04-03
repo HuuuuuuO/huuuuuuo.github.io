@@ -340,10 +340,10 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 23:23:48 2024-03-27 
+        Posted by Nefelibata on Wed 2024-03-27 
         
         
-        | Last Modified on Sat 16:33:41 2024-03-30 
+        | Last Modified on Thu 2024-03-28 
         
     
     </p>
@@ -366,10 +366,10 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 13:12:48 2024-03-21 
+        Posted by Nefelibata on Thu 2024-03-21 
         
         
-        | Last Modified on Wed 23:26:13 2024-03-27 
+        | Last Modified on Thu 2024-03-28 
         
     
     </p>
@@ -873,13 +873,14 @@
 
   
   var lightTheme = {
-      backgroundColor: '#FFFFFF',
-      fangkuaicolor:'#f1f1f1a8',
-      gaoliangcolor: ['#0085A121','#0085A1B8'],
+      backgroundColor: '#FFFFFF00',     
+      fangkuaicolor:'#FFFFFF00',    
+      gaoliangcolor: ['#0085A145','#0085A1E3'],  
       
-      riqiColor: '#999',
-      textbrcolor: '#FFF',
+      riqiColor: '#999',        
+      textbrcolor: '#FFFFFF',       
       xiankuangcolor:'rgba(0, 0, 0, 0.0)',
+      borderColor:'#FFFFFF00',
   };
 
   
@@ -896,10 +897,15 @@
   var currentTheme = prefersDarkMode ? darkTheme : lightTheme;
 
   option = {
+    
+
     tooltip: {
     hideDelay: 1000,
     enterable: true,
+
     backgroundColor: currentTheme.textbrcolor,
+    
+
     borderWidth: 0, 
     formatter: function (p) {
         const date = p.data[0];

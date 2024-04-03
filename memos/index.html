@@ -829,13 +829,14 @@ var meting_api='https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&
 
   
   var lightTheme = {
-      backgroundColor: '#FFFFFF',
-      fangkuaicolor:'#f1f1f1a8',
-      gaoliangcolor: ['#0085A121','#0085A1B8'],
+      backgroundColor: '#FFFFFF00',     
+      fangkuaicolor:'#FFFFFF00',    
+      gaoliangcolor: ['#0085A145','#0085A1E3'],  
       
-      riqiColor: '#999',
-      textbrcolor: '#FFF',
+      riqiColor: '#999',        
+      textbrcolor: '#FFFFFF',       
       xiankuangcolor:'rgba(0, 0, 0, 0.0)',
+      borderColor:'#FFFFFF00',
   };
 
   
@@ -852,10 +853,15 @@ var meting_api='https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&
   var currentTheme = prefersDarkMode ? darkTheme : lightTheme;
 
   option = {
+    
+
     tooltip: {
     hideDelay: 1000,
     enterable: true,
+
     backgroundColor: currentTheme.textbrcolor,
+    
+
     borderWidth: 0, 
     formatter: function (p) {
         const date = p.data[0];

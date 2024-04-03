@@ -340,8 +340,10 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 22:27:26 2024-03-27 
+        Posted by Nefelibata on Wed 2024-03-27 
         
+        
+        | Last Modified on Thu 2024-03-28 
         
     
     </p>
@@ -364,7 +366,7 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 17:15:28 2024-03-27 
+        Posted by Nefelibata on Wed 2024-03-27 
         
         
     
@@ -388,7 +390,7 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 16:05:03 2024-03-27 
+        Posted by Nefelibata on Wed 2024-03-27 
         
         
     
@@ -412,10 +414,10 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 15:38:38 2024-03-27 
+        Posted by Nefelibata on Wed 2024-03-27 
         
         
-        | Last Modified on Sun 14:47:28 2024-03-31 
+        | Last Modified on Mon 2024-04-01 
         
     
     </p>
@@ -438,10 +440,8 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 18:55:26 2024-03-21 
+        Posted by Nefelibata on Thu 2024-03-21 
         
-        
-        | Last Modified on Fri 18:57:14 2024-03-22 
         
     
     </p>
@@ -464,10 +464,10 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 13:12:48 2024-03-21 
+        Posted by Nefelibata on Thu 2024-03-21 
         
         
-        | Last Modified on Wed 23:26:13 2024-03-27 
+        | Last Modified on Thu 2024-03-28 
         
     
     </p>
@@ -490,10 +490,10 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 17:30:42 2024-03-20 
+        Posted by Nefelibata on Wed 2024-03-20 
         
         
-        | Last Modified on Fri 18:57:14 2024-03-22 
+        | Last Modified on Fri 2024-03-22 
         
     
     </p>
@@ -516,10 +516,10 @@
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 00:00:00 2024-03-20 
+        Posted by Nefelibata on Wed 2024-03-20 
         
         
-        | Last Modified on Sun 15:23:39 2024-03-31 
+        | Last Modified on Mon 2024-04-01 
         
     
     </p>
@@ -1032,13 +1032,14 @@
 
   
   var lightTheme = {
-      backgroundColor: '#FFFFFF',
-      fangkuaicolor:'#f1f1f1a8',
-      gaoliangcolor: ['#0085A121','#0085A1B8'],
+      backgroundColor: '#FFFFFF00',     
+      fangkuaicolor:'#FFFFFF00',    
+      gaoliangcolor: ['#0085A145','#0085A1E3'],  
       
-      riqiColor: '#999',
-      textbrcolor: '#FFF',
+      riqiColor: '#999',        
+      textbrcolor: '#FFFFFF',       
       xiankuangcolor:'rgba(0, 0, 0, 0.0)',
+      borderColor:'#FFFFFF00',
   };
 
   
@@ -1055,10 +1056,15 @@
   var currentTheme = prefersDarkMode ? darkTheme : lightTheme;
 
   option = {
+    
+
     tooltip: {
     hideDelay: 1000,
     enterable: true,
+
     backgroundColor: currentTheme.textbrcolor,
+    
+
     borderWidth: 0, 
     formatter: function (p) {
         const date = p.data[0];

@@ -81,7 +81,7 @@ body {
   fill: #dfdfdf; }
 
 #movies_page {
-  margin-top: 15%;
+  margin-top: 20%;
   margin-left: 18%;
   margin-right: 18%;
   
@@ -165,7 +165,7 @@ body {
 .movies_loadMore {
   background: 0 0;
   cursor: pointer;
-  color: var(--text-highlight-color);
+  color: #979494f0;
   border-radius: 4px;
   padding: 10px 30px;
   font-family: var(--font-family-title);
