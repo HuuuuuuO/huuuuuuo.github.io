@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 02 Apr 2024 21:10:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2024 22:15:52 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：中英文之间自动加空格</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC/</link>
+      <pubDate>Thu, 04 Apr 2024 20:33:21 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC/</guid>
+      <description>1 显示效果 中英文之间auto自动加空格 2 解决方法 可以使用 盘古之白 在文件layouts\partials\footer.html中，加入以下代</description>
+    </item>
+    <item>
+      <title>Hugo：归档改为年月统计</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Thu, 04 Apr 2024 17:56:33 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/</guid>
+      <description>1 显示效果 在归档archive页面中，我将归档显示方式改为先按日，再按月和年来统计。 2 解决方法 在文件 layouts\_default\archive.html 中修改统计方式： 重点是 第一个按年分组要</description>
+    </item>
     <item>
       <title>Hugo：阅读进度条</title>
       <link>https://huuuuuuo.github.io/post/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/</link>

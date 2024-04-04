@@ -19,15 +19,15 @@
     
 
     
-    <meta name="title" content="Hugo：代码高亮风格" />
-    <meta property="og:title" content="Hugo：代码高亮风格" />
-    <meta property="twitter:title" content="Hugo：代码高亮风格" />
+    <meta name="title" content="Hugo：归档改为年月统计" />
+    <meta property="og:title" content="Hugo：归档改为年月统计" />
+    <meta property="twitter:title" content="Hugo：归档改为年月统计" />
     
 
     
-    <meta name="description" content="Nefelibata,看吧天空在上,Blog,博客,个人网站,互联网,Web,hugo">
-    <meta property="og:description" content="Nefelibata,看吧天空在上,Blog,博客,个人网站,互联网,Web,hugo" />
-    <meta property="twitter:description" content="Nefelibata,看吧天空在上,Blog,博客,个人网站,互联网,Web,hugo" />
+    <meta name="description" content="Hugo的归档显示改为年月统计">
+    <meta property="og:description" content="Hugo的归档显示改为年月统计" />
+    <meta property="twitter:description" content="Hugo的归档显示改为年月统计" />
     
 
     
@@ -49,9 +49,9 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <title>Hugo：代码高亮风格 | Blog</title>
+    <title>Hugo：归档改为年月统计 | Blog</title>
 
-    <link rel="canonical" href="/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/">
+    <link rel="canonical" href="/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/">
 
     
     
@@ -318,16 +318,8 @@
                             hugo
                         </a>
                         
-                        <a class="tag" href="/tags/%e4%bb%a3%e7%a0%81%e9%ab%98%e4%ba%ae" title="代码高亮">
-                            代码高亮
-                        </a>
-                        
-                        <a class="tag" href="/tags/Chroma%20Style%20Gallery" title="Chroma Style Gallery">
-                            Chroma Style Gallery
-                        </a>
-                        
                     </div>
-                    <h1>Hugo：代码高亮风格</h1>
+                    <h1>Hugo：归档改为年月统计</h1>
 
                     <h2 class="subheading"></h2>
                     <span class="meta">
@@ -337,13 +329,13 @@
                         Nefelibata
                         
                         on
-                        Sat 2024-03-30
+                        Thu 2024-04-04
                         
-                        | <span class="post-date">591 words</span> | about<span class="more-meta"> 2 mins</span>
+                        | <span class="post-date">311 words</span> | about<span class="more-meta"> 1 mins</span>
                         
                         
                         
-                        <br>Last Modified on Sun 2024-03-31
+                        <br>Last Modified on Thu 2024-04-04
                         
                         
                     </span>
@@ -372,105 +364,66 @@
                 
 
              
-                    <h1 id="1-代码高亮风格">1 代码高亮风格</h1>
-<p>代码高亮风格很多，可以参见  <a href="https://xyproto.github.io/splash/docs/all.html">Chroma Style Gallery</a></p>
+                    <h1 id="1-显示效果">1 显示效果</h1>
 <p>
 
 
 <div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240330021242701.png">
-<img src="/img/image-20240330021242701.png" alt="image-20240330021242701"  />
+<a data-fancybox="gallery" href="/img/image-20240404220608843.png">
+<img src="/img/image-20240404220608843.png" alt="image-20240404220608843"  />
 </a>
 </div>
 
 </p>
-<p>看起来都不错，可以考虑添加进 hugo</p>
-<h1 id="2-遇到问题">2 遇到问题</h1>
-<p>之前我已经在 <code>config.toml</code> 中已经添加如下配置：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[markup]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  [markup.highlight]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    codeFences = true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    guessSyntax = true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    hl_Lines = &#34;&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    lineNoStart = 1
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    lineNos = true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    font_size = 19
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    lineNumbersInTable = false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    noClasses = true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    tabWidth = 4
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    style = &#34;dracula&#34;
-</span></span></code></pre></div><p>启动的风格是 dracula，也就是这样：</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240330021553646.png">
-<img src="/img/image-20240330021553646.png" alt="image-20240330021553646"  />
-</a>
-</div>
-
-</p>
-<p>在网站上显示的代码块是这样的：</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240330021627143.png">
-<img src="/img/image-20240330021627143.png" alt="image-20240330021627143"  />
-</a>
-</div>
-
-</p>
-<p>可以看出来，似乎只改了背景颜色，而代码那种五颜六色的样子并没有实现，之前一直尝试解决，却没有找到缘由，今天偶然间发现了，是不是没有将代码块所使用的代码语言进行标记，于是在进行标记了一下之后就出现了如下：</p>
+<p>在归档archive页面中，我将归档显示方式改为先按日，再按月和年来统计。</p>
+<h1 id="2-解决方法">2 解决方法</h1>
+<p>在文件 <code>layouts\_default\archive.html</code> 中修改统计方式：</p>
+<p>重点是 第一个按年分组要使用<code>$pages</code>， <code>{{ range $pages.GroupByDate &quot;2006&quot; }}</code></p>
+<p>按月分组和按日分组要使用<code>.Pages</code>，这表示前面按年分组之后的结果，之后使用 <code>{{ range .Pages.GroupByDate &quot;01&quot; }}</code> 和 <code>{{ range .Pages.GroupByDate &quot;01-02&quot; }}</code> 。</p>
 
 
 
 
 <details style="background-color:#e6e3e336;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);">
-    <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">os</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">shutil</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">codecs</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#9893a5"># 定义源路径和目标路径</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#d7827e">source_path</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;content/post/postimg&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#d7827e">destination_path</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;static/img&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#9893a5"># 复制文件，如果目标路径已存在文件则不覆盖</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#286983">for</span> <span style="color:#d7827e">filename</span> <span style="color:#797593">in</span> <span style="color:#d7827e">os</span><span style="color:#797593">.</span><span style="color:#d7827e">listdir</span><span style="color:#797593">(</span><span style="color:#d7827e">source_path</span><span style="color:#797593">):</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#d7827e">source_file</span> <span style="color:#797593">=</span> <span style="color:#d7827e">os</span><span style="color:#797593">.</span><span style="color:#d7827e">path</span><span style="color:#797593">.</span><span style="color:#d7827e">join</span><span style="color:#797593">(</span><span style="color:#d7827e">source_path</span><span style="color:#797593">,</span> <span style="color:#d7827e">filename</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    <span style="color:#d7827e">destination_file</span> <span style="color:#797593">=</span> <span style="color:#d7827e">os</span><span style="color:#797593">.</span><span style="color:#d7827e">path</span><span style="color:#797593">.</span><span style="color:#d7827e">join</span><span style="color:#797593">(</span><span style="color:#d7827e">destination_path</span><span style="color:#797593">,</span> <span style="color:#d7827e">filename</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#286983">if</span> <span style="color:#797593">not</span> <span style="color:#d7827e">os</span><span style="color:#797593">.</span><span style="color:#d7827e">path</span><span style="color:#797593">.</span><span style="color:#d7827e">exists</span><span style="color:#797593">(</span><span style="color:#d7827e">destination_file</span><span style="color:#797593">):</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>        <span style="color:#d7827e">shutil</span><span style="color:#797593">.</span><span style="color:#d7827e">copy2</span><span style="color:#797593">(</span><span style="color:#d7827e">source_file</span><span style="color:#797593">,</span> <span style="color:#d7827e">destination_file</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        <span style="color:#d7827e">print</span><span style="color:#797593">(</span><span style="color:#ea9d34">f</span><span style="color:#ea9d34">&#34;文件 </span><span style="color:#ea9d34">{</span><span style="color:#d7827e">source_file</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34"> 复制成功！&#34;</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    <span style="color:#286983">else</span><span style="color:#797593">:</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>        <span style="color:#d7827e">print</span><span style="color:#797593">(</span><span style="color:#ea9d34">f</span><span style="color:#ea9d34">&#34;pass&#34;</span><span style="color:#797593">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">template</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#797593">&lt;</span><span style="color:#d7827e">div</span> <span style="color:#d7827e">id</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;app&#34;</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">img</span> <span style="color:#d7827e">src</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;./assets/logo.png&#34;</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">router-view</span><span style="color:#797593">/&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#797593">&lt;/</span><span style="color:#d7827e">div</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">template</span><span style="color:#797593">&gt;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#286983">public</span> <span style="color:#286983">class</span> <span style="color:#56949f">HelloJava</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#286983">public</span> <span style="color:#286983">static</span> <span style="color:#286983">void</span> <span style="color:#d7827e">main</span><span style="color:#797593">(</span><span style="color:#d7827e">String</span><span style="color:#797593">[]</span> <span style="color:#d7827e">args</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        <span style="color:#d7827e">System</span><span style="color:#797593">.</span><span style="color:#d7827e">out</span><span style="color:#797593">.</span><span style="color:#d7827e">println</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#34;哈哈哈&#34;</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#797593">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#797593">.</span><span style="color:#56949f">highlight</span> <span style="color:#d7827e">pre</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#286983">padding-right</span><span style="color:#797593">:</span> <span style="color:#ea9d34">75</span><span style="color:#286983">px</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#9893a5">/* background-color:#f8f8f8 !important; */</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#797593">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#9893a5">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">html</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#797593">&lt;</span><span style="color:#d7827e">head</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">meta</span> <span style="color:#d7827e">charset</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;utf-8&#34;</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">meta</span> <span style="color:#d7827e">name</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;viewport&#34;</span> <span style="color:#d7827e">content</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;width=device-width,initial-scale=1.0&#34;</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">title</span><span style="color:#797593">&gt;</span>vuehello<span style="color:#797593">&lt;/</span><span style="color:#d7827e">title</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>  <span style="color:#797593">&lt;/</span><span style="color:#d7827e">head</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  <span style="color:#797593">&lt;</span><span style="color:#d7827e">body</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">div</span> <span style="color:#d7827e">id</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;app&#34;</span><span style="color:#797593">&gt;&lt;/</span><span style="color:#d7827e">div</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#9893a5">&lt;!-- built files will be auto injected --&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  <span style="color:#797593">&lt;/</span><span style="color:#d7827e">body</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">html</span><span style="color:#797593">&gt;</span>
+    <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>&lt;div class=&#34;archive-list&#34;&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>                
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>                &lt;section&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>                {{ range $pages.GroupByDate &#34;2006&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>                    &lt;h1 class=&#34;title is-4 has-text-weight-normal&#34; style=&#34;position: relative; display: inline-block; padding-right: 30px;&#34;&gt;{{ .Key }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>                       &lt;span style=&#34;position: absolute; top: 0; right: 0; font-size: 15px; color: #666;&#34;&gt;{{ len .Pages }}&lt;/span&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>                      &lt;/h1&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>                      &lt;hr&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>                &lt;/section&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>               &lt;section&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>                {{ range .Pages.GroupByDate &#34;01&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>                &lt;h3 class=&#34;title is-4 has-text-weight-normal&#34; style=&#34;position: relative; display: inline-block; padding-right: 30px;&#34;&gt;{{ .Key }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>                    &lt;span style=&#34;position: absolute; top: 0; right: 0; font-size: 15px; color: #666;&#34;&gt;{{ len .Pages }}&lt;/span&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>                &lt;/h3&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>                &lt;hr&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>            &lt;/section&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>            &lt;section&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>                {{ range .Pages.GroupByDate &#34;01-02&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>                &lt;h3 class=&#34;title is-4 has-text-weight-normal&#34; style=&#34;position: relative; display: inline-block; padding-right: 30px;&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{{ .Key }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>                    &lt;span style=&#34;position: absolute; top: 0; right: 0; font-size: 15px; color: #666;&#34;&gt;{{ len .Pages }}&lt;/span&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>                &lt;/h3&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>            &lt;/section&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>                
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>                &lt;ul style=	&#34;background-position:1000px; padding-left:100px;&#34;&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>                    {{ range .Pages }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>                    &lt;li &gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>                        
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>                        &lt;a href=&#34;{{ .RelPermalink }}&#34;&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>                           {{ .Title }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>                        &lt;/a&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>                    &lt;/li&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>                    {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>                &lt;/ul&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>                {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>                {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>                {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>            &lt;/div&gt;
 </span></span></code></pre></div>
 </details>
 
@@ -480,27 +433,6 @@
 
 
 
-<h1 id="2-解决方案">2 解决方案</h1>
-<p>由此，可以得到解决方案，就是在写 <code>markdown</code> 的时候对代码进行标记，也就是</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#ea9d34">```java
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#ea9d34"></span><span style="color:#286983">public</span> <span style="color:#286983">class</span> <span style="color:#56949f">HelloJava</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#286983">public</span> <span style="color:#286983">static</span> <span style="color:#286983">void</span> <span style="color:#d7827e">main</span><span style="color:#797593">(</span><span style="color:#d7827e">String</span><span style="color:#797593">[]</span> <span style="color:#d7827e">args</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>        <span style="color:#d7827e">System</span><span style="color:#797593">.</span><span style="color:#d7827e">out</span><span style="color:#797593">.</span><span style="color:#d7827e">println</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#34;哈哈哈&#34;</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#ea9d34">```</span>
-</span></span></code></pre></div><p>如果你使用的是 <code>Typora</code> ，则可以直接在右下角添加代码语言：</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240330023549493.png">
-<img src="/img/image-20240330023549493.png" alt="image-20240330023549493"  />
-</a>
-</div>
-
-</p>
-<p>这样就可以了，解决。你也可以尝试换成各种不同的代码高亮风格来进行尝试了。</p>
 
 
                     
@@ -544,15 +476,15 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：添加热力图">&larr;
+                            <a href="/post/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/" data-toggle="tooltip" data-placement="top"
+                                title="Hugo：阅读进度条">&larr;
                                 Previous Post</a>
                         </li>
                         
                         
                         <li class="next">
-                            <a href="/post/hugo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%90%8E%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：文章发布后最后修改时间不一致问题">Next
+                            <a href="/post/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC/" data-toggle="tooltip" data-placement="top"
+                                title="Hugo：中英文之间自动加空格">Next
                                 Post &rarr;</a>
                         </li>
                         

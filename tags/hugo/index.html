@@ -134,6 +134,10 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC\/?utm_source=random",
+      
+      "\/post\/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1\/?utm_source=random",
+      
       "\/post\/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1\/?utm_source=random",
       
       "\/post\/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA\/?utm_source=random",
@@ -333,6 +337,54 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC/">
+        <h2 class="post-title">
+            Hugo：中英文之间自动加空格
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 显示效果 中英文之间auto自动加空格 2 解决方法 可以使用 盘古之白 在文件layouts\partials\footer.html中，加入以下代
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-04-04 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/">
+        <h2 class="post-title">
+            Hugo：归档改为年月统计
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            Hugo的归档显示改为年月统计
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-04-04 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
@@ -658,58 +710,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
-        <h2 class="post-title">
-            Hugo：内容折叠与代码块大小限制
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 目前显示效果 1git add . 2git commit -m &#34;update&#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&lt;details style=&#34;background-color:#ffffff;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);&#34;&gt; 2 &lt;summary&gt; &lt;font color=#817f7f&gt; &gt; &gt; &gt; 展开 &gt; &gt; &gt; &lt;/font&gt;&lt;/summary&gt; 3 {{ .Inner | markdownify }} 4&lt;/details&gt; 以
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-        | Last Modified on Sat 2024-03-30 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/">
-        <h2 class="post-title">
-            Hugo：访问量统计
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            显示效果 解决方案 本文使用 不蒜子 来进行网站访问量的统计 前期也踩了几个坑，最后在官网发现了最佳解决方案，只需要将官网上的两行代码稍加改进就可以在
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-        | Last Modified on Sat 2024-03-30 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -800,6 +800,30 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-04";
+    var value = dataMap.get(key);
+    var wordCount =  121 ;
+    var link = "/post/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC/";
+    var title = "Hugo：中英文之间自动加空格";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-04-04";
+    var value = dataMap.get(key);
+    var wordCount =  311 ;
+    var link = "/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/";
+    var title = "Hugo：归档改为年月统计";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-02";
     var value = dataMap.get(key);
     var wordCount =  257 ;
@@ -1889,8 +1913,12 @@
                     
                         
                     
-                    发表了 33 篇文章 · 
-                    总计 3.14 万字
+                        
+                    
+                        
+                    
+                    发表了 35 篇文章 · 
+                    总计 3.18 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -2062,6 +2090,18 @@ list-max-height=90px
 
 <script src="/js/copy-to-clipboard.js"></script>
 
+<script>
+    (function(u, c) {
+      var d = document, t = 'script', o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function(e) { c(e); }); }
+      s.parentNode.insertBefore(o, s);
+    })('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+      pangu.spacingPage();
+    });
+    </script>
+    
 
 
 
