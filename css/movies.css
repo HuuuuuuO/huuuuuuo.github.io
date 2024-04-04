@@ -20,7 +20,12 @@ body {
 .navbar-custom.is-fixed .navbar-brand{
   color: #ffffff97;
 }
-
+@media only screen and (max-width: 767px){
+  .navbar-custom .nav li a{
+    color: #626161dc;
+  
+  }
+}
 .movie-quanju {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
