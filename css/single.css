@@ -10,7 +10,7 @@
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    margin-bottom: 0;
+    margin-bottom: 90;
   display: inline;
 }
 
@@ -27,6 +27,26 @@
     color: #ffffffd9;
 
 }}
+
+
+@media only screen and (max-width: 768px)
+{.intro-header .container {
+  margin-bottom: 10px;
+  margin-top: 100px;
+ }}
+ 
+ @media only screen and (min-width: 1200px)
+ {.intro-header .container {
+   margin-bottom: 420px;
+   margin-top: 100px;
+
+ }}
+
+ @media only screen and (min-width: 768px) and (max-width: 1200px)
+ {.intro-header .container {
+   margin-bottom: 100px;
+   margin-top: 50px;
+  }}
 
 .sidebar-container a {
   color: #000000be!important;
@@ -64,19 +84,33 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2px;
     margin-bottom: 40px; }
-  
-  .bg_pic {
+
+  @media only screen and (min-width: 767px){
+    .bg_pic {
     position: absolute;
     /* height: 85rem; */
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     left: 0;
     right: 0;
     top: 0;
     z-index: -10; 
-  
-  
-  }
+  }}
+
+  @media only screen and (max-width: 767px){
+  .bg_pic {
+    position: absolute;
+    height: 65rem;
+    /* height: 100%; */
+    /* width: 100%; */
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-left: -160px;
+    z-index: -10; 
+  }}
+
+
   .sidebar-container a {
     color: #33333490!important;
 }
@@ -137,6 +171,8 @@ display: inline-block;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #ffffff 100%); 
   }
   
+
+
   hr {
     margin-top: 20px;
     margin-bottom: 20px;
