@@ -13,18 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-      fetch('/data/douban/quote.csv')
-          .then(response => response.text())
+      fetch('https://v1.hitokoto.cn')
+          .then(response => response.json())
           .then(data => {
-              const lines = data.split('\n');
-              const quotes = lines.slice(1).map(line => line.split(','));
-              const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-              document.getElementById('quote').textContent = randomQuote[0];
-              document.getElementById('source').textContent = randomQuote[1] ? '——' + randomQuote[1] : '';
-
-              
-              console.log(randomQuote[0],randomQuote[1]);
-
-          });
+              document.getElementById('quote').textContent = data.hitokoto;
+              document.getElementById('source').textContent = '—— ' + data.from;
+          })
+          .catch(error => console.error('Error:', error));
   });
   
