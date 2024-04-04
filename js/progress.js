@@ -10,3 +10,21 @@ document.addEventListener('DOMContentLoaded', function () {
           progressBar.value = window.scrollY;
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+      fetch('/data/douban/quote.csv')
+          .then(response => response.text())
+          .then(data => {
+              const lines = data.split('\n');
+              const quotes = lines.slice(1).map(line => line.split(','));
+              const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+              document.getElementById('quote').textContent = randomQuote[0];
+              document.getElementById('source').textContent = randomQuote[1] ? '——' + randomQuote[1] : '';
+
+              
+              console.log(randomQuote[0],randomQuote[1]);
+
+          });
+  });
+  

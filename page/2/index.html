@@ -135,6 +135,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA\/?utm_source=random",
+      
       "\/post\/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC\/?utm_source=random",
       
       "\/post\/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1\/?utm_source=random",
@@ -301,7 +303,7 @@
 <header class="intro-header">
     <div class="bg_pic">
        <img class="bg-source" src="/img/2/1 (2).jpg" width="100%" height="100%" style="object-fit:cover">
-                  
+  
     </div>
     
 
@@ -309,7 +311,33 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-          
+                    <style>
+                        .quote-container {
+                            color: #fdfdfd7d;
+                            position: relative;
+                            width: 100%;
+                            height: 100px;
+                            border: 0px solid #ccc;
+                            padding: 0px;
+                            box-sizing: border-box;
+                        }
+                        .quote {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        .source {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            text-align: right;
+                        }
+                    </style>
+                     <div class="quote-container">
+                        <span class="quote" id="quote"></span>
+                <span class="source" id="source"></span>
+                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -344,6 +372,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/">
+        <h2 class="post-title">
+            Hugo：添加随机浏览文章功能
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            偶然看见了一位大佬的博客 给 Hugo 博客添加随机文章入口 ，发现了他做了这个功能，感觉可以搞一下，于是借鉴了她的代码，感谢。 1 显示效果 在博客的右上角添
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sat 2024-03-30 
+        
+        
+        | Last Modified on Sun 2024-03-31 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD-copy/">
@@ -699,30 +753,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/">
-        <h2 class="post-title">
-            Hugo：博客运行时间
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方案 1&lt;!-- Add blog running time --&gt; 2本博客已稳定运行 3&lt;span id=&#34;runningdays&#34; class=&#34;running-days&#34;&gt;&lt;/span&gt; 4&lt;script&gt; 5let s1 = &#39;2024-3-18&#39;; //website start date 6s1 = new Date(s1.replace(/-/g, &#34;/&#34;)); 7let s2 = new Date(); 8let timeDifference = s2.getTime() - s1.getTime(); 9 10let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 11let
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -817,6 +847,18 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-05";
+    var value = dataMap.get(key);
+    var wordCount =  274 ;
+    var link = "/post/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA/";
+    var title = "Hugo：增加台词随机展示";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-04";
     var value = dataMap.get(key);
     var wordCount =  121 ;
@@ -833,7 +875,7 @@
     var value = dataMap.get(key);
     var wordCount =  311 ;
     var link = "/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/";
-    var title = "Hugo：归档改为年月统计";
+    var title = "Hugo：归档改为年月日统计";
     
     
     if (value == null) {
@@ -1592,6 +1634,12 @@
         
         
         
+        <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0" title="博客改造">
+            博客改造
+        </a>
+        
+        
+        
         <a href="/tags/%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7" title="图片放大">
             图片放大
         </a>
@@ -1934,8 +1982,10 @@
                     
                         
                     
-                    发表了 35 篇文章 · 
-                    总计 3.18 万字
+                        
+                    
+                    发表了 36 篇文章 · 
+                    总计 3.21 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
