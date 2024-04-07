@@ -1,0 +1,73 @@
+[Version]
+signature="$CHICAGO$"
+Material Design Best Edition By Dante Berlin
+[DefaultInstall]
+CopyFiles = Scheme.Cur
+AddReg    = Scheme.Reg,Wreg
+
+[DestinationDirs]
+Scheme.Cur = 10,"%CUR_DIR%"
+
+[Scheme.Reg]
+HKCU,"Control Panel\Cursors\Schemes","%SCHEME_NAME%",,"%10%\%CUR_DIR%\%arrow%,%10%\%CUR_DIR%\%helpsel%,%10%\%CUR_DIR%\%working%,%10%\%CUR_DIR%\%busy%,%10%\%CUR_DIR%\%cross%,%10%\%CUR_DIR%\%beam%,%10%\%CUR_DIR%\%pen%,%10%\%CUR_DIR%\%unavail%,%10%\%CUR_DIR%\%ns%,%10%\%CUR_DIR%\%ew%,%10%\%CUR_DIR%\%nwse%,%10%\%CUR_DIR%\%nesw%,%10%\%CUR_DIR%\%move%,%10%\%CUR_DIR%\%up%,%10%\%CUR_DIR%\%link%,%10%\%CUR_DIR%\%pin%,%10%\%CUR_DIR%\%person%"
+
+[Wreg]
+HKCU,"Control Panel\Cursors",,0x00020000,"%SCHEME_NAME%"
+HKCU,"Control Panel\Cursors",AppStarting,0x00020000,"%10%\%CUR_DIR%\%working%"
+HKCU,"Control Panel\Cursors",Arrow,0x00020000,"%10%\%CUR_DIR%\%arrow%"
+HKCU,"Control Panel\Cursors",Crosshair,0x00020000,"%10%\%CUR_DIR%\%cross%"
+HKCU,"Control Panel\Cursors",Hand,0x00020000,"%10%\%CUR_DIR%\%link%"
+HKCU,"Control Panel\Cursors",Help,0x00020000,"%10%\%CUR_DIR%\%helpsel%"
+HKCU,"Control Panel\Cursors",IBeam,0x00020000,"%10%\%CUR_DIR%\%beam%"
+HKCU,"Control Panel\Cursors",No,0x00020000,"%10%\%CUR_DIR%\%unavail%"
+HKCU,"Control Panel\Cursors",NWPen,0x00020000,"%10%\%CUR_DIR%\%pen%"
+HKCU,"Control Panel\Cursors",SizeAll,0x00020000,"%10%\%CUR_DIR%\%move%"
+HKCU,"Control Panel\Cursors",SizeNESW,0x00020000,"%10%\%CUR_DIR%\%nesw%"
+HKCU,"Control Panel\Cursors",SizeNS,0x00020000,"%10%\%CUR_DIR%\%ns%"
+HKCU,"Control Panel\Cursors",SizeNWSE,0x00020000,"%10%\%CUR_DIR%\%nwse%"
+HKCU,"Control Panel\Cursors",SizeWE,0x00020000,"%10%\%CUR_DIR%\%ew%"
+HKCU,"Control Panel\Cursors",UpArrow,0x00020000,"%10%\%CUR_DIR%\%up%"
+HKCU,"Control Panel\Cursors",Wait,0x00020000,"%10%\%CUR_DIR%\%busy%"
+HKCU,"Control Panel\Cursors",Pin,0x00020000,"%10%\%CUR_DIR%\%pin%"
+HKCU,"Control Panel\Cursors",Person,0x00020000,"%10%\%CUR_DIR%\%person%"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Runonce\Setup\","",,"rundll32.exe shell32.dll,Control_RunDLL main.cpl @0,1"
+
+[Scheme.Cur]
+"arrow.cur"
+"helpsel.cur"
+"working.ani"
+"busy.ani"
+"cross.cur"       
+"beam.cur"
+"pen.cur"
+"unavail.cur"
+"ns.cur"
+"ew.cur"
+"nwse.cur"
+"nesw.cur"
+"move.cur"
+"up.cur"
+"link.cur"
+"pin.cur"
+"person.cur"
+
+[Strings]
+CUR_DIR         = "Cursors\Material Design Best Edition"
+SCHEME_NAME     = "Material Design Best Edition"
+arrow		= "arrow.cur"
+helpsel		= "helpsel.cur"
+working		= "working.ani"
+busy		= "busy.ani"
+cross		= "cross.cur"
+beam		= "beam.cur"
+pen		= "pen.cur"
+unavail 	= "unavail.cur"
+ns		= "ns.cur"   
+ew		= "ew.cur"
+nwse		= "nwse.cur"
+nesw		= "nesw.cur"
+move		= "move.cur"
+up      	= "up.cur"
+link		= "link.cur"
+pin             = "pin.cur"
+person          = "person.cur"

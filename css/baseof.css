@@ -36,7 +36,14 @@
 
 body {
     background-color: #ffffff;
+
+    /* cursor:url(/css/Material-Design-Best-Edition/arrow.cur),default; */
+
   }
+  /* a,
+ img {
+  cursor:url(/css/Material-Design-Best-Edition/link.cur),default;
+ } */
   .navbar-custom.is-fixed{
     background-color: rgba(255, 255, 255, 0.148);
     border: 0 ;
