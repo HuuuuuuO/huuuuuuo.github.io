@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5\/?utm_source=random",
+      
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA\/?utm_source=random",
       
       "\/post\/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC\/?utm_source=random",
@@ -331,10 +333,13 @@
                             right: 0;
                             text-align: right;
                         }
-
+                       
                 
                     </style>
                      <div class="quote-container">
+                        
+
+
                <span class="quote" id="quote"></span>
                 <span class="source" id="source"></span>
  
@@ -444,6 +449,82 @@ var meting_api='https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&
     
 
 
+<section>
+    <hr>
+<style>
+
+    .weatherReport {
+       font-size: 15px;
+       color: #1f373c8c;
+    }
+     
+</style>
+<h5 class="locationInfo" id="locationInfo"></h5>
+
+<span class="weatherReport" id="weatherReport"></span>
+
+
+
+<script>
+    const apicityUrl = 'https://restapi.amap.com/v3/ip?key=7747cc0f1efaa36c8d12b5dbba5f87cf';
+    const apiUrlTemplate = 'https://restapi.amap.com/v3/weather/weatherInfo?city={adcode}&key=7747cc0f1efaa36c8d12b5dbba5f87cf&extensions=all';
+
+    fetch(apicityUrl)
+        .then(response => response.json())
+        .then(data => {
+            const province = data.province;
+            const city = data.city;
+            const adcode = data.adcode;
+
+            
+            document.getElementById('locationInfo').innerHTML = `WEATHER | ${province} ${city}`;
+
+            
+            const apiUrl = apiUrlTemplate.replace('{adcode}', adcode);
+
+            
+            return fetch(apiUrl);
+        })
+        .then(response => response.json())
+    .then(data => {
+        if (data.status === "1" && data.count === "1") {
+            const forecast = data.forecasts[0];
+            const reportTime = forecast.reporttime;
+            const city = forecast.city;
+            const province = forecast.province;
+
+            let weatherReport = ``;
+
+        forecast.casts.forEach((cast, index) => {
+            const date = cast.date;
+            const parts = date.split("-"); 
+            const newDate = parts.slice(1).join("-"); 
+            const nightWeather = cast.nightweather;
+            const dayWeather = cast.dayweather;
+            const daytemp = cast.daytemp;
+            const nighttemp = cast.nighttemp;
+
+            
+            if (index === 0) {
+                
+                weatherReport += `${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
+            } else {
+                
+                weatherReport += `<br>${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
+            }
+        });
+
+
+            document.getElementById('weatherReport').innerHTML = weatherReport;
+        } else {
+            console.error('Error fetching weather data');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+</script>
+</section>
+
+
 
 <section>
     <hr>
@@ -460,6 +541,18 @@ var meting_api='https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-08";
+    var value = dataMap.get(key);
+    var wordCount =  1134 ;
+    var link = "/post/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/";
+    var title = "Hugo：添加天气预报";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-05";
     var value = dataMap.get(key);
     var wordCount =  431 ;
@@ -1277,6 +1370,12 @@ var meting_api='https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&
         
         
         
+        <a href="/tags/%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5" title="天气预报">
+            天气预报
+        </a>
+        
+        
+        
         <a href="/tags/%E5%AD%97%E4%BD%93" title="字体">
             字体
         </a>
@@ -1598,8 +1697,10 @@ var meting_api='https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&
                     
                         
                     
-                    发表了 36 篇文章 · 
-                    总计 3.22 万字
+                        
+                    
+                    发表了 37 篇文章 · 
+                    总计 3.34 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

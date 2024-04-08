@@ -6,8 +6,15 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 07 Apr 2024 09:38:54 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2024 22:37:37 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：添加天气预报</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/</link>
+      <pubDate>Mon, 08 Apr 2024 21:56:52 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/</guid>
+      <description>1 显示效果 给hugo博客添加天气预报的效果，其实不只是给hugo，所有博客都是通用的。 我自己想要一打开就能看到天气，所以增加了这个功能。可以</description>
+    </item>
     <item>
       <title>Hugo：增加台词随机展示</title>
       <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA/</link>
