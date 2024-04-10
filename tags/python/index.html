@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1\/?utm_source=random",
+      
       "\/post\/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5\/?utm_source=random",
       
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA\/?utm_source=random",
@@ -543,6 +545,85 @@
 </section>
 
 
+<section>
+    <hr>
+    <h5>PROGRESS | Day-Month-Year</h5>
+<div class="progress">
+    <div class="progress-bar" id="todayProgress" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+   </div>
+   <div class="progress">
+    <div class="progress-bar" id="monthProgress" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+   </div>
+   <div class="progress">
+    <div class="progress-bar" id="yearProgress" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+   </div>
+
+<style>
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #0086a18b;
+    -webkit-box-shadow: inset 0 -1px 0 rgb(0 0 0 / 15%);
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 15%);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+
+}
+.progress {
+    height: 20px;
+    width: 240px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f8f8f883;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+}
+
+</style>   
+
+<script>
+function updateProgress(progressId, newValue) {
+    $(`#${progressId}`).css('width', newValue + '%').attr('aria-valuenow', newValue).text(newValue + '%');
+   }
+    const now = new Date();
+
+    
+    const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const elapsedTime = now - startOfDay;
+
+    
+    const dayPercentage = Math.round((elapsedTime / (1000 * 60 * 60 * 24)) * 100);
+
+    
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const elapsedDays = (now - startOfMonth) / (1000 * 60 * 60 * 24);
+    const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+
+    
+    const monthPercentage =  Math.round((elapsedDays / daysInMonth) * 100);
+
+    
+    const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const elapsedDaysInYear = (now - startOfYear) / (1000 * 60 * 60 * 24);
+    const daysInYear = (new Date(now.getFullYear() + 1, 0, 1) - new Date(now.getFullYear(), 0, 1)) / (1000 * 60 * 60 * 24);
+
+    
+    const yearPercentage =  Math.round((elapsedDaysInYear / daysInYear) * 100);
+
+    updateProgress('todayProgress', dayPercentage);
+    updateProgress('monthProgress', monthPercentage);
+    updateProgress('yearProgress', yearPercentage);
+</script>
+</section>
+
+
 
 <section>
     <hr>
@@ -559,6 +640,18 @@
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-10";
+    var value = dataMap.get(key);
+    var wordCount =  602 ;
+    var link = "/post/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1/";
+    var title = "Hugo：增加年月日时间进度条";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-08";
     var value = dataMap.get(key);
     var wordCount =  1134 ;
@@ -645,7 +738,7 @@
     }
     var key = "2024-04-01";
     var value = dataMap.get(key);
-    var wordCount =  843 ;
+    var wordCount =  873 ;
     var link = "/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/";
     var title = "Hugo：增加新页面";
     
@@ -1478,6 +1571,12 @@
         
         
         
+        <a href="/tags/%E8%BF%9B%E5%BA%A6%E6%9D%A1" title="进度条">
+            进度条
+        </a>
+        
+        
+        
         <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88" title="随机浏览">
             随机浏览
         </a>
@@ -1716,8 +1815,10 @@
                     
                         
                     
-                    发表了 37 篇文章 · 
-                    总计 3.42 万字
+                        
+                    
+                    发表了 38 篇文章 · 
+                    总计 3.48 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

@@ -6,8 +6,15 @@
     <description>Recent content in Hugo on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Apr 2024 09:50:29 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Apr 2024 23:37:26 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo：增加年月日时间进度条</title>
+      <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1/</link>
+      <pubDate>Wed, 10 Apr 2024 23:31:43 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1/</guid>
+      <description>1 显示效果 增加年、月、日的时间进度条显示，如下，可以显示当前时间在今天、当月、当年的进度。 2 解决方案 在侧边栏layouts\partials</description>
+    </item>
     <item>
       <title>Hugo：添加天气预报</title>
       <link>https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/</link>
