@@ -6,14 +6,14 @@
     <description>Recent content in 增加新页面 on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Apr 2024 20:36:28 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Apr 2024 09:50:29 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：增加新页面</title>
       <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</link>
       <pubDate>Mon, 01 Apr 2024 08:40:15 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</guid>
-      <description>想要在网站上做几个新页面</description>
+      <description>想要在网站上做几个新页面 1 在配置文件中新增标签 1 [[params.addtional_menus]] 2 title = &amp;#34;TREND&amp;#34; 3 href = &amp;#34;/trend&amp;#34; 2 新增页面布局 2.1 沿用已有布局 新增了标签以后，点进去是404，这是因为还没有</description>
     </item>
   </channel>
 </rss>

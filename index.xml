@@ -6,7 +6,7 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 08 Apr 2024 22:47:07 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Apr 2024 09:50:29 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：添加天气预报</title>
@@ -62,7 +62,7 @@
       <link>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</link>
       <pubDate>Mon, 01 Apr 2024 08:40:15 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/</guid>
-      <description>想要在网站上做几个新页面</description>
+      <description>想要在网站上做几个新页面 1 在配置文件中新增标签 1 [[params.addtional_menus]] 2 title = &amp;#34;TREND&amp;#34; 3 href = &amp;#34;/trend&amp;#34; 2 新增页面布局 2.1 沿用已有布局 新增了标签以后，点进去是404，这是因为还没有</description>
     </item>
     <item>
       <title>Hugo：增加搜索功能</title>
@@ -275,13 +275,6 @@
       <description>About Me Hello ~&#xA;If you&amp;rsquo;ve got something to say, just leave a comment😊 ~</description>
     </item>
     <item>
-      <title>Memos</title>
-      <link>https://huuuuuuo.github.io/memos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/memos/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Movies</title>
       <link>https://huuuuuuo.github.io/movies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -293,6 +286,13 @@
       <link>https://huuuuuuo.github.io/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://huuuuuuo.github.io/archive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trend</title>
+      <link>https://huuuuuuo.github.io/trend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/trend/</guid>
       <description></description>
     </item>
   </channel>

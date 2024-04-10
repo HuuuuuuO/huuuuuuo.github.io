@@ -227,6 +227,8 @@
 		    
                         <li><a href="/movies/">SPARK</a></li>
                     
+                        <li><a href="/trend/">TREND</a></li>
+                    
                         <li><a href="/archive/">Timeline</a></li>
                     
                         <li><a href="/about/">ABOUT</a></li>
@@ -339,11 +341,11 @@
                         on
                         Mon 2024-04-01
                         
-                        | <span class="post-date">12 words</span> | about<span class="more-meta"> 1 mins</span>
+                        | <span class="post-date">843 words</span> | about<span class="more-meta"> 2 mins</span>
                         
                         
                         
-                        <br>Last Modified on Mon 2024-04-01
+                        <br>Last Modified on Wed 2024-04-10
                         
                         
                     </span>
@@ -373,6 +375,51 @@
 
              
                     <p>想要在网站上做几个新页面</p>
+<h1 id="1-在配置文件中新增标签">1 在配置文件中新增标签</h1>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>  <span style="color:#797593">[[</span><span style="color:#d7827e">params</span><span style="color:#797593">.</span><span style="color:#d7827e">addtional_menus</span><span style="color:#797593">]]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#d7827e">title</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;TREND&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#d7827e">href</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;/trend&#34;</span> 
+</span></span></code></pre></div><h1 id="2-新增页面布局">2 新增页面布局</h1>
+<h2 id="21-沿用已有布局">2.1 沿用已有布局</h2>
+<p>新增了标签以后，点进去是404，这是因为还没有建立页面，所以这一步我们要新建页面。</p>
+<p>新增<code>hugo-root\content\trend\index.md</code>，文件内容里面要写明页面布局格式 <code>layout: page</code></p>
+<p>这个根据你的主题下的你需要使用的页面模板来决定，具体路径在<code>hugo-root\themes\your-theme\layouts\_default\page.html</code>，这里的<code>\layouts\_default\</code>就是所有layout的路径，page就是你的具体的layout</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>title: &#34;Trend&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>layout: page
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>---
+</span></span></code></pre></div><p>这样，我们就新建了一个空页面。</p>
+<h2 id="21-增加新布局">2.1 增加新布局</h2>
+<p>如果要增加新的布局，那么就在<code>\layouts\_default\</code>目录下新增html文件，并且在html中新增你的内容，比如我这里新增一个<code>trend.html</code></p>
+<p>然后在<code>hugo-root\content\trend\index.md</code>中也要改为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>title: &#34;Trend&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>layout: trend
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>---
+</span></span></code></pre></div><h1 id="3-添加内容">3 添加内容</h1>
+<h2 id="31-添加简单内容">3.1 添加简单内容</h2>
+<p>这时候如果我们在<code>hugo-root\content\trend\index.md</code>里面添加文字或者内容的话，页面上就有内容了。</p>
+<p>不过这种方式是在page的排版基础上，如果只是想添加简单的内容就可以用这种方式</p>
+<h2 id="32-添加自定义内容">3.2 添加自定义内容</h2>
+<p>在<code>2.1 增加新布局</code>的基础上，我们对<code>trend.html</code>进行更深的改动。</p>
+<p>改动之前，我们需要了解hugo中layout的几个设定。</p>
+<p>3.2.1 baseof.html</p>
+<p>在<code>baseof.html</code>中有几个设定，如下所示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ block &#34;header&#34; .}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{{ end }}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ block &#34;main&#34; . }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>{{ end }}
+</span></span></code></pre></div><p>这些是留给我们自定义的内容。</p>
+<p>那么在<code>trend.html</code>中我们需要相应设定为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ define &#34;header&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{{ end }}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{{ end }}
+</span></span></code></pre></div><p>并且往其中添加内容即可，header中我们添加文章标题或者网页标题的相关内容，main中我们添加主题内容。</p>
+<p>这一部分就和写普通的html基本一致了，只不过我们还可以利用hugo的一些特殊的方法和变量来获取我们网站的内容。具体可参考官方文档或者 <a href="https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/">Hugo 学习笔记（长期更新）</a>。</p>
 
 
                     
@@ -466,6 +513,10 @@
                         <hr class="hidden-sm hidden-xs">
                         
                         
+                         
+                            <h4>
+                                <a class="catalog-toggle" href="#">目录</a>
+                            </h4>
                         
                         <ul class="catalog-body"></ul>
                     </div>
@@ -1034,7 +1085,7 @@
                         
                     
                     发表了 37 篇文章 · 
-                    总计 3.34 万字
+                    总计 3.42 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
