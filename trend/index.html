@@ -387,7 +387,7 @@
 
 <style>
 .trend-container {
-    display: flex;
+     
     justify-content: center;
     align-items: center;
     padding: 0 16.66%;  
@@ -407,7 +407,7 @@
 
 
 .hot-item {
-    display: flex;
+    display: block;
     align-items: center;
      
     padding: 10px;
@@ -442,7 +442,23 @@
     height: auto;
     margin-left: 10px;
 }
+@media only screen and (max-width: 768px){
+  .trend-container {
+     
+    justify-content: center;
+    align-items: center;
+    padding: 0 5.66%;  
+    box-sizing: border-box;  
+}
+.hot-item h3 {
+    font-size: 21px;
+}
+.hot-item p {
+    font-size: 17px;  
+  
 
+}
+  }
 
 </style>
 
