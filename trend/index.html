@@ -371,7 +371,18 @@
 <div  class="container">
   <div class="row">
   <div class="trend-container">
-
+    <div class="tag-container">
+      <button class="tag-btn" data-title="知乎">知乎</button>
+      <button class="tag-btn" data-title="少数派">少数派</button>
+      <button class="tag-btn" data-title="36氪">36氪</button>
+      <button class="tag-btn" data-title="稀土掘金">稀土掘金</button>
+      <button class="tag-btn" data-title="今日头条">今日头条</button>
+      <button class="tag-btn" data-title="微博热搜">微博热搜</button>
+      <button class="tag-btn" data-title="百度贴吧">百度贴吧</button>
+      <button class="tag-btn" data-title="百度">百度</button>
+      <button class="tag-btn" data-title="哔哩哔哩">哔哩哔哩</button>
+  </div>
+  <hr>
       <div class="hotListContainer" id="hotListContainer"></div>
 
       <script src="script.js"></script>
@@ -382,10 +393,21 @@
 
 
 
-
-
-
 <style>
+.tag-container{
+
+}
+.tag-btn{
+  background-color: #ffffff00;
+  color: #383838b6;
+  border: 0;
+}
+.tag-btn.active {
+    color: #0085a1;  
+}
+.tag-btn:hover {
+    color: #0085a1;  
+}
 .trend-container {
      
     justify-content: center;
@@ -422,13 +444,13 @@
 
 .hot-item h3 {
     margin: 0;
-    font-size: 25px;
+    font-size: 23px;
     color: #404040;
 }
 
 .hot-item p {
     margin: 0;
-    font-size: 19px;  
+    font-size: 18px;  
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -451,7 +473,7 @@
     box-sizing: border-box;  
 }
 .hot-item h3 {
-    font-size: 21px;
+    font-size: 20px;
 }
 .hot-item p {
     font-size: 17px;  
@@ -463,14 +485,31 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('https://api.pearktrue.cn/api/dailyhot/?title=知乎')
-        .then(response => response.json())
-        .then(data => {
-            const container = document.getElementById('hotListContainer');
-            const hotList = data.data;
+  document.addEventListener('DOMContentLoaded', function() {
+    const tagButtons = document.querySelectorAll('.tag-btn');
 
-            hotList.forEach((item, index) => {
+    
+    function resetButtons() {
+        tagButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+    }
+
+    tagButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            resetButtons(); 
+            this.classList.add('active'); 
+
+            
+            const title = this.getAttribute('data-title');
+            fetch(`https://api.pearktrue.cn/api/dailyhot/?title=${title}`)
+                .then(response => response.json())
+                .then(data => {
+                  const container = document.getElementById('hotListContainer');
+                  container.innerHTML = '';
+                const hotList = data.data;
+
+                hotList.forEach((item, index) => {
                 const hotItem = document.createElement('div');
                 hotItem.className = 'hot-item';
 
@@ -493,8 +532,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 hotItem.appendChild(link);
                 container.appendChild(hotItem);
             });
-        })
-        .catch(error => console.error('Error fetching data:', error));
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    });
 });
 
 
