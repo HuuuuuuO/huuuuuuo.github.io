@@ -367,9 +367,125 @@
 
 
 
-<body>
-  
-</body>
+
+<div  class="container">
+  <div class="row">
+  <div class="trend-container">
+
+      <div class="hotListContainer" id="hotListContainer"></div>
+
+      <script src="script.js"></script>
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+
+<style>
+.trend-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16.66%;  
+    box-sizing: border-box;  
+}
+
+
+.hotListContainer {
+     
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 100%;  
+    box-sizing: border-box;  
+     
+}
+
+
+.hot-item {
+    display: flex;
+    align-items: center;
+     
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.hot-item-link {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.hot-item h3 {
+    margin: 0;
+    font-size: 25px;
+    color: #404040;
+}
+
+.hot-item p {
+    margin: 0;
+    font-size: 19px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    color: #787676;
+
+}
+
+.hot-item img {
+    width: 100px;  
+    height: auto;
+    margin-left: 10px;
+}
+
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://api.pearktrue.cn/api/dailyhot/?title=知乎')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('hotListContainer');
+            const hotList = data.data;
+
+            hotList.forEach((item, index) => {
+                const hotItem = document.createElement('div');
+                hotItem.className = 'hot-item';
+
+           
+
+                const link = document.createElement('a');
+                link.href = item.url;
+                link.className = 'hot-item-link';
+
+                const title = document.createElement('h3');
+                title.textContent =  index + 1 + '. '+item.title;
+                link.appendChild(title);
+
+                const desc = document.createElement('p');
+                desc.textContent = item.desc.length > 50 ? item.desc.substring(0, 50) + '...' : item.desc;
+                link.appendChild(desc);
+
+                
+
+                hotItem.appendChild(link);
+                container.appendChild(hotItem);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
+
+
+</script>
+
+
+
 
 
 
