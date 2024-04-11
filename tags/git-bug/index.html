@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/hugo%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E6%96%B0%E5%A2%9E%E7%83%AD%E6%A6%9C\/?utm_source=random",
+      
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1\/?utm_source=random",
       
       "\/post\/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5\/?utm_source=random",
@@ -399,6 +401,8 @@
         Posted by Nefelibata on Thu 2024-03-21 
         
         
+        | Last Modified on Fri 2024-03-22 
+        
     
     </p>
 
@@ -655,11 +659,22 @@ function updateProgress(progressId, newValue) {
 
 <section>
     <hr>
-    <h5>HEATMAP | March</h5>
+<h5 id="heatmap-month">HEATMAP | </h5>
 <div id="heatmap" style="max-width: 290px;height: 200px;margin-bottom: 6px;"></div>
 
 <script src="/js/echarts.min.js"></script>
+<script>
+  
+</script>
 <script type="text/javascript">
+   
+   const currentMonthh5 = new Date().getMonth();
+        
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        
+        const monthName = monthNames[currentMonthh5].charAt(0).toUpperCase() + monthNames[currentMonthh5].slice(1);
+        
+        document.querySelector('#heatmap-month').innerHTML += monthName;
   var chartDom = document.getElementById('heatmap');
   var myChart = echarts.init(chartDom);
   window.onresize = function() {
@@ -668,6 +683,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-11";
+    var value = dataMap.get(key);
+    var wordCount =  1372 ;
+    var link = "/post/hugo%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E6%96%B0%E5%A2%9E%E7%83%AD%E6%A6%9C/";
+    var title = "Hugo博客改造：新增热榜";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-10";
     var value = dataMap.get(key);
     var wordCount =  602 ;
@@ -1257,8 +1284,13 @@ function updateProgress(progressId, newValue) {
       window.open(link, '_blank').focus();
     }
 });
+
+
 </script>
+
 </section>
+
+
 
 
 
@@ -1847,8 +1879,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 38 篇文章 · 
-                    总计 3.48 万字
+                        
+                    
+                    发表了 39 篇文章 · 
+                    总计 3.62 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
