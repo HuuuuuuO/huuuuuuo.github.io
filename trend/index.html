@@ -536,7 +536,12 @@
                 .catch(error => console.error('Error fetching data:', error));
         });
     });
-});
+
+    const zhihuButton = document.querySelector('.tag-btn[data-title="知乎"]');
+    if (zhihuButton) {
+        zhihuButton.click();
+    }
+  });
 
 
 </script>
