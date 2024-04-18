@@ -135,6 +135,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE\/?utm_source=random",
+      
       "\/post\/hugo%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E6%96%B0%E5%A2%9E%E7%83%AD%E6%A6%9C\/?utm_source=random",
       
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1\/?utm_source=random",
@@ -390,6 +392,30 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95cname%E7%AD%89%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88/">
+        <h2 class="post-title">
+            域名、A记录、CNAME等都是什么
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            今天想要给博客搞个域名，涉及了一大堆专业名词，在此记录一下。 1 域名 域名就是最常见的网址，比如 www.baidu.com ，因为ip地址不好记，所以用域名来代替，我们访
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sun 2024-03-31 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo&#43;githubpages-copy/">
@@ -749,30 +775,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/">
-        <h2 class="post-title">
-            Hugo：自定义字体
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            显示效果 解决方案 本博客使用的是 霞鹜文楷 ，要在网站使用此字体，可以查看 霞鹜文楷屏幕阅读版 网络字体仓库 1、插入代码 将以下代码插入 themes\hugo-theme-cleanwhite\layouts\partials\head.html 1&lt;html&gt; 2&lt;head&gt; 3 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css&#34; /&gt;
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1033,6 +1035,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-18";
+    var value = dataMap.get(key);
+    var wordCount =  59 ;
+    var link = "/post/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE/";
+    var title = "Html页面嵌入流程图";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-11";
     var value = dataMap.get(key);
     var wordCount =  1372 ;
@@ -1705,6 +1719,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/drawio" title="drawio">
+            drawio
+        </a>
+        
+        
+        
         <a href="/tags/fancybox" title="fancybox">
             fancybox
         </a>
@@ -1759,6 +1779,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/html" title="html">
+            html
+        </a>
+        
+        
+        
         <a href="/tags/hugo" title="hugo">
             hugo
         </a>
@@ -1779,6 +1805,12 @@ function updateProgress(progressId, newValue) {
         
         <a href="/tags/mark" title="mark">
             mark
+        </a>
+        
+        
+        
+        <a href="/tags/mermaid" title="mermaid">
+            mermaid
         </a>
         
         
@@ -1929,6 +1961,12 @@ function updateProgress(progressId, newValue) {
         
         <a href="/tags/%E6%A0%87%E8%AE%B0" title="标记">
             标记
+        </a>
+        
+        
+        
+        <a href="/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE" title="流程图">
+            流程图
         </a>
         
         
@@ -2231,7 +2269,9 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 39 篇文章 · 
+                        
+                    
+                    发表了 40 篇文章 · 
                     总计 3.62 万字
                     <br>
                     

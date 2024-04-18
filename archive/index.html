@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE\/?utm_source=random",
+      
       "\/post\/hugo%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E6%96%B0%E5%A2%9E%E7%83%AD%E6%A6%9C\/?utm_source=random",
       
       "\/post\/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1\/?utm_source=random",
@@ -386,7 +388,7 @@
                 <section>
                 
                     <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2024
-                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">39</span>
+                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">40</span>
                       </h1>
                       <hr>
                 </section>
@@ -394,11 +396,28 @@
                <section>
                 
                 <h3 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">04
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">10</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">11</span>
                 </h3>
                 <hr>
             </section>
             <section>
+                
+                <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;04-18
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
+                </h5>
+            </section>
+                
+                <ul style=	"background-position:1000px; padding-left:100px;">
+                    
+                    <li >
+                        
+                        <a href="/post/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE/">
+                           Html页面嵌入流程图
+                        </a>
+                    </li>
+                    
+                </ul>
+
                 
                 <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;04-11
                     <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
@@ -1081,6 +1100,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-18";
+    var value = dataMap.get(key);
+    var wordCount =  59 ;
+    var link = "/post/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE/";
+    var title = "Html页面嵌入流程图";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-11";
     var value = dataMap.get(key);
     var wordCount =  1372 ;
@@ -1753,6 +1784,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/drawio" title="drawio">
+            drawio
+        </a>
+        
+        
+        
         <a href="/tags/fancybox" title="fancybox">
             fancybox
         </a>
@@ -1807,6 +1844,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/html" title="html">
+            html
+        </a>
+        
+        
+        
         <a href="/tags/hugo" title="hugo">
             hugo
         </a>
@@ -1827,6 +1870,12 @@ function updateProgress(progressId, newValue) {
         
         <a href="/tags/mark" title="mark">
             mark
+        </a>
+        
+        
+        
+        <a href="/tags/mermaid" title="mermaid">
+            mermaid
         </a>
         
         
@@ -1977,6 +2026,12 @@ function updateProgress(progressId, newValue) {
         
         <a href="/tags/%E6%A0%87%E8%AE%B0" title="标记">
             标记
+        </a>
+        
+        
+        
+        <a href="/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE" title="流程图">
+            流程图
         </a>
         
         
@@ -2279,7 +2334,9 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 39 篇文章 · 
+                        
+                    
+                    发表了 40 篇文章 · 
                     总计 3.62 万字
                     <br>
                     
