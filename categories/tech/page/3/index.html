@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
+      
       "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
       
       "\/post\/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE\/?utm_source=random",
@@ -390,6 +392,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
+        <h2 class="post-title">
+            Python无环境部署
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 背景 有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。 目前考虑的方案是，
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Wed 2024-04-24 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
@@ -903,6 +931,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  21772 ;
+    var link = "/post/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/";
+    var title = "Vue3学习笔记";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-24";
     var value = dataMap.get(key);
     var wordCount =  861 ;
@@ -1731,6 +1771,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/vue3" title="vue3">
+            vue3
+        </a>
+        
+        
+        
         <a href="/tags/windows" title="windows">
             windows
         </a>
@@ -2161,8 +2207,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 41 篇文章 · 
-                    总计 3.73 万字
+                        
+                    
+                    发表了 42 篇文章 · 
+                    总计 5.91 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

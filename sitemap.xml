@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://huuuuuuo.github.io/categories/</loc>
+    <lastmod>2024-04-24T15:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://huuuuuuo.github.io/</loc>
+    <lastmod>2024-04-24T15:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://huuuuuuo.github.io/post/</loc>
+    <lastmod>2024-04-24T15:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://huuuuuuo.github.io/tags/</loc>
+    <lastmod>2024-04-24T15:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://huuuuuuo.github.io/categories/tech/</loc>
+    <lastmod>2024-04-24T15:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://huuuuuuo.github.io/tags/vue3/</loc>
+    <lastmod>2024-04-24T15:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://huuuuuuo.github.io/post/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-04-24T15:33:33+08:00</lastmod>
+  </url><url>
     <loc>https://huuuuuuo.github.io/post/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81/</loc>
     <lastmod>2024-04-24T12:18:18+08:00</lastmod>
   </url><url>
-    <loc>https://huuuuuuo.github.io/categories/</loc>
-    <lastmod>2024-04-24T12:18:18+08:00</lastmod>
-  </url><url>
-    <loc>https://huuuuuuo.github.io/</loc>
-    <lastmod>2024-04-24T12:18:18+08:00</lastmod>
-  </url><url>
-    <loc>https://huuuuuuo.github.io/post/</loc>
-    <lastmod>2024-04-24T12:18:18+08:00</lastmod>
-  </url><url>
     <loc>https://huuuuuuo.github.io/categories/read/</loc>
-    <lastmod>2024-04-24T12:18:18+08:00</lastmod>
-  </url><url>
-    <loc>https://huuuuuuo.github.io/tags/</loc>
     <lastmod>2024-04-24T12:18:18+08:00</lastmod>
   </url><url>
     <loc>https://huuuuuuo.github.io/tags/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4/</loc>
@@ -34,9 +43,6 @@
   </url><url>
     <loc>https://huuuuuuo.github.io/tags/mermaid/</loc>
     <lastmod>2024-04-19T08:17:39+08:00</lastmod>
-  </url><url>
-    <loc>https://huuuuuuo.github.io/categories/tech/</loc>
-    <lastmod>2024-04-24T10:40:08+08:00</lastmod>
   </url><url>
     <loc>https://huuuuuuo.github.io/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/</loc>
     <lastmod>2024-04-19T08:17:39+08:00</lastmod>

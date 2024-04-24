@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
+      
       "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
       
       "\/post\/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE\/?utm_source=random",
@@ -393,7 +395,7 @@
                 <section>
                 
                     <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2024
-                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">41</span>
+                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">42</span>
                       </h1>
                       <hr>
                 </section>
@@ -401,18 +403,25 @@
                <section>
                 
                 <h3 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">04
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">12</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">13</span>
                 </h3>
                 <hr>
             </section>
             <section>
                 
                 <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;04-24
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">2</span>
                 </h5>
             </section>
                 
                 <ul style=	"background-position:1000px; padding-left:100px;">
+                    
+                    <li >
+                        
+                        <a href="/post/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                           Vue3学习笔记
+                        </a>
+                    </li>
                     
                     <li >
                         
@@ -1122,6 +1131,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  21772 ;
+    var link = "/post/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/";
+    var title = "Vue3学习笔记";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-24";
     var value = dataMap.get(key);
     var wordCount =  861 ;
@@ -1950,6 +1971,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/vue3" title="vue3">
+            vue3
+        </a>
+        
+        
+        
         <a href="/tags/windows" title="windows">
             windows
         </a>
@@ -2380,8 +2407,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 41 篇文章 · 
-                    总计 3.73 万字
+                        
+                    
+                    发表了 42 篇文章 · 
+                    总计 5.91 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
