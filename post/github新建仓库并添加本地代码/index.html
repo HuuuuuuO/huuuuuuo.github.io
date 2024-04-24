@@ -19,9 +19,9 @@
     
 
     
-    <meta name="title" content="Hugo：代码块拷贝" />
-    <meta property="og:title" content="Hugo：代码块拷贝" />
-    <meta property="twitter:title" content="Hugo：代码块拷贝" />
+    <meta name="title" content="Github新建仓库并添加本地代码" />
+    <meta property="og:title" content="Github新建仓库并添加本地代码" />
+    <meta property="twitter:title" content="Github新建仓库并添加本地代码" />
     
 
     
@@ -49,9 +49,9 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <title>Hugo：代码块拷贝 | Blog</title>
+    <title>Github新建仓库并添加本地代码 | Blog</title>
 
-    <link rel="canonical" href="/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/">
+    <link rel="canonical" href="/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/">
 
     
     
@@ -337,20 +337,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/hugo" title="hugo">
-                            hugo
-                        </a>
-                        
-                        <a class="tag" href="/tags/copy" title="copy">
-                            copy
-                        </a>
-                        
-                        <a class="tag" href="/tags/%e4%bb%a3%e7%a0%81%e5%9d%97" title="代码块">
-                            代码块
+                        <a class="tag" href="/tags/github" title="github">
+                            github
                         </a>
                         
                     </div>
-                    <h1>Hugo：代码块拷贝</h1>
+                    <h1>Github新建仓库并添加本地代码</h1>
 
                     <h2 class="subheading"></h2>
                     <span class="meta">
@@ -360,13 +352,13 @@
                         Nefelibata
                         
                         on
-                        Thu 2024-03-21
+                        Wed 2024-04-24
                         
-                        | <span class="post-date">486 words</span> | about<span class="more-meta"> 1 mins</span>
+                        | <span class="post-date">61 words</span> | about<span class="more-meta"> 1 mins</span>
                         
                         
                         
-                        <br>Last Modified on Thu 2024-03-28
+                        <br>Last Modified on Wed 2024-04-24
                         
                         
                     </span>
@@ -395,98 +387,18 @@
                 
 
              
-                    <p>本文转载与修改自：<a href="https://huangzhongde.cn/post/2020-02-21-hugo-code-copy-to-clipboard/">Hugo插件之代码块拷贝插件</a></p>
-<h1 id="添加按钮-css">添加按钮-css</h1>
-<p>我们通过检查博客内容页面发现，hugo生成的每个代码块格式如下：</p>
-<p>没有语法突出显示的代码块具有相同的结构，但周围没有 <code>&lt;div class=highlight&gt;</code>。为了考虑到这两种情况，我选择了作为 <code>&lt;pre&gt; </code>元素下面的 <code>&lt;code&gt; </code>子元素。</p>
-<p><code>copy-to-clipboard.css</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>.highlight {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    position: relative;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>.highlight pre {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    padding-right: 75px;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    /* background-color:#f8f8f8 !important; */
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>.highlight-copy-btn {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    position: absolute;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    top: 7px;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    right: 7px;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    border: 0;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    border-radius: 4px;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    padding: 1px;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    font-size: 0.8em;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    line-height: 1.5;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    color: #fff;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    background-color: #777;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    min-width: 50px;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    text-align: center;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>.highlight-copy-btn:hover {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    background-color: #666;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>}
-</span></span></code></pre></div><h1 id="与剪切板交互-js">与剪切板交互-js</h1>
-<p>按钮有了，接下来就是怎么使用JavaScript拷贝代码到剪切板，废话少说，直接上代码：</p>
-<p><code>copy-to-clipboard.js</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#797593">(</span><span style="color:#d7827e">function</span><span style="color:#797593">()</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#ea9d34">&#39;use strict&#39;</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  <span style="color:#286983">if</span><span style="color:#797593">(</span><span style="color:#797593">!</span><span style="color:#d7827e">document</span><span style="color:#797593">.</span><span style="color:#d7827e">queryCommandSupported</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;copy&#39;</span><span style="color:#797593">))</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#286983">return</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  <span style="color:#d7827e">function</span> <span style="color:#d7827e">flashCopyMessage</span><span style="color:#797593">(</span><span style="color:#d7827e">el</span><span style="color:#797593">,</span> <span style="color:#d7827e">msg</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#d7827e">el</span><span style="color:#797593">.</span><span style="color:#d7827e">textContent</span> <span style="color:#797593">=</span> <span style="color:#d7827e">msg</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#d7827e">setTimeout</span><span style="color:#797593">(</span><span style="color:#d7827e">function</span><span style="color:#797593">()</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>      <span style="color:#d7827e">el</span><span style="color:#797593">.</span><span style="color:#d7827e">textContent</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;Copy&#34;</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    <span style="color:#797593">},</span> <span style="color:#ea9d34">1000</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>  <span style="color:#d7827e">function</span> <span style="color:#d7827e">selectText</span><span style="color:#797593">(</span><span style="color:#d7827e">node</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    <span style="color:#286983">var</span> <span style="color:#d7827e">selection</span> <span style="color:#797593">=</span> <span style="color:#d7827e">window</span><span style="color:#797593">.</span><span style="color:#d7827e">getSelection</span><span style="color:#797593">();</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    <span style="color:#286983">var</span> <span style="color:#d7827e">range</span> <span style="color:#797593">=</span> <span style="color:#d7827e">document</span><span style="color:#797593">.</span><span style="color:#d7827e">createRange</span><span style="color:#797593">();</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    <span style="color:#d7827e">range</span><span style="color:#797593">.</span><span style="color:#d7827e">selectNodeContents</span><span style="color:#797593">(</span><span style="color:#d7827e">node</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    <span style="color:#d7827e">selection</span><span style="color:#797593">.</span><span style="color:#d7827e">removeAllRanges</span><span style="color:#797593">();</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#d7827e">selection</span><span style="color:#797593">.</span><span style="color:#d7827e">addRange</span><span style="color:#797593">(</span><span style="color:#d7827e">range</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    <span style="color:#286983">return</span> <span style="color:#d7827e">selection</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>  <span style="color:#d7827e">function</span> <span style="color:#d7827e">addCopyButton</span><span style="color:#797593">(</span><span style="color:#d7827e">containerEl</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#286983">var</span> <span style="color:#d7827e">copyBtn</span> <span style="color:#797593">=</span> <span style="color:#d7827e">document</span><span style="color:#797593">.</span><span style="color:#d7827e">createElement</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#34;button&#34;</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    <span style="color:#d7827e">copyBtn</span><span style="color:#797593">.</span><span style="color:#d7827e">className</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;highlight-copy-btn&#34;</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    <span style="color:#d7827e">copyBtn</span><span style="color:#797593">.</span><span style="color:#d7827e">textContent</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#34;Copy&#34;</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>    <span style="color:#286983">var</span> <span style="color:#d7827e">codeEl</span> <span style="color:#797593">=</span> <span style="color:#d7827e">containerEl</span><span style="color:#797593">.</span><span style="color:#d7827e">firstElementChild</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>    <span style="color:#d7827e">copyBtn</span><span style="color:#797593">.</span><span style="color:#d7827e">addEventListener</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;click&#39;</span><span style="color:#797593">,</span> <span style="color:#d7827e">function</span><span style="color:#797593">()</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>      <span style="color:#d7827e">try</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>        <span style="color:#286983">var</span> <span style="color:#d7827e">selection</span> <span style="color:#797593">=</span> <span style="color:#d7827e">selectText</span><span style="color:#797593">(</span><span style="color:#d7827e">codeEl</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>        <span style="color:#d7827e">document</span><span style="color:#797593">.</span><span style="color:#d7827e">execCommand</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;copy&#39;</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>        <span style="color:#d7827e">selection</span><span style="color:#797593">.</span><span style="color:#d7827e">removeAllRanges</span><span style="color:#797593">();</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>        <span style="color:#d7827e">flashCopyMessage</span><span style="color:#797593">(</span><span style="color:#d7827e">copyBtn</span><span style="color:#797593">,</span> <span style="color:#ea9d34">&#39;Copied!&#39;</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>      <span style="color:#797593">}</span> <span style="color:#d7827e">catch</span><span style="color:#797593">(</span><span style="color:#d7827e">e</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>        <span style="color:#d7827e">console</span> <span style="color:#797593">&amp;&amp;</span> <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#d7827e">e</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>        <span style="color:#d7827e">flashCopyMessage</span><span style="color:#797593">(</span><span style="color:#d7827e">copyBtn</span><span style="color:#797593">,</span> <span style="color:#ea9d34">&#39;Failed :</span><span style="color:#286983">\&#39;</span><span style="color:#ea9d34">(&#39;</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>      <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>    <span style="color:#797593">});</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>    <span style="color:#d7827e">containerEl</span><span style="color:#797593">.</span><span style="color:#d7827e">appendChild</span><span style="color:#797593">(</span><span style="color:#d7827e">copyBtn</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>  <span style="color:#797593">//</span> <span style="color:#d7827e">Add</span> <span style="color:#d7827e">copy</span> <span style="color:#d7827e">button</span> <span style="color:#d7827e">to</span> <span style="color:#d7827e">code</span> <span style="color:#d7827e">blocks</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>  <span style="color:#286983">var</span> <span style="color:#d7827e">highlightBlocks</span> <span style="color:#797593">=</span> <span style="color:#d7827e">document</span><span style="color:#797593">.</span><span style="color:#d7827e">getElementsByClassName</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;highlight&#39;</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span>  <span style="color:#286983">Array</span><span style="color:#797593">.</span><span style="color:#d7827e">prototype</span><span style="color:#797593">.</span><span style="color:#d7827e">forEach</span><span style="color:#797593">.</span><span style="color:#d7827e">call</span><span style="color:#797593">(</span><span style="color:#d7827e">highlightBlocks</span><span style="color:#797593">,</span> <span style="color:#d7827e">addCopyButton</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span><span style="color:#797593">})();</span>
-</span></span></code></pre></div><h1 id="修改主题">修改主题</h1>
-<p>将 <code>copy-to-clipboard.css</code>  和  <code>copy-to-clipboard.js</code>  分别放到 <code>static/css</code> 和 <code>static/js</code> 目录下</p>
-<p>然后在页面引用这两个文件</p>
-<p>1.修改 <code>config.toml</code> 添加自定义css</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>custom_css = [&#34;/css/copy-to-clipboard.css&#34;]
-</span></span></code></pre></div><p>2.修改主题文件下的  <code>layouts/partials/footer.html</code></p>
-<p>在结尾加上下面这一句，之前测试在  <code>config.toml</code>  下面添加，不生效</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;script src=&#34;/js/copy-to-clipboard.js&#34;&gt;&lt;/script&gt;
+                    <h1 id="1-create-a-new-repository-on-the-command-line">1 create a new repository on the command line</h1>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#d7827e">echo</span> <span style="color:#ea9d34">&#34;# vue3_test&#34;</span> &gt;&gt; README.md
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git init
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git add .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git commit -m <span style="color:#ea9d34">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>git branch -M main
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>git remote add origin https://github.com/HuuuuuuO/vue3_test.git
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>git push -u origin main
+</span></span></code></pre></div><h1 id="2-push-an-existing-repository-from-the-command-line">2 push an existing repository from the command line</h1>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git remote add origin https://github.com/HuuuuuuO/vue3_test.git
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git branch -M main
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git push -u origin main
 </span></span></code></pre></div>
 
                     
@@ -530,17 +442,11 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/" data-toggle="tooltip" data-placement="top"
-                                title="连接github时connection reset的问题">&larr;
+                            <a href="/post/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-toggle="tooltip" data-placement="top"
+                                title="Vue3学习笔记">&larr;
                                 Previous Post</a>
                         </li>
                         
-                        
-                        <li class="next">
-                            <a href="/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：图片存储路径优化">Next
-                                Post &rarr;</a>
-                        </li>
                         
                     </ul>
                     

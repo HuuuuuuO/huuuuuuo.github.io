@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81\/?utm_source=random",
+      
       "\/post\/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
       
       "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
@@ -392,6 +394,30 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/">
+        <h2 class="post-title">
+            Github新建仓库并添加本地代码
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 create a new repository on the command line 1echo &#34;# vue3_test&#34; &gt;&gt; README.md 2git init 3git add . 4git commit -m &#34;first commit&#34; 5git branch -M main 6git remote add origin https://github.com/HuuuuuuO/vue3_test.git 7git push -u origin main 2 push an existing repository from the command line 1git remote add origin https://github.com/HuuuuuuO/vue3_test.git 2git branch -M main 3git push -u origin main
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-04-24 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/">
@@ -666,6 +692,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  61 ;
+    var link = "/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/";
+    var title = "Github新建仓库并添加本地代码";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-24";
     var value = dataMap.get(key);
     var wordCount =  21839 ;
@@ -1944,7 +1982,9 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 42 篇文章 · 
+                        
+                    
+                    发表了 43 篇文章 · 
                     总计 5.92 万字
                     <br>
                     

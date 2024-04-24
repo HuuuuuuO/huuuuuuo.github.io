@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81\/?utm_source=random",
+      
       "\/post\/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
       
       "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
@@ -395,7 +397,7 @@
                 <section>
                 
                     <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2024
-                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">42</span>
+                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">43</span>
                       </h1>
                       <hr>
                 </section>
@@ -403,18 +405,25 @@
                <section>
                 
                 <h3 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">04
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">13</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">14</span>
                 </h3>
                 <hr>
             </section>
             <section>
                 
                 <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;04-24
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">2</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">3</span>
                 </h5>
             </section>
                 
                 <ul style=	"background-position:1000px; padding-left:100px;">
+                    
+                    <li >
+                        
+                        <a href="/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/">
+                           Github新建仓库并添加本地代码
+                        </a>
+                    </li>
                     
                     <li >
                         
@@ -1131,6 +1140,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  61 ;
+    var link = "/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/";
+    var title = "Github新建仓库并添加本地代码";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-24";
     var value = dataMap.get(key);
     var wordCount =  21839 ;
@@ -2409,7 +2430,9 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 42 篇文章 · 
+                        
+                    
+                    发表了 43 篇文章 · 
                     总计 5.92 万字
                     <br>
                     

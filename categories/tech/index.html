@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81\/?utm_source=random",
+      
       "\/post\/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
       
       "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
@@ -392,6 +394,30 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/">
+        <h2 class="post-title">
+            Github新建仓库并添加本地代码
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 create a new repository on the command line 1echo &#34;# vue3_test&#34; &gt;&gt; README.md 2git init 3git add . 4git commit -m &#34;first commit&#34; 5git branch -M main 6git remote add origin https://github.com/HuuuuuuO/vue3_test.git 7git push -u origin main 2 push an existing repository from the command line 1git remote add origin https://github.com/HuuuuuuO/vue3_test.git 2git branch -M main 3git push -u origin main
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-04-24 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -751,32 +777,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95cname%E7%AD%89%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88/">
-        <h2 class="post-title">
-            域名、A记录、CNAME等都是什么
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            今天想要给博客搞个域名，涉及了一大堆专业名词，在此记录一下。 1 域名 域名就是最常见的网址，比如 www.baidu.com ，因为ip地址不好记，所以用域名来代替，我们访
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sun 2024-03-31 
-        
-        
-        | Last Modified on Mon 2024-04-01 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1033,6 +1033,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  61 ;
+    var link = "/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/";
+    var title = "Github新建仓库并添加本地代码";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-24";
     var value = dataMap.get(key);
     var wordCount =  21839 ;
@@ -2311,7 +2323,9 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 42 篇文章 · 
+                        
+                    
+                    发表了 43 篇文章 · 
                     总计 5.92 万字
                     <br>
                     
