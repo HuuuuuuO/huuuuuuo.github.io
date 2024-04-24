@@ -353,11 +353,11 @@
                         on
                         Wed 2024-03-27
                         
-                        | <span class="post-date">91 words</span> | about<span class="more-meta"> 1 mins</span>
+                        | <span class="post-date">322 words</span> | about<span class="more-meta"> 1 mins</span>
                         
                         
                         
-                        <br>Last Modified on Wed 2024-03-27
+                        <br>Last Modified on Wed 2024-04-24
                         
                         
                     </span>
@@ -386,9 +386,23 @@
                 
 
              
-                    <h1 id="1背景">1、背景</h1>
+                    <h1 id="1-背景">1 背景</h1>
 <p>有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。</p>
-<p>目前考虑的方案是，mysql 改用 access，python</p>
+<p>目前考虑的方案是，mysql 改用 access，python使用pyinstaller打包为exe</p>
+<blockquote>
+<p>但是使用pyodbc连接access连接数据库，一直报错，尝试了各种方案都无法解决，遂弃用，改为使用sqlite</p>
+</blockquote>
+<h1 id="2-解决方案">2 解决方案</h1>
+<h2 id="21-使用sqlite">2.1 使用sqlite</h2>
+<p>使用sqlite做数据库，部署非常简单</p>
+<p>使用dbever连上sqlite，下载驱动，然后创建一个库，新建一个表，具体可直接百度</p>
+<h2 id="22-py连接sqlite">2.2 py连接sqlite</h2>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">sqlite3</span>   <span style="color:#9893a5">#导入sqlite3模块</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#d7827e">conn</span> <span style="color:#797593">=</span> <span style="color:#d7827e">sqlite3</span><span style="color:#797593">.</span><span style="color:#d7827e">connect</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#34;First.db&#34;</span><span style="color:#797593">)</span>     <span style="color:#9893a5">#建立一个基于硬盘的数据库实例</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#d7827e">conn</span><span style="color:#797593">.</span><span style="color:#d7827e">close</span><span style="color:#797593">()</span>        <span style="color:#9893a5">#关闭与数据库的连接</span>
+</span></span></code></pre></div><p>数据库连接成功以后，就可以通过py进行数据库操作了</p>
 
 
                     
@@ -1092,7 +1106,7 @@
                         
                     
                     发表了 40 篇文章 · 
-                    总计 3.62 万字
+                    总计 3.65 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
