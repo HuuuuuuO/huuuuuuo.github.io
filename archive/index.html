@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
+      
       "\/post\/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE\/?utm_source=random",
       
       "\/post\/hugo%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E6%96%B0%E5%A2%9E%E7%83%AD%E6%A6%9C\/?utm_source=random",
@@ -235,7 +237,7 @@
                     
                         <li><a href="/trend/">TREND</a></li>
                     
-                        <li><a href="/tweet/">TWEET</a></li>
+                        <li><a href="/daily/">DAILY</a></li>
                     
                         <li><a href="/archive/">Timeline</a></li>
                     
@@ -388,7 +390,7 @@
                 <section>
                 
                     <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2024
-                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">40</span>
+                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">41</span>
                       </h1>
                       <hr>
                 </section>
@@ -396,11 +398,28 @@
                <section>
                 
                 <h3 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">04
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">11</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">12</span>
                 </h3>
                 <hr>
             </section>
             <section>
+                
+                <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;04-24
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
+                </h5>
+            </section>
+                
+                <ul style=	"background-position:1000px; padding-left:100px;">
+                    
+                    <li >
+                        
+                        <a href="/post/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81/">
+                           《万历十五年》摘要
+                        </a>
+                    </li>
+                    
+                </ul>
+
                 
                 <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;04-18
                     <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
@@ -1100,6 +1119,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  861 ;
+    var link = "/post/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81/";
+    var title = "《万历十五年》摘要";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-18";
     var value = dataMap.get(key);
     var wordCount =  59 ;
@@ -1730,12 +1761,6 @@ function updateProgress(progressId, newValue) {
         
         
         
-        <a href="/tags/access" title="access">
-            access
-        </a>
-        
-        
-        
         <a href="/tags/ai" title="ai">
             ai
         </a>
@@ -1900,6 +1925,12 @@ function updateProgress(progressId, newValue) {
         
         <a href="/tags/shortcodes" title="shortcodes">
             shortcodes
+        </a>
+        
+        
+        
+        <a href="/tags/sqlite" title="sqlite">
+            sqlite
         </a>
         
         
@@ -2336,8 +2367,12 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 40 篇文章 · 
-                    总计 3.65 万字
+                        
+                    
+                        
+                    
+                    发表了 41 篇文章 · 
+                    总计 3.73 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

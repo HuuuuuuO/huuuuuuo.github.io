@@ -135,6 +135,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
+      
       "\/post\/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE\/?utm_source=random",
       
       "\/post\/hugo%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E6%96%B0%E5%A2%9E%E7%83%AD%E6%A6%9C\/?utm_source=random",
@@ -236,7 +238,7 @@
                     
                         <li><a href="/trend/">TREND</a></li>
                     
-                        <li><a href="/tweet/">TWEET</a></li>
+                        <li><a href="/daily/">DAILY</a></li>
                     
                         <li><a href="/archive/">Timeline</a></li>
                     
@@ -392,6 +394,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/git%E4%B9%8B.gitignore%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+        <h2 class="post-title">
+            Git：.gitignore无效解决方法
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            文章转载修改自：https://blog.csdn.net/wwwtotoro/article/details/91042307 在根目录中新
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Mon 2024-04-01 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/">
@@ -755,32 +783,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/">
-        <h2 class="post-title">
-            Hugo：自定义字体
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            显示效果 解决方案 本博客使用的是 霞鹜文楷 ，要在网站使用此字体，可以查看 霞鹜文楷屏幕阅读版 网络字体仓库 1、插入代码 将以下代码插入 themes\hugo-theme-cleanwhite\layouts\partials\head.html 1&lt;html&gt; 2&lt;head&gt; 3 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css&#34; /&gt;
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-        | Last Modified on Thu 2024-03-28 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1041,6 +1043,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  861 ;
+    var link = "/post/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81/";
+    var title = "《万历十五年》摘要";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-18";
     var value = dataMap.get(key);
     var wordCount =  59 ;
@@ -1671,12 +1685,6 @@ function updateProgress(progressId, newValue) {
         
         
         
-        <a href="/tags/access" title="access">
-            access
-        </a>
-        
-        
-        
         <a href="/tags/ai" title="ai">
             ai
         </a>
@@ -1841,6 +1849,12 @@ function updateProgress(progressId, newValue) {
         
         <a href="/tags/shortcodes" title="shortcodes">
             shortcodes
+        </a>
+        
+        
+        
+        <a href="/tags/sqlite" title="sqlite">
+            sqlite
         </a>
         
         
@@ -2277,8 +2291,12 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 40 篇文章 · 
-                    总计 3.65 万字
+                        
+                    
+                        
+                    
+                    发表了 41 篇文章 · 
+                    总计 3.73 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
