@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +14,8 @@
 
 
     
-    <meta property="og:image" content="http://localhost:1313//img/home-bg-jeep.jpg">
-    <meta property="twitter:image" content="http://localhost:1313//img/home-bg-jeep.jpg" />
+    <meta property="og:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg">
+    <meta property="twitter:image" content="https://huuuuuuo.github.io//img/home-bg-jeep.jpg" />
     
 
     
@@ -76,7 +76,7 @@
     <link rel="stylesheet" href="/css/font-awesome.all.min.css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/copy-to-clipboard.css">
+    <link rel="stylesheet" href="https://huuuuuuo.github.io/css/copy-to-clipboard.css">
 
     
     <script src="/js/jquery.min.js"></script>
@@ -133,6 +133,8 @@
                         <script>
   function goToRandomPost() {
     const pages = [
+      
+      "\/post\/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81\/?utm_source=random",
       
       "\/post\/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE\/?utm_source=random",
       
@@ -223,6 +225,11 @@
                     
                         
                         <li>
+                            <a href="/categories/read/">read</a>
+                        </li>
+     
+                        
+                        <li>
                             <a href="/categories/tech/">tech</a>
                         </li>
      
@@ -234,8 +241,6 @@
                         <li><a href="/movies/">SPARK</a></li>
                     
                         <li><a href="/trend/">TREND</a></li>
-                    
-                        <li><a href="/daily/">DAILY</a></li>
                     
                         <li><a href="/archive/">Timeline</a></li>
                     
@@ -385,6 +390,30 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81/">
+        <h2 class="post-title">
+            《万历十五年》摘要
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            粗略浏览了下《万历十五年》，主要思想大概是下面这句，也是本书结尾： 当一个人口众多的国家，各人行动全凭儒家简单粗浅而又无法固定的原则所限制，而
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-04-24 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 </div>
 
@@ -633,6 +662,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-04-24";
+    var value = dataMap.get(key);
+    var wordCount =  861 ;
+    var link = "/post/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81/";
+    var title = "《万历十五年》摘要";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-04-18";
     var value = dataMap.get(key);
     var wordCount =  59 ;
@@ -1455,6 +1496,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4" title="万历十五年">
+            万历十五年
+        </a>
+        
+        
+        
         <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" title="人工智能">
             人工智能
         </a>
@@ -1871,8 +1918,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 40 篇文章 · 
-                    总计 3.65 万字
+                        
+                    
+                    发表了 41 篇文章 · 
+                    总计 3.73 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
