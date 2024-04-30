@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7jmeter%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0\/?utm_source=random",
+      
       "\/post\/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81\/?utm_source=random",
       
       "\/post\/vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
@@ -354,11 +356,11 @@
                         on
                         Wed 2024-04-24
                         
-                        | <span class="post-date">21839 words</span> | about<span class="more-meta"> 44 mins</span>
+                        | <span class="post-date">21906 words</span> | about<span class="more-meta"> 44 mins</span>
                         
                         
                         
-                        <br>Last Modified on Wed 2024-04-24
+                        <br>Last Modified on Thu 2024-04-25
                         
                         
                     </span>
@@ -654,7 +656,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>    <span style="color:#797593">},</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>  <span style="color:#797593">}</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
-</span></span></code></pre></div><p>2.4. 控制台调试</p>
+</span></span></code></pre></div><h2 id="24-控制台调试">2.4. 【控制台调试】</h2>
 <p>下载<a href="https://chrome.zzzmh.cn/info/nhdogjmejiglipccpnnnanhbledajbpd">Vue.js官方调试工具</a>，解压后将其中的crx插件拖入chrome的扩展程序，即可安装，然后就可以在f12里面看见了。</p>
 <p>
 
@@ -726,6 +728,22 @@
 <li><code>setup</code>中访问<code>this</code>是<code>undefined</code>。</li>
 <li><code>setup</code>函数会在<code>beforeCreate</code>之前调用，它是“领先”所有钩子执行的。</li>
 </ul>
+<blockquote>
+<p>第20行：
+
+<mark>数据（注意：此时的name、age、tel都不是响应式数据）</mark>
+
+
+
+</p>
+
+
+<mark> 其中响应式可以简单理解为：后期数据变化了，会进行自动更新 </mark>
+
+
+
+
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">template</span><span style="color:#797593">&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#797593">&lt;</span><span style="color:#d7827e">div</span> <span style="color:#d7827e">class</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;person&#34;</span><span style="color:#797593">&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">h2</span><span style="color:#797593">&gt;</span><span style="color:#d7827e">姓名</span><span style="color:#b4637a">：</span><span style="color:#797593">{{</span><span style="color:#d7827e">name</span><span style="color:#797593">}}&lt;/</span><span style="color:#d7827e">h2</span><span style="color:#797593">&gt;</span>
@@ -741,28 +759,29 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#d7827e">name</span><span style="color:#797593">:</span><span style="color:#ea9d34">&#39;Person&#39;</span><span style="color:#797593">,</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#d7827e">setup</span><span style="color:#797593">(){</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>      <span style="color:#9893a5">// 数据，原来写在data中（注意：此时的name、age、tel数据都不是响应式数据）
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#9893a5"></span>      <span style="color:#286983">let</span> <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;张三&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>      <span style="color:#286983">let</span> <span style="color:#d7827e">age</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">18</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>      <span style="color:#286983">let</span> <span style="color:#d7827e">tel</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;13888888888&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>      <span style="color:#9893a5">// 方法，原来写在methods中
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#9893a5"></span>      <span style="color:#286983">function</span> <span style="color:#d7827e">changeName</span><span style="color:#797593">(){</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>        <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;zhang-san&#39;</span> <span style="color:#9893a5">//注意：此时这么修改name页面是不变化的
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#9893a5"></span>        <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#d7827e">name</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>      <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>      <span style="color:#286983">function</span> <span style="color:#d7827e">changeAge</span><span style="color:#797593">(){</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>        <span style="color:#d7827e">age</span> <span style="color:#797593">+=</span> <span style="color:#ea9d34">1</span> <span style="color:#9893a5">//注意：此时这么修改age页面是不变化的
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#9893a5"></span>        <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#d7827e">age</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>      <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>      <span style="color:#286983">function</span> <span style="color:#d7827e">showTel</span><span style="color:#797593">(){</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>        <span style="color:#d7827e">alert</span><span style="color:#797593">(</span><span style="color:#d7827e">tel</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>      <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>      <span style="color:#9893a5">// 返回一个对象，对象中的内容，模板中可以直接使用
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span><span style="color:#9893a5"></span>      <span style="color:#286983">return</span> <span style="color:#797593">{</span><span style="color:#d7827e">name</span><span style="color:#797593">,</span><span style="color:#d7827e">age</span><span style="color:#797593">,</span><span style="color:#d7827e">tel</span><span style="color:#797593">,</span><span style="color:#d7827e">changeName</span><span style="color:#797593">,</span><span style="color:#d7827e">changeAge</span><span style="color:#797593">,</span><span style="color:#d7827e">showTel</span><span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>    <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#9893a5"></span>        
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>      <span style="color:#286983">let</span> <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;张三&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>      <span style="color:#286983">let</span> <span style="color:#d7827e">age</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">18</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>      <span style="color:#286983">let</span> <span style="color:#d7827e">tel</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;13888888888&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>      <span style="color:#9893a5">// 方法，原来写在methods中
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#9893a5"></span>      <span style="color:#286983">function</span> <span style="color:#d7827e">changeName</span><span style="color:#797593">(){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;zhang-san&#39;</span> <span style="color:#9893a5">//注意：此时这么修改name页面是不变化的
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#9893a5"></span>        <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#d7827e">name</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>      <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>      <span style="color:#286983">function</span> <span style="color:#d7827e">changeAge</span><span style="color:#797593">(){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>        <span style="color:#d7827e">age</span> <span style="color:#797593">+=</span> <span style="color:#ea9d34">1</span> <span style="color:#9893a5">//注意：此时这么修改age页面是不变化的
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span><span style="color:#9893a5"></span>        <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#d7827e">age</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>      <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>      <span style="color:#286983">function</span> <span style="color:#d7827e">showTel</span><span style="color:#797593">(){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>        <span style="color:#d7827e">alert</span><span style="color:#797593">(</span><span style="color:#d7827e">tel</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>      <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>      <span style="color:#9893a5">// 返回一个对象，对象中的内容，模板中可以直接使用
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span><span style="color:#9893a5"></span>      <span style="color:#286983">return</span> <span style="color:#797593">{</span><span style="color:#d7827e">name</span><span style="color:#797593">,</span><span style="color:#d7827e">age</span><span style="color:#797593">,</span><span style="color:#d7827e">tel</span><span style="color:#797593">,</span><span style="color:#d7827e">changeName</span><span style="color:#797593">,</span><span style="color:#d7827e">changeAge</span><span style="color:#797593">,</span><span style="color:#d7827e">showTel</span><span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>    <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>  <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
 </span></span></code></pre></div><h3 id="setup-的返回值">setup 的返回值</h3>
 <ul>
 <li>若返回一个<strong>对象</strong>：则对象中的：属性、方法等，在模板中均可以直接使用**（重点关注）。**</li>
@@ -772,11 +791,13 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#286983">return</span> <span style="color:#797593">()=&gt;</span> <span style="color:#ea9d34">&#39;你好啊！&#39;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#797593">}</span>
 </span></span></code></pre></div><h3 id="setup-与-options-api-的关系">setup 与 Options API 的关系</h3>
+<blockquote>
 <ul>
 <li><code>Vue2</code> 的配置（<code>data</code>、<code>methos</code>&hellip;&hellip;）中<strong>可以访问到</strong> <code>setup</code>中的属性、方法。</li>
-<li>但在<code>setup</code>中<strong>不能访问到</strong><code>Vue2</code>的配置（<code>data</code>、<code>methos</code>&hellip;&hellip;）。</li>
+<li>但在<code>setup</code>中<strong>不能访问到</strong><code>Vue2</code>的配置（<code>data</code>、<code>methods</code>&hellip;&hellip;）。</li>
 <li>如果与<code>Vue2</code>冲突，则<code>setup</code>优先。</li>
 </ul>
+</blockquote>
 <h3 id="setup-语法糖">setup 语法糖</h3>
 <p><code>setup</code>函数有一个语法糖，这个语法糖，可以让我们把<code>setup</code>独立出去，代码如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">template</span><span style="color:#797593">&gt;</span>
@@ -798,24 +819,23 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#9893a5">&lt;!--</span> <span style="color:#d7827e">下面的写法是setup语法糖</span> <span style="color:#797593">--&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">script</span> <span style="color:#d7827e">setup</span> <span style="color:#d7827e">lang</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;ts&#34;</span><span style="color:#797593">&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>  <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#286983">this</span><span style="color:#797593">)</span> <span style="color:#9893a5">//undefined
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#9893a5"></span>  
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>  <span style="color:#9893a5">// 数据（注意：此时的name、age、tel都不是响应式数据）
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#9893a5"></span>  <span style="color:#286983">let</span> <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;张三&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>  <span style="color:#286983">let</span> <span style="color:#d7827e">age</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">18</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>  <span style="color:#286983">let</span> <span style="color:#d7827e">tel</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;13888888888&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>  <span style="color:#9893a5">// 方法
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#9893a5"></span>  <span style="color:#286983">function</span> <span style="color:#d7827e">changName</span><span style="color:#797593">(){</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>    <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;李四&#39;</span><span style="color:#9893a5">//注意：此时这么修改name页面是不变化的
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#9893a5"></span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>  <span style="color:#286983">function</span> <span style="color:#d7827e">changAge</span><span style="color:#797593">(){</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>    <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#d7827e">age</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>    <span style="color:#d7827e">age</span> <span style="color:#797593">+=</span> <span style="color:#ea9d34">1</span> <span style="color:#9893a5">//注意：此时这么修改age页面是不变化的
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#9893a5"></span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>  <span style="color:#286983">function</span> <span style="color:#d7827e">showTel</span><span style="color:#797593">(){</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>    <span style="color:#d7827e">alert</span><span style="color:#797593">(</span><span style="color:#d7827e">tel</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>  <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#9893a5"></span>  <span style="color:#9893a5">//数据（注意：此时的name、age、tel都不是响应式数据）
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#9893a5"></span>  <span style="color:#286983">let</span> <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;张三&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>  <span style="color:#286983">let</span> <span style="color:#d7827e">age</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">18</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>  <span style="color:#286983">let</span> <span style="color:#d7827e">tel</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;13888888888&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>  <span style="color:#9893a5">// 方法
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span><span style="color:#9893a5"></span>  <span style="color:#286983">function</span> <span style="color:#d7827e">changName</span><span style="color:#797593">(){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    <span style="color:#d7827e">name</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;李四&#39;</span><span style="color:#9893a5">//注意：此时这么修改name页面是不变化的
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span><span style="color:#9893a5"></span>  <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>  <span style="color:#286983">function</span> <span style="color:#d7827e">changAge</span><span style="color:#797593">(){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>    <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">log</span><span style="color:#797593">(</span><span style="color:#d7827e">age</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>    <span style="color:#d7827e">age</span> <span style="color:#797593">+=</span> <span style="color:#ea9d34">1</span> <span style="color:#9893a5">//注意：此时这么修改age页面是不变化的
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#9893a5"></span>  <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>  <span style="color:#286983">function</span> <span style="color:#d7827e">showTel</span><span style="color:#797593">(){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>    <span style="color:#d7827e">alert</span><span style="color:#797593">(</span><span style="color:#d7827e">tel</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>  <span style="color:#797593">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
 </span></span></code></pre></div><p>扩展：上述代码，还需要编写一个不写<code>setup</code>的<code>script</code>标签，去指定组件名字，比较麻烦，我们可以借助<code>vite</code>中的插件简化</p>
 <ol>
 <li>第一步：<code>npm i vite-plugin-vue-setup-extend -D</code></li>
@@ -3075,7 +3095,7 @@
                         
                         <li class="next">
                             <a href="/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/" data-toggle="tooltip" data-placement="top"
-                                title="Github新建仓库并添加本地代码">Next
+                                title="Github新建仓库并添加本地代码或文件">Next
                                 Post &rarr;</a>
                         </li>
                         
@@ -3268,6 +3288,12 @@
                             
                             
                             
+                            <a href="/tags/jmeter" title="jmeter">
+                                jmeter
+                            </a>
+                            
+                            
+                            
                             <a href="/tags/lastmod" title="lastmod">
                                 lastmod
                             </a>
@@ -3432,6 +3458,12 @@
                             
                             <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE" title="快捷键">
                                 快捷键
+                            </a>
+                            
+                            
+                            
+                            <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95" title="性能测试">
+                                性能测试
                             </a>
                             
                             
@@ -3746,8 +3778,10 @@
                     
                         
                     
-                    发表了 43 篇文章 · 
-                    总计 5.92 万字
+                        
+                    
+                    发表了 44 篇文章 · 
+                    总计 6.01 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

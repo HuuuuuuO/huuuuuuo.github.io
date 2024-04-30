@@ -19,9 +19,9 @@
     
 
     
-    <meta name="title" content="Github新建仓库并添加本地代码" />
-    <meta property="og:title" content="Github新建仓库并添加本地代码" />
-    <meta property="twitter:title" content="Github新建仓库并添加本地代码" />
+    <meta name="title" content="Github新建仓库并添加本地代码或文件" />
+    <meta property="og:title" content="Github新建仓库并添加本地代码或文件" />
+    <meta property="twitter:title" content="Github新建仓库并添加本地代码或文件" />
     
 
     
@@ -49,7 +49,7 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <title>Github新建仓库并添加本地代码 | Blog</title>
+    <title>Github新建仓库并添加本地代码或文件 | Blog</title>
 
     <link rel="canonical" href="/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/">
 
@@ -133,6 +133,8 @@
                         <script>
   function goToRandomPost() {
     const pages = [
+      
+      "\/post\/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7jmeter%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0\/?utm_source=random",
       
       "\/post\/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81\/?utm_source=random",
       
@@ -342,7 +344,7 @@
                         </a>
                         
                     </div>
-                    <h1>Github新建仓库并添加本地代码</h1>
+                    <h1>Github新建仓库并添加本地代码或文件</h1>
 
                     <h2 class="subheading"></h2>
                     <span class="meta">
@@ -354,11 +356,11 @@
                         on
                         Wed 2024-04-24
                         
-                        | <span class="post-date">61 words</span> | about<span class="more-meta"> 1 mins</span>
+                        | <span class="post-date">177 words</span> | about<span class="more-meta"> 1 mins</span>
                         
                         
                         
-                        <br>Last Modified on Wed 2024-04-24
+                        <br>Last Modified on Thu 2024-04-25
                         
                         
                     </span>
@@ -387,15 +389,28 @@
                 
 
              
-                    <h1 id="1-create-a-new-repository-on-the-command-line">1 create a new repository on the command line</h1>
+                    <h1 id="1-在cmd创建新仓库">1 在cmd创建新仓库</h1>
+<h2 id="11-在github页面上新建仓库">1.1 在github页面上新建仓库</h2>
+<h2 id="12-在本地新建仓库">1.2 在本地新建仓库</h2>
+<p>首先，创建<code>.gitignore</code>文件，将不需要上传的文件和文件夹写进去，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>node_modules
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>.DS_Store
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>dist
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>dist-ssr
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>coverage
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>*.local
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>/cypress/videos/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>/cypress/screenshots/
+</span></span></code></pre></div><p>接着，执行以下命令</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#d7827e">echo</span> <span style="color:#ea9d34">&#34;# vue3_test&#34;</span> &gt;&gt; README.md
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git init
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git add .
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git commit -m <span style="color:#ea9d34">&#34;first commit&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>git branch -M main
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>git remote add origin https://github.com/HuuuuuuO/vue3_test.git
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>git push -u origin main
-</span></span></code></pre></div><h1 id="2-push-an-existing-repository-from-the-command-line">2 push an existing repository from the command line</h1>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git init		<span style="color:#9893a5"># 初始化</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git add .		<span style="color:#9893a5"># 添加本地所有文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git commit -m <span style="color:#ea9d34">&#34;first commit&#34;</span>		<span style="color:#9893a5"># 初始化</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>git branch -M main		<span style="color:#9893a5"># 初始化</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>git remote add origin https://github.com/HuuuuuuO/vue3_test.git		<span style="color:#9893a5"># 初始化</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>git push -u origin main		<span style="color:#9893a5"># 初始化</span>
+</span></span></code></pre></div><h1 id="2-从cmd推送一个已经存在的仓库">2 从cmd推送一个已经存在的仓库</h1>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git remote add origin https://github.com/HuuuuuuO/vue3_test.git
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git branch -M main
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git push -u origin main
@@ -447,6 +462,12 @@
                                 Previous Post</a>
                         </li>
                         
+                        
+                        <li class="next">
+                            <a href="/post/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7jmeter%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/" data-toggle="tooltip" data-placement="top"
+                                title="性能测试：jmeter使用学习">Next
+                                Post &rarr;</a>
+                        </li>
                         
                     </ul>
                     
@@ -637,6 +658,12 @@
                             
                             
                             
+                            <a href="/tags/jmeter" title="jmeter">
+                                jmeter
+                            </a>
+                            
+                            
+                            
                             <a href="/tags/lastmod" title="lastmod">
                                 lastmod
                             </a>
@@ -801,6 +828,12 @@
                             
                             <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE" title="快捷键">
                                 快捷键
+                            </a>
+                            
+                            
+                            
+                            <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95" title="性能测试">
+                                性能测试
                             </a>
                             
                             
@@ -1115,8 +1148,10 @@
                     
                         
                     
-                    发表了 43 篇文章 · 
-                    总计 5.92 万字
+                        
+                    
+                    发表了 44 篇文章 · 
+                    总计 6.01 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
