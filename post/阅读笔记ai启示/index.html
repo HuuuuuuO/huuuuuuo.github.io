@@ -19,9 +19,9 @@
     
 
     
-    <meta name="title" content="Hugo：中英文之间自动加空格" />
-    <meta property="og:title" content="Hugo：中英文之间自动加空格" />
-    <meta property="twitter:title" content="Hugo：中英文之间自动加空格" />
+    <meta name="title" content="阅读笔记：AI启示" />
+    <meta property="og:title" content="阅读笔记：AI启示" />
+    <meta property="twitter:title" content="阅读笔记：AI启示" />
     
 
     
@@ -49,9 +49,9 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <title>Hugo：中英文之间自动加空格 | Blog</title>
+    <title>阅读笔记：AI启示 | Blog</title>
 
-    <link rel="canonical" href="/post/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC/">
+    <link rel="canonical" href="/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0ai%E5%90%AF%E7%A4%BA/">
 
     
     
@@ -341,12 +341,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/hugo" title="hugo">
-                            hugo
+                        <a class="tag" href="/tags/AI" title="AI">
+                            AI
                         </a>
                         
                     </div>
-                    <h1>Hugo：中英文之间自动加空格</h1>
+                    <h1>阅读笔记：AI启示</h1>
 
                     <h2 class="subheading"></h2>
                     <span class="meta">
@@ -356,13 +356,13 @@
                         Nefelibata
                         
                         on
-                        Thu 2024-04-04
+                        Sat 2024-05-11
                         
-                        | <span class="post-date">121 words</span> | about<span class="more-meta"> 1 mins</span>
+                        | <span class="post-date">689 words</span> | about<span class="more-meta"> 2 mins</span>
                         
                         
                         
-                        <br>Last Modified on Sun 2024-04-07
+                        <br>Last Modified on Sat 2024-05-11
                         
                         
                     </span>
@@ -391,23 +391,27 @@
                 
 
              
-                    <h1 id="1-显示效果">1 显示效果</h1>
-<p>中英文之间auto自动加空格</p>
-<h1 id="2-解决方法">2 解决方法</h1>
-<p>可以使用 <a href="https://yihui.org/cn/2017/05/pangu/">盘古之白</a></p>
-<p>在文件<code>layouts\partials\footer.html</code>中，加入以下代码即可：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#797593">(</span><span style="color:#d7827e">function</span><span style="color:#797593">(</span><span style="color:#d7827e">u</span><span style="color:#797593">,</span> <span style="color:#d7827e">c</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>      <span style="color:#286983">var</span> <span style="color:#d7827e">d</span> <span style="color:#797593">=</span> <span style="color:#d7827e">document</span><span style="color:#797593">,</span> <span style="color:#d7827e">t</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;script&#39;</span><span style="color:#797593">,</span> <span style="color:#d7827e">o</span> <span style="color:#797593">=</span> <span style="color:#d7827e">d</span><span style="color:#797593">.</span><span style="color:#d7827e">createElement</span><span style="color:#797593">(</span><span style="color:#d7827e">t</span><span style="color:#797593">),</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>          <span style="color:#d7827e">s</span> <span style="color:#797593">=</span> <span style="color:#d7827e">d</span><span style="color:#797593">.</span><span style="color:#d7827e">getElementsByTagName</span><span style="color:#797593">(</span><span style="color:#d7827e">t</span><span style="color:#797593">)[</span><span style="color:#ea9d34">0</span><span style="color:#797593">];</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>      <span style="color:#d7827e">o</span><span style="color:#797593">.</span><span style="color:#d7827e">src</span> <span style="color:#797593">=</span> <span style="color:#d7827e">u</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>      <span style="color:#286983">if</span> <span style="color:#797593">(</span><span style="color:#d7827e">c</span><span style="color:#797593">)</span> <span style="color:#797593">{</span> <span style="color:#d7827e">o</span><span style="color:#797593">.</span><span style="color:#d7827e">addEventListener</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;load&#39;</span><span style="color:#797593">,</span> <span style="color:#d7827e">function</span><span style="color:#797593">(</span><span style="color:#d7827e">e</span><span style="color:#797593">)</span> <span style="color:#797593">{</span> <span style="color:#d7827e">c</span><span style="color:#797593">(</span><span style="color:#d7827e">e</span><span style="color:#797593">);</span> <span style="color:#797593">});</span> <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>      <span style="color:#d7827e">s</span><span style="color:#797593">.</span><span style="color:#d7827e">parentNode</span><span style="color:#797593">.</span><span style="color:#d7827e">insertBefore</span><span style="color:#797593">(</span><span style="color:#d7827e">o</span><span style="color:#797593">,</span> <span style="color:#d7827e">s</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#797593">})(</span><span style="color:#ea9d34">&#39;//cdn.bootcss.com/pangu/3.3.0/pangu.min.js&#39;</span><span style="color:#797593">,</span> <span style="color:#d7827e">function</span><span style="color:#797593">()</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>      <span style="color:#d7827e">pangu</span><span style="color:#797593">.</span><span style="color:#d7827e">spacingPage</span><span style="color:#797593">();</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#797593">});</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
-</span></span></code></pre></div>
+                    <blockquote>
+<p>本文为以下文章的阅读笔记：</p>
+<p><a href="https://36kr.com/p/2770849347648260">https://36kr.com/p/2770849347648260</a></p>
+</blockquote>
+<blockquote>
+<p>不可否认，GPT经常会犯一些低级错误。但陈云飞认为，事实并不是GPT擅长的，而当它被用在教育方面时，凭借极强的逻辑推理能力和丰富的知识库，它往往会让使用者感到惊艳。</p>
+</blockquote>
+<p>GPT丰富的知识库像一个老师，能够做出经验输出和推理，这正是我们学习过程中所需要的教育。</p>
+<blockquote>
+<p>在陈云飞看来，3年以内，翻译、客服、审核员、分析师和初级程序员都是最容易被AI替代的岗位。与此同时，又会衍生出提示词工程师和AI训练师这类新的岗位需求。届时市面上可能会涌现出许多专门培训AI培训师的机构，预期盛况可以参考当年office兴起后的培训班数量。</p>
+<p>而无论是新兴行业，还是传统行业，有一种能力始终通用，那就是能把人与人连接起来的本事。所以像销售、产品经理、项目经理这种复合类的岗位，不可替代性最强。</p>
+</blockquote>
+<p>3年以内太乐观了，很多企业还是有着大公司病，并且有些岗位虽然使用AI可以更快地解决问题，但也不代表就必须使用AI，不出错可能才是更重要的一点。传统行业或者特殊行业里面，人力有时候不仅仅是用来产出的，也是为了担责。</p>
+<p>现状是，虽然不一定大家都深度将其作为生产力工具，但是可能大部分人都或多或少会使用到。</p>
+<p>并且，在大城市到小城市，大公司到小公司，使用深度和广度都有差别。因此这也是一个需求点。</p>
+<blockquote>
+<p>毕竟，在唯变不变的年代，比起“体面高薪”的工作本身，永远保持“不下牌桌”的能力，才是更加抗风险的选择。</p>
+</blockquote>
+<p>不下牌桌，依靠被动收入来获取所需的收入，也即是财务自由的一种，这才是当代一种更好地选择——在工作之外有一个并行的收入。</p>
+<p>不过说到底，他的模式还是做出一个爆款，然后打造个人IP，成为网红，通过咨询和广告等进行变现。</p>
+
 
                     
                     
@@ -450,17 +454,11 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：归档改为年月日统计">&larr;
+                            <a href="/post/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7jmeter%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/" data-toggle="tooltip" data-placement="top"
+                                title="性能测试：jmeter使用学习">&larr;
                                 Previous Post</a>
                         </li>
                         
-                        
-                        <li class="next">
-                            <a href="/post/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：增加台词随机展示">Next
-                                Post &rarr;</a>
-                        </li>
                         
                     </ul>
                     
@@ -500,10 +498,6 @@
                         <hr class="hidden-sm hidden-xs">
                         
                         
-                         
-                            <h4>
-                                <a class="catalog-toggle" href="#">目录</a>
-                            </h4>
                         
                         <ul class="catalog-body"></ul>
                     </div>

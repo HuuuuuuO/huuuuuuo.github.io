@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ai on Nefelibata</title>
+    <title>AI on Nefelibata</title>
     <link>https://huuuuuuo.github.io/tags/ai/</link>
-    <description>Recent content in Ai on Nefelibata</description>
+    <description>Recent content in AI on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Mar 2024 15:41:15 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2024 16:08:17 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>阅读笔记：AI启示</title>
+      <link>https://huuuuuuo.github.io/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0ai%E5%90%AF%E7%A4%BA/</link>
+      <pubDate>Sat, 11 May 2024 15:39:21 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0ai%E5%90%AF%E7%A4%BA/</guid>
+      <description>本文为以下文章的阅读笔记： https://36kr.com/p/2770849347648260 不可否认，GPT经常会犯一些低级错误。但陈云飞认为，事实并不是GPT擅长的，而当它被用在教育方面时，凭借极强的逻</description>
+    </item>
     <item>
       <title>关于GPT的底层原理和未来影响（转载）</title>
       <link>https://huuuuuuo.github.io/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD-copy/</link>
