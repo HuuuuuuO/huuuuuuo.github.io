@@ -6,13 +6,13 @@
     <description>Recent content in KNN on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 20 May 2024 11:35:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2024 15:08:25 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/knn/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>KNN算法笔记（1）</title>
-      <link>https://huuuuuuo.github.io/post/knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</link>
+      <title>深度学习：KNN算法笔记</title>
+      <link>https://huuuuuuo.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 17 May 2024 09:29:39 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://huuuuuuo.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</guid>
       <description>参考： https://zhuanlan.zhihu.com/p/25994179 https://zhuanlan.zhihu.com/p/26029567 https://zhuanlan.zhihu.com/p/650548703 1 什么是KNN kNN（k-nearest neighbor classification），即k近邻算法。 给定一个训练数据集，对新的输入实例，在训</description>
     </item>
   </channel>

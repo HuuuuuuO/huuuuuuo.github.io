@@ -134,7 +134,11 @@
   function goToRandomPost() {
     const pages = [
       
-      "\/post\/knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0\/?utm_source=random",
+      "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E6%9D%8E%E5%A8%9F%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B0\/?utm_source=random",
+      
+      "\/post\/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0svm%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0\/?utm_source=random",
+      
+      "\/post\/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0\/?utm_source=random",
       
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%88%98%E6%85%88%E6%AC%A3%E6%9C%9D%E9%97%BB%E9%81%93\/?utm_source=random",
       
@@ -398,6 +402,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/">
+        <h2 class="post-title">
+            Hugo：增加新页面
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            想要在网站上做几个新页面 1 在配置文件中新增标签 1 [[params.addtional_menus]] 2 title = &#34;TREND&#34; 3 href = &#34;/trend&#34; 2 新增页面布局 2.1 沿用已有布局 新增了标签以后，点进去是404，这是因为还没有
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Mon 2024-04-01 
+        
+        
+        | Last Modified on Thu 2024-04-11 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
@@ -761,30 +791,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%80%E9%94%AE%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/">
-        <h2 class="post-title">
-            Hugo：一键回到顶部
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            文章参考自：https://github.com/sengmitnick/hugo-theme-hello-friend-ng/commit
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1045,11 +1051,35 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-05-21";
+    var value = dataMap.get(key);
+    var wordCount =  20 ;
+    var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E6%9D%8E%E5%A8%9F%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B0/";
+    var title = "阅读笔记：李娟《我的阿勒泰》";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-05-21";
+    var value = dataMap.get(key);
+    var wordCount =  1983 ;
+    var link = "/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0svm%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/";
+    var title = "深度学习：SVM算法笔记";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-05-17";
     var value = dataMap.get(key);
     var wordCount =  1309 ;
-    var link = "/post/knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/";
-    var title = "KNN算法笔记（1）";
+    var link = "/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0knn%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/";
+    var title = "深度学习：KNN算法笔记";
     
     
     if (value == null) {
@@ -1059,7 +1089,7 @@ function updateProgress(progressId, newValue) {
     }
     var key = "2024-05-11";
     var value = dataMap.get(key);
-    var wordCount =  139 ;
+    var wordCount =  538 ;
     var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%88%98%E6%85%88%E6%AC%A3%E6%9C%9D%E9%97%BB%E9%81%93/";
     var title = "阅读笔记：刘慈欣《朝闻道》、《时间旅行》";
     
@@ -1951,6 +1981,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/svm" title="svm">
+            svm
+        </a>
+        
+        
+        
         <a href="/tags/typora" title="typora">
             typora
         </a>
@@ -2089,6 +2125,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/%E6%9D%8E%E5%A8%9F" title="李娟">
+            李娟
+        </a>
+        
+        
+        
         <a href="/tags/%E6%A0%87%E8%AE%B0" title="标记">
             标记
         </a>
@@ -2097,6 +2139,12 @@ function updateProgress(progressId, newValue) {
         
         <a href="/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE" title="流程图">
             流程图
+        </a>
+        
+        
+        
+        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" title="深度学习">
+            深度学习
         </a>
         
         
@@ -2417,8 +2465,12 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 47 篇文章 · 
-                    总计 6.23 万字
+                        
+                    
+                        
+                    
+                    发表了 49 篇文章 · 
+                    总计 6.47 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
