@@ -6,8 +6,15 @@
     <description>Recent content in Tech on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 May 2024 16:18:37 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 May 2024 16:36:48 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git新建空分支并上传文件</title>
+      <link>https://huuuuuuo.github.io/post/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 23 May 2024 16:33:19 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/</guid>
+      <description>要新建一个空分支，其实就是新建一个分支，然后清空该分支下的所有文件 因为新建分支，该分支下的内容会和当前分支一样 1git branch qstart # 新建qstart分支 2git</description>
+    </item>
     <item>
       <title>深度学习：SVM算法笔记</title>
       <link>https://huuuuuuo.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0svm%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</link>

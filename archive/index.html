@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6\/?utm_source=random",
+      
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E6%9D%8E%E5%A8%9F%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B0\/?utm_source=random",
       
       "\/post\/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0svm%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0\/?utm_source=random",
@@ -405,7 +407,7 @@
                 <section>
                 
                     <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2024
-                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">49</span>
+                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">50</span>
                       </h1>
                       <hr>
                 </section>
@@ -413,11 +415,28 @@
                <section>
                 
                 <h3 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">05
-                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">5</span>
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">6</span>
                 </h3>
                 <hr>
             </section>
             <section>
+                
+                <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;05-23
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
+                </h5>
+            </section>
+                
+                <ul style=	"background-position:1000px; padding-left:100px;">
+                    
+                    <li >
+                        
+                        <a href="/post/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">
+                           Git新建空分支并上传文件
+                        </a>
+                    </li>
+                    
+                </ul>
+
                 
                 <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;05-21
                     <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">2</span>
@@ -1238,9 +1257,21 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-05-23";
+    var value = dataMap.get(key);
+    var wordCount =  152 ;
+    var link = "/post/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/";
+    var title = "Git新建空分支并上传文件";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-05-21";
     var value = dataMap.get(key);
-    var wordCount =  20 ;
+    var wordCount =  153 ;
     var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E6%9D%8E%E5%A8%9F%E6%88%91%E7%9A%84%E9%98%BF%E5%8B%92%E6%B3%B0/";
     var title = "阅读笔记：李娟《我的阿勒泰》";
     
@@ -2656,8 +2687,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 49 篇文章 · 
-                    总计 6.47 万字
+                        
+                    
+                    发表了 50 篇文章 · 
+                    总计 6.50 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
