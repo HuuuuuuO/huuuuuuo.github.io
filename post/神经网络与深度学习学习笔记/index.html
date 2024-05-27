@@ -368,11 +368,11 @@
                         on
                         Mon 2024-05-27
                         
-                        | <span class="post-date">2599 words</span> | about<span class="more-meta"> 6 mins</span>
+                        | <span class="post-date">3298 words</span> | about<span class="more-meta"> 7 mins</span>
                         
                         
                         
-                        <br>Last Modified on Mon 2024-05-27
+                        <br>Last Modified on Tue 2024-05-28
                         
                         
                     </span>
@@ -402,8 +402,9 @@
 
              
                     <blockquote>
-<p>本文阅读书籍：</p>
+<p>本文阅读书籍与参考代码：</p>
 <p><a href="https://github.com/HuuuuuuO/huuuuuuo.github.io/blob/master/data/Neural%20Network%20and%20Deep%20Learning-ch.pdf">《神经网络与深度学习》</a></p>
+<p><a href="https://github.com/MichalDanielDobrzanski/DeepLearningPython">https://github.com/MichalDanielDobrzanski/DeepLearningPython</a></p>
 </blockquote>
 <h1 id="1-使神经络识别写数字">1 使⽤神经⽹络识别⼿写数字</h1>
 <p>神经⽹络使⽤样本来⾃动推断出识别⼿写数字的规则。另外，通过增加训练样本的数量，⽹络可以学到更多关于⼿写数字的知识，这样就能够提升⾃⾝的准确性。</p>
@@ -566,50 +567,50 @@
 <table>
 <thead>
 <tr>
-<th>原数字</th>
-<th>二进制表示</th>
+<th style="text-align:center">原数字</th>
+<th style="text-align:center">二进制表示</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>0000</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0000</td>
 </tr>
 <tr>
-<td>1</td>
-<td>0001</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0001</td>
 </tr>
 <tr>
-<td>2</td>
-<td>0010</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0010</td>
 </tr>
 <tr>
-<td>3</td>
-<td>0011</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0011</td>
 </tr>
 <tr>
-<td>4</td>
-<td>0100</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0100</td>
 </tr>
 <tr>
-<td>5</td>
-<td>0101</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0101</td>
 </tr>
 <tr>
-<td>6</td>
-<td>0110</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0110</td>
 </tr>
 <tr>
-<td>7</td>
-<td>0111</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0111</td>
 </tr>
 <tr>
-<td>8</td>
-<td>1000</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1000</td>
 </tr>
 <tr>
-<td>9</td>
-<td>1001</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1001</td>
 </tr>
 </tbody>
 </table>
@@ -867,8 +868,51 @@
 </tr>
 </tbody>
 </table>
-<p>可以看出最大误差为0.05，那么我们可以设置偏置b为-0.06，就可以消去误差，然后规定至少大于0激活。比如，当第三层输出的数字为7，得出4个神经元adcd的输出w·x分别为[0.02，1.02，1.02，1.03]，这时候去掉误差-0.06，得到[-0.04，0.96，0.96，0.97]，-0.04未激活，结果=0。此时adcd=0111，转为十进制为7。</p>
+<p>可以看出最大误差为0.05，那么我们可以设置偏置b为-0.06，就可以消去误差，然后规定至少大于0激活。比如，当第三层输出的数字为7，得出4个神经元adcd的输出w·x分别为[0.02，1.02，1.02，1.03]，这时候去掉误差-0.06，得到[-0.04，0.96，0.96，0.97]，-0.04未激活，结果=0。此时adcd=0111，也就是十进制的7。</p>
 <h2 id="15-使梯度下降算法进学习">1.5 使⽤梯度下降算法进⾏学习</h2>
+<p>把每个训练输⼊ x 看作⼀个 28 × 28 = 784维的向量。每个向量中的项⽬代表图像中单个像素的灰度值。我们⽤ y = y(x) 表⽰对应的期望输出，这⾥ y 是⼀个 10 维的向量。</p>
+<p>我们希望有⼀个算法，能让我们找到权重和偏置，以⾄于⽹络的输出 y(x) 能够拟合所有的训练输⼊ x。为了量化我们如何实现这个⽬标，我们定义⼀个损失函数：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240527220512574.png">
+<img src="/img/image-20240527220512574.png" alt="image-20240527220512574"  />
+</a>
+</div>
+
+</p>
+<p>这⾥ w 表⽰所有的⽹络中权重的集合，b 是所有的偏置，n 是训练输⼊数据的个数，a 是表⽰当输⼊为 x 时输出的向量，求和则是在总的训练输⼊ x 上进⾏的。</p>
+<p>我们训练算法的⽬的，是最⼩化权重和偏置的代价函数 C(w, b)。换句话说，我们想要找到⼀系列能让代价尽可能⼩的权重和偏置。</p>
+<p>我们将采⽤称为梯度下降的算法来达到这个⽬的。</p>
+<p>梯度下降算法⼯作的⽅式就是重复计算梯度 ∇C，然后沿着相反的⽅向移动，沿
+着⼭⾕“滚落”。我们可以想象它像这样：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240527220856116.png">
+<img src="/img/image-20240527220856116.png" alt="image-20240527220856116"  />
+</a>
+</div>
+
+</p>
+<p>梯度下降法可以被视为⼀种在 C 下降最快的⽅向上做微⼩变化的⽅法。</p>
+<h2 id="16-实现我们的络来分类数字">1.6 实现我们的⽹络来分类数字</h2>
+<p>⼀旦我们给⼀个⽹络学会了⼀组好的权重集和偏置集，它能很容易地被移植到⽹络浏览器中以 Javascript 运⾏，或者如在移动设备上的本地应⽤。</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">mnist_loader</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">validation_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span> <span style="color:#797593">=</span> <span style="color:#d7827e">mnist_loader</span><span style="color:#797593">.</span><span style="color:#d7827e">load_data_wrapper</span><span style="color:#797593">()</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">network</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#d7827e">net</span> <span style="color:#797593">=</span> <span style="color:#d7827e">network</span><span style="color:#797593">.</span><span style="color:#d7827e">Network</span><span style="color:#797593">([</span><span style="color:#ea9d34">784</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">])</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#d7827e">net</span><span style="color:#797593">.</span><span style="color:#d7827e">SGD</span><span style="color:#797593">(</span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">,</span> <span style="color:#ea9d34">3.0</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span><span style="color:#797593">=</span><span style="color:#d7827e">test_data</span><span style="color:#797593">)</span>
+</span></span></code></pre></div><p>代码输出如下，最高准确率为95.08%：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Epoch 0 : 8937 / 10000
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Epoch 19 : 9508 / 10000
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Epoch 29 : 9488 / 10000
+</span></span></code></pre></div><p>将隐藏神经元数量改到 100，准确率得到了提升，⾄少在这种情况下，使⽤更多的隐藏神经元帮助我们得到了更好的结果。</p>
+<p>当然，为了获得这些准确性，我不得不对训练的迭代期数量，⼩批量数据⼤⼩和学习速率η做特别的选择。正如我上⾯所提到的，这些在我们的神经⽹络中被称为超参数，以区别于通过我们的学习算法所学到的参数（权重和偏置）。如果我们选择了糟糕的超参数，我们会得到较差的结果。</p>
 
 
                     
@@ -1642,7 +1686,7 @@
                         
                     
                     发表了 50 篇文章 · 
-                    总计 6.73 万字
+                    总计 6.80 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
