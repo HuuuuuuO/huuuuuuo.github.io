@@ -368,7 +368,7 @@
                         on
                         Mon 2024-05-27
                         
-                        | <span class="post-date">0 words</span> | about<span class="more-meta"> 0 mins</span>
+                        | <span class="post-date">633 words</span> | about<span class="more-meta"> 2 mins</span>
                         
                         
                         
@@ -401,7 +401,53 @@
                 
 
              
-                    
+                    <blockquote>
+<p>本文阅读书籍：</p>
+<p><a href="https://github.com/HuuuuuuO/huuuuuuo.github.io/blob/master/data/Neural%20Network%20and%20Deep%20Learning-ch.pdf">https://github.com/HuuuuuuO/huuuuuuo.github.io/blob/master/data/Neural%20Network%20and%20Deep%20Learning-ch.pdf</a></p>
+</blockquote>
+<h1 id="1-使神经络识别写数字">1 使⽤神经⽹络识别⼿写数字</h1>
+<p>神经⽹络使⽤样本来⾃动推断出识别⼿写数字的规则。另外，通过增加训练样本的数量，⽹络可以学到更多关于⼿写数字的知识，这样就能够提升⾃⾝的准确性。</p>
+<h2 id="11-感知器">1.1 感知器</h2>
+<p>⼀个感知器接受⼏个⼆进制输⼊，x1, x2, . . .，并产⽣⼀个⼆进制输出。你可以将感知器看作依据权重来作出决定的设备。感知器的规则可以写为：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240527094909620.png">
+<img src="/img/image-20240527094909620.png" alt="image-20240527094909620"  />
+</a>
+</div>
+
+</p>
+<p>感知器网络可以表示为如下，并且我们完全能⽤感知器⽹络来计算任何逻辑功能，例如“与”，“或”和“与⾮”：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240527095027169.png">
+<img src="/img/image-20240527095027169.png" alt="image-20240527095027169"  />
+</a>
+</div>
+
+</p>
+<h2 id="12-s型神经元">1.2 S型神经元</h2>
+<p>假设我们把⽹络中的权重（或者偏置）做些微⼩的改动。就像我们⻢上会看到的，这⼀属性会让学习变得可能：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240527095341654.png">
+<img src="/img/image-20240527095341654.png" alt="image-20240527095341654"  />
+</a>
+</div>
+
+</p>
+<p>如果对权重（或者偏置）的微⼩的改动真的能够仅仅引起输出的微⼩变化，那我们可以利⽤这⼀事实来修改权重和偏置，让我们的⽹络能够表现得像我们想要的那样。</p>
+<p><code>例如，假设⽹络错误地把⼀个“9”的图像分类为“8”。我们能够计算出怎么对权重和偏置做些⼩的改动，这样⽹络能够接近于把图像分类为“9”。</code></p>
+<p>然后我们要重复这个⼯作，<code>反复改动权重和偏置来产⽣更好的输出</code>。这时⽹络就在学习。</p>
+<p>实际上，⽹络中单个感知器上⼀个权重或偏置的微⼩改动有时候会引起那个感知器的输出完全翻转，如 0 变到 1。因此，虽然你的“9”可能被正确分类，⽹络在其它图像上的⾏为很可能以⼀些很难控制的⽅式被完全改变。</p>
+<p>我们引⼊⼀种称为 S 型神经元的新的⼈⼯神经元来克服这个问题。S 型神经元和感知器类似，但是被修改为<code>权重和偏置的微⼩改动只引起输出的微⼩变化</code>。这对于让神经元⽹络学习起来是很关键的。</p>
+
 
                     
                     
@@ -488,6 +534,10 @@
                         <hr class="hidden-sm hidden-xs">
                         
                         
+                         
+                            <h4>
+                                <a class="catalog-toggle" href="#">目录</a>
+                            </h4>
                         
                         <ul class="catalog-body"></ul>
                     </div>
@@ -1170,7 +1220,7 @@
                         
                     
                     发表了 50 篇文章 · 
-                    总计 6.47 万字
+                    总计 6.54 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
