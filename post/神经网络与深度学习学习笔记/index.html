@@ -368,7 +368,7 @@
                         on
                         Mon 2024-05-27
                         
-                        | <span class="post-date">1878 words</span> | about<span class="more-meta"> 4 mins</span>
+                        | <span class="post-date">2585 words</span> | about<span class="more-meta"> 6 mins</span>
                         
                         
                         
@@ -613,6 +613,262 @@
 </tr>
 </tbody>
 </table>
+<p>四位二进制用abcd表示，当十进制输入为8，9的时候，a=1。</p>
+<p>所以可以设置权重为[0，0，0，0，0，0，0，0，1，1]T</p>
+<p>例如，计算第一个神经元a的w·x，当第三层十进制输出8时：</p>
+<ol>
+<li>激活值：当该位激活时=0.99，未激活时=0.01。第三层输出8时，8那个位置激活了，所以激活值=0.99</li>
+<li>9的权重为1，但是未激活，所以激活值为0.01</li>
+<li>计算<code>各位的权重·激活值并进行相加</code>，结果=1.00</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原数字</th>
+<th style="text-align:center">权重</th>
+<th style="text-align:center">激活值</th>
+<th style="text-align:center">计算w·激活值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.99</td>
+<td style="text-align:center">0.99</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1.00</td>
+</tr>
+</tbody>
+</table>
+<p>又例如，计算第三个神经元c的w·x，当第三层十进制输出7时：</p>
+<ol>
+<li>激活值：当该位激活时=0.99，未激活时=0.01。第三层输出7时，7那个位置激活了，所以激活值=0.99</li>
+<li>2、3、6的权重为1，但是未激活，所以激活值为0.01</li>
+<li>计算<code>各位的权重·激活值并进行相加</code>，结果=1.02</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原数字</th>
+<th style="text-align:center">权重</th>
+<th style="text-align:center">激活值</th>
+<th style="text-align:center">计算w·激活值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.99</td>
+<td style="text-align:center">0.99</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1.02</td>
+</tr>
+</tbody>
+</table>
+<p>最后可以得出总表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数字</th>
+<th style="text-align:center">w·x（第一个神经元）</th>
+<th style="text-align:center">第二个神经元</th>
+<th style="text-align:center">第三个神经元</th>
+<th style="text-align:center">第四个神经元</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">1.03</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.03</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.03</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1.00</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1.00</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+</tbody>
+</table>
+<p>可以看出最大误差为0.05，那么我们可以设置偏置b为-0.06，就可以消去误差，然后规定至少大于0激活。比如，当第三层输出的数字为7，得出4个神经元adcd的输出w·x分别为[0.02，1.02，1.02，1.03]，这时候去掉误差-0.06，得到[-0.04，0.96，0.96，0.97]，此时adcd=0111，转为十进制为7。</p>
+<h2 id="15-使梯度下降算法进学习">1.5 使⽤梯度下降算法进⾏学习</h2>
 
 
                     
@@ -1386,7 +1642,7 @@
                         
                     
                     发表了 50 篇文章 · 
-                    总计 6.66 万字
+                    总计 6.73 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
