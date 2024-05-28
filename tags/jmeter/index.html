@@ -134,7 +134,9 @@
   function goToRandomPost() {
     const pages = [
       
-      "\/post\/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
+      "\/post\/img_move_back\/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/?utm_source=random",
+      
+      "\/post\/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0\/?utm_source=random",
       
       "\/post\/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6\/?utm_source=random",
       
@@ -422,7 +424,7 @@
         Posted by Nefelibata on Mon 2024-04-29 
         
         
-        | Last Modified on Mon 2024-05-27 
+        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -680,9 +682,21 @@ function updateProgress(progressId, newValue) {
   
     var key = "2024-05-27";
     var value = dataMap.get(key);
-    var wordCount =  3298 ;
-    var link = "/post/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/";
+    var wordCount =  3297 ;
+    var link = "/post/img_move_back/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/";
     var title = "《神经网络与深度学习》学习笔记";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-05-27";
+    var value = dataMap.get(key);
+    var wordCount =  3298 ;
+    var link = "/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/";
+    var title = "学习笔记：《神经网络与深度学习》第一章";
     
     
     if (value == null) {
@@ -2110,8 +2124,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 50 篇文章 · 
-                    总计 6.80 万字
+                        
+                    
+                    发表了 51 篇文章 · 
+                    总计 7.13 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
