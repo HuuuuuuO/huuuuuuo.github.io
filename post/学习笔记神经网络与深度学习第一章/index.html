@@ -368,7 +368,7 @@
                         on
                         Mon 2024-05-27
                         
-                        | <span class="post-date">3298 words</span> | about<span class="more-meta"> 7 mins</span>
+                        | <span class="post-date">3321 words</span> | about<span class="more-meta"> 7 mins</span>
                         
                         
                         
@@ -508,7 +508,7 @@
 <p>这个⽹络中，最左边的称为输⼊层，其中的神经元称为输⼊神经元。</p>
 <p>最右边的，即输出层，包含有输出神经元，在本例中，输出层只有⼀个神经元。</p>
 <p>中间层，既然这层中的神经元既不是输⼊也不是输出，则被称为隐藏层。“隐藏”这⼀术语也许听上去有些神秘——但它实际上仅仅意味着“既⾮输⼊也⾮输出”。</p>
-<h3 id="131-网络层的设计">1.3.1 网络层的设计：</h3>
+<h3 id="131-网络层的设计">1.3.1 网络层的设计</h3>
 <p>设计⽹络的输⼊输出层通常是⽐较直接的。例如，假设我们尝试确定⼀张⼿写数字的图像上是否写的是“9”。很⾃然地，我们可以将图⽚像素的强度进⾏编码作为输⼊神经元来设计⽹络。</p>
 <p>如果图像是⼀个 64 × 64 的灰度图像，那么我们会需要 4096 = 64 × 64 个输⼊神经元，每个强度取 0 和 1 之间合适的值。</p>
 <p>输出层只需要包含⼀个神经元，当输出值⼩于 0.5 时表⽰“输⼊图像不是⼀个 9”，⼤于 0.5 的值表⽰“输⼊图像是⼀个 9”。</p>
@@ -900,18 +900,20 @@
 <p>梯度下降法可以被视为⼀种在 C 下降最快的⽅向上做微⼩变化的⽅法。</p>
 <h2 id="16-实现我们的络来分类数字">1.6 实现我们的⽹络来分类数字</h2>
 <p>⼀旦我们给⼀个⽹络学会了⼀组好的权重集和偏置集，它能很容易地被移植到⽹络浏览器中以 Javascript 运⾏，或者如在移动设备上的本地应⽤。</p>
+<p>建立一个<code>test1.py</code>文件，写入以下代码：</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">mnist_loader</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">validation_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span> <span style="color:#797593">=</span> <span style="color:#d7827e">mnist_loader</span><span style="color:#797593">.</span><span style="color:#d7827e">load_data_wrapper</span><span style="color:#797593">()</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">network</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#d7827e">net</span> <span style="color:#797593">=</span> <span style="color:#d7827e">network</span><span style="color:#797593">.</span><span style="color:#d7827e">Network</span><span style="color:#797593">([</span><span style="color:#ea9d34">784</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">])</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#d7827e">net</span><span style="color:#797593">.</span><span style="color:#d7827e">SGD</span><span style="color:#797593">(</span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">,</span> <span style="color:#ea9d34">3.0</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span><span style="color:#797593">=</span><span style="color:#d7827e">test_data</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">network</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">validation_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span> <span style="color:#797593">=</span> <span style="color:#d7827e">mnist_loader</span><span style="color:#797593">.</span><span style="color:#d7827e">load_data_wrapper</span><span style="color:#797593">()</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#d7827e">net</span> <span style="color:#797593">=</span> <span style="color:#d7827e">network</span><span style="color:#797593">.</span><span style="color:#d7827e">Network</span><span style="color:#797593">([</span><span style="color:#ea9d34">784</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">])</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#d7827e">net</span><span style="color:#797593">.</span><span style="color:#d7827e">SGD</span><span style="color:#797593">(</span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">,</span> <span style="color:#ea9d34">3.0</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span><span style="color:#797593">=</span><span style="color:#d7827e">test_data</span><span style="color:#797593">)</span>
 </span></span></code></pre></div><p>代码输出如下，最高准确率为95.08%：</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Epoch 0 : 8937 / 10000
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>...
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Epoch 19 : 9508 / 10000
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>...
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Epoch 29 : 9488 / 10000
-</span></span></code></pre></div><p>将隐藏神经元数量改到 100，准确率得到了提升，⾄少在这种情况下，使⽤更多的隐藏神经元帮助我们得到了更好的结果。</p>
+</span></span></code></pre></div><p>将隐藏层神经元数量改到 100，准确率得到了提升，⾄少在这种情况下，使⽤更多的隐藏神经元帮助我们得到了更好的结果。</p>
 <p>当然，为了获得这些准确性，我不得不对训练的迭代期数量，⼩批量数据⼤⼩和学习速率η做特别的选择。正如我上⾯所提到的，这些在我们的神经⽹络中被称为超参数，以区别于通过我们的学习算法所学到的参数（权重和偏置）。如果我们选择了糟糕的超参数，我们会得到较差的结果。</p>
 
 
@@ -1688,7 +1690,7 @@
                         
                     
                     发表了 50 篇文章 · 
-                    总计 7.13 万字
+                    总计 7.14 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
