@@ -19,9 +19,9 @@
     
 
     
-    <meta name="title" content="性能测试：jmeter使用学习" />
-    <meta property="og:title" content="性能测试：jmeter使用学习" />
-    <meta property="twitter:title" content="性能测试：jmeter使用学习" />
+    <meta name="title" content="学习笔记：《神经网络与深度学习》第一章" />
+    <meta property="og:title" content="学习笔记：《神经网络与深度学习》第一章" />
+    <meta property="twitter:title" content="学习笔记：《神经网络与深度学习》第一章" />
     
 
     
@@ -49,9 +49,9 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <title>性能测试：jmeter使用学习 | Blog</title>
+    <title>学习笔记：《神经网络与深度学习》第一章 | Blog</title>
 
-    <link rel="canonical" href="/post/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7jmeter%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">
+    <link rel="canonical" href="/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/">
 
     
     
@@ -347,16 +347,16 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/%e6%80%a7%e8%83%bd%e6%b5%8b%e8%af%95" title="性能测试">
-                            性能测试
+                        <a class="tag" href="/tags/%e7%a5%9e%e7%bb%8f%e7%bd%91%e7%bb%9c%e4%b8%8e%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0" title="神经网络与深度学习">
+                            神经网络与深度学习
                         </a>
                         
-                        <a class="tag" href="/tags/jmeter" title="jmeter">
-                            jmeter
+                        <a class="tag" href="/tags/AI" title="AI">
+                            AI
                         </a>
                         
                     </div>
-                    <h1>性能测试：jmeter使用学习</h1>
+                    <h1>学习笔记：《神经网络与深度学习》第一章</h1>
 
                     <h2 class="subheading"></h2>
                     <span class="meta">
@@ -366,13 +366,13 @@
                         Nefelibata
                         
                         on
-                        Mon 2024-04-29
+                        Mon 2024-05-27
                         
-                        | <span class="post-date">706 words</span> | about<span class="more-meta"> 2 mins</span>
+                        | <span class="post-date">3298 words</span> | about<span class="more-meta"> 7 mins</span>
                         
                         
                         
-                        <br>Last Modified on Thu 2024-05-23
+                        <br>Last Modified on Tue 2024-05-28
                         
                         
                     </span>
@@ -401,57 +401,518 @@
                 
 
              
-                    <h1 id="1-性能指标">1 性能指标</h1>
-<h2 id="11-tps">1.1 TPS</h2>
-<p>TPS (transaction per second) 是<code>服务端</code>每秒处理请求的数量</p>
-<p>TPS 最直观的反映了<code>系统的处理能力</code>，是重要的性能指标之一。</p>
-<h2 id="12-响应时长">1.2 响应时长</h2>
-<p>响应时长 就是 <code>服务端</code> 处理请求耗费的时间</p>
-<p>平均响应时长 就是<code>服务端</code> 处理请求的平均耗费时间。</p>
-<h2 id="13-并发连接-和-并发用户">1.3 并发连接 和 并发用户</h2>
-<p>并发连接数 是 服务端 和客户端 建立的 <code>TCP连接的数量</code></p>
-<p>并发用户数 是 服务端 同时服务的 <code>用户的数量</code> 。</p>
-<p>用户的一个操作可能引发多个并发连接。</p>
-<h2 id="14-cpu内存磁盘网络-负载">1.4 CPU/内存/磁盘/网络 负载</h2>
-<p>我们做性能测试时，不能只看 TPS、响应时长 等指标是否达到，也要看被测系统在达到这些指标时，机器本身的负载情况。</p>
-<p>所谓负载情况，主要是： CPU占用率， 内存使用，磁盘IO、磁盘使用率。</p>
-<p>在性能测试分析时，我们主要关注这两点：</p>
-<ul>
-<li>是否接近<code>满负荷</code>
-<ul>
-<li>如果在达到这些指标时，机器已经处于满负荷状态：<code>CPU使用率</code> 接近 100%， 内存几乎用光，那也是不行的。 因为随时系统可能出问题。就是说再加点压力，或者再持续一段时间，就很可能出现响应超时甚至响应错误的情况。</li>
-</ul>
-</li>
-<li>是否资源使用<code>持续上升</code>
-<ul>
-<li>这点特别体现在 <code>内存使用率</code> 上。</li>
-<li>如果系统资源使用图上，
-
-<mark>内存使用率是一个斜线不断上升的情况，那么很可能被测系统存在内存泄露。</mark>
-
-
-
-这样只要再持续一段时间，就很可能出现系统因内存耗尽而奔溃的现象。</li>
-<li>出现这样的图表，
-
-<mark>就应该添加测试用例，做一个较长时间的性能测试（longevity testing），观查系统的行为。</mark>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-jmeter工具">2 Jmeter工具</h1>
-<p>JMeter主要用于 <code>服务端系统</code> 的性能测试，主要是接口测试。比如测试 web网站，API服务器 的性能。</p>
-<p><code>Ramp-Up 时间</code> 意思是总耗时，以秒为单位。</p>
-<p><code>循环次数</code> 意思是执行线程组里面定义的动作行为 <code>多少轮</code> 。 缺省就做一轮。</p>
-<p><code>Sampler 取样器</code> 定义一个具体的请求。</p>
-<p><code>测试计划</code>其实就是一个<code>测试用例</code>，对应一个测试场景。</p>
-<blockquote>
-<p>参考：</p>
-<p><a href="https://www.byhy.net/etc/loadtest/process/measure/#cp">https://www.byhy.net/etc/loadtest/process/measure/#cp</a></p>
+                    <blockquote>
+<p>本文阅读书籍与参考代码：</p>
+<p><a href="https://github.com/HuuuuuuO/huuuuuuo.github.io/blob/master/data/Neural%20Network%20and%20Deep%20Learning-ch.pdf">《神经网络与深度学习》</a></p>
+<p><a href="https://github.com/MichalDanielDobrzanski/DeepLearningPython">https://github.com/MichalDanielDobrzanski/DeepLearningPython</a></p>
 </blockquote>
+<h1 id="1-使神经络识别写数字">1 使⽤神经⽹络识别⼿写数字</h1>
+<p>神经⽹络使⽤样本来⾃动推断出识别⼿写数字的规则。另外，通过增加训练样本的数量，⽹络可以学到更多关于⼿写数字的知识，这样就能够提升⾃⾝的准确性。</p>
+<h2 id="11-感知器">1.1 感知器</h2>
+<p>⼀个感知器接受⼏个⼆进制输⼊，x1, x2, . . .，并产⽣⼀个⼆进制输出。你可以将感知器看作依据权重来作出决定的设备。感知器的规则可以写为：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527094909620.png">
+<img src="../post/postimg/image-20240527094909620.png" alt="image-20240527094909620"  />
+</a>
+</div>
+
+</p>
+<p>感知器网络可以表示为如下，并且我们完全能⽤感知器⽹络来计算任何逻辑功能，例如“与”，“或”和“与⾮”：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527095027169.png">
+<img src="../post/postimg/image-20240527095027169.png" alt="image-20240527095027169"  />
+</a>
+</div>
+
+</p>
+<h2 id="12-s型神经元">1.2 S型神经元</h2>
+<p>假设我们把⽹络中的权重（或者偏置）做些微⼩的改动。就像我们⻢上会看到的，这⼀属性会让学习变得可能：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527095341654.png">
+<img src="../post/postimg/image-20240527095341654.png" alt="image-20240527095341654"  />
+</a>
+</div>
+
+</p>
+<p>如果对权重（或者偏置）的微⼩的改动真的能够仅仅引起输出的微⼩变化，那我们可以利⽤这⼀事实来修改权重和偏置，让我们的⽹络能够表现得像我们想要的那样。</p>
+<p><code>例如，假设⽹络错误地把⼀个“9”的图像分类为“8”。我们能够计算出怎么对权重和偏置做些⼩的改动，这样⽹络能够接近于把图像分类为“9”。</code></p>
+<p>然后我们要重复这个⼯作，<code>反复改动权重和偏置来产⽣更好的输出</code>。这时⽹络就在学习。</p>
+<p>实际上，⽹络中单个感知器上⼀个权重或偏置的微⼩改动有时候会引起那个感知器的输出完全翻转，如 0 变到 1。因此，虽然你的“9”可能被正确分类，⽹络在其它图像上的⾏为很可能以⼀些很难控制的⽅式被完全改变。</p>
+<p>我们引⼊⼀种称为 S 型神经元的新的⼈⼯神经元来克服这个问题。S 型神经元和感知器类似，但是被修改为<code>权重和偏置的微⼩改动只引起输出的微⼩变化</code>。这对于让神经元⽹络学习起来是很关键的。</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527110423651.png">
+<img src="../post/postimg/image-20240527110423651.png" alt="image-20240527110423651"  />
+</a>
+</div>
+
+</p>
+<p>S 型神经元有多个输⼊，x1, x2, . . .。<code>但是这些输⼊可以取 0 和 1 中的任意值，⽽不仅仅是 0 或 1。例如，0.638 。</code></p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527110501524.png">
+<img src="../post/postimg/image-20240527110501524.png" alt="image-20240527110501524"  />
+</a>
+</div>
+
+</p>
+<p>其中z ≡ w · x + b，σ 有时被称为逻辑函数。</p>
+<p>形状如下：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527110548003.png">
+<img src="../post/postimg/image-20240527110548003.png" alt="image-20240527110548003"  />
+</a>
+</div>
+
+</p>
+<p>σ 函数的平滑特性，正是关键因素，⽽不是其细部形式。σ 的平滑意味着权重和偏置的微⼩变化，即 ∆wj 和 ∆b，会从神经元产⽣⼀个微⼩的输出变化 ∆output。实际上它的意思⾮常简单（这可是个好消息）：∆output 是⼀个反映权重和偏置变化 —— 即 ∆wj 和 ∆b —— 的线性函数。这⼀线性使得选择权重和偏置的微⼩变化来达到输出的微⼩变化的运算变得容易。</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527110828504.png">
+<img src="../post/postimg/image-20240527110828504.png" alt="image-20240527110828504"  />
+</a>
+</div>
+
+</p>
+<p><code>S 型神经元不仅仅输出 0 或 1。它可以输出 0 和 1 之间的任何实数，所以诸如 0.173。</code></p>
+<h2 id="13-神经络的架构">1.3 神经⽹络的架构</h2>
+<p>有这样一个网络：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527112851296.png">
+<img src="../post/postimg/image-20240527112851296.png" alt="image-20240527112851296"  />
+</a>
+</div>
+
+</p>
+<p>这个⽹络中，最左边的称为输⼊层，其中的神经元称为输⼊神经元。</p>
+<p>最右边的，即输出层，包含有输出神经元，在本例中，输出层只有⼀个神经元。</p>
+<p>中间层，既然这层中的神经元既不是输⼊也不是输出，则被称为隐藏层。“隐藏”这⼀术语也许听上去有些神秘——但它实际上仅仅意味着“既⾮输⼊也⾮输出”。</p>
+<h3 id="131-网络层的设计">1.3.1 网络层的设计：</h3>
+<p>设计⽹络的输⼊输出层通常是⽐较直接的。例如，假设我们尝试确定⼀张⼿写数字的图像上是否写的是“9”。很⾃然地，我们可以将图⽚像素的强度进⾏编码作为输⼊神经元来设计⽹络。</p>
+<p>如果图像是⼀个 64 × 64 的灰度图像，那么我们会需要 4096 = 64 × 64 个输⼊神经元，每个强度取 0 和 1 之间合适的值。</p>
+<p>输出层只需要包含⼀个神经元，当输出值⼩于 0.5 时表⽰“输⼊图像不是⼀个 9”，⼤于 0.5 的值表⽰“输⼊图像是⼀个 9”。</p>
+<p>⽬前为⽌，我们讨论的神经⽹络，都是以上⼀层的输出作为下⼀层的输⼊。这种⽹络被称为<code>前馈神经⽹络</code>。</p>
+<h2 id="14-个简单的分类写数字的络">1.4 ⼀个简单的分类⼿写数字的⽹络</h2>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527144033855.png">
+<img src="../post/postimg/image-20240527144033855.png" alt="image-20240527144033855"  />
+</a>
+</div>
+
+</p>
+<p>我们给⽹络的训练数据会有很多扫描得到的 28 × 28 的⼿写数字的图像组成，所有输⼊层包含有 784 = 28 × 28个神经元。输⼊像素是灰度级的，值为 0.0 表⽰⽩⾊，值为 1.0 表⽰⿊⾊，中间数值表⽰逐渐暗淡的灰⾊。</p>
+<p>⽹络的第⼆层是⼀个隐藏层。我们⽤ n 来表⽰神经元的数量，我们将给 n 实验不同的数值。⽰例中⽤⼀个⼩的隐藏层来说明，仅仅包含 n = 15 个神经元。</p>
+<p>⽹络的输出层包含有 10 个神经元。如果第⼀个神经元激活，即输出 ≈ 1，那么表明⽹络认为数字是⼀个 0。</p>
+<h3 id="141-隐藏层的神经元在做什么">1.4.1 隐藏层的神经元在做什么</h3>
+<p>假设隐藏层的第⼀个神经元只是⽤于检测如下的图像是否存在：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527144435277.png">
+<img src="../post/postimg/image-20240527144435277.png" alt="image-20240527144435277"  />
+</a>
+</div>
+
+</p>
+<p>为了达到这个⽬的，它通过对此图像对应部分的像素赋予较⼤权重，对其它部分赋予较⼩的
+权重。同理，我们可以假设隐藏层的第⼆，第三，第四个神经元是为检测下列图⽚是否存在：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527144444983.png">
+<img src="../post/postimg/image-20240527144444983.png" alt="image-20240527144444983"  />
+</a>
+</div>
+
+</p>
+<p>这四幅图像组合在⼀起构成了前⾯显⽰的⼀⾏数字图像中的 0：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527144454932.png">
+<img src="../post/postimg/image-20240527144454932.png" alt="image-20240527144454932"  />
+</a>
+</div>
+
+</p>
+<h3 id="142-练习十进制转二进制">1.4.2 练习——十进制转二进制</h3>
+<p>通过在上述的三层神经⽹络加⼀个额外的⼀层就可以实现按位表⽰数字。<code>额外的⼀层把原来的输出层转化为⼀个⼆进制表⽰</code>，如下图所⽰。为新的输出层寻找⼀些合适的权重和偏置。假定原先的 3 层神经⽹络在第三层得到正确输出（即原来的输出层）的激活值⾄少是0.99，得到错误的输出的激活值⾄多是0.01。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原数字</th>
+<th style="text-align:center">二进制表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0000</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0001</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0010</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0011</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0100</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0101</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0110</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0111</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1000</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1001</td>
+</tr>
+</tbody>
+</table>
+<p>四位二进制用abcd表示，当十进制输入为8，9的时候，a=1。</p>
+<p>所以可以设置权重为[0，0，0，0，0，0，0，0，1，1]T</p>
+<p>例如，计算第一个神经元a的w·x，当第三层十进制输出8时：</p>
+<ol>
+<li>激活值：当该位激活时=0.99，未激活时=0.01。第三层输出8时，8那个位置激活了，所以激活值=0.99</li>
+<li>9的权重为1，但是未激活，所以激活值为0.01</li>
+<li>计算<code>各位的权重·激活值并进行相加</code>，结果=1.00</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原数字</th>
+<th style="text-align:center">权重</th>
+<th style="text-align:center">激活值</th>
+<th style="text-align:center">计算w·激活值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.99</td>
+<td style="text-align:center">0.99</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1.00</td>
+</tr>
+</tbody>
+</table>
+<p>又例如，计算第三个神经元c的w·x，当第三层十进制输出7时：</p>
+<ol>
+<li>激活值：当该位激活时=0.99，未激活时=0.01。第三层输出7时，7那个位置激活了，所以激活值=0.99</li>
+<li>2、3、6的权重为1，但是未激活，所以激活值为0.01</li>
+<li>计算<code>各位的权重·激活值并进行相加</code>，结果=1.02</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原数字</th>
+<th style="text-align:center">权重</th>
+<th style="text-align:center">激活值</th>
+<th style="text-align:center">计算w·激活值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0.01</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.99</td>
+<td style="text-align:center">0.99</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1.02</td>
+</tr>
+</tbody>
+</table>
+<p>最后可以得出总表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数字</th>
+<th style="text-align:center">w·x（第一个神经元）</th>
+<th style="text-align:center">第二个神经元</th>
+<th style="text-align:center">第三个神经元</th>
+<th style="text-align:center">第四个神经元</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">1.03</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.03</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">1.03</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1.00</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1.00</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.04</td>
+<td style="text-align:center">0.05</td>
+</tr>
+</tbody>
+</table>
+<p>可以看出最大误差为0.05，那么我们可以设置偏置b为-0.06，就可以消去误差，然后规定至少大于0激活。比如，当第三层输出的数字为7，得出4个神经元adcd的输出w·x分别为[0.02，1.02，1.02，1.03]，这时候去掉误差-0.06，得到[-0.04，0.96，0.96，0.97]，-0.04未激活，结果=0。此时adcd=0111，也就是十进制的7。</p>
+<h2 id="15-使梯度下降算法进学习">1.5 使⽤梯度下降算法进⾏学习</h2>
+<p>把每个训练输⼊ x 看作⼀个 28 × 28 = 784维的向量。每个向量中的项⽬代表图像中单个像素的灰度值。我们⽤ y = y(x) 表⽰对应的期望输出，这⾥ y 是⼀个 10 维的向量。</p>
+<p>我们希望有⼀个算法，能让我们找到权重和偏置，以⾄于⽹络的输出 y(x) 能够拟合所有的训练输⼊ x。为了量化我们如何实现这个⽬标，我们定义⼀个损失函数：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527220512574.png">
+<img src="../post/postimg/image-20240527220512574.png" alt="image-20240527220512574"  />
+</a>
+</div>
+
+</p>
+<p>这⾥ w 表⽰所有的⽹络中权重的集合，b 是所有的偏置，n 是训练输⼊数据的个数，a 是表⽰当输⼊为 x 时输出的向量，求和则是在总的训练输⼊ x 上进⾏的。</p>
+<p>我们训练算法的⽬的，是最⼩化权重和偏置的代价函数 C(w, b)。换句话说，<code>我们想要找到⼀系列能让代价尽可能⼩的权重和偏置。</code></p>
+<p>我们将采⽤称为梯度下降的算法来达到这个⽬的。</p>
+<p>梯度下降算法⼯作的⽅式就是重复计算梯度 ∇C，然后沿着相反的⽅向移动，沿
+着⼭⾕“滚落”。我们可以想象它像这样：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="../post/postimg/image-20240527220856116.png">
+<img src="../post/postimg/image-20240527220856116.png" alt="image-20240527220856116"  />
+</a>
+</div>
+
+</p>
+<p>梯度下降法可以被视为⼀种在 C 下降最快的⽅向上做微⼩变化的⽅法。</p>
+<h2 id="16-实现我们的络来分类数字">1.6 实现我们的⽹络来分类数字</h2>
+<p>⼀旦我们给⼀个⽹络学会了⼀组好的权重集和偏置集，它能很容易地被移植到⽹络浏览器中以 Javascript 运⾏，或者如在移动设备上的本地应⽤。</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">mnist_loader</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">validation_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span> <span style="color:#797593">=</span> <span style="color:#d7827e">mnist_loader</span><span style="color:#797593">.</span><span style="color:#d7827e">load_data_wrapper</span><span style="color:#797593">()</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">network</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#d7827e">net</span> <span style="color:#797593">=</span> <span style="color:#d7827e">network</span><span style="color:#797593">.</span><span style="color:#d7827e">Network</span><span style="color:#797593">([</span><span style="color:#ea9d34">784</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">])</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#d7827e">net</span><span style="color:#797593">.</span><span style="color:#d7827e">SGD</span><span style="color:#797593">(</span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#ea9d34">30</span><span style="color:#797593">,</span> <span style="color:#ea9d34">10</span><span style="color:#797593">,</span> <span style="color:#ea9d34">3.0</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span><span style="color:#797593">=</span><span style="color:#d7827e">test_data</span><span style="color:#797593">)</span>
+</span></span></code></pre></div><p>代码输出如下，最高准确率为95.08%：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Epoch 0 : 8937 / 10000
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Epoch 19 : 9508 / 10000
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Epoch 29 : 9488 / 10000
+</span></span></code></pre></div><p>将隐藏神经元数量改到 100，准确率得到了提升，⾄少在这种情况下，使⽤更多的隐藏神经元帮助我们得到了更好的结果。</p>
+<p>当然，为了获得这些准确性，我不得不对训练的迭代期数量，⼩批量数据⼤⼩和学习速率η做特别的选择。正如我上⾯所提到的，这些在我们的神经⽹络中被称为超参数，以区别于通过我们的学习算法所学到的参数（权重和偏置）。如果我们选择了糟糕的超参数，我们会得到较差的结果。</p>
 
 
                     
@@ -490,24 +951,6 @@
                     
         
                     
-                    
-                    <hr>
-                    <ul class="pager">
-                        
-                        <li class="previous">
-                            <a href="/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/" data-toggle="tooltip" data-placement="top"
-                                title="Github新建仓库并添加本地代码或文件">&larr;
-                                Previous Post</a>
-                        </li>
-                        
-                        
-                        <li class="next">
-                            <a href="/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0ai%E5%90%AF%E7%A4%BA/" data-toggle="tooltip" data-placement="top"
-                                title="阅读笔记：AI启示">Next
-                                Post &rarr;</a>
-                        </li>
-                        
-                    </ul>
                     
 
                     
