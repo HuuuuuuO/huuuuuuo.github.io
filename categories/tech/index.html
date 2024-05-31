@@ -134,6 +134,10 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0\/?utm_source=random",
+      
+      "\/post\/%E5%86%B7%E7%AC%91%E8%AF%9D%E6%94%B6%E9%9B%86\/?utm_source=random",
+      
       "\/post\/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0\/?utm_source=random",
       
       "\/post\/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6\/?utm_source=random",
@@ -404,6 +408,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0/">
+        <h2 class="post-title">
+            学习笔记：《神经网络与深度学习》第一章练习
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 目标 构建一个自己手写的数据集，作为测试集，测试神经网络的性能。 2 步骤 数据处理：将图片转化为28*28的大小（同时进行灰度化，归一化等） 格式
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-05-30 
+        
+        
+        | Last Modified on Fri 2024-05-31 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/">
@@ -767,32 +797,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
-        <h2 class="post-title">
-            Hugo：阅读进度条
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            Hugo实现顶部阅读进度条功能
-        
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Tue 2024-04-02 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1049,9 +1053,33 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-05-30";
+    var value = dataMap.get(key);
+    var wordCount =  254 ;
+    var link = "/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0/";
+    var title = "学习笔记：《神经网络与深度学习》第一章练习";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
+    var key = "2024-05-30";
+    var value = dataMap.get(key);
+    var wordCount =  681 ;
+    var link = "/post/%E5%86%B7%E7%AC%91%E8%AF%9D%E6%94%B6%E9%9B%86/";
+    var title = "冷笑话收集";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-05-27";
     var value = dataMap.get(key);
-    var wordCount =  3321 ;
+    var wordCount =  3325 ;
     var link = "/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/";
     var title = "学习笔记：《神经网络与深度学习》第一章";
     
@@ -2039,6 +2067,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/%E5%86%B7%E7%AC%91%E8%AF%9D" title="冷笑话">
+            冷笑话
+        </a>
+        
+        
+        
         <a href="/tags/%E5%88%86%E6%94%AF" title="分支">
             分支
         </a>
@@ -2483,8 +2517,12 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 50 篇文章 · 
-                    总计 7.14 万字
+                        
+                    
+                        
+                    
+                    发表了 52 篇文章 · 
+                    总计 7.24 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

@@ -6,14 +6,21 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 May 2024 10:30:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 May 2024 18:16:49 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>学习笔记：《神经网络与深度学习》第一章</title>
-      <link>https://huuuuuuo.github.io/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</link>
-      <pubDate>Mon, 27 May 2024 08:25:07 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
-      <description>本文阅读书籍与参考代码： 《神经网络与深度学习》 https://github.com/MichalDanielDobrzanski/DeepLearningPython 1 使⽤神经⽹络识别⼿写数字 神经⽹络使⽤样本来⾃动推断出识别⼿写数字的规则。另外，通过增加训练</description>
+      <title>学习笔记：《神经网络与深度学习》第一章练习</title>
+      <link>https://huuuuuuo.github.io/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0/</link>
+      <pubDate>Thu, 30 May 2024 20:00:40 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0/</guid>
+      <description>1 目标 构建一个自己手写的数据集，作为测试集，测试神经网络的性能。 2 步骤 数据处理：将图片转化为28*28的大小（同时进行灰度化，归一化等） 格式</description>
+    </item>
+    <item>
+      <title>冷笑话收集</title>
+      <link>https://huuuuuuo.github.io/post/%E5%86%B7%E7%AC%91%E8%AF%9D%E6%94%B6%E9%9B%86/</link>
+      <pubDate>Thu, 30 May 2024 16:24:05 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E5%86%B7%E7%AC%91%E8%AF%9D%E6%94%B6%E9%9B%86/</guid>
+      <description>猫会喵喵叫，狗会汪汪汪，鸭会嘎嘎嘎，鸡会什么？ 鸡会留给有准备的人 一朵花为什么好笑？ 因为它有梗 为什么蚊子不吃辣椒？ 因为蚊子吃blood（不辣的</description>
     </item>
     <item>
       <title>学习笔记：《神经网络与深度学习》第一章</title>
@@ -364,6 +371,13 @@
       <pubDate>Tue, 19 Mar 2024 19:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&amp;gt; main (non-fast-forward) 4error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &amp;#39;git pull ...&amp;#39;) before pushing again. 8hint: See the &amp;#39;Note about fast-forwards&amp;#39; in &amp;#39;git push --help&amp;#39; for</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://huuuuuuo.github.io/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
+      <description>本文阅读书籍与参考代码： https://github.com/MichalDanielDobrzanski/DeepLearningPython 1 使⽤神经⽹络识别⼿写数字 神经⽹络使⽤样本来⾃动推断出识别⼿写数字的规则。另外，通过增加训练样本的数量，⽹络可以学</description>
     </item>
     <item>
       <title>About</title>
