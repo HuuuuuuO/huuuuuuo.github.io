@@ -372,11 +372,11 @@
                         on
                         Thu 2024-05-30
                         
-                        | <span class="post-date">254 words</span> | about<span class="more-meta"> 1 mins</span>
+                        | <span class="post-date">592 words</span> | about<span class="more-meta"> 2 mins</span>
                         
                         
                         
-                        <br>Last Modified on Fri 2024-05-31
+                        <br>Last Modified on Mon 2024-06-03
                         
                         
                     </span>
@@ -430,10 +430,42 @@
 </li>
 </ol>
 <h1 id="3-数据处理">3 数据处理</h1>
-<h1 id="4-格式转换">4 格式转换</h1>
+<p>灰度化、转化为28*28的大小、归一化并反相（因为输入为白底黑字，若为黑底白字就不需要）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>img = Image.open(os.path.join(root, filename)).convert(&#39;L&#39;)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>resized_img = img.resize((28, 28))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>normalized_arr =1-arr.astype(np.float32) / 255
+</span></span></code></pre></div><p>不过这样生成的图片是灰度的，而不是纯黑白的</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"></code></pre></div><h1 id="4-格式转换">4 格式转换</h1>
+<p>可以看到</p>
+<h1 id="5-读取并测试">5 读取并测试</h1>
 <p>本书例子里面，mnist数据集的格式是mnist.pkl，里面直接把训练集和测试集都包括进去了</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">validation_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span> <span style="color:#797593">=</span> <span style="color:#d7827e">pickle</span><span style="color:#797593">.</span><span style="color:#d7827e">load</span><span style="color:#797593">(</span><span style="color:#d7827e">f</span><span style="color:#797593">,</span> <span style="color:#d7827e">encoding</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;latin1&#34;</span><span style="color:#797593">)</span>
 </span></span></code></pre></div><p>我们要做的就是：转换我们自己的图片数据为pkl，并作为test_data。</p>
+<p>在<code>mnist_loader.py</code>修改这个函数代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#286983">def</span> <span style="color:#d7827e">load_data</span><span style="color:#797593">():</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#d7827e">f</span> <span style="color:#797593">=</span> <span style="color:#d7827e">gzip</span><span style="color:#797593">.</span><span style="color:#d7827e">open</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;mnist.pkl.gz&#39;</span><span style="color:#797593">,</span> <span style="color:#ea9d34">&#39;rb&#39;</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">validation_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span> <span style="color:#797593">=</span> <span style="color:#d7827e">pickle</span><span style="color:#797593">.</span><span style="color:#d7827e">load</span><span style="color:#797593">(</span><span style="color:#d7827e">f</span><span style="color:#797593">,</span> <span style="color:#d7827e">encoding</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;latin1&#34;</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#d7827e">f</span><span style="color:#797593">.</span><span style="color:#d7827e">close</span><span style="color:#797593">()</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#d7827e">f_mydata</span> <span style="color:#797593">=</span> <span style="color:#d7827e">gzip</span><span style="color:#797593">.</span><span style="color:#d7827e">open</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;mydata.pkl.gz&#39;</span><span style="color:#797593">,</span> <span style="color:#ea9d34">&#39;rb&#39;</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#d7827e">test_data</span> <span style="color:#797593">=</span> <span style="color:#d7827e">pickle</span><span style="color:#797593">.</span><span style="color:#d7827e">load</span><span style="color:#797593">(</span><span style="color:#d7827e">f_mydata</span><span style="color:#797593">,</span> <span style="color:#d7827e">encoding</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;latin1&#34;</span><span style="color:#797593">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#d7827e">f_mydata</span><span style="color:#797593">.</span><span style="color:#d7827e">close</span><span style="color:#797593">()</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#286983">return</span> <span style="color:#797593">(</span><span style="color:#d7827e">training_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">validation_data</span><span style="color:#797593">,</span> <span style="color:#d7827e">test_data</span><span style="color:#797593">)</span>
+</span></span></code></pre></div><h1 id="6-问题汇总">6 问题汇总</h1>
+<p>6.1 数据处理</p>
+<p>对于准确率来说，数据处理的怎么样很重要。如果数据处理的时候只进行灰度化，识别结果会比较差，准确率最高为18%。如果加一点对比度，结果会有点提升，能到23%左右，但是拉不开区别。</p>
+<p>若进行了纯黑纯白化，即通过设置阈值，在阈值以上的全部设置为255，阈值以下的全部设置为0，那么图片将变为黑底白字的只有两个极端的图片，如下图，此时识别结果就会好很多，最高能达到40%。</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240603154226829.png">
+<img src="/img/image-20240603154226829.png" alt="image-20240603154226829"  />
+</a>
+</div>
+
+</p>
 
 
                     
@@ -1219,7 +1251,7 @@
                         
                     
                     发表了 52 篇文章 · 
-                    总计 7.24 万字
+                    总计 7.27 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
