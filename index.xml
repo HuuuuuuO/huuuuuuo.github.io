@@ -6,7 +6,7 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 03 Jun 2024 20:15:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2024 11:21:04 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习笔记：《神经网络与深度学习》第一章练习</title>
@@ -378,6 +378,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://huuuuuuo.github.io/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
       <description>本文阅读书籍与参考代码： https://github.com/MichalDanielDobrzanski/DeepLearningPython 1 使⽤神经⽹络识别⼿写数字 神经⽹络使⽤样本来⾃动推断出识别⼿写数字的规则。另外，通过增加训练样本的数量，⽹络可以学</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://huuuuuuo.github.io/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://huuuuuuo.github.io/img_move_back/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0/</guid>
+      <description>1 目标 构建一个自己手写的数据集，作为测试集，测试神经网络的性能。 2 步骤 数据处理：将图片转化为28*28的大小（同时进行灰度化，归一化等） 格式</description>
     </item>
     <item>
       <title>About</title>
