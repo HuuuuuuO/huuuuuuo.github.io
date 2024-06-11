@@ -372,11 +372,11 @@
                         on
                         Wed 2024-06-05
                         
-                        | <span class="post-date">1276 words</span> | about<span class="more-meta"> 3 mins</span>
+                        | <span class="post-date">1549 words</span> | about<span class="more-meta"> 4 mins</span>
                         
                         
                         
-                        <br>Last Modified on Wed 2024-06-05
+                        <br>Last Modified on Tue 2024-06-11
                         
                         
                     </span>
@@ -409,9 +409,10 @@
 <p>参考：</p>
 <p><a href="https://procjx.github.io/2020/04/08/%E3%80%90git%20%E4%BD%BF%E7%94%A8%E3%80%91%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E5%92%8C%E5%88%87%E6%8D%A2%E5%A4%9A%E4%B8%AA-github-%E8%B4%A6%E5%8F%B7/">【git 使用】如何在本地管理和切换多个 github 账号</a></p>
 <p><a href="https://blog.csdn.net/qq_45533868/article/details/112392291">Windows下使用ssh-add报错 Error connecting to agent: No such file or directory</a></p>
+<p><a href="https://blog.csdn.net/hudeyong926/article/details/120303433">Git配置多个用户</a></p>
 </blockquote>
 <h1 id="1-创建-ssh-密钥">1 创建 SSH 密钥</h1>
-<p>如果有两个 github 账户，一个工作用的，用户名是 yuanzhen-kooboo；另一个是私人的：huangyuanzhen。所以，我要创建两个密钥，每个账号一个：</p>
+<p>如果有两个 github 账户，一个工作用的，用户名是 company_account；另一个是私人的：personal_account。所以，我要创建两个密钥，每个账号一个：</p>
 <p>操作为：</p>
 <ul>
 <li>
@@ -438,7 +439,7 @@
 </div>
 
 </p>
-<p>找到 C:\Users\huangyuanzhen.ssh 下，可以看到，生成了下面四个文件：</p>
+<p>找到 C:\Users\personal_account.ssh 下，可以看到，生成了下面四个文件：</p>
 <ul>
 <li>id_rsa_personal</li>
 <li>id_rsa_personal.pub</li>
@@ -461,23 +462,25 @@
 
 </p>
 <ul>
-<li>相对的，在其他账户上重复相对应的操作；以我的为例，则是把 <code>id_rsa_company.pub</code> 的内容粘贴到我工作账户 yuanzhen-kooboo 的 ssh 上;</li>
+<li>相对的，在其他账户上重复相对应的操作；以我的为例，则是把 <code>id_rsa_company.pub</code> 的内容粘贴到我工作账户 company_account 的 ssh 上;</li>
 </ul>
 <h1 id="3-创建一个配置-config-文件来管理-key">3 创建一个配置 config 文件来管理 key</h1>
 <p>在 ~/.ssh/ 目录下创建一个 config 文件</p>
 <p>复制代码找到这个文件，并用编辑器打开(我的是 vscode)，然后将下面内容写入文件，保存:</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span># huangyuanzhen
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>Host personal
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>   HostName github.com
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>   User git
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>   IdentityFile ~/.ssh/id_rsa_personal
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span># yuanzhen-kooboo
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>Host company
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>   HostName github.com
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>   User git
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>   IdentityFile ~/.ssh/id_rsa_work
-</span></span></code></pre></div><p>这里我们的主机名称不是 github.com，而是将其命名为 personal 和 company。不同之处在于，我们现在附加了之前创建的新标识文件: id_rsa_&lt;&gt;;</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span># personal_account
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>Host github.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>User  personal_account@qq.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>Hostname ssh.github.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>PreferredAuthentications publickey
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>IdentityFile ~/.ssh/id_rsa
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>Port 443
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span># company_account
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>Host company
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>HostName ssh.github.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>User company_account@163.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>IdentityFile ~/.ssh/id_rsa_company
+</span></span></code></pre></div><p>这里我们的主机名称不是 github.com，而是将其命名为 github.com 和 company。不同之处在于，我们现在附加了之前创建的新标识文件: id_rsa_&lt;&gt;；因为我是个别是公司账户，所以我就是在原来个人账户的基础上新增了company的host。</p>
 <h1 id="4-更新存储的key">4 更新存储的key</h1>
 <p>在更新存储之前，我们要先检查一下本地的 OpenSSH 服务有没有开启。不然会出错。
 开启 ssh 服务的流程为：</p>
@@ -510,23 +513,15 @@
 </div>
 
 </p>
-<p>开始 SSH 服务之后，我们就可以使用ssh 命令了。
-清除当前存储的认证：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>C:\Users\huangyuanzhen&gt;ssh-add -D
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>// All identities removed.
-</span></span></code></pre></div><p>增加新的keys:</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>C:\Users\huangyuanzhen\.ssh&gt;ssh-add id_rsa_company
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Identity added: id_rsa_company (id_rsa_company)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>   
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>C:\Users\huangyuanzhen\.ssh&gt;ssh-add id_rsa_personal
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Identity added: id_rsa_personal (id_rsa_personal)
-</span></span></code></pre></div><p>验证一下！ github 是否能识别到这些 keys；在cmd中输入：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -T personal
-</span></span></code></pre></div><p>可以看到 “Hi huangyuanzhen! You’ve successfully authenticated, but GitHub does not provide shell access.” 的提示语。这表明，github 能识别这些 keys 了。Cool !</p>
+<p>开始 SSH 服务之后，我们就可以使用ssh 命令了。</p>
+<p>验证一下！ github 是否能识别到这些 keys；在cmd中输入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -T git@personal
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ssh -T git@company
+</span></span></code></pre></div><p>可以看到 “Hi personal_account! You’ve successfully authenticated, but GitHub does not provide shell access.” 的提示语。这表明，github 能识别这些 keys 了。Cool !</p>
 <h1 id="5-测试-clone-和-push">5 测试 clone 和 push</h1>
-<p>以我的私人账户为例，我想把 huangyuanzhen 账号上的 Look-Thinking 仓库克隆到本地，然后操作。</p>
+<p>以我的私人账户为例，我想把 personal_account 账号上的 Look-Thinking 仓库克隆到本地，然后操作。</p>
 <p>在cmd 上输入：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git clone git@personal:huangyuanzhen/Look-Thinking.git
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git clone git@personal:personal_account/Look-Thinking.git
 </span></span></code></pre></div><p>可以看到可以成功把该仓库克隆过来：</p>
 <p>
 
@@ -538,11 +533,11 @@
 </div>
 
 </p>
-<p>还是以在我的私人 github 账号 huangyuanzhen 上操作为例。在 账号上创建 work-test 仓库；然后在本地创建 test 文件夹。创建好 readme.md 文件后,将其 push 到 github ;</p>
+<p>还是以在我的私人 github 账号 personal_account 上操作为例。在 账号上创建 work-test 仓库；然后在本地创建 test 文件夹。创建好 readme.md 文件后,将其 push 到 github ;</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git init
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git add .
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git commit -am &#34;first commit&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git remote add origin git@personal:huangyuanzhen/test.git
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git remote add origin git@personal:personal_account/test.git
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>git push -u origin master
 </span></span></code></pre></div><p>将文件push成功之后是这样的：</p>
 <p>
@@ -556,14 +551,42 @@
 
 </p>
 <p>可以在github账户上看到在本地对 readme.md的操作结果。git pull 同理。</p>
-<h1 id="6-用命令行切换账号">6 用命令行切换账号</h1>
-<p>如果之前已经用 git remote add 和远程仓库建立过连接，我们需要先清除当前连接，不然会报错：“fatal: remote origin already exists.”；清除当前连接之后，然后连接新的账号里的仓库，如：</p>
+<h1 id="6-仓库账户配置">6 仓库账户配置</h1>
+<p>将随便一个git项目下将全局账户设置为私人账户，因为我是就个别账户是公司账户，所以其余都设置成私人账户，如果账户很多，也可以分别设置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git config --global user.name <span style="color:#ea9d34">&#34;personal_account&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git config --global user.email <span style="color:#ea9d34">&#34;personal_account@163.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git config user.name
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git config user.email
+</span></span></code></pre></div><p>在公司git项目下将账户设置为公司账户，不需要加<code>--global</code>，因为这里是局部账户设置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git config user.name <span style="color:#ea9d34">&#34;company_account&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git config user.email <span style="color:#ea9d34">&#34;company_account@163.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git config user.name
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git config user.email
+</span></span></code></pre></div><h1 id="7-更改远程仓库">7 更改远程仓库</h1>
+<p>如果某个本地仓库之前已经用 git remote add 和远程仓库建立过连接，我们需要先清除当前连接，不然会报错：“fatal: remote origin already exists.”；清除当前连接之后，然后连接新的账号里的仓库，如：</p>
 <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git remote rm origin
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git remote add origin git@company:yuanzhen-kooboo/work-test.git
-</span></span></code></pre></div><p>这里，我们就断开了之前和 huangyuanzhen 账号的连接，然后切换到了 yuanzhen-kooboo 账号。
-这样配置好之后，不需要再用 smartgit 等一些辅助工具，直接在终端使用命令行操作，我感觉十分方便了呢！动手试试吧。</p>
-<p><em>注意：上面命令行是在windows上操作，如果是在别的操作系统上，直接换成对应的操作命令即可。</em></p>
-
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git remote add origin git@company:company_account/work-test.git
+</span></span></code></pre></div><p>这里，我们就断开了之前和 personal_account 账号的连接，然后切换到了 company_account 账号。
+这样配置好之后，就可以直接使用命令行操作了，这个账户也不需要再继续调整什么了，不同账户之间切换直接切换到目录就行了</p>
+<h1 id="8-总结">8 总结</h1>
+<p>前面的1-4步都配置好后，在单独某个账户下的操作为：</p>
+<ol>
+<li>配置本git项目账户名</li>
+<li>配置本git项目账户邮箱</li>
+<li>清除当前连接</li>
+<li>新建连接，host为我们重新设置的company</li>
+<li>git更新</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>@REM git config user.name &#34;flamencogo&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>@REM git config user.email &#34;flamencogo@163.com&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>@REM git config user.name
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>@REM git config user.email
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>@REM git remote rm origin
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>@REM git remote add origin git@company:flamencogo/NeuralNetworkandDeepLearning.git
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>git add .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>git commit -m &#34;update&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>git push origin main
+</span></span></code></pre></div>
 
                     
                     
@@ -1354,7 +1377,7 @@
                         
                     
                     发表了 54 篇文章 · 
-                    总计 7.62 万字
+                    总计 7.65 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
