@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93\/?utm_source=random",
+      
       "\/post\/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88\/?utm_source=random",
       
       "\/post\/git%E4%BD%BF%E7%94%A8%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E5%92%8C%E5%88%87%E6%8D%A2%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7\/?utm_source=random",
@@ -414,6 +416,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/">
+        <h2 class="post-title">
+            Hugo：添加天气预报
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 显示效果 给hugo博客添加天气预报的效果，其实不只是给hugo，所有博客都是通用的。 我自己想要一打开就能看到天气，所以增加了这个功能。可以
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Mon 2024-04-08 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA/">
@@ -779,32 +807,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/">
-        <h2 class="post-title">
-            Hugo：代码高亮风格
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 代码高亮风格 代码高亮风格很多，可以参见 Chroma Style Gallery 看起来都不错，可以考虑添加进 hugo 2 遇到问题 之前我已经在 config.toml 中已经添加如下配置： 1[markup] 2 [markup.highlight] 3 codeFences = true 4 guessSyntax =
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sat 2024-03-30 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1065,6 +1067,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-06-14";
+    var value = dataMap.get(key);
+    var wordCount =  1079 ;
+    var link = "/post/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/";
+    var title = "代码漏洞修复：mass管理、访问控制";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-06-14";
     var value = dataMap.get(key);
     var wordCount =  644 ;
@@ -2103,6 +2117,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E" title="代码漏洞">
+            代码漏洞
+        </a>
+        
+        
+        
         <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE" title="代码高亮">
             代码高亮
         </a>
@@ -2583,8 +2603,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 55 篇文章 · 
-                    总计 7.72 万字
+                        
+                    
+                    发表了 56 篇文章 · 
+                    总计 7.82 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

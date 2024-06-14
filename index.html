@@ -135,6 +135,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93\/?utm_source=random",
+      
       "\/post\/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88\/?utm_source=random",
       
       "\/post\/git%E4%BD%BF%E7%94%A8%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E5%92%8C%E5%88%87%E6%8D%A2%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7\/?utm_source=random",
@@ -423,23 +425,21 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8F%8A%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0%E4%BC%98%E5%8C%96/">
+    <a href="https://huuuuuuo.github.io/post/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/">
         <h2 class="post-title">
-            学习笔记：《神经网络与深度学习》第二章及第一章练习优化
+            代码漏洞修复：mass管理、访问控制
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 目标 学习《神经网络与深度学习》第二章，并在第一章练习的基础上，将训练集掺入我们自己的数据进行训练，看看泛化效果如何。例如在其中几个epoc
+            参考： https://www.cnblogs.com/obge/p/13155317.html https://cloud.tencent.com/developer/article/1716630 1 mass管理：不安全的绑定器 比如说有一个类，类中有很多个属性：性别，姓名，身份证号，准考证号，通过控制属性的公开与否，使得攻击者
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Tue 2024-06-04 
+        Posted by Nefelibata on Fri 2024-06-14 
         
-        
-        | Last Modified on Fri 2024-06-14 
         
     
     </p>
@@ -464,6 +464,32 @@
     
         Posted by Nefelibata on Fri 2024-06-14 
         
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8F%8A%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0%E4%BC%98%E5%8C%96/">
+        <h2 class="post-title">
+            学习笔记：《神经网络与深度学习》第二章及第一章练习优化
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 目标 学习《神经网络与深度学习》第二章，并在第一章练习的基础上，将训练集掺入我们自己的数据进行训练，看看泛化效果如何。例如在其中几个epoc
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Tue 2024-06-04 
+        
+        
+        | Last Modified on Fri 2024-06-14 
         
     
     </p>
@@ -780,32 +806,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4%E6%91%98%E8%A6%81/">
-        <h2 class="post-title">
-            《万历十五年》摘要
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            粗略浏览了下《万历十五年》，主要思想大概是下面这句，也是本书结尾： 当一个人口众多的国家，各人行动全凭儒家简单粗浅而又无法固定的原则所限制，而
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-04-24 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1062,6 +1062,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-06-14";
+    var value = dataMap.get(key);
+    var wordCount =  1079 ;
+    var link = "/post/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/";
+    var title = "代码漏洞修复：mass管理、访问控制";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-06-14";
     var value = dataMap.get(key);
     var wordCount =  644 ;
@@ -2100,6 +2112,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E" title="代码漏洞">
+            代码漏洞
+        </a>
+        
+        
+        
         <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE" title="代码高亮">
             代码高亮
         </a>
@@ -2580,8 +2598,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 55 篇文章 · 
-                    总计 7.72 万字
+                        
+                    
+                    发表了 56 篇文章 · 
+                    总计 7.82 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

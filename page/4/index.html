@@ -135,6 +135,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93\/?utm_source=random",
+      
       "\/post\/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88\/?utm_source=random",
       
       "\/post\/git%E4%BD%BF%E7%94%A8%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E5%92%8C%E5%88%87%E6%8D%A2%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7\/?utm_source=random",
@@ -421,6 +423,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/">
+        <h2 class="post-title">
+            Hugo学习笔记（长期更新）
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            此文章用于长期更新hugo学习的内容 1 模板 1├── layouts 2└── themes 3 └── mytheme 4 └── layouts 5 ├── 404.html // 404页面模板 6 ├── _default 7 │ ├── baseof.html // 默认的基
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Mon 2024-04-01 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/">
@@ -938,6 +966,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-06-14";
+    var value = dataMap.get(key);
+    var wordCount =  1079 ;
+    var link = "/post/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/";
+    var title = "代码漏洞修复：mass管理、访问控制";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-06-14";
     var value = dataMap.get(key);
     var wordCount =  644 ;
@@ -1976,6 +2016,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E" title="代码漏洞">
+            代码漏洞
+        </a>
+        
+        
+        
         <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE" title="代码高亮">
             代码高亮
         </a>
@@ -2456,8 +2502,10 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 55 篇文章 · 
-                    总计 7.72 万字
+                        
+                    
+                    发表了 56 篇文章 · 
+                    总计 7.82 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
