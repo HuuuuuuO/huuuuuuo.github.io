@@ -19,9 +19,9 @@
     
 
     
-    <meta name="title" content="Python无环境部署" />
-    <meta property="og:title" content="Python无环境部署" />
-    <meta property="twitter:title" content="Python无环境部署" />
+    <meta name="title" content="代码漏洞修复（1）：mass管理、访问控制" />
+    <meta property="og:title" content="代码漏洞修复（1）：mass管理、访问控制" />
+    <meta property="twitter:title" content="代码漏洞修复（1）：mass管理、访问控制" />
     
 
     
@@ -49,9 +49,9 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <title>Python无环境部署 | Blog</title>
+    <title>代码漏洞修复（1）：mass管理、访问控制 | Blog</title>
 
-    <link rel="canonical" href="/post/python%E6%97%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
+    <link rel="canonical" href="/post/%E4%BB%A3%E7%A0%81%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D1mass%E7%AE%A1%E7%90%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">
 
     
     
@@ -359,20 +359,16 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/python" title="python">
-                            python
+                        <a class="tag" href="/tags/%e4%bb%a3%e7%a0%81%e6%bc%8f%e6%b4%9e" title="代码漏洞">
+                            代码漏洞
                         </a>
                         
-                        <a class="tag" href="/tags/windows" title="windows">
-                            windows
-                        </a>
-                        
-                        <a class="tag" href="/tags/sqlite" title="sqlite">
-                            sqlite
+                        <a class="tag" href="/tags/%e7%99%bd%e7%9b%92%e6%89%ab%e6%8f%8f" title="白盒扫描">
+                            白盒扫描
                         </a>
                         
                     </div>
-                    <h1>Python无环境部署</h1>
+                    <h1>代码漏洞修复（1）：mass管理、访问控制</h1>
 
                     <h2 class="subheading"></h2>
                     <span class="meta">
@@ -382,13 +378,13 @@
                         Nefelibata
                         
                         on
-                        Wed 2024-03-27
+                        Fri 2024-06-14
                         
-                        | <span class="post-date">322 words</span> | about<span class="more-meta"> 1 mins</span>
+                        | <span class="post-date">1079 words</span> | about<span class="more-meta"> 3 mins</span>
                         
                         
                         
-                        <br>Last Modified on Thu 2024-05-23
+                        <br>Last Modified on Fri 2024-06-14
                         
                         
                     </span>
@@ -417,23 +413,76 @@
                 
 
              
-                    <h1 id="1-背景">1 背景</h1>
-<p>有一个程序，使用asp、mysql、python实现，想要实现在另一台windows环境部署，需要将部署方法最简化。</p>
-<p>目前考虑的方案是，mysql 改用 access，python使用pyinstaller打包为exe</p>
-<blockquote>
-<p>但是使用pyodbc连接access连接数据库，一直报错，尝试了各种方案都无法解决，遂弃用，改为使用sqlite</p>
+                    <blockquote>
+<p>参考：</p>
+<p><a href="https://www.cnblogs.com/obge/p/13155317.html">https://www.cnblogs.com/obge/p/13155317.html</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1716630">https://cloud.tencent.com/developer/article/1716630</a></p>
 </blockquote>
-<h1 id="2-解决方案">2 解决方案</h1>
-<h2 id="21-使用sqlite">2.1 使用sqlite</h2>
-<p>使用sqlite做数据库，部署非常简单</p>
-<p>使用dbever连上sqlite，下载驱动，然后创建一个库，新建一个表，具体可直接百度</p>
-<h2 id="22-py连接sqlite">2.2 py连接sqlite</h2>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#907aa9">import</span> <span style="color:#d7827e">sqlite3</span>   <span style="color:#9893a5">#导入sqlite3模块</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#d7827e">conn</span> <span style="color:#797593">=</span> <span style="color:#d7827e">sqlite3</span><span style="color:#797593">.</span><span style="color:#d7827e">connect</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#34;First.db&#34;</span><span style="color:#797593">)</span>     <span style="color:#9893a5">#建立一个基于硬盘的数据库实例</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#d7827e">conn</span><span style="color:#797593">.</span><span style="color:#d7827e">close</span><span style="color:#797593">()</span>        <span style="color:#9893a5">#关闭与数据库的连接</span>
-</span></span></code></pre></div><p>数据库连接成功以后，就可以通过py进行数据库操作了</p>
+<h1 id="1-mass管理不安全的绑定器">1 mass管理：不安全的绑定器</h1>
+<blockquote>
+<p>比如说有一个类，类中有很多个属性：性别，姓名，身份证号，准考证号，通过控制属性的公开与否，使得攻击者无法将任意值绑定到属性，例如更改身份证号。</p>
+</blockquote>
+<h2 id="mvc模型">MVC模型</h2>
+<p>Spring MVC 基于 MVC 模式，因此理解 Spring MVC 需要先对 MVC 模式有所了解。</p>
+<p>MVC是 model、view、和controller的缩写，是软件开发中一种常用的架构模式。</p>
+<p>MVC各部分根据职责进行分离，使程序的结构更为直观，增加了程序的可扩展性、可维护性、可复用性。</p>
+<p>可以用如下的图形来表示MVC三者之间的关系：</p>
+<p>
+
+
+<div class="post-img-view">
+<a data-fancybox="gallery" href="/img/image-20240614100711430.png">
+<img src="/img/image-20240614100711430.png" alt="image-20240614100711430"  />
+</a>
+</div>
+
+</p>
+<ol>
+<li>
+<p>模型(Model)</p>
+<p>模型封装了数据及对数据的操作，可以直接对数据库进行访问，不依赖视图和控制器，也就是说模型并不关注数据如何展示，只负责提供数据。GUI 程序模型中数据的变化一般会通过观察者模式通知视图，而在 web 中则不会这样。</p>
+</li>
+<li>
+<p>视图(View)</p>
+<p>视图从模型中拉取数据，只负责展示，没有具体的程序逻辑。</p>
+</li>
+<li>
+<p>控制器(Controller)</p>
+<p>控制器用于控制程序的流程，将模型中的数据展示到视图中。</p>
+</li>
+</ol>
+<p><code>把view和controller控制分开，要控制哪些可以直接请求，哪些不行。</code></p>
+<h2 id="修复方案">修复方案</h2>
+<p>所以，针对这种漏洞，可以分为两个方向考虑：</p>
+<ol>
+<li>
+<p>使用SpringMVC框架：控制</p>
+</li>
+<li>
+<p>老代码改不动：则暂时搁置。</p>
+</li>
+</ol>
+<h1 id="2-访问控制数据库">2 访问控制：数据库</h1>
+<p>用户应该对他们需要的数据具有适当的访问权，既不能多也不能少（即用户不能对过多的数据具有访问权）。</p>
+<p><code>访问控制：需要给用户提供他们所需的访问权，且仅提供他们所需的访问权。</code></p>
+<blockquote>
+<p>例如，考试查询成绩，如果只需要输入准考证号，就可以查询到用户成绩，那么把准考证号改几位数，便可以遍历所有用户的成绩，那么就产生了越权风险，所有用户的信息都泄露了。</p>
+<p>而如果，加入一个查询条件，例如性别，姓名呢？也不行。性别就两个选项，遍历无非就是多遍历一个选项，也就是翻一倍而已，与一个id没有本质区别。姓名查询，如果是熟人，同班同学，那么也会导致很容易泄露。</p>
+<p>那么添加什么条件比较好呢？例如身份证号，或者其他不容易猜到的信息，这种东西一般大家没那么容易记住，或者说遍历，那么就会相对安全一点。</p>
+</blockquote>
+<p>程序未做恰当的验证，类似于数据库越权。如果用户只需要输入id就可以进行查询，那么就可能存在越权查询的情况。</p>
+<h2 id="修复方案-1">修复方案</h2>
+<p>所以，针对这种漏洞，可以分为两个方向考虑：</p>
+<ol>
+<li>非用户输入类查询：程序内部控制，那么没有被越权的风险。</li>
+<li>用户输入类查询：
+<ol>
+<li>用户只需要输入一个查询条件，便可获取信息，那么需要添加多种限定条件进行限制。</li>
+<li>用户输入多种条件，但是多种条件也较容易被猜到，那么与A情况无异。</li>
+<li>用户输入多种条件，并且多种条件不容易被猜到，那么经过代码审核，具体判断后，可以视为无风险。</li>
+</ol>
+</li>
+</ol>
 
 
                     
@@ -477,17 +526,11 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：图片存储路径优化">&larr;
+                            <a href="/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/" data-toggle="tooltip" data-placement="top"
+                                title="白盒扫描如何与AI结合">&larr;
                                 Previous Post</a>
                         </li>
                         
-                        
-                        <li class="next">
-                            <a href="/post/git%E4%B9%8B.gitignore%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" data-toggle="tooltip" data-placement="top"
-                                title="Git：.gitignore无效解决方法">Next
-                                Post &rarr;</a>
-                        </li>
                         
                     </ul>
                     
