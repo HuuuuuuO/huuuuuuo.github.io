@@ -6,8 +6,15 @@
     <description>Recent content in Tech on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 11 Jun 2024 10:23:14 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2024 08:58:02 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>白盒扫描如何与AI结合</title>
+      <link>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</link>
+      <pubDate>Fri, 14 Jun 2024 08:32:39 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</guid>
+      <description>1 出发点 将代码漏洞扫描（白盒扫描）与AI结合，可以通过多种方式来实现。 其出发点可以包括提高扫描的效率、准确性和覆盖率，提升功能使用便捷程度。</description>
+    </item>
     <item>
       <title>Git使用：如何在本地管理和切换多个github账号</title>
       <link>https://huuuuuuo.github.io/post/git%E4%BD%BF%E7%94%A8%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E5%92%8C%E5%88%87%E6%8D%A2%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>

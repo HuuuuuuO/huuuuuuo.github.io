@@ -6,14 +6,14 @@
     <description>Recent content on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 11 Jun 2024 14:59:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2024 08:58:02 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>阅读笔记：《社会学的想象力》</title>
-      <link>https://huuuuuuo.github.io/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E7%A4%BE%E4%BC%9A%E5%AD%A6%E7%9A%84%E6%83%B3%E8%B1%A1%E5%8A%9B/</link>
-      <pubDate>Tue, 11 Jun 2024 10:27:35 +0800</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E7%A4%BE%E4%BC%9A%E5%AD%A6%E7%9A%84%E6%83%B3%E8%B1%A1%E5%8A%9B/</guid>
-      <description>——赖特·米尔斯《社会学的想象力》</description>
+      <title>白盒扫描如何与AI结合</title>
+      <link>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</link>
+      <pubDate>Fri, 14 Jun 2024 08:32:39 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</guid>
+      <description>1 出发点 将代码漏洞扫描（白盒扫描）与AI结合，可以通过多种方式来实现。 其出发点可以包括提高扫描的效率、准确性和覆盖率，提升功能使用便捷程度。</description>
     </item>
     <item>
       <title>Git使用：如何在本地管理和切换多个github账号</title>

@@ -6,8 +6,15 @@
     <description>Recent content in AI on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 05 Jun 2024 08:34:04 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2024 08:58:02 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>白盒扫描如何与AI结合</title>
+      <link>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</link>
+      <pubDate>Fri, 14 Jun 2024 08:32:39 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</guid>
+      <description>1 出发点 将代码漏洞扫描（白盒扫描）与AI结合，可以通过多种方式来实现。 其出发点可以包括提高扫描的效率、准确性和覆盖率，提升功能使用便捷程度。</description>
+    </item>
     <item>
       <title>学习笔记：《神经网络与深度学习》第二章及第一章练习优化</title>
       <link>https://huuuuuuo.github.io/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8F%8A%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0%E4%BC%98%E5%8C%96/</link>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>白盒扫描 on Nefelibata</title>
+    <link>https://huuuuuuo.github.io/tags/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F/</link>
+    <description>Recent content in 白盒扫描 on Nefelibata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 14 Jun 2024 08:57:37 +0800</lastBuildDate>
+    <atom:link href="https://huuuuuuo.github.io/tags/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>白盒扫描如何与AI结合</title>
+      <link>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</link>
+      <pubDate>Fri, 14 Jun 2024 08:32:39 +0800</pubDate>
+      <guid>https://huuuuuuo.github.io/post/%E7%99%BD%E7%9B%92%E6%89%AB%E6%8F%8F%E5%A6%82%E4%BD%95%E4%B8%8Eai%E7%BB%93%E5%90%88/</guid>
+      <description>1 出发点 将代码漏洞扫描（白盒扫描）与AI结合，可以通过多种方式来实现。 其出发点可以包括提高扫描的效率、准确性和覆盖率，提升功能使用便捷程度。</description>
+    </item>
+  </channel>
+</rss>
