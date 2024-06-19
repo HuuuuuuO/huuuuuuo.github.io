@@ -380,11 +380,11 @@
                         on
                         Tue 2024-06-04
                         
-                        | <span class="post-date">781 words</span> | about<span class="more-meta"> 2 mins</span>
+                        | <span class="post-date">980 words</span> | about<span class="more-meta"> 2 mins</span>
                         
                         
                         
-                        <br>Last Modified on Tue 2024-06-18
+                        <br>Last Modified on Wed 2024-06-19
                         
                         
                     </span>
@@ -498,6 +498,12 @@
 </li>
 </ol>
 <h2 id="32-计算误差">3.2 计算误差</h2>
+<ol>
+<li>计算神经网络的输出(预测值)和真值的误差。</li>
+<li>计算完误差后，需要将这个误差向不断的向前一层传播。<strong>向前一层传播时，需要考虑到前一个神经元的权重系数</strong>(因为不同神经元的重要性不同，因此回传时需要考虑权重系数)。</li>
+<li>与前向传播时相同，<strong>反向传播时后一层的节点会与前一层的多个节点相连，因此需要对所有节点的误差求和</strong>。</li>
+<li>计算出每个神经元的误差，接下来就更新权重。</li>
+</ol>
 <p>
 
 
@@ -529,6 +535,7 @@
 
 </p>
 <h2 id="33-更新权重">3.3 更新权重</h2>
+<p>η代表学习率，w′是更新后的权重，通过这个式子来更新权重。</p>
 <p>
 
 
@@ -539,7 +546,8 @@
 </div>
 
 </p>
-<p>有了计算误差和更新权重，反向传播就结束了。将这个过程不断重复，就可以不断减小误差，提高正确率，获得比较好的模型了。</p>
+<p>计算好误差，并且更新权重，反向传播就结束了。</p>
+<p>将这个过程不断重复，就可以不断减小误差，提高正确率，获得比较好的模型了。</p>
 
 
                     
@@ -1353,7 +1361,7 @@
                         
                     
                     发表了 56 篇文章 · 
-                    总计 7.89 万字
+                    总计 7.91 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
