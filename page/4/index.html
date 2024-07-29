@@ -429,23 +429,23 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/">
         <h2 class="post-title">
-            Hugo：增加搜索功能
+            Hugo：图片点击放大
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 显示效果 可以看到在右上角有一个搜索图标，原本是这个主题带的，原本是点击以后会进入一个新的 search页面进行搜索，但是我用的时候发现这个功
+            1 显示效果 想要知乎这种图片点击放大的效果，一查才知道是灯箱。 2 解决方案 2.1 修改 config.toml 在 config.toml文件中，添加如下代码： 1[params] 2 fancybox = true 2.2 创建
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Sun 2024-03-31 
+        Posted by Nefelibata on Fri 2024-03-29 
         
         
-        | Last Modified on Thu 2024-05-23 
+        | Last Modified on Sat 2024-03-30 
         
     
     </p>
@@ -455,23 +455,23 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%96%B0%E9%A1%B5%E9%9D%A2/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/">
         <h2 class="post-title">
-            Hugo：增加新页面
+            Hugo：访问量统计
         </h2>
 	
         <div class="post-content-preview">
 	
-            想要在网站上做几个新页面 1 在配置文件中新增标签 1 [[params.addtional_menus]] 2 title = &#34;TREND&#34; 3 href = &#34;/trend&#34; 2 新增页面布局 2.1 沿用已有布局 新增了标签以后，点进去是404，这是因为还没有
+            显示效果 解决方案 本文使用 不蒜子 来进行网站访问量的统计 前期也踩了几个坑，最后在官网发现了最佳解决方案，只需要将官网上的两行代码稍加改进就可以在
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Mon 2024-04-01 
+        Posted by Nefelibata on Wed 2024-03-27 
         
         
-        | Last Modified on Thu 2024-05-23 
+        | Last Modified on Sat 2024-03-30 
         
     
     </p>
@@ -481,23 +481,21 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/">
         <h2 class="post-title">
-            Hugo学习笔记（长期更新）
+            Hugo：添加热力图
         </h2>
 	
         <div class="post-content-preview">
 	
-            此文章用于长期更新hugo学习的内容 1 模板 1├── layouts 2└── themes 3 └── mytheme 4 └── layouts 5 ├── 404.html // 404页面模板 6 ├── _default 7 │ ├── baseof.html // 默认的基
+            1 显示效果 鼠标未移动到上面的时候，根据发表文章的数量显示热力图： 如果鼠标移动到上面，会显示当天发表的文章详情，并且可以点击进行跳转： 2 解决方
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Mon 2024-04-01 
+        Posted by Nefelibata on Sat 2024-03-30 
         
-        
-        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -507,23 +505,21 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">
         <h2 class="post-title">
-            Hugo：将首页文章按照最后修改时间显示
+            Hugo：添加评论功能
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 显示效果 现在可以按照最后更新时间进行排序了 2 修改代码 在 layouts\partials\portfolio.html 中，将以下一行代码替换成后面三行。 原代码： 1&lt;!-- {{ $paginator := .Paginate (where (where .Site.Pages &#34;Type&#34; &#34;post&#34;) &#34;IsPage&#34; true) }} --&gt; 替换成： 1{{ $sortedPages
+            1 显示效果 2 解决方案 我正在使用的主题所提供的评论方案是： 1 [params.giscus] 2 data_repo=&#34;your GitHub repo&#34; 3 data_repo_id=&#34;your repo id&#34; 4 data_category=&#34;your category&#34; 5 data_category_id=&#34;your category id&#34; 6 data_mapping=&#34;pathname&#34; 7 data_reactions_enabled=&#34;1&#34; 8 data_emit_metadata=&#34;0&#34; 9 data_theme=&#34;light&#34; 10 data_lang=&#34;en&#34; 11 crossorigin=&#34;anonymous&#34; 在申请giscus 的时候，
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Mon 2024-04-01 
+        Posted by Nefelibata on Thu 2024-03-28 
         
-        
-        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -533,101 +529,23 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/">
         <h2 class="post-title">
-            Hugo：阅读进度条
+            Hugo：代码块拷贝
         </h2>
 	
         <div class="post-content-preview">
 	
-            Hugo实现顶部阅读进度条功能
-        
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Tue 2024-04-02 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%BD%92%E6%A1%A3%E6%94%B9%E4%B8%BA%E5%B9%B4%E6%9C%88%E7%BB%9F%E8%AE%A1/">
-        <h2 class="post-title">
-            Hugo：归档改为年月日统计
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            Hugo的归档显示改为年月日统计
-        
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Thu 2024-04-04 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%AD%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E5%8A%A0%E7%A9%BA%E6%A0%BC/">
-        <h2 class="post-title">
-            Hugo：中英文之间自动加空格
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 显示效果 中英文之间auto自动加空格 2 解决方法 可以使用 盘古之白 在文件layouts\partials\footer.html中，加入以下代
+            本文转载与修改自：Hugo插件之代码块拷贝插件 添加按钮-css 我们通过检查博客内容页面发现，hugo生成的每个代码块格式如下： 没有语法突出显
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 2024-04-04 
+        Posted by Nefelibata on Thu 2024-03-21 
         
         
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA/">
-        <h2 class="post-title">
-            Hugo：增加台词随机展示
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 显示效果 2 解决方法 因为没找到这种台词的接口，于是就去网上搜罗了一堆放在csv里面，然后页面刷新的时候自动从csv中抽取一行台词进行展示。分
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Fri 2024-04-05 
-        
-        
-        | Last Modified on Thu 2024-05-23 
+        | Last Modified on Wed 2024-03-27 
         
     
     </p>
@@ -637,23 +555,21 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/">
         <h2 class="post-title">
-            Hugo：添加天气预报
+            Hugo：自定义字体
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 显示效果 给hugo博客添加天气预报的效果，其实不只是给hugo，所有博客都是通用的。 我自己想要一打开就能看到天气，所以增加了这个功能。可以
+            显示效果 解决方案 本博客使用的是 霞鹜文楷 ，要在网站使用此字体，可以查看 霞鹜文楷屏幕阅读版 网络字体仓库 1、插入代码 将以下代码插入 themes\hugo-theme-cleanwhite\layouts\partials\head.html 1&lt;html&gt; 2&lt;head&gt; 3 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css&#34; /&gt;
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Mon 2024-04-08 
+        Posted by Nefelibata on Wed 2024-03-27 
         
-        
-        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -663,23 +579,23 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
+    <a href="https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
         <h2 class="post-title">
-            Hugo：增加年月日时间进度条
+            git push：本地分支和远程分支冲突问题解决
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 显示效果 增加年、月、日的时间进度条显示，如下，可以显示当前时间在今天、当月、当年的进度。 2 解决方案 在侧边栏layouts\partials
+            1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&gt; main (non-fast-forward) 4error: failed to push some refs to &#39;https://github.com/xxxx.git&#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &#39;git pull ...&#39;) before pushing again. 8hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 2024-04-10 
+        Posted by Nefelibata on Tue 2024-03-19 
         
         
-        | Last Modified on Thu 2024-05-23 
+        | Last Modified on Wed 2024-03-27 
         
     
     </p>
@@ -689,23 +605,21 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E6%96%B0%E5%A2%9E%E7%83%AD%E6%A6%9C/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/">
         <h2 class="post-title">
-            Hugo博客改造：新增热榜
+            Hugo：博客运行时间
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 显示效果 通过接口获取各个平台的热搜榜，集成在自己的博客上 2 解决方法 首先，要找到热榜的接口，通过js访问接口来获取各大网站的热门榜。我使用的
+            文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方案 1&lt;!-- Add blog running time --&gt; 2本博客已稳定运行 3&lt;span id=&#34;runningdays&#34; class=&#34;running-days&#34;&gt;&lt;/span&gt; 4&lt;script&gt; 5let s1 = &#39;2024-3-18&#39;; //website start date 6s1 = new Date(s1.replace(/-/g, &#34;/&#34;)); 7let s2 = new Date(); 8let timeDifference = s2.getTime() - s1.getTime(); 9 10let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 11let
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 2024-04-11 
+        Posted by Nefelibata on Wed 2024-03-27 
         
-        
-        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -715,23 +629,21 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%80%E9%94%AE%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/">
         <h2 class="post-title">
-            Html页面嵌入流程图
+            Hugo：一键回到顶部
         </h2>
 	
         <div class="post-content-preview">
 	
-            想要在html页面中嵌入流程图，并且不能是图片，需要进行文本复制，同时还想要能够点击链接。考虑的方案是html+js。
+            文章参考自：https://github.com/sengmitnick/hugo-theme-hello-friend-ng/commit
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Thu 2024-04-18 
+        Posted by Nefelibata on Wed 2024-03-27 
         
-        
-        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -741,23 +653,101 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/github%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/">
         <h2 class="post-title">
-            Github新建仓库并添加本地代码或文件
+            Hugo：日常更新流程
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 在cmd创建新仓库 1.1 在github页面上新建仓库 1.2 在本地新建仓库 首先，创建.gitignore文件，将不需要上传的文件和文件夹写进去，例如
+            1、新建文章 进入blog本地仓库，新疆文章，写文章并修改 1cd F:\vscode\hugo-root 2hugo new post/文章名字.md 2、本地验证 1hugo serve -D --disableFastRender 2或 3hugo serve 3、更新public目录
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 2024-04-24 
+        Posted by Nefelibata on Wed 2024-03-20 
         
         
-        | Last Modified on Thu 2024-05-23 
+        | Last Modified on Fri 2024-03-22 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+        <h2 class="post-title">
+            git基本使用
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。 index：暂存区 workspace：工作区 resposi
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-20 
+        
+        
+        | Last Modified on Fri 2024-03-22 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/%E8%BF%9E%E6%8E%A5github%E6%97%B6connection-reset%E7%9A%84%E9%97%AE%E9%A2%98/">
+        <h2 class="post-title">
+            连接github时connection reset的问题
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            git连接时遇到问题 1ssh -T git@github.com 2Connection reset by 140.82.113.3 port 22 解决方案 在所生成ssh秘钥文件夹下（~/.ssh/）使用文本文档新建 config文件（无后缀）。 修改代
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-03-21 
+        
+        
+        | Last Modified on Fri 2024-03-22 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
+        <h2 class="post-title">
+            Hugo：图片存储路径优化
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-03-21 
+        
+        
+        | Last Modified on Fri 2024-03-22 
         
     
     </p>
@@ -1024,7 +1014,7 @@ function updateProgress(progressId, newValue) {
   
     var key = "2024-07-29";
     var value = dataMap.get(key);
-    var wordCount =  2694 ;
+    var wordCount =  2769 ;
     var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%BC%97%E6%B4%9B%E5%A7%86%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF/";
     var title = "阅读笔记：弗洛姆《爱的艺术》";
     
@@ -2603,7 +2593,7 @@ function updateProgress(progressId, newValue) {
                         
                     
                     发表了 58 篇文章 · 
-                    总计 8.31 万字
+                    总计 8.32 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
