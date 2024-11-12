@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Nefelibata</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Nov 2024 11:40:56 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2024 11:39:26 +0800</lastBuildDate>
     <atom:link href="https://huuuuuuo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>阅读笔记：黑塞《悉达多》</title>
@@ -420,13 +420,6 @@
       <pubDate>Tue, 19 Mar 2024 19:30:42 +0800</pubDate>
       <guid>https://huuuuuuo.github.io/post/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description>1 failed to push some refs 报错 1git push -u origin main 2To https://github.com/xxxx.git 3 ! [rejected] main -&amp;gt; main (non-fast-forward) 4error: failed to push some refs to &amp;#39;https://github.com/xxxx.git&amp;#39; 5hint: Updates were rejected because the tip of your current branch is behind 6hint: its remote counterpart. Integrate the remote changes (e.g. 7hint: &amp;#39;git pull ...&amp;#39;) before pushing again. 8hint: See the &amp;#39;Note about fast-forwards&amp;#39; in &amp;#39;git push --help&amp;#39; for</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://huuuuuuo.github.io/post/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://huuuuuuo.github.io/post/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%AC%94%E8%AE%B0/</guid>
-      <description>科目一笔记 来源： http://xhslink.com/a/iotnqLugsDOY http://xhslink.com/a/8Hw9uYFFGHOY</description>
     </item>
   </channel>
 </rss>
