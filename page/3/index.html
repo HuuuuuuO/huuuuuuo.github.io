@@ -135,6 +135,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%BB%91%E5%A1%9E%E6%82%89%E8%BE%BE%E5%A4%9A\/?utm_source=random",
+      
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%BC%97%E6%B4%9B%E5%A7%86%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF\/?utm_source=random",
       
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E4%B8%87%E7%BB%B4%E9%92%A2%E6%8B%90%E7%82%B9\/?utm_source=random",
@@ -250,6 +252,8 @@
       "\/post\/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo\u002bgithubpages-copy\/?utm_source=random",
       
       "\/post\/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3\/?utm_source=random",
+      
+      "\/post\/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%AC%94%E8%AE%B0\/?utm_source=random",
       ];
     const rand = Math.floor(Math.random() * pages.length);
     window.location.href = pages[rand];
@@ -429,301 +433,23 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
         <h2 class="post-title">
-            Hugo：文字标记
+            Hugo：图片存储路径优化
         </h2>
 	
         <div class="post-content-preview">
 	
-            1 显示效果 第一种，正经标记： 对文字进行标记 第二种，将文字放在代码里，利用代码的颜色来进行标记： 对文字进行标记 2 解决方案 首先，利用短代码，添加
+            使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Sat 2024-03-30 
+        Posted by Nefelibata on Thu 2024-03-21 
         
         
-        | Last Modified on Mon 2024-04-01 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%AD%A6%E4%B9%A0/">
-        <h2 class="post-title">
-            Hugo学习笔记（长期更新）
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            此文章用于长期更新hugo学习的内容 1 模板 1├── layouts 2└── themes 3 └── mytheme 4 └── layouts 5 ├── 404.html // 404页面模板 6 ├── _default 7 │ ├── baseof.html // 默认的基
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Mon 2024-04-01 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%B0%86%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E6%9C%80%E5%90%8E%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/">
-        <h2 class="post-title">
-            Hugo：将首页文章按照最后修改时间显示
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 显示效果 现在可以按照最后更新时间进行排序了 2 修改代码 在 layouts\partials\portfolio.html 中，将以下一行代码替换成后面三行。 原代码： 1&lt;!-- {{ $paginator := .Paginate (where (where .Site.Pages &#34;Type&#34; &#34;post&#34;) &#34;IsPage&#34; true) }} --&gt; 替换成： 1{{ $sortedPages
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Mon 2024-04-01 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
-        <h2 class="post-title">
-            Hugo：增加搜索功能
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 显示效果 可以看到在右上角有一个搜索图标，原本是这个主题带的，原本是点击以后会进入一个新的 search页面进行搜索，但是我用的时候发现这个功
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sun 2024-03-31 
-        
-        
-        | Last Modified on Mon 2024-04-01 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/githubpages%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D/">
-        <h2 class="post-title">
-            GithubPages配置域名
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 申请域名 可以去找个免费域名网站，我用的是： 域名申请或者购买成功了以后，我们还需要解析域名。 2 解析域名 输入ping xxx.github.io
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sun 2024-03-31 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/">
-        <h2 class="post-title">
-            Hugo：代码高亮风格
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 代码高亮风格 代码高亮风格很多，可以参见 Chroma Style Gallery 看起来都不错，可以考虑添加进 hugo 2 遇到问题 之前我已经在 config.toml 中已经添加如下配置： 1[markup] 2 [markup.highlight] 3 codeFences = true 4 guessSyntax =
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sat 2024-03-30 
-        
-        
-        | Last Modified on Sun 2024-03-31 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95cname%E7%AD%89%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88/">
-        <h2 class="post-title">
-            域名、A记录、CNAME等都是什么
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            今天想要给博客搞个域名，涉及了一大堆专业名词，在此记录一下。 1 域名 域名就是最常见的网址，比如 www.baidu.com ，因为ip地址不好记，所以用域名来代替，我们访
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sun 2024-03-31 
-        
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/">
-        <h2 class="post-title">
-            Hugo：总字数统计
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方法 我是直接在主题上面改的，在主题的 layouts/partials/footer.html 里增加以下代码： 1&lt;!-- 添加在copyright之前 --&gt; 2 3&lt;!-- Add total page and word count time --&gt; 4{{$scratch := newScratch}} 5{{ range
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-        | Last Modified on Sun 2024-03-31 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/">
-        <h2 class="post-title">
-            Hugo：一些有趣的短代码收集
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            首先感谢 眠于水月间 大佬，文章主要收集于他的文章，[Hugo | 在 Stack 主题上可行的短代码们] 本文旨在收集一些有趣的短代码，因此主要是呈现使用方式，
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sat 2024-03-30 
-        
-        
-        | Last Modified on Sun 2024-03-31 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/">
-        <h2 class="post-title">
-            Hugo：添加随机浏览文章功能
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            偶然看见了一位大佬的博客 给 Hugo 博客添加随机文章入口 ，发现了他做了这个功能，感觉可以搞一下，于是借鉴了她的代码，感谢。 1 显示效果 在博客的右上角添
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sat 2024-03-30 
-        
-        
-        | Last Modified on Sun 2024-03-31 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD-copy/">
-        <h2 class="post-title">
-            关于GPT的底层原理和未来影响（转载）
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            视频是关于GPT的底层原理和未来影响。将抛开技术细节，少用专业名词，在整体功能上讲解ChatGPT 的「工作原理」「制造过程」「涌现的能力」「
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-20 
-        
-        
-        | Last Modified on Sat 2024-03-30 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
-        <h2 class="post-title">
-            Hugo：内容折叠与代码块大小限制
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            1 目前显示效果 1git add . 2git commit -m &#34;update&#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&lt;details style=&#34;background-color:#ffffff;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);&#34;&gt; 2 &lt;summary&gt; &lt;font color=#817f7f&gt; &gt; &gt; &gt; 展开 &gt; &gt; &gt; &lt;/font&gt;&lt;/summary&gt; 3 {{ .Inner | markdownify }} 4&lt;/details&gt; 以
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Wed 2024-03-27 
-        
-        
-        | Last Modified on Sat 2024-03-30 
+        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -749,7 +475,267 @@
         Posted by Nefelibata on Wed 2024-03-27 
         
         
-        | Last Modified on Sat 2024-03-30 
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%80%BB%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/">
+        <h2 class="post-title">
+            Hugo：总字数统计
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方法 我是直接在主题上面改的，在主题的 layouts/partials/footer.html 里增加以下代码： 1&lt;!-- 添加在copyright之前 --&gt; 2 3&lt;!-- Add total page and word count time --&gt; 4{{$scratch := newScratch}} 5{{ range
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/">
+        <h2 class="post-title">
+            Hugo：博客运行时间
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            文章参考自 https://thirdshire.com/hugo-stack-renovation/ 显示效果 解决方案 1&lt;!-- Add blog running time --&gt; 2本博客已稳定运行 3&lt;span id=&#34;runningdays&#34; class=&#34;running-days&#34;&gt;&lt;/span&gt; 4&lt;script&gt; 5let s1 = &#39;2024-3-18&#39;; //website start date 6s1 = new Date(s1.replace(/-/g, &#34;/&#34;)); 7let s2 = new Date(); 8let timeDifference = s2.getTime() - s1.getTime(); 9 10let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 11let
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%80%E9%94%AE%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/">
+        <h2 class="post-title">
+            Hugo：一键回到顶部
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            文章参考自：https://github.com/sengmitnick/hugo-theme-hello-friend-ng/commit
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/">
+        <h2 class="post-title">
+            Hugo：自定义字体
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            显示效果 解决方案 本博客使用的是 霞鹜文楷 ，要在网站使用此字体，可以查看 霞鹜文楷屏幕阅读版 网络字体仓库 1、插入代码 将以下代码插入 themes\hugo-theme-cleanwhite\layouts\partials\head.html 1&lt;html&gt; 2&lt;head&gt; 3 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css&#34; /&gt;
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1/">
+        <h2 class="post-title">
+            Hugo：访问量统计
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            显示效果 解决方案 本文使用 不蒜子 来进行网站访问量的统计 前期也踩了几个坑，最后在官网发现了最佳解决方案，只需要将官网上的两行代码稍加改进就可以在
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%86%85%E5%AE%B9%E6%8A%98%E5%8F%A0%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
+        <h2 class="post-title">
+            Hugo：内容折叠与代码块大小限制
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 目前显示效果 1git add . 2git commit -m &#34;update&#34; 3git push origin master 2 解决方案 2.1 内容折叠 新建 themes\hugo-theme-cleanwhite\layouts\shortcodes\details.html 文件，并添加以下代码： 1&lt;details style=&#34;background-color:#ffffff;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);&#34;&gt; 2 &lt;summary&gt; &lt;font color=#817f7f&gt; &gt; &gt; &gt; 展开 &gt; &gt; &gt; &lt;/font&gt;&lt;/summary&gt; 3 {{ .Inner | markdownify }} 4&lt;/details&gt; 以
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Wed 2024-03-27 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">
+        <h2 class="post-title">
+            Hugo：添加评论功能
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 显示效果 2 解决方案 我正在使用的主题所提供的评论方案是： 1 [params.giscus] 2 data_repo=&#34;your GitHub repo&#34; 3 data_repo_id=&#34;your repo id&#34; 4 data_category=&#34;your category&#34; 5 data_category_id=&#34;your category id&#34; 6 data_mapping=&#34;pathname&#34; 7 data_reactions_enabled=&#34;1&#34; 8 data_emit_metadata=&#34;0&#34; 9 data_theme=&#34;light&#34; 10 data_lang=&#34;en&#34; 11 crossorigin=&#34;anonymous&#34; 在申请giscus 的时候，
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-03-28 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/">
+        <h2 class="post-title">
+            Hugo：图片点击放大
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 显示效果 想要知乎这种图片点击放大的效果，一查才知道是灯箱。 2 解决方案 2.1 修改 config.toml 在 config.toml文件中，添加如下代码： 1[params] 2 fancybox = true 2.2 创建
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Fri 2024-03-29 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E7%83%AD%E5%8A%9B%E5%9B%BE/">
+        <h2 class="post-title">
+            Hugo：添加热力图
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 显示效果 鼠标未移动到上面的时候，根据发表文章的数量显示热力图： 如果鼠标移动到上面，会显示当天发表的文章详情，并且可以点击进行跳转： 2 解决方
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sat 2024-03-30 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/">
+        <h2 class="post-title">
+            Hugo：代码高亮风格
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            1 代码高亮风格 代码高亮风格很多，可以参见 Chroma Style Gallery 看起来都不错，可以考虑添加进 hugo 2 遇到问题 之前我已经在 config.toml 中已经添加如下配置： 1[markup] 2 [markup.highlight] 3 codeFences = true 4 guessSyntax =
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sat 2024-03-30 
+        
+        
+        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -775,6 +761,8 @@
         Posted by Nefelibata on Sat 2024-03-30 
         
         
+        | Last Modified on Thu 2024-05-23 
+        
     
     </p>
 
@@ -783,23 +771,49 @@
 <hr>
 
 <div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%96%87%E5%AD%97%E6%A0%87%E8%AE%B0/">
         <h2 class="post-title">
-            Typora快捷键
+            Hugo：文字标记
         </h2>
 	
         <div class="post-content-preview">
 	
-            本地编辑md我用的是typora，用一些快捷键会更好用 设置标题 ctrl + 1 ~6 标题1~6 等同于 一级标题：#+空格+标题内容 二级标题：##+空格+标题
+            1 显示效果 第一种，正经标记： 对文字进行标记 第二种，将文字放在代码里，利用代码的颜色来进行标记： 对文字进行标记 2 解决方案 首先，利用短代码，添加
        
         </div>
     </a>
     <p class="post-meta">
     
-        Posted by Nefelibata on Wed 2024-03-20 
+        Posted by Nefelibata on Sat 2024-03-30 
         
         
-        | Last Modified on Sat 2024-03-30 
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/">
+        <h2 class="post-title">
+            Hugo：一些有趣的短代码收集
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            首先感谢 眠于水月间 大佬，文章主要收集于他的文章，[Hugo | 在 Stack 主题上可行的短代码们] 本文旨在收集一些有趣的短代码，因此主要是呈现使用方式，
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Sat 2024-03-30 
+        
+        
+        | Last Modified on Thu 2024-05-23 
         
     
     </p>
@@ -1068,6 +1082,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2024-11-12";
+    var value = dataMap.get(key);
+    var wordCount =  25 ;
+    var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%BB%91%E5%A1%9E%E6%82%89%E8%BE%BE%E5%A4%9A/";
+    var title = "阅读笔记：黑塞《悉达多》";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-07-29";
     var value = dataMap.get(key);
     var wordCount =  2769 ;
@@ -1763,6 +1789,18 @@ function updateProgress(progressId, newValue) {
       dataMap.set(key, [{wordCount,link, title}]);
     } else {
       value.push({wordCount,link, title});
+    }
+    var key = "0001-01-01";
+    var value = dataMap.get(key);
+    var wordCount =  10 ;
+    var link = "/post/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%AC%94%E8%AE%B0/";
+    var title = "";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
     }var data = [];
   for (const [key, value] of dataMap.entries()) {
     data.push([key, value.length]);
@@ -2244,6 +2282,12 @@ function updateProgress(progressId, newValue) {
         
         
         
+        <a href="/tags/%E6%82%89%E8%BE%BE%E5%A4%9A" title="悉达多">
+            悉达多
+        </a>
+        
+        
+        
         <a href="/tags/%E6%8A%98%E5%8F%A0" title="折叠">
             折叠
         </a>
@@ -2648,7 +2692,11 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 58 篇文章 · 
+                        
+                    
+                        
+                    
+                    发表了 60 篇文章 · 
                     总计 8.32 万字
                     <br>
                     
