@@ -19,9 +19,9 @@
     
 
     
-    <meta name="title" content="Hugo：添加天气预报" />
-    <meta property="og:title" content="Hugo：添加天气预报" />
-    <meta property="twitter:title" content="Hugo：添加天气预报" />
+    <meta name="title" content="阅读笔记：冷笑话收集" />
+    <meta property="og:title" content="阅读笔记：冷笑话收集" />
+    <meta property="twitter:title" content="阅读笔记：冷笑话收集" />
     
 
     
@@ -49,9 +49,9 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <title>Hugo：添加天气预报 | Blog</title>
+    <title>阅读笔记：冷笑话收集 | Blog</title>
 
-    <link rel="canonical" href="/post/hugo%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/">
+    <link rel="canonical" href="/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%86%B7%E7%AC%91%E8%AF%9D%E6%94%B6%E9%9B%86/">
 
     
     
@@ -365,20 +365,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/hugo" title="hugo">
-                            hugo
-                        </a>
-                        
-                        <a class="tag" href="/tags/%e5%a4%a9%e6%b0%94%e9%a2%84%e6%8a%a5" title="天气预报">
-                            天气预报
-                        </a>
-                        
-                        <a class="tag" href="/tags/%e5%8d%9a%e5%ae%a2%e6%94%b9%e9%80%a0" title="博客改造">
-                            博客改造
+                        <a class="tag" href="/tags/%e5%86%b7%e7%ac%91%e8%af%9d" title="冷笑话">
+                            冷笑话
                         </a>
                         
                     </div>
-                    <h1>Hugo：添加天气预报</h1>
+                    <h1>阅读笔记：冷笑话收集</h1>
 
                     <h2 class="subheading"></h2>
                     <span class="meta">
@@ -388,13 +380,13 @@
                         Nefelibata
                         
                         on
-                        Mon 2024-04-08
+                        Thu 2024-05-30
                         
-                        | <span class="post-date">1134 words</span> | about<span class="more-meta"> 3 mins</span>
+                        | <span class="post-date">681 words</span> | about<span class="more-meta"> 2 mins</span>
                         
                         
                         
-                        <br>Last Modified on Thu 2024-05-23
+                        <br>Last Modified on Wed 2024-12-18
                         
                         
                     </span>
@@ -423,184 +415,80 @@
                 
 
              
-                    <h1 id="1-显示效果">1 显示效果</h1>
-<p>给hugo博客添加天气预报的效果，其实不只是给hugo，所有博客都是通用的。</p>
-<p>我自己想要一打开就能看到天气，所以增加了这个功能。可以根据你的IP显示城市，并且显示未来几天的天气预报。</p>
-<p>显示效果是这样的：</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240408220214982.png">
-<img src="/img/image-20240408220214982.png" alt="image-20240408220214982"  />
-</a>
-</div>
-
-</p>
-<h1 id="2-解决方案">2 解决方案</h1>
-<h2 id="21-天气查询api">2.1 天气查询api</h2>
-<p>要显示天气就必须有天气预报的api，查了一下发现高德开放平台有天气的api <a href="https://lbs.amap.com/api/webservice/guide/api/weatherinfo">天气查询</a> ，于是就开始马不停蹄地添加到博客上。</p>
-<h3 id="211-申请key">2.1.1 申请key</h3>
-<p>首先，打开<a href="https://lbs.amap.com/">高德开放平台</a>注册账号，或者用高德地图扫码。</p>
-<p>然后，进入控制台，选择创建新应用，应用类型选择天气。</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240408221254754.png">
-<img src="/img/image-20240408221254754.png" alt="image-20240408221254754"  />
-</a>
-</div>
-
-</p>
-<p>创建好应用以后，选择右上角的<code>添加key</code>，然后 <code>服务平台</code>中选择<code>web服务</code>就行了。可以看到下面的可使用服务是很广的，这一个key就可以同时用于这些服务上面。</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240408222921495.png">
-<img src="/img/image-20240408222921495.png" alt="image-20240408222921495"  />
-</a>
-</div>
-
-</p>
-<p>提交以后，就会显示你的key，这个key就可以用在api的参数里面了。</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240408221235620.png">
-<img src="/img/image-20240408221235620.png" alt="image-20240408221235620"  />
-</a>
-</div>
-
-</p>
-<h3 id="212-api使用">2.1.2 api使用</h3>
-<p>api的使用就是按照api文档来就行了，其中key和city是必须的参数，city参数可以从城市编码表中获取。</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240408221501209.png">
-<img src="/img/image-20240408221501209.png" alt="image-20240408221501209"  />
-</a>
-</div>
-
-</p>
-<p>返回的结果有很多，在api文档也能看到，选取你需要的参数就行了。</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240408221734414.png">
-<img src="/img/image-20240408221734414.png" alt="image-20240408221734414"  />
-</a>
-</div>
-
-</p>
-<h2 id="22-ip定位api">2.2 IP定位api</h2>
-<p>如果只需要固定显示一个地方的天气，那么直接在请求中硬编码输入城市的编码就行了，但是我想要自动定位IP，那么就可以用到高德开放平台的另一个api，<a href="https://lbs.amap.com/api/webservice/guide/api/ipconfig">IP定位</a> 。</p>
-<p>必填的参数就一个，你的key。刚才申请的key也可以用于这里。</p>
-<p>
-
-
-<div class="post-img-view">
-<a data-fancybox="gallery" href="/img/image-20240408222413396.png">
-<img src="/img/image-20240408222413396.png" alt="image-20240408222413396"  />
-</a>
-</div>
-
-</p>
-<h2 id="23-页面展示">2.3 页面展示</h2>
-<p>添加<code>\layouts\partials\weather.html</code>，完整的html代码在下面，将api里面的<code>yourkey</code>替换成你自己的key就可以了。</p>
-
-
-
-
-<details style="background-color:#e6e3e336;border-radius:6px;border:2px dashed rgba(187, 181, 181, 0.712);">
-    <div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">style</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#797593">.</span><span style="color:#56949f">weatherReport</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>       <span style="color:#286983">font-size</span><span style="color:#797593">:</span> <span style="color:#ea9d34">15</span><span style="color:#286983">px</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>       <span style="color:#286983">color</span><span style="color:#797593">:</span> <span style="color:#ea9d34">#1f373c</span><span style="color:#ea9d34">8</span><span style="color:#d7827e">c</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">style</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">h5</span> <span style="color:#d7827e">class</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;locationInfo&#34;</span> <span style="color:#d7827e">id</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;locationInfo&#34;</span><span style="color:#797593">&gt;&lt;/</span><span style="color:#d7827e">h5</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">span</span> <span style="color:#d7827e">class</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;weatherReport&#34;</span> <span style="color:#d7827e">id</span><span style="color:#797593">=</span><span style="color:#ea9d34">&#34;weatherReport&#34;</span><span style="color:#797593">&gt;&lt;/</span><span style="color:#d7827e">span</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#286983">const</span> <span style="color:#d7827e">apicityUrl</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;https://restapi.amap.com/v3/ip?key=yourkey&#39;</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    <span style="color:#286983">const</span> <span style="color:#d7827e">apiUrlTemplate</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">&#39;https://restapi.amap.com/v3/weather/weatherInfo?city=350103&amp;key=yourkey&amp;extensions=all&#39;</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#d7827e">fetch</span><span style="color:#797593">(</span><span style="color:#d7827e">apicityUrl</span><span style="color:#797593">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        <span style="color:#797593">.</span><span style="color:#d7827e">then</span><span style="color:#797593">(</span><span style="color:#d7827e">response</span> <span style="color:#797593">=&gt;</span> <span style="color:#d7827e">response</span><span style="color:#797593">.</span><span style="color:#d7827e">json</span><span style="color:#797593">())</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>        <span style="color:#797593">.</span><span style="color:#d7827e">then</span><span style="color:#797593">(</span><span style="color:#d7827e">data</span> <span style="color:#797593">=&gt;</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">province</span> <span style="color:#797593">=</span> <span style="color:#d7827e">data</span><span style="color:#797593">.</span><span style="color:#d7827e">province</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">city</span> <span style="color:#797593">=</span> <span style="color:#d7827e">data</span><span style="color:#797593">.</span><span style="color:#d7827e">city</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">adcode</span> <span style="color:#797593">=</span> <span style="color:#d7827e">data</span><span style="color:#797593">.</span><span style="color:#d7827e">adcode</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>            <span style="color:#9893a5">// 显示省份和城市信息
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#9893a5"></span>            <span style="color:#d7827e">document</span><span style="color:#797593">.</span><span style="color:#d7827e">getElementById</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;locationInfo&#39;</span><span style="color:#797593">).</span><span style="color:#d7827e">innerHTML</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">`WEATHER | </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">province</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34"> </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">city</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34">`</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>            <span style="color:#9893a5">// 将 adcode 插入到 apiUrl 中
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#9893a5"></span>            <span style="color:#286983">const</span> <span style="color:#d7827e">apiUrl</span> <span style="color:#797593">=</span> <span style="color:#d7827e">apiUrlTemplate</span><span style="color:#797593">.</span><span style="color:#d7827e">replace</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;{adcode}&#39;</span><span style="color:#797593">,</span> <span style="color:#d7827e">adcode</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>            <span style="color:#9893a5">// 使用新的 apiUrl 获取天气信息
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span><span style="color:#9893a5"></span>            <span style="color:#286983">return</span> <span style="color:#d7827e">fetch</span><span style="color:#797593">(</span><span style="color:#d7827e">apiUrl</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>        <span style="color:#797593">})</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>        <span style="color:#797593">.</span><span style="color:#d7827e">then</span><span style="color:#797593">(</span><span style="color:#d7827e">response</span> <span style="color:#797593">=&gt;</span> <span style="color:#d7827e">response</span><span style="color:#797593">.</span><span style="color:#d7827e">json</span><span style="color:#797593">())</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>    <span style="color:#797593">.</span><span style="color:#d7827e">then</span><span style="color:#797593">(</span><span style="color:#d7827e">data</span> <span style="color:#797593">=&gt;</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>        <span style="color:#286983">if</span> <span style="color:#797593">(</span><span style="color:#d7827e">data</span><span style="color:#797593">.</span><span style="color:#d7827e">status</span> <span style="color:#797593">===</span> <span style="color:#ea9d34">&#34;1&#34;</span> <span style="color:#797593">&amp;&amp;</span> <span style="color:#d7827e">data</span><span style="color:#797593">.</span><span style="color:#d7827e">count</span> <span style="color:#797593">===</span> <span style="color:#ea9d34">&#34;1&#34;</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">forecast</span> <span style="color:#797593">=</span> <span style="color:#d7827e">data</span><span style="color:#797593">.</span><span style="color:#d7827e">forecasts</span><span style="color:#797593">[</span><span style="color:#ea9d34">0</span><span style="color:#797593">];</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">reportTime</span> <span style="color:#797593">=</span> <span style="color:#d7827e">forecast</span><span style="color:#797593">.</span><span style="color:#d7827e">reporttime</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">city</span> <span style="color:#797593">=</span> <span style="color:#d7827e">forecast</span><span style="color:#797593">.</span><span style="color:#d7827e">city</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">province</span> <span style="color:#797593">=</span> <span style="color:#d7827e">forecast</span><span style="color:#797593">.</span><span style="color:#d7827e">province</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>            <span style="color:#286983">let</span> <span style="color:#d7827e">weatherReport</span> <span style="color:#797593">=</span> <span style="color:#ea9d34">``</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>        <span style="color:#d7827e">forecast</span><span style="color:#797593">.</span><span style="color:#d7827e">casts</span><span style="color:#797593">.</span><span style="color:#d7827e">forEach</span><span style="color:#797593">((</span><span style="color:#d7827e">cast</span><span style="color:#797593">,</span> <span style="color:#d7827e">index</span><span style="color:#797593">)</span> <span style="color:#797593">=&gt;</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">date</span> <span style="color:#797593">=</span> <span style="color:#d7827e">cast</span><span style="color:#797593">.</span><span style="color:#d7827e">date</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">parts</span> <span style="color:#797593">=</span> <span style="color:#d7827e">date</span><span style="color:#797593">.</span><span style="color:#d7827e">split</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#34;-&#34;</span><span style="color:#797593">);</span> 
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">newDate</span> <span style="color:#797593">=</span> <span style="color:#d7827e">parts</span><span style="color:#797593">.</span><span style="color:#d7827e">slice</span><span style="color:#797593">(</span><span style="color:#ea9d34">1</span><span style="color:#797593">).</span><span style="color:#d7827e">join</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#34;-&#34;</span><span style="color:#797593">);</span> 
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">nightWeather</span> <span style="color:#797593">=</span> <span style="color:#d7827e">cast</span><span style="color:#797593">.</span><span style="color:#d7827e">nightweather</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">dayWeather</span> <span style="color:#797593">=</span> <span style="color:#d7827e">cast</span><span style="color:#797593">.</span><span style="color:#d7827e">dayweather</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">daytemp</span> <span style="color:#797593">=</span> <span style="color:#d7827e">cast</span><span style="color:#797593">.</span><span style="color:#d7827e">daytemp</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>            <span style="color:#286983">const</span> <span style="color:#d7827e">nighttemp</span> <span style="color:#797593">=</span> <span style="color:#d7827e">cast</span><span style="color:#797593">.</span><span style="color:#d7827e">nighttemp</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span>            <span style="color:#9893a5">// 检查是否是第一个预报
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span><span style="color:#9893a5"></span>            <span style="color:#286983">if</span> <span style="color:#797593">(</span><span style="color:#d7827e">index</span> <span style="color:#797593">===</span> <span style="color:#ea9d34">0</span><span style="color:#797593">)</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>                <span style="color:#9893a5">// 如果是第一个预报，不添加 &lt;br&gt;
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span><span style="color:#9893a5"></span>                <span style="color:#d7827e">weatherReport</span> <span style="color:#797593">+=</span> <span style="color:#ea9d34">`</span><span style="color:#ea9d34">${</span><span style="color:#d7827e">newDate</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34">&lt;br&gt;日夜温度: </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">daytemp</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34"> ~ </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">nighttemp</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34">℃&lt;br&gt;日夜天气: </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">nightWeather</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34"> ~ </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">dayWeather</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34">&lt;br&gt;`</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>            <span style="color:#797593">}</span> <span style="color:#286983">else</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>                <span style="color:#9893a5">// 如果不是第一个预报，添加 &lt;br&gt;
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span><span style="color:#9893a5"></span>                <span style="color:#d7827e">weatherReport</span> <span style="color:#797593">+=</span> <span style="color:#ea9d34">`&lt;br&gt;</span><span style="color:#ea9d34">${</span><span style="color:#d7827e">newDate</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34">&lt;br&gt;日夜温度: </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">daytemp</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34"> ~ </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">nighttemp</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34">℃&lt;br&gt;日夜天气: </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">nightWeather</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34"> ~ </span><span style="color:#ea9d34">${</span><span style="color:#d7827e">dayWeather</span><span style="color:#ea9d34">}</span><span style="color:#ea9d34">&lt;br&gt;`</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span>            <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span>        <span style="color:#797593">});</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span>            <span style="color:#d7827e">document</span><span style="color:#797593">.</span><span style="color:#d7827e">getElementById</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;weatherReport&#39;</span><span style="color:#797593">).</span><span style="color:#d7827e">innerHTML</span> <span style="color:#797593">=</span> <span style="color:#d7827e">weatherReport</span><span style="color:#797593">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span>        <span style="color:#797593">}</span> <span style="color:#286983">else</span> <span style="color:#797593">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span><span>            <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">error</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;Error fetching weather data&#39;</span><span style="color:#797593">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span><span>        <span style="color:#797593">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span><span>    <span style="color:#797593">})</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65</span><span>    <span style="color:#797593">.</span><span style="color:#286983">catch</span><span style="color:#797593">(</span><span style="color:#d7827e">error</span> <span style="color:#797593">=&gt;</span> <span style="color:#d7827e">console</span><span style="color:#797593">.</span><span style="color:#d7827e">error</span><span style="color:#797593">(</span><span style="color:#ea9d34">&#39;Error:&#39;</span><span style="color:#797593">,</span> <span style="color:#d7827e">error</span><span style="color:#797593">));</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">script</span><span style="color:#797593">&gt;</span>
-</span></span></code></pre></div>
-</details>
-
-
-
-
-
-
-
-<p>因为我是放在侧边栏，所以在<code>\layouts\partials\sidebar.html</code>文件中，添加以下代码：</p>
-<div class="highlight"><pre tabindex="0" style="color:#575279;background-color:#faf4ed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#9893a5">&lt;!-- WEATHER --&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#797593">&lt;</span><span style="color:#d7827e">section</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#797593">&lt;</span><span style="color:#d7827e">hr</span><span style="color:#797593">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>{{ partial &#34;weather&#34; . }}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#797593">&lt;/</span><span style="color:#d7827e">section</span><span style="color:#797593">&gt;</span>
-</span></span></code></pre></div><p>如果想放在别的位置，也可以自己调整位置。</p>
-<p>以上。</p>
+                    <ol>
+<li>
+<p>猫会喵喵叫，狗会汪汪汪，鸭会嘎嘎嘎，鸡会什么？</p>
+<p>鸡会留给有准备的人</p>
+</li>
+<li>
+<p>一朵花为什么好笑？</p>
+<p>因为它有梗</p>
+</li>
+<li>
+<p>为什么蚊子不吃辣椒？</p>
+<p>因为蚊子吃blood（不辣的）</p>
+</li>
+<li>
+<p>迪迦哪里的？</p>
+<p>东北的，因为我迪迦在东北</p>
+</li>
+<li>
+<p>知道狐狸为什么站不起来吗？</p>
+<p>因为他狡猾</p>
+</li>
+<li>
+<p>晏子使楚，晏子被人羞辱后离开，有认识晏子的大臣一听，急忙追去，</p>
+<p>说“晏子！晏子！没有你我可怎么活啊！”</p>
+</li>
+<li>
+<p>你知道恐怖片中为什么诡异的房子里都会有钢琴和邮箱吗？</p>
+<p>因为钢琴…住了几个妖，邮箱住了几个魔</p>
+</li>
+<li>
+<p>进门要求填个人信息，我瞎填的，</p>
+<p>于是我的身份成为了秘密:“瞎填瞎填悄悄过去，留下小秘密~”</p>
+</li>
+<li>
+<p>煎蛋爱上了荷包蛋，它拿着吉他，走到荷包蛋楼下唱：“这是一首煎蛋的小情歌。”</p>
+</li>
+<li>
+<p>虾和蚌同时考了100分，老师问虾你抄谁的？</p>
+<p><code>虾说：“我抄蚌的。”</code>老师说：“你棒什么棒。”</p>
+</li>
+<li>
+<p>一只迷路的蚂蚁问另一只蚂蚁:“你都如何回蚁窝？”被问的蚂蚁说:“带着笑或是很沉默”</p>
+</li>
+<li>
+<p>蚂蚁的牙是什么颜色的，蚂蚁牙黑，蚂蚁牙黑</p>
+</li>
+<li>
+<p>从前有个猎人，他正在丛林中打猎，看见了一只狐狸，于是对着狐狸开了一枪，但他自己却死了，其实内是个反射弧</p>
+</li>
+<li>
+<p>为什么阿姨不流汗，因为阿姨怕留下姨汗</p>
+</li>
+<li>
+<p>知道海鸥到哪不会叫吗？巴黎，因为巴黎鸥来哑（巴黎欧莱雅）</p>
+</li>
+<li>
+<p>为什么许仙每次生气，白素贞一唱歌许仙就绕过他了，因为她擅长绕蛇歌曲</p>
+</li>
+<li>
+<p>为什么超人要穿紧身衣？<code>因为救人要紧</code></p>
+</li>
+<li>
+<p>为什么哆啦A梦没有脖子？<code>因为蓝脖积泥</code></p>
+</li>
+<li>
+<p>吃着吃着停电了，我连忙扒拉了两口饭，突然灯亮了，<code>我惊呼：“莫非这就是传说中的扒拉拉能亮？”</code></p>
+</li>
+<li>
+<p>满分10分给你8.5分，你知道为什么吗？因为我有1.5语</p>
+</li>
+<li>
+<p>小猪小牛和小羊一起去便利店，出来的时候小猪和小牛被揍的鼻青脸肿，而小羊却没有。为什么呢？因为，<code>便利店24小时不打烊</code></p>
+</li>
+</ol>
 
 
                     
@@ -644,15 +532,15 @@
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/post/hugo%E5%A2%9E%E5%8A%A0%E5%8F%B0%E8%AF%8D%E9%9A%8F%E6%9C%BA%E6%98%BE%E7%A4%BA/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：增加台词随机展示">&larr;
+                            <a href="/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/" data-toggle="tooltip" data-placement="top"
+                                title="学习笔记：《神经网络与深度学习》第一章">&larr;
                                 Previous Post</a>
                         </li>
                         
                         
                         <li class="next">
-                            <a href="/post/hugo%E5%A2%9E%E5%8A%A0%E5%B9%B4%E6%9C%88%E6%97%A5%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6%E6%9D%A1/" data-toggle="tooltip" data-placement="top"
-                                title="Hugo：增加年月日时间进度条">Next
+                            <a href="/post/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%83%E4%B9%A0/" data-toggle="tooltip" data-placement="top"
+                                title="学习笔记：《神经网络与深度学习》第一章练习">Next
                                 Post &rarr;</a>
                         </li>
                         
@@ -694,10 +582,6 @@
                         <hr class="hidden-sm hidden-xs">
                         
                         
-                         
-                            <h4>
-                                <a class="catalog-toggle" href="#">目录</a>
-                            </h4>
                         
                         <ul class="catalog-body"></ul>
                     </div>
