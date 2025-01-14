@@ -135,6 +135,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91\/?utm_source=random",
+      
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%BB%91%E5%A1%9E%E6%82%89%E8%BE%BE%E5%A4%9A\/?utm_source=random",
       
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%BC%97%E6%B4%9B%E5%A7%86%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF\/?utm_source=random",
@@ -429,6 +431,32 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
+        <h2 class="post-title">
+            Hugo：图片存储路径优化
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            使用hugo搭建博客的时候，md文件的图片存储路径有问题，对其进行改进 1、typora配置 图像存储路径改为如图，其中是以相对路径 ./ 开头 2、用
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-03-21 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/git%E4%B9%8B.gitignore%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
@@ -794,32 +822,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%B5%8F%E8%A7%88%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD/">
-        <h2 class="post-title">
-            Hugo：添加随机浏览文章功能
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            偶然看见了一位大佬的博客 给 Hugo 博客添加随机文章入口 ，发现了他做了这个功能，感觉可以搞一下，于是借鉴了她的代码，感谢。 1 显示效果 在博客的右上角添
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sat 2024-03-30 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1080,6 +1082,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2025-01-14";
+    var value = dataMap.get(key);
+    var wordCount =  2755 ;
+    var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91/";
+    var title = "阅读笔记：马、列、毛主席晚年的困惑";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-11-12";
     var value = dataMap.get(key);
     var wordCount =  1503 ;
@@ -2680,15 +2694,17 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 59 篇文章 · 
-                    总计 8.47 万字
+                        
+                    
+                    发表了 60 篇文章 · 
+                    总计 8.74 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                     <span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 · </span>
                     <span id="busuanzi_container_site_uv">您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者</span>
                     <br>
-                    Copyright &copy; Nefelibata 2024
+                    Copyright &copy; Nefelibata 2025
                     
                     <br>
                     Powered by Hugo

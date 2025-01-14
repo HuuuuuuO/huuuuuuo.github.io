@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91\/?utm_source=random",
+      
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%BB%91%E5%A1%9E%E6%82%89%E8%BE%BE%E5%A4%9A\/?utm_source=random",
       
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%BC%97%E6%B4%9B%E5%A7%86%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF\/?utm_source=random",
@@ -422,6 +424,30 @@
         ">
             
 <div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91/">
+        <h2 class="post-title">
+            阅读笔记：马、列、毛主席晚年的困惑
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            本文转载修改自以下文章： https://zhuanlan.zhihu.com/p/701723610 马克思晚年的困惑 马克思是劳动者阶级建立劳动社会理论的创造者，对他的理论体系，马克思没有任何怀疑和困惑，他的困惑是在
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Tue 2025-01-14 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
 
 <div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%BB%91%E5%A1%9E%E6%82%89%E8%BE%BE%E5%A4%9A/">
@@ -779,32 +805,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/html%E9%A1%B5%E9%9D%A2%E5%B5%8C%E5%85%A5%E6%B5%81%E7%A8%8B%E5%9B%BE/">
-        <h2 class="post-title">
-            Html页面嵌入流程图
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            想要在html页面中嵌入流程图，并且不能是图片，需要进行文本复制，同时还想要能够点击链接。考虑的方案是html+js。
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Thu 2024-04-18 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -1061,6 +1061,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2025-01-14";
+    var value = dataMap.get(key);
+    var wordCount =  2755 ;
+    var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91/";
+    var title = "阅读笔记：马、列、毛主席晚年的困惑";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-11-12";
     var value = dataMap.get(key);
     var wordCount =  1503 ;
@@ -2661,15 +2673,17 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 59 篇文章 · 
-                    总计 8.47 万字
+                        
+                    
+                    发表了 60 篇文章 · 
+                    总计 8.74 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                     <span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 · </span>
                     <span id="busuanzi_container_site_uv">您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者</span>
                     <br>
-                    Copyright &copy; Nefelibata 2024
+                    Copyright &copy; Nefelibata 2025
                     
                     <br>
                     Powered by Hugo

@@ -134,6 +134,8 @@
   function goToRandomPost() {
     const pages = [
       
+      "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91\/?utm_source=random",
+      
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%BB%91%E5%A1%9E%E6%82%89%E8%BE%BE%E5%A4%9A\/?utm_source=random",
       
       "\/post\/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E5%BC%97%E6%B4%9B%E5%A7%86%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF\/?utm_source=random",
@@ -423,6 +425,40 @@
             <div class="archive-list">
                 
                 <section>
+                
+                    <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2025
+                       <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
+                      </h1>
+                      <hr>
+                </section>
+
+               <section>
+                
+                <h3 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">01
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
+                </h3>
+                <hr>
+            </section>
+            <section>
+                
+                <h5 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;01-14
+                    <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">1</span>
+                </h5>
+            </section>
+                
+                <ul style=	"background-position:1000px; padding-left:100px;">
+                    
+                    <li >
+                        
+                        <a href="/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91/">
+                           阅读笔记：马、列、毛主席晚年的困惑
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                
+                
                 
                     <h1 class="title is-4 has-text-weight-normal" style="position: relative; display: inline-block; padding-right: 30px;">2024
                        <span style="position: absolute; top: 0; right: 0; font-size: 15px; color: #666;">59</span>
@@ -1442,6 +1478,18 @@ function updateProgress(progressId, newValue) {
   var option;
   var dataMap = new Map();
   
+    var key = "2025-01-14";
+    var value = dataMap.get(key);
+    var wordCount =  2755 ;
+    var link = "/post/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E9%A9%AC%E5%88%97%E6%AF%9B%E4%B8%BB%E5%B8%AD%E6%99%9A%E5%B9%B4%E7%9A%84%E5%9B%B0%E6%83%91/";
+    var title = "阅读笔记：马、列、毛主席晚年的困惑";
+    
+    
+    if (value == null) {
+      dataMap.set(key, [{wordCount,link, title}]);
+    } else {
+      value.push({wordCount,link, title});
+    }
     var key = "2024-11-12";
     var value = dataMap.get(key);
     var wordCount =  1503 ;
@@ -3042,15 +3090,17 @@ function updateProgress(progressId, newValue) {
                     
                         
                     
-                    发表了 59 篇文章 · 
-                    总计 8.47 万字
+                        
+                    
+                    发表了 60 篇文章 · 
+                    总计 8.74 万字
                     <br>
                     
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                     <span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 · </span>
                     <span id="busuanzi_container_site_uv">您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者</span>
                     <br>
-                    Copyright &copy; Nefelibata 2024
+                    Copyright &copy; Nefelibata 2025
                     
                     <br>
                     Powered by Hugo
