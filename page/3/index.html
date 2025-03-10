@@ -433,6 +433,32 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/">
+        <h2 class="post-title">
+            Hugo：代码块拷贝
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            本文转载与修改自：Hugo插件之代码块拷贝插件 添加按钮-css 我们通过检查博客内容页面发现，hugo生成的每个代码块格式如下： 没有语法突出显
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-03-21 
+        
+        
+        | Last Modified on Thu 2024-05-23 
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BC%98%E5%8C%96/">
         <h2 class="post-title">
             Hugo：图片存储路径优化
@@ -796,32 +822,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/">
-        <h2 class="post-title">
-            Hugo：一些有趣的短代码收集
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            首先感谢 眠于水月间 大佬，文章主要收集于他的文章，[Hugo | 在 Stack 主题上可行的短代码们] 本文旨在收集一些有趣的短代码，因此主要是呈现使用方式，
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Sat 2024-03-30 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -900,80 +900,6 @@
     
 
 
-<section>
-    <hr>
-<style>
-
-    .weatherReport {
-       font-size: 15px;
-       color: #1f373c8c;
-    }
-     
-</style>
-<h5 class="locationInfo" id="locationInfo"></h5>
-
-<span class="weatherReport" id="weatherReport"></span>
-
-
-
-<script>
-    const apicityUrl = 'https://restapi.amap.com/v3/ip?key=7747cc0f1efaa36c8d12b5dbba5f87cf';
-    const apiUrlTemplate = 'https://restapi.amap.com/v3/weather/weatherInfo?city={adcode}&key=7747cc0f1efaa36c8d12b5dbba5f87cf&extensions=all';
-
-    fetch(apicityUrl)
-        .then(response => response.json())
-        .then(data => {
-            const province = data.province;
-            const city = data.city;
-            const adcode = data.adcode;
-
-            
-            document.getElementById('locationInfo').innerHTML = `WEATHER | ${province} ${city}`;
-
-            
-            const apiUrl = apiUrlTemplate.replace('{adcode}', adcode);
-
-            
-            return fetch(apiUrl);
-        })
-        .then(response => response.json())
-    .then(data => {
-        if (data.status === "1" && data.count === "1") {
-            const forecast = data.forecasts[0];
-            const reportTime = forecast.reporttime;
-            const city = forecast.city;
-            const province = forecast.province;
-
-            let weatherReport = ``;
-
-        forecast.casts.forEach((cast, index) => {
-            const date = cast.date;
-            const parts = date.split("-"); 
-            const newDate = parts.slice(1).join("-"); 
-            const nightWeather = cast.nightweather;
-            const dayWeather = cast.dayweather;
-            const daytemp = cast.daytemp;
-            const nighttemp = cast.nighttemp;
-
-            
-            if (index === 0) {
-                
-                weatherReport += `${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
-            } else {
-                
-                weatherReport += `<br>${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
-            }
-        });
-
-
-            document.getElementById('weatherReport').innerHTML = weatherReport;
-        } else {
-            console.error('Error fetching weather data');
-        }
-    })
-    .catch(error => console.error('Error:', error));
-</script>
-</section>
 
 
 <section>

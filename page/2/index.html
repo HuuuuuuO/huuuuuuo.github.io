@@ -433,6 +433,30 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
+    <a href="https://huuuuuuo.github.io/post/git%E6%96%B0%E5%BB%BA%E7%A9%BA%E5%88%86%E6%94%AF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">
+        <h2 class="post-title">
+            Git新建空分支并上传文件
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            要新建一个空分支，其实就是新建一个分支，然后清空该分支下的所有文件 因为新建分支，该分支下的内容会和当前分支一样 1git branch qstart # 新建qstart分支 2git
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Nefelibata on Thu 2024-05-23 
+        
+        
+    
+    </p>
+
+</div>
+
+<hr>
+
+<div class="post-preview">
     <a href="https://huuuuuuo.github.io/post/%E5%85%B3%E4%BA%8Egpt%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%BD%B1%E5%93%8D%E8%BD%AC%E8%BD%BD-copy/">
         <h2 class="post-title">
             关于GPT的底层原理和未来影响（转载）
@@ -796,32 +820,6 @@
 
 <hr>
 
-<div class="post-preview">
-    <a href="https://huuuuuuo.github.io/post/hugo%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/">
-        <h2 class="post-title">
-            Hugo：代码块拷贝
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            本文转载与修改自：Hugo插件之代码块拷贝插件 添加按钮-css 我们通过检查博客内容页面发现，hugo生成的每个代码块格式如下： 没有语法突出显
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Nefelibata on Thu 2024-03-21 
-        
-        
-        | Last Modified on Thu 2024-05-23 
-        
-    
-    </p>
-
-</div>
-
-<hr>
-
 </div>
 
             
@@ -900,80 +898,6 @@
     
 
 
-<section>
-    <hr>
-<style>
-
-    .weatherReport {
-       font-size: 15px;
-       color: #1f373c8c;
-    }
-     
-</style>
-<h5 class="locationInfo" id="locationInfo"></h5>
-
-<span class="weatherReport" id="weatherReport"></span>
-
-
-
-<script>
-    const apicityUrl = 'https://restapi.amap.com/v3/ip?key=7747cc0f1efaa36c8d12b5dbba5f87cf';
-    const apiUrlTemplate = 'https://restapi.amap.com/v3/weather/weatherInfo?city={adcode}&key=7747cc0f1efaa36c8d12b5dbba5f87cf&extensions=all';
-
-    fetch(apicityUrl)
-        .then(response => response.json())
-        .then(data => {
-            const province = data.province;
-            const city = data.city;
-            const adcode = data.adcode;
-
-            
-            document.getElementById('locationInfo').innerHTML = `WEATHER | ${province} ${city}`;
-
-            
-            const apiUrl = apiUrlTemplate.replace('{adcode}', adcode);
-
-            
-            return fetch(apiUrl);
-        })
-        .then(response => response.json())
-    .then(data => {
-        if (data.status === "1" && data.count === "1") {
-            const forecast = data.forecasts[0];
-            const reportTime = forecast.reporttime;
-            const city = forecast.city;
-            const province = forecast.province;
-
-            let weatherReport = ``;
-
-        forecast.casts.forEach((cast, index) => {
-            const date = cast.date;
-            const parts = date.split("-"); 
-            const newDate = parts.slice(1).join("-"); 
-            const nightWeather = cast.nightweather;
-            const dayWeather = cast.dayweather;
-            const daytemp = cast.daytemp;
-            const nighttemp = cast.nighttemp;
-
-            
-            if (index === 0) {
-                
-                weatherReport += `${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
-            } else {
-                
-                weatherReport += `<br>${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
-            }
-        });
-
-
-            document.getElementById('weatherReport').innerHTML = weatherReport;
-        } else {
-            console.error('Error fetching weather data');
-        }
-    })
-    .catch(error => console.error('Error:', error));
-</script>
-</section>
 
 
 <section>

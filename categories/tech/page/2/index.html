@@ -520,7 +520,7 @@
         Posted by Nefelibata on Mon 2024-04-08 
         
         
-        | Last Modified on Thu 2024-05-23 
+        | Last Modified on Mon 2025-03-10 
         
     
     </p>
@@ -893,80 +893,6 @@
     
 
 
-<section>
-    <hr>
-<style>
-
-    .weatherReport {
-       font-size: 15px;
-       color: #1f373c8c;
-    }
-     
-</style>
-<h5 class="locationInfo" id="locationInfo"></h5>
-
-<span class="weatherReport" id="weatherReport"></span>
-
-
-
-<script>
-    const apicityUrl = 'https://restapi.amap.com/v3/ip?key=7747cc0f1efaa36c8d12b5dbba5f87cf';
-    const apiUrlTemplate = 'https://restapi.amap.com/v3/weather/weatherInfo?city={adcode}&key=7747cc0f1efaa36c8d12b5dbba5f87cf&extensions=all';
-
-    fetch(apicityUrl)
-        .then(response => response.json())
-        .then(data => {
-            const province = data.province;
-            const city = data.city;
-            const adcode = data.adcode;
-
-            
-            document.getElementById('locationInfo').innerHTML = `WEATHER | ${province} ${city}`;
-
-            
-            const apiUrl = apiUrlTemplate.replace('{adcode}', adcode);
-
-            
-            return fetch(apiUrl);
-        })
-        .then(response => response.json())
-    .then(data => {
-        if (data.status === "1" && data.count === "1") {
-            const forecast = data.forecasts[0];
-            const reportTime = forecast.reporttime;
-            const city = forecast.city;
-            const province = forecast.province;
-
-            let weatherReport = ``;
-
-        forecast.casts.forEach((cast, index) => {
-            const date = cast.date;
-            const parts = date.split("-"); 
-            const newDate = parts.slice(1).join("-"); 
-            const nightWeather = cast.nightweather;
-            const dayWeather = cast.dayweather;
-            const daytemp = cast.daytemp;
-            const nighttemp = cast.nighttemp;
-
-            
-            if (index === 0) {
-                
-                weatherReport += `${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
-            } else {
-                
-                weatherReport += `<br>${newDate}<br>日夜温度: ${daytemp} ~ ${nighttemp}℃<br>日夜天气: ${nightWeather} ~ ${dayWeather}<br>`;
-            }
-        });
-
-
-            document.getElementById('weatherReport').innerHTML = weatherReport;
-        } else {
-            console.error('Error fetching weather data');
-        }
-    })
-    .catch(error => console.error('Error:', error));
-</script>
-</section>
 
 
 <section>
